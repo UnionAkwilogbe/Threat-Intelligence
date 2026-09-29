@@ -1,0 +1,4 @@
+[
+ {"ip_address":"192.0.2.10","port":443,"status":"online","malware":"QakBot","as_number":64500,"as_name":"EXAMPLE-HOSTING-UK","country":"GB","last_online":"2026-09-28"},
+ {"ip_address":"198.51.100.7","port":8080,"status":"offline","malware":"Emotet","as_number":64501,"as_name":"EXAMPLE-NET","country":"NL","last_online":"2026-09-20"}
+]

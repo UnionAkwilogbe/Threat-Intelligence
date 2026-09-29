@@ -1,0 +1,65 @@
+name: Daily threat intel brief
+
+on:
+  schedule:
+    # 05:17 UTC = 06:17 UK time in summer (BST), 05:17 in winter (GMT).
+    # Off the hour on purpose: GitHub delays jobs scheduled at :00.
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "How many hours back to look (use 72 on a Monday)"
+        default: "36"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
+      - name: Build today's brief
+        env:
+          # Add these under Settings > Secrets and variables > Actions.
+          # For the email you only need SMTP_USER and SMTP_PASSWORD (a Gmail app password).
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          ABUSECH_AUTH_KEY: ${{ secrets.ABUSECH_AUTH_KEY }}
+          CLIENTS_JSON: ${{ secrets.CLIENTS_JSON }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          BRIEF_TO: ${{ secrets.BRIEF_TO }}
+          BRIEF_FROM: ${{ secrets.BRIEF_FROM }}
+          # Set a DASHBOARD_URL repository variable only if you publish the page somewhere.
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+        run: |
+          HOURS="${{ github.event.inputs.hours }}"
+          # Monday mornings cover the whole weekend
+          if [ -z "$HOURS" ]; then
+            if [ "$(date -u +%u)" = "1" ]; then HOURS=72; else HOURS=36; fi
+          fi
+          python -m ti --hours "$HOURS" --email
+
+      - name: Save the brief to the repo
+        run: |
+          git config user.name "threat-intel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Daily brief $(TZ=Europe/London date +%F)"
+          git push

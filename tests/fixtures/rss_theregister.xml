@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Register (sample)</title>
+<entry><title>British retailer hit by help desk social engineering, MFA reset abused</title>
+<link href="https://example.com/reg/retailer"/><updated>2026-09-28T07:30:00Z</updated>
+<summary>A UK high street retail chain says attackers phoned its IT help desk and obtained an MFA reset before deploying ransomware.</summary></entry>
+</feed>

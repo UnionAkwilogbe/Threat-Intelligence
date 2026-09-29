@@ -1,0 +1,4 @@
+{"title":"CISA KEV (sample)","vulnerabilities":[
+ {"cveID":"CVE-2026-10001","vendorProject":"ExampleCorp","product":"ExampleVPN","vulnerabilityName":"Authentication Bypass","dateAdded":"2026-09-27","shortDescription":"ExampleVPN contains an authentication bypass allowing remote attackers to gain admin access.","requiredAction":"Apply vendor mitigations.","dueDate":"2026-10-18","knownRansomwareCampaignUse":"Known"},
+ {"cveID":"CVE-2026-10002","vendorProject":"SampleSoft","product":"FileShare","vulnerabilityName":"SQL Injection","dateAdded":"2026-09-26","shortDescription":"SampleSoft FileShare contains a SQL injection vulnerability.","requiredAction":"Apply updates.","dueDate":"2026-10-17","knownRansomwareCampaignUse":"Unknown"}
+]}
