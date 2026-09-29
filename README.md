@@ -54,7 +54,7 @@ This tool does the first layer of enrichment automatically and tells you which l
 | Source | What it gives | UK? |
 |---|---|---|
 | NCSC UK | Official UK advisories and news | Yes |
-| ICO | UK data protection enforcement and news | Yes |
+| ICO enforcement | UK data protection fines and reprimands | Yes |
 | Computer Weekly, The Register, Infosecurity Magazine | UK-based security news | Yes |
 | CISA KEV | Vulnerabilities attackers are actively using | |
 | NVD | Newly published critical vulnerabilities | |
@@ -63,7 +63,7 @@ This tool does the first layer of enrichment automatically and tells you which l
 | Feodo Tracker (abuse.ch) | Live botnet control servers (we highlight UK-hosted ones) | Filtered |
 | URLhaus (abuse.ch) | Web addresses spreading malware (we highlight .uk ones) | Filtered |
 | ThreatFox (abuse.ch) | Fresh indicators of compromise | |
-| BleepingComputer, The Record, The Hacker News, Krebs, SANS ISC, SecurityWeek, CISA advisories | Global news and research | |
+| BleepingComputer, The Record, The Hacker News, Krebs, SANS ISC, SecurityWeek | Global news and research | |
 
 If a source is down, the brief still builds. The **Source health** table at the bottom shows what worked.
 Add or remove feeds in `ti/sources.py` (the `RSS_FEEDS` list).

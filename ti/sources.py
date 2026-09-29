@@ -28,8 +28,8 @@ RSS_FEEDS = [
     # UK government and UK focused
     {"id": "ncsc", "name": "NCSC UK", "uk": True, "kind": "advisory",
      "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"},
-    {"id": "ico", "name": "ICO (UK regulator)", "uk": True, "kind": "news",
-     "url": "https://ico.org.uk/global/rss-feeds/news/"},
+    {"id": "ico", "name": "ICO enforcement (UK regulator)", "uk": True, "kind": "news",
+     "url": "https://ico.org.uk/global/rss-feeds/enforcement/"},
     {"id": "computerweekly", "name": "Computer Weekly Security", "uk": True, "kind": "news",
      "url": "https://www.computerweekly.com/rss/IT-security.xml"},
     {"id": "theregister", "name": "The Register Security", "uk": True, "kind": "news",
@@ -49,8 +49,6 @@ RSS_FEEDS = [
      "url": "https://isc.sans.edu/rssfeed_full.xml"},
     {"id": "securityweek", "name": "SecurityWeek", "uk": False, "kind": "news",
      "url": "https://www.securityweek.com/feed/"},
-    {"id": "cisa_adv", "name": "CISA Advisories", "uk": False, "kind": "advisory",
-     "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"},
 ]
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
