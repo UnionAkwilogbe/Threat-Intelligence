@@ -341,12 +341,13 @@ def render_html(ctx):
 <header>
   <div><h1>Threat Intel Field Brief</h1>
   <div class="sub">{e(ctx['date_long'])} · generated {e(ctx['generated'])} UK time · {ctx['window']}</div></div>
-  <div style="display:flex;gap:8px;align-items:center"><span class="tlp">TLP:CLEAR</span>
+  <div style="display:flex;gap:8px;align-items:center"><a class="toggle" href="how-it-works.html">How it works</a>
+  <span class="tlp">TLP:CLEAR</span>
   <button class="toggle" id="theme" type="button">Light / dark</button></div>
 </header>
 {demo}
 <section class="bluf"><h2>Your morning in 30 seconds</h2><ul>{"".join(f"<li>{e(l)}</li>" for l in bluf_lines(stories, stats))}</ul>
-<details><summary>New here? How to read this page</summary><p class="sub">Every story gets a <b>priority score</b> (0-100): higher means read it first.
+<details><summary>New here? How to read this page (full guide: <a href="how-it-works.html">How it works</a>)</summary><p class="sub">Every story gets a <b>priority score</b> (0-100): higher means read it first.
 Red is 60 and above, amber 35-59, green below 35. <b>UK relevant</b> means UK words, UK sources or UK victims were found.
 <b>KEV</b> means attackers are already exploiting the bug. <b>EPSS</b> is the chance it gets exploited in the next 30 days.
 Each card tells you what it means in plain English, what to do for clients, and which lookups (enrichment) would make it more useful.</p></details></section>

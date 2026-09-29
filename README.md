@@ -9,6 +9,19 @@ Every morning it:
 4. **Briefs** you: a web dashboard, a short Markdown brief, and optionally an email.
 5. **Teaches** you: a daily knowledge pack with a lesson, review quizzes, a word of the day and a hands-on drill.
 
+## Your links
+
+| What | Where |
+|---|---|
+| **Live dashboard** | https://unionakwilogbe.github.io/Threat-Intelligence/ |
+| **How it works** (the logic, in plain English) | https://unionakwilogbe.github.io/Threat-Intelligence/how-it-works.html |
+| Today's text brief | [`docs/latest.md`](docs/latest.md) |
+| Past briefs | [`docs/briefs/`](docs/briefs/) |
+| Run it now | Actions tab → *Daily threat intel brief* → *Run workflow* |
+
+The site uses GitHub Pages: *Settings → Pages* should say *Deploy from a branch*, `main`, `/docs`.
+(If it is set to `/ (root)` the link still works, it just redirects to `/docs`.)
+
 No paid tools, no API keys needed to start, and no libraries to install (plain Python 3.11+).
 
 ---
@@ -113,7 +126,7 @@ Sector names you can use: `Health / NHS`, `Finance`, `Retail`, `Public sector`, 
 
 Every brief includes:
 
-- **Lesson of the day**: 30 lessons on enrichment and UK threat intel (Pyramid of Pain, EPSS vs KEV, Admiralty Code, TLP, Companies House, RIPE, NCSC Early Warning, UK GDPR, and more). Each has a plain English explanation, an analogy, the UK angle, an enrichment tip, a try-it-today task and a quiz.
+- **Lesson of the day**: 33 lessons on enrichment and UK threat intel (Pyramid of Pain, EPSS vs KEV, Admiralty Code, TLP, Companies House, RIPE, NCSC Early Warning, UK GDPR, and more). Each has a plain English explanation, an analogy, the UK angle, an enrichment tip, a try-it-today task and a quiz.
 - **Review cards**: lessons from 1, 3 and 7 days ago come back as quizzes. This is *spaced repetition*: things return just as you would forget them. Repetition is on purpose.
 - **Word of the day** from a 40-term glossary.
 - **Enrichment drill**: a 15-minute guided exercise built from a real story in today's brief.

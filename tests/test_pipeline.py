@@ -121,5 +121,16 @@ class ParsingTest(unittest.TestCase):
         self.assertEqual(enrich.uk_relevance({"title": "Duke of york", "summary": "we are ok"}), 0)
 
 
+
+class HowItWorksTest(unittest.TestCase):
+    def test_page_renders_with_link(self):
+        from ti import howto
+        page = howto.render_how("https://example.github.io/Threat-Intelligence/")
+        self.assertIn("https://example.github.io/Threat-Intelligence/", page)
+        self.assertIn("Worked example", page)
+        for f in sources.RSS_FEEDS:
+            self.assertIn(f["name"], page)
+
+
 if __name__ == "__main__":
     unittest.main()

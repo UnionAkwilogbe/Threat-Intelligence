@@ -45,8 +45,8 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           BRIEF_TO: ${{ secrets.BRIEF_TO }}
           BRIEF_FROM: ${{ secrets.BRIEF_FROM }}
-          # Set a DASHBOARD_URL repository variable only if you publish the page somewhere.
-          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+          # Your GitHub Pages address. Override with a DASHBOARD_URL repository variable if it ever moves.
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
         run: |
           HOURS="${{ github.event.inputs.hours }}"
           # Monday mornings cover the whole weekend

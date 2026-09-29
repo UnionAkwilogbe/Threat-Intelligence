@@ -13,7 +13,7 @@ import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import enrich, nuggets, notify, render, sources
+from . import enrich, howto, nuggets, notify, render, sources
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UK = ZoneInfo("Europe/London")
@@ -68,6 +68,8 @@ def main(argv=None):
     page = render.render_html(ctx)
     with open(os.path.join(args.out, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(page)
+    with open(os.path.join(args.out, "how-it-works.html"), "w", encoding="utf-8") as fh:
+        fh.write(howto.render_how(os.environ.get("DASHBOARD_URL", "")))
     with open(os.path.join(data, f"{day}.json"), "w", encoding="utf-8") as fh:
         json.dump({"date": day, "stories": stories, "stats": stats, "health": health,
                    "lesson": pack["lesson"]["id"]}, fh, indent=1, default=str)
