@@ -6,7 +6,7 @@ scoring in enrich.py, update SCORING below to match.
 """
 
 from . import enrich, nuggets, sources
-from .render import CSS, JS, e
+from .render import e, page
 
 # Mirrors the points system in enrich.enrich_story(), dedupe() and match_clients().
 SCORING = [
@@ -63,20 +63,13 @@ def render_how(dashboard_url=""):
     ], 1))
     link = (f"<a href='{e(dashboard_url)}'>{e(dashboard_url)}</a>" if dashboard_url
             else "<code>https://&lt;your-username&gt;.github.io/Threat-Intelligence/</code>")
-    return f"""<!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How the Brief Works</title>
-<meta name="description" content="Plain English guide to how the daily threat intel brief collects, enriches and ranks stories">
-<style>{CSS}</style></head><body><div class="wrap">
-<header><div><h1>How the brief works</h1><div class="sub">A plain English tour of the logic. <a href="./">Back to today's brief</a></div></div>
-<button class="toggle" id="theme" type="button">Light / dark</button></header>
-
+    body = f"""
 <section class="bluf"><h2>The short version</h2>
 <p>Every morning a robot (a GitHub Action) wakes up, reads {len(sources.RSS_FEEDS) + 6} public threat sources, throws away old and duplicate items,
 adds context to each story, gives it a score out of 100, and publishes the result here and to your email. Then it adds a daily lesson.</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px">{flow}</div></section>
 
-<section><h2>Where to find everything</h2>
+<section id="where"><h2>Where to find everything</h2>
 <table><tbody>
 <tr><td><b>Live dashboard</b></td><td>{link}<div class="sub">Bookmark it or add it to your phone's home screen. It updates each morning.</div></td></tr>
 <tr><td><b>Email</b></td><td>The same brief arrives in your inbox, with the dashboard attached and a link back here.</td></tr>
@@ -85,7 +78,7 @@ adds context to each story, gives it a score out of 100, and publishes the resul
 <tr><td><b>Run it now</b></td><td>GitHub repo → Actions tab → <i>Daily threat intel brief</i> → Run workflow.</td></tr>
 </tbody></table></section>
 
-<section><h2>When it runs</h2>
+<section id="when"><h2>When it runs</h2>
 <ul>{_li([
     "Every day at 05:17 UTC. That is 06:17 UK time in summer (BST) and 05:17 in winter (GMT).",
     "Normally it looks back 36 hours, so nothing slips through the gap between runs.",
@@ -93,14 +86,14 @@ adds context to each story, gives it a score out of 100, and publishes the resul
     "It takes about a minute. Then GitHub Pages republishes the site, which takes another minute or two.",
 ])}</ul></section>
 
-<section><h2>Step 1: Collect</h2>
+<section id="collect"><h2>Step 1: Collect</h2>
 <p>Each source has its own small collector in <code>ti/sources.py</code>. If one source is down, the rest still work,
 and the <b>Source health</b> table at the bottom of the dashboard shows what failed.</p>
 <div class="scroll"><table><thead><tr><th>Source</th><th>Type</th><th>UK source?</th></tr></thead>
 <tbody>{feeds}{other_rows}</tbody></table></div>
 <p class="sub">UK sources get a head start on the UK score, because what they choose to cover is already filtered for UK readers.</p></section>
 
-<section><h2>Step 2: Clean</h2>
+<section id="clean"><h2>Step 2: Clean</h2>
 <ul>{_li([
     "<b>Strip formatting:</b> HTML tags are removed so summaries read as plain text.",
     "<b>Fix dates:</b> every feed writes dates differently, so all of them are converted to one format (UTC).",
@@ -109,7 +102,7 @@ and the <b>Source health</b> table at the bottom of the dashboard shows what fai
     "<b>Same bug, different stories:</b> if two stories mention the same CVE, each counts as confirmation (corroboration) for the other.",
 ])}</ul></section>
 
-<section><h2>Step 3: Enrich</h2>
+<section id="enrich"><h2>Step 3: Enrich</h2>
 <p>This is where a headline becomes intelligence. Each story gets these extra fields:</p>
 <div class="scroll"><table><thead><tr><th>Field</th><th>How it is worked out</th><th>Why it helps</th></tr></thead><tbody>
 <tr><td>CVEs</td><td>Pattern match for IDs like CVE-2026-12345 in the title and summary</td><td>Lets us look the bug up everywhere else</td></tr>
@@ -128,13 +121,13 @@ and the <b>Source health</b> table at the bottom of the dashboard shows what fai
 wrongly, for example a story about "BT" the company versus the letters BT. Leak-site claims come from the criminals, so
 treat them as unconfirmed. Always check the source before acting.</p></section>
 
-<section><h2>Step 4: Score and rank</h2>
+<section id="score"><h2>Step 4: Score and rank</h2>
 <p>Every story earns points. The total, capped at 100, is its <b>priority</b>. Click <i>Why this score?</i> on any card to see its points.</p>
 <div class="scroll"><table><thead><tr><th>Reason</th><th>Points</th><th>Max</th><th>Explained</th></tr></thead>
 <tbody>{scoring}</tbody></table></div>
-<p><b>Colours:</b> <span class="score s-hi" style="padding:2px 6px">60+</span> read today,
-<span class="score s-med" style="padding:2px 6px">35-59</span> worth a look,
-<span class="score s-lo" style="padding:2px 6px">under 35</span> background.</p>
+<p><b>Levels:</b> <span class="pill s-hi"><span class="dot"></span>HIGH 60+</span> read today ·
+<span class="pill s-med"><span class="dot"></span>MED 35-59</span> worth a look ·
+<span class="pill s-lo"><span class="dot"></span>LOW under 35</span> background.</p>
 <div class="card"><h3>Worked example</h3>
 <p>NCSC warns UK organisations about an exploited VPN bug, posted 5 hours ago, also reported by BleepingComputer:</p>
 <ul>{_li([
@@ -150,7 +143,7 @@ treat them as unconfirmed. Always check the source before acting.</p></section>
 <p>The top 8 stories get full cards. If two stories are about the same CVE, only the higher one gets a card, so the
 list is not repetitive. Everything else goes into the searchable <i>Everything else</i> table.</p></section>
 
-<section><h2>Step 5: Publish</h2>
+<section id="publish"><h2>Step 5: Publish</h2>
 <ul>{_li([
     "<code>docs/index.html</code>: the dashboard you are using (replaced each day).",
     "<code>docs/briefs/&lt;date&gt;.md</code> and <code>docs/latest.md</code>: the short text brief.",
@@ -158,7 +151,7 @@ list is not repetitive. Everything else goes into the searchable <i>Everything e
     "The robot saves these files to the repo, GitHub Pages republishes the site, and the email goes out.",
 ])}</ul></section>
 
-<section><h2>The knowledge pack</h2>
+<section id="pack"><h2>The knowledge pack</h2>
 <ul>{_li([
     f"<b>Lesson:</b> {lessons} lessons, one a day in a fixed order, starting again after {lessons} days. Repetition is on purpose.",
     "<b>Reviews:</b> lessons from 1, 3 and 7 days ago come back as quizzes. This is called spaced repetition: you see "
@@ -168,7 +161,7 @@ list is not repetitive. Everything else goes into the searchable <i>Everything e
     "victim) and turns it into a 15-minute step-by-step enrichment exercise.",
 ])}</ul></section>
 
-<section><h2>How to tune it</h2>
+<section id="tune"><h2>How to tune it</h2>
 <div class="scroll"><table><thead><tr><th>You want to…</th><th>Edit this</th></tr></thead><tbody>
 <tr><td>Add or remove a news feed</td><td><code>ti/sources.py</code>, the <code>RSS_FEEDS</code> list</td></tr>
 <tr><td>Add UK keywords or change their weight</td><td><code>ti/enrich.py</code>, <code>UK_TERMS</code></td></tr>
@@ -176,6 +169,11 @@ list is not repetitive. Everything else goes into the searchable <i>Everything e
 <tr><td>Track your clients</td><td>The <code>CLIENTS_JSON</code> secret (see the README). Use codenames, because this site is public.</td></tr>
 <tr><td>Add lessons or glossary words</td><td><code>ti/data/nuggets.json</code>, <code>ti/data/glossary.json</code></td></tr>
 <tr><td>Change the time it runs</td><td><code>.github/workflows/daily-brief.yml</code>, the <code>cron</code> line (times are UTC)</td></tr>
-</tbody></table></div></section>
-</div><script>{JS}</script></body></html>
-"""
+</tbody></table></div></section>"""
+    nav = [("where", "Where to find it"), ("when", "When it runs"), ("collect", "1 Collect"),
+           ("clean", "2 Clean"), ("enrich", "3 Enrich"), ("score", "4 Score"), ("publish", "5 Publish"),
+           ("pack", "Knowledge pack"), ("tune", "Tune it")]
+    return page("How the Brief Works",
+                "Plain English guide to how the daily threat intel brief collects, enriches and ranks stories",
+                "How the brief works", "A plain English tour of the logic behind your morning brief",
+                body, nav=nav, links=[("./", "Back to today's brief")])
