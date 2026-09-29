@@ -73,58 +73,91 @@ def bluf_lines(stories, stats):
 # ---------------------------------------------------------------------------
 
 CSS = """
-:root{--bg:#f6f7f9;--panel:#fff;--ink:#14171c;--muted:#5b6472;--line:#e3e6eb;--accent:#1d4ed8;
---accent-soft:#e6edfd;--hi:#b42318;--hi-soft:#fdecea;--med:#b54708;--med-soft:#fef4e6;--lo:#067647;
---lo-soft:#e7f6ee;--chip:#eef0f3;--code:#f1f3f5}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1116;--panel:#161a21;
---ink:#e7eaee;--muted:#9aa3af;--line:#262c36;--accent:#7aa2ff;--accent-soft:#1b2540;--hi:#ff8a80;
---hi-soft:#3a1d1b;--med:#ffb86b;--med-soft:#3a2a17;--lo:#6fd6a0;--lo-soft:#15301f;--chip:#222833;--code:#1d222b}}
-:root[data-theme="dark"]{--bg:#0e1116;--panel:#161a21;--ink:#e7eaee;--muted:#9aa3af;--line:#262c36;
---accent:#7aa2ff;--accent-soft:#1b2540;--hi:#ff8a80;--hi-soft:#3a1d1b;--med:#ffb86b;--med-soft:#3a2a17;
---lo:#6fd6a0;--lo-soft:#15301f;--chip:#222833;--code:#1d222b}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+:root{color-scheme:light;
+--bg:#f4f3ef;--panel:#fcfcfb;--panel-2:#f7f6f2;--ink:#0b0b0b;--muted:#52514e;--faint:#77756f;--line:#e4e2dc;
+--accent:#1c5cab;--accent-soft:#e8f0fa;--bar:#2a78d6;--top:#0f1b2d;--top-ink:#f4f3ef;--top-muted:#a9b3c2;
+--crit:#d03b3b;--crit-soft:#fbeeee;--warn:#ec835a;--low:#a3a19b;--good:#0ca30c;--code:#efeee9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+--bg:#121211;--panel:#1a1a19;--panel-2:#1f1f1d;--ink:#ffffff;--muted:#c3c2b7;--faint:#9a998f;--line:#2e2e2b;
+--accent:#6da7ec;--accent-soft:#17263b;--bar:#3987e5;--top:#0b1320;--top-ink:#f4f3ef;--top-muted:#8c97a8;
+--crit:#e06060;--crit-soft:#341c1c;--warn:#ec835a;--low:#6f6e68;--good:#0ca30c;--code:#242422}}
+:root[data-theme="dark"]{color-scheme:dark;
+--bg:#121211;--panel:#1a1a19;--panel-2:#1f1f1d;--ink:#ffffff;--muted:#c3c2b7;--faint:#9a998f;--line:#2e2e2b;
+--accent:#6da7ec;--accent-soft:#17263b;--bar:#3987e5;--top:#0b1320;--top-ink:#f4f3ef;--top-muted:#8c97a8;
+--crit:#e06060;--crit-soft:#341c1c;--warn:#ec835a;--low:#6f6e68;--good:#0ca30c;--code:#242422}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:var(--top);color:var(--top-ink)}
+.topbar .in{max-width:1180px;margin:0 auto;padding:22px 16px 18px;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font:600 11px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--top-muted)}
+h1{font-size:28px;margin:6px 0 4px;letter-spacing:-.02em;font-weight:700}
+.topbar .sub{color:var(--top-muted)}
+.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav a{color:var(--muted);font-size:13px;font-weight:500;padding:12px 10px;white-space:nowrap;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink);text-decoration:none;border-bottom-color:var(--accent)}
 .wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
-header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;margin-bottom:20px}
-h1{font-size:26px;margin:0;letter-spacing:-.01em}h2{font-size:19px;margin:0 0 12px}
-h3{font-size:16px;margin:0 0 6px}
+h2{font-size:18px;margin:0 0 4px;letter-spacing:-.01em}h3{font-size:16px;margin:0 0 4px;line-height:1.4}
+.h-note{color:var(--faint);font-size:13px;margin:0 0 14px}
 .sub{color:var(--muted);font-size:13px}
-.tlp{font:600 12px/1 ui-monospace,monospace;background:#000;color:#fff;padding:5px 8px;border-radius:4px}
-section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:0 0 18px}
+.tlp{font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;background:#000;color:#fff;padding:6px 8px;border-radius:4px;border:1px solid #444;letter-spacing:.04em}
+section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:0 0 20px}
 .bluf{border-left:4px solid var(--accent)}
-.bluf ul{margin:0;padding-left:20px}.bluf li{margin:4px 0}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 18px}
-.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
-.tile b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.bluf ul{margin:8px 0 0;padding-left:20px}.bluf li{margin:6px 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 20px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.tile b{display:block;font-size:30px;line-height:1.1;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .tile span{color:var(--muted);font-size:13px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media (max-width:820px){.grid2{grid-template-columns:1fr}}
 .grid2>*{min-width:0}section,.card{min-width:0;overflow-wrap:anywhere}
-.card{border:1px solid var(--line);border-radius:10px;padding:14px;margin:0 0 12px}
-.card-head{display:flex;gap:12px;align-items:flex-start}
-.score{flex:0 0 auto;min-width:44px;text-align:center;font:700 16px/1 ui-monospace,monospace;padding:9px 6px;border-radius:8px}
-.s-hi{background:var(--hi-soft);color:var(--hi)}.s-med{background:var(--med-soft);color:var(--med)}.s-lo{background:var(--lo-soft);color:var(--lo)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
-.chip{background:var(--chip);border-radius:999px;padding:2px 9px;font-size:12px;color:var(--muted)}
-.chip.uk{background:var(--accent-soft);color:var(--accent)}.chip.kev{background:var(--hi-soft);color:var(--hi)}
-.rookie{background:var(--accent-soft);border-radius:8px;padding:8px 10px;margin:8px 0;font-size:14px}
-.card ul{margin:4px 0 0;padding-left:20px}.card li{margin:2px 0}
-.label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:8px}
-details summary{cursor:pointer;color:var(--muted);font-size:13px;margin-top:8px}
+.card{border:1px solid var(--line);border-left:4px solid var(--low);border-radius:10px;padding:16px 18px;margin:0 0 14px;background:var(--panel)}
+.card.r-hi{border-left-color:var(--crit)}.card.r-med{border-left-color:var(--warn)}
+.card-head{display:flex;gap:14px;align-items:flex-start}
+.card h3 a{color:var(--ink)}.card h3 a:hover{color:var(--accent)}
+.score{flex:0 0 auto;min-width:58px;text-align:center;border:1px solid var(--line);border-radius:10px;padding:6px 6px 5px;background:var(--panel-2)}
+.score b{display:block;font:700 20px/1.1 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.score i{display:flex;gap:5px;align-items:center;justify-content:center;font:600 10px/1 Inter,system-ui,sans-serif;letter-spacing:.08em;font-style:normal;color:var(--muted);margin-top:3px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--low);display:inline-block;flex:0 0 auto}
+.s-hi .dot{background:var(--crit)}.s-med .dot{background:var(--warn)}
+.pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:2px 9px 2px 7px;font-size:12px;font-weight:600;background:var(--panel-2);font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.chip{background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:1px 9px;font-size:12px;color:var(--muted)}
+.chip.uk{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+.chip.kev{background:var(--crit-soft);border-color:transparent;color:var(--ink);font-weight:600}
+.chip.kev::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--crit);margin-right:6px;vertical-align:1px}
+.rookie{background:var(--accent-soft);border-radius:8px;padding:10px 12px;margin:12px 0 8px;font-size:14px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px}
+@media (max-width:720px){.cols{grid-template-columns:1fr}}
+.card ul,.card ol{margin:4px 0 0;padding-left:20px}.card li{margin:3px 0}
+.label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-top:12px}
+details summary{cursor:pointer;color:var(--muted);font-size:13px;margin-top:10px}
 table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:var(--panel-2)}
+th{font-size:11px;color:var(--faint);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
 td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .scroll{overflow-x:auto}
-code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--code);padding:1px 5px;border-radius:4px;word-break:break-all}
-.ok{color:var(--lo)}.bad{color:var(--hi)}
-.lesson{border-left:4px solid var(--lo)}
-.quiz{background:var(--code);border-radius:8px;padding:8px 10px;margin-top:8px}
-.word{font-size:18px;font-weight:700}
-input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;margin-bottom:10px}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:var(--code);padding:1px 6px;border-radius:4px;word-break:break-all}
+.ok{color:var(--ink)}.ok::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:7px}
+.bad{color:var(--ink);font-weight:600}.bad::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--crit);margin-right:7px}
+.lesson{border-left-color:var(--accent)}
+.quiz{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:10px}
+.word{font-size:22px;font-weight:700;letter-spacing:-.01em}
+input[type=search]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);color:var(--ink);font:inherit;margin-bottom:12px}
+input[type=search]:focus{outline:2px solid var(--accent);outline-offset:1px}
 .muted{color:var(--muted)}
-.toggle{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit;font-size:13px}
+.toggle{display:inline-block;background:transparent;border:1px solid color-mix(in srgb,currentColor 30%,transparent);color:inherit;border-radius:8px;padding:6px 11px;cursor:pointer;font:inherit;font-size:13px;font-weight:500}
+.toggle:hover{text-decoration:none;border-color:currentColor}
+.bars{display:grid;gap:9px}
+.bar-row{display:grid;grid-template-columns:minmax(110px,38%) 1fr 32px;gap:10px;align-items:center;font-size:13px;padding:2px 0;border-radius:6px}
+.bar-row:hover{background:var(--panel-2)}
+.bar-track{height:10px}
+.bar-fill{height:10px;background:var(--bar);border-radius:0 4px 4px 0;min-width:4px}
+.bar-row .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+footer{color:var(--faint);font-size:13px;padding:8px 2px}
 """
 
 JS = """
@@ -143,6 +176,40 @@ JS = """
 
 def _score_class(p):
     return "s-hi" if p >= 60 else "s-med" if p >= 35 else "s-lo"
+
+
+def _level(p):
+    return "HIGH" if p >= 60 else "MED" if p >= 35 else "LOW"
+
+
+def _badge(p):
+    """Priority badge: number + dot + word, so meaning never relies on colour alone."""
+    return (f'<div class="score {_score_class(p)}" title="Priority score out of 100">'
+            f'<b>{p}</b><i><span class="dot"></span>{_level(p)}</i></div>')
+
+
+def _pill(p):
+    return f'<span class="pill {_score_class(p)}"><span class="dot"></span>{p}</span>'
+
+
+def _bars(counts, title_suffix="stories"):
+    """Horizontal bar list: one hue, labels and values as text, hover shows the count."""
+    counts = [(k, v) for k, v in counts if v]
+    if not counts:
+        return "<p class='muted'>Nothing to chart today.</p>"
+    top = max(v for _, v in counts)
+    return "<div class='bars'>" + "".join(
+        f"<div class='bar-row' title='{e(k)}: {v} {title_suffix}'><span>{e(k)}</span>"
+        f"<div class='bar-track'><div class='bar-fill' style='width:{v / top * 100:.0f}%'></div></div>"
+        f"<span class='v'>{v}</span></div>" for k, v in counts) + "</div>"
+
+
+def _mix(stories, field):
+    counts = {}
+    for s in stories:
+        for t in s.get(field, []):
+            counts[t] = counts.get(t, 0) + 1
+    return sorted(counts.items(), key=lambda kv: -kv[1])[:8]
 
 
 def _chips(s):
@@ -172,26 +239,29 @@ def _story_card(s):
     if s.get("attack"):
         attack = " ".join(f'<a class="mono" href="https://attack.mitre.org/techniques/{e(t.replace(".", "/"))}/">{e(t)}</a>'
                           for t in s["attack"])
-        attack = f"<div class='label'>ATT&amp;CK</div>{attack}"
+        attack = f"<div class='label'>ATT&amp;CK techniques</div>{attack}"
+    rail = {"s-hi": "r-hi", "s-med": "r-med"}.get(_score_class(s["priority"]), "")
     return f"""
-<div class="card">
+<article class="card {rail}">
   <div class="card-head">
-    <div class="score {_score_class(s['priority'])}" title="Priority score out of 100">{s['priority']}</div>
-    <div>
+    {_badge(s['priority'])}
+    <div style="min-width:0">
       <h3><a href="{e(safe_url(s.get('url')))}" rel="noopener noreferrer" target="_blank">{e(s['title'])}</a></h3>
       <div class="sub">{e(s['source'])} · {e(_when(s.get('published')))}{also}</div>
       {_chips(s)}
     </div>
   </div>
   <div class="rookie"><b>In plain English:</b> {e(s['rookie'])}</div>
-  {f'<div class="muted">{e(s["summary"])}</div>' if s.get("summary") else ""}
-  <div class="label">Do this for UK clients</div>
-  <ul>{"".join(f"<li>{e(a)}</li>" for a in s["actions"])}</ul>
-  <div class="label">Enrich it further</div>
-  <ul>{"".join(f"<li>{e(a)}</li>" for a in s["enrich_steps"])}</ul>
+  {f'<div class="muted" style="font-size:14px">{e(s["summary"])}</div>' if s.get("summary") else ""}
+  <div class="cols">
+    <div><div class="label">Do this for UK clients</div>
+    <ul>{"".join(f"<li>{e(a)}</li>" for a in s["actions"])}</ul></div>
+    <div><div class="label">Enrich it further</div>
+    <ul>{"".join(f"<li>{e(a)}</li>" for a in s["enrich_steps"])}</ul></div>
+  </div>
   {iocs}{attack}
   <details><summary>Why this score?</summary><div class="sub">{e(why)}</div></details>
-</div>"""
+</article>"""
 
 
 def _vuln_table(stories):
@@ -265,7 +335,7 @@ def _infra(stats):
 
 def _all_table(stories):
     rows = "".join(
-        f"<tr><td class='num'><span class='score {_score_class(s['priority'])}' style='padding:3px 6px'>{s['priority']}</span></td>"
+        f"<tr><td class='num'>{_pill(s['priority'])}</td>"
         f"<td><a href='{e(safe_url(s.get('url')))}' target='_blank' rel='noopener noreferrer'>{e(s['title'])}</a>"
         f"<div class='sub'>{e(', '.join(s.get('threat_types', [])[:3] + s.get('sectors', [])[:2]))}</div></td>"
         f"<td>{e(s['source'])}</td><td class='num'>{s['uk_score']}</td></tr>" for s in stories)
@@ -323,7 +393,7 @@ def render_html(ctx):
     top = pick_top(stories)
     rest = [s for s in stories if s not in top]
     archive = "".join(f"<a href='briefs/{e(d)}.md'>{e(d)}</a> · " for d in ctx.get("archive", [])[:14])
-    demo = ("<section style='border-color:var(--med)'><b>Demo mode:</b> built from sample data in tests/fixtures, "
+    demo = ("<section style='border-left:4px solid var(--warn)'><b>Demo mode:</b> built from sample data in tests/fixtures, "
             "not live feeds.</section>" if ctx.get("demo") else "")
     tiles = [
         (len(stories), "stories after de-duplication"),
@@ -333,34 +403,61 @@ def render_html(ctx):
         (len(stats.get("c2_uk") or []), "botnet C2s on UK networks"),
         (f"{ok}/{len(health)}", "sources healthy"),
     ]
-    return f"""<!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Threat Intel Field Brief</title>
-<meta name="description" content="Daily UK-focused cyber threat intelligence brief and knowledge pack for {e(ctx['date'])}">
-<style>{CSS}</style></head><body><div class="wrap">
-<header>
-  <div><h1>Threat Intel Field Brief</h1>
-  <div class="sub">{e(ctx['date_long'])} · generated {e(ctx['generated'])} UK time · {ctx['window']}</div></div>
-  <div style="display:flex;gap:8px;align-items:center"><span class="tlp">TLP:CLEAR</span>
-  <button class="toggle" id="theme" type="button">Light / dark</button></div>
-</header>
+    nav = [("top", "Top stories"), ("mix", "Threat mix"), ("patch", "Patch watch"), ("ransomware", "Ransomware"),
+           ("infra", "Infrastructure"), ("learn", "Knowledge pack"), ("all", "All stories"), ("sources", "Sources")]
+    body = f"""
 {demo}
 <section class="bluf"><h2>Your morning in 30 seconds</h2><ul>{"".join(f"<li>{e(l)}</li>" for l in bluf_lines(stories, stats))}</ul>
-<details><summary>New here? How to read this page</summary><p class="sub">Every story gets a <b>priority score</b> (0-100): higher means read it first.
-Red is 60 and above, amber 35-59, green below 35. <b>UK relevant</b> means UK words, UK sources or UK victims were found.
+<details><summary>New here? How to read this page</summary><p class="sub">Every story gets a <b>priority score</b> out of 100: the higher, the sooner you should read it.
+<b>HIGH</b> is 60 and above, <b>MED</b> 35-59, <b>LOW</b> under 35. <b>UK relevant</b> means UK words, UK sources or UK victims were found.
 <b>KEV</b> means attackers are already exploiting the bug. <b>EPSS</b> is the chance it gets exploited in the next 30 days.
-Each card tells you what it means in plain English, what to do for clients, and which lookups (enrichment) would make it more useful.</p></details></section>
+Each card tells you what it means in plain English, what to do for clients, and which lookups (enrichment) would add more context.
+The full guide is on the <a href="how-it-works.html">How it works</a> page.</p></details></section>
 <div class="tiles">{"".join(f"<div class='tile'><b>{e(v)}</b><span>{e(k)}</span></div>" for v, k in tiles)}</div>
-<section><h2>Top {len(top)} for your UK clients</h2>{"".join(_story_card(s) for s in top) or "<p class='muted'>No stories today.</p>"}</section>
-<section><h2>Patch watch: vulnerabilities</h2>{_vuln_table(stories)}</section>
-<section><h2>UK ransomware watch</h2>{_ransomware_table(stories, stats)}</section>
-<section><h2>Attacker infrastructure</h2>{_infra(stats)}</section>
-<section><h2>Daily knowledge pack</h2>{_pack(pack)}</section>
-<section><h2>Everything else</h2>{_all_table(rest)}</section>
-<section><h2>Source health</h2>{_health(health)}</section>
-<p class="sub">Past briefs: {archive or 'none yet'} Data: <a href="data/{e(ctx['date'])}.json">today's JSON</a>.
-Built from public sources: CISA, NCSC, NVD, FIRST EPSS, abuse.ch, ransomware.live and security news RSS. Always verify before acting.</p>
-</div><script>{JS}</script></body></html>
+<section id="top"><h2>Top {len(top)} for your UK clients</h2><p class="h-note">Ranked by priority. The coloured edge and badge show the level.</p>
+{"".join(_story_card(s) for s in top) or "<p class='muted'>No stories today.</p>"}</section>
+<div class="grid2" id="mix">
+<section><h2>Threat mix</h2><p class="h-note">How many of today's stories involve each threat type</p>{_bars(_mix(stories, "threat_types"))}</section>
+<section><h2>Sectors in the news</h2><p class="h-note">Which UK sectors today's stories touch</p>{_bars(_mix(stories, "sectors"))}</section>
+</div>
+<section id="patch"><h2>Patch watch</h2><p class="h-note">Exploited (KEV) and critical vulnerabilities, most urgent first</p>{_vuln_table(stories)}</section>
+<section id="ransomware"><h2>UK ransomware watch</h2>{_ransomware_table(stories, stats)}</section>
+<section id="infra"><h2>Attacker infrastructure</h2>{_infra(stats)}</section>
+<section id="learn"><h2>Daily knowledge pack</h2><p class="h-note">A new lesson each day, plus quick reviews of earlier ones</p>{_pack(pack)}</section>
+<section id="all"><h2>Everything else</h2>{_all_table(rest)}</section>
+<section id="sources"><h2>Source health</h2>{_health(health)}</section>
+<footer>Past briefs: {archive or 'none yet'} Data: <a href="data/{e(ctx['date'])}.json">today's JSON</a>.
+Built from public sources: CISA, NCSC, NVD, FIRST EPSS, abuse.ch, ransomware.live and security news RSS. Always verify before acting.</footer>"""
+    return page("Threat Intel Field Brief",
+                f"Daily UK-focused cyber threat intelligence brief and knowledge pack for {ctx['date']}",
+                "Threat Intel Field Brief",
+                f"{ctx['date_long']} · generated {ctx['generated']} UK time · {ctx['window']}",
+                body, nav=nav, links=[("how-it-works.html", "How it works")])
+
+
+def page(title, description, heading, subtitle, body, nav=None, links=None):
+    """Shared page shell: dark top bar, optional sticky section nav, content, theme toggle."""
+    nav_html = ""
+    if nav:
+        nav_html = ("<nav class='nav'><div class='in'>"
+                    + "".join(f"<a href='#{e(i)}'>{e(t)}</a>" for i, t in nav) + "</div></nav>")
+    link_html = "".join(f"<a class='toggle' href='{e(h)}'>{e(t)}</a>" for h, t in (links or []))
+    return f"""<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{e(title)}</title>
+<meta name="description" content="{e(description)}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>{CSS}</style></head><body>
+<header class="topbar"><div class="in">
+  <div><div class="eyebrow">UK cyber threat intelligence · daily</div><h1>{e(heading)}</h1>
+  <div class="sub">{e(subtitle)}</div></div>
+  <div class="actions">{link_html}<span class="tlp">TLP:CLEAR</span>
+  <button class="toggle" id="theme" type="button">Light / dark</button></div>
+</div></header>
+{nav_html}
+<main class="wrap">{body}</main>
+<script>{JS}</script></body></html>
 """
 
 

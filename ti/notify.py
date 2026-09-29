@@ -91,7 +91,10 @@ def send_brief(subject, markdown_body, dashboard_html="", attachment_name="threa
     msg["To"] = os.environ.get("BRIEF_TO") or user
     intro = "The full interactive dashboard is attached. Open the .html file to view it.\n\n"
     if dashboard_url:
-        intro = f"Full dashboard: {dashboard_url}\n\n"
+        base = dashboard_url.rstrip("/")
+        intro = (f"**[Open the interactive dashboard]({base}/)** · "
+                 f"[How the scoring works]({base}/how-it-works.html) · "
+                 "also attached for offline reading\n\n")
     msg.set_content(intro + markdown_body)
     msg.add_alternative(markdown_to_html(intro + markdown_body), subtype="html")
     if dashboard_html:
