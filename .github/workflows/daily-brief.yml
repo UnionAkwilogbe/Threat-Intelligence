@@ -34,7 +34,8 @@ jobs:
 
       - name: Build today's brief
         env:
-          # All optional. Add them under Settings > Secrets and variables > Actions.
+          # Add these under Settings > Secrets and variables > Actions.
+          # For the email you only need SMTP_USER and SMTP_PASSWORD (a Gmail app password).
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
           ABUSECH_AUTH_KEY: ${{ secrets.ABUSECH_AUTH_KEY }}
           CLIENTS_JSON: ${{ secrets.CLIENTS_JSON }}
@@ -44,7 +45,8 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           BRIEF_TO: ${{ secrets.BRIEF_TO }}
           BRIEF_FROM: ${{ secrets.BRIEF_FROM }}
-          DASHBOARD_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          # Set a DASHBOARD_URL repository variable only if you publish the page somewhere.
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
         run: |
           HOURS="${{ github.event.inputs.hours }}"
           # Monday mornings cover the whole weekend

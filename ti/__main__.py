@@ -65,8 +65,9 @@ def main(argv=None):
     with open(os.path.join(args.out, "latest.md"), "w", encoding="utf-8") as fh:
         fh.write(md)
     ctx["archive"] = render.list_archive(briefs)
+    page = render.render_html(ctx)
     with open(os.path.join(args.out, "index.html"), "w", encoding="utf-8") as fh:
-        fh.write(render.render_html(ctx))
+        fh.write(page)
     with open(os.path.join(data, f"{day}.json"), "w", encoding="utf-8") as fh:
         json.dump({"date": day, "stories": stories, "stats": stats, "health": health,
                    "lesson": pack["lesson"]["id"]}, fh, indent=1, default=str)
@@ -78,10 +79,13 @@ def main(argv=None):
     if args.email:
         url = os.environ.get("DASHBOARD_URL", "")
         try:
-            sent = notify.send_brief(f"Threat Intel Field Brief · {ctx['date_long']}", md, url)
-            print("Emailed brief." if sent else "Email not configured, skipped.")
-        except Exception as err:  # noqa: BLE001 - email failure must not fail the build
-            print(f"Email failed: {err}", file=sys.stderr)
+            sent = notify.send_brief(f"Threat Intel Field Brief · {ctx['date_long']}", md,
+                                     dashboard_html=page, attachment_name=f"threat-brief-{day}.html",
+                                     dashboard_url=url)
+            print("Emailed brief." if sent else
+                  "::warning::Email not configured: add SMTP_USER and SMTP_PASSWORD secrets.")
+        except Exception as err:  # noqa: BLE001 - email failure must not stop the brief being saved
+            print(f"::warning::Email failed: {err}", file=sys.stderr)
 
     if not any(h["ok"] for h in health):
         print("Every source failed. Check network access.", file=sys.stderr)

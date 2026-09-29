@@ -59,17 +59,30 @@ Add or remove feeds in `ti/sources.py` (the `RSS_FEEDS` list).
 
 ## Setup (about 10 minutes, once)
 
-1. **Turn on the website.** In GitHub: *Settings → Pages → Build and deployment → Deploy from a branch*, pick `main` and the `/docs` folder, then save.
-   Your dashboard will live at `https://<your-username>.github.io/Threat-Intelligence/`.
-2. **Run it once by hand.** *Actions tab → Daily threat intel brief → Run workflow.* After that it runs by itself every morning at about 06:17 UK time (05:17 in winter), and looks back 72 hours on Mondays to cover the weekend.
-3. **(Optional) Get it by email.** Add these under *Settings → Secrets and variables → Actions*:
-   `SMTP_HOST`, `SMTP_PORT` (usually 587), `SMTP_USER`, `SMTP_PASSWORD`, `BRIEF_TO`.
-   For Gmail, use `smtp.gmail.com` and an [app password](https://support.google.com/accounts/answer/185833), never your normal password.
-4. **(Optional) Better data.** A free `NVD_API_KEY` (from nvd.nist.gov) avoids NVD rate limits. A free `ABUSECH_AUTH_KEY` (from auth.abuse.ch) keeps abuse.ch feeds working if they require one.
+The brief arrives **by email every morning**: a readable summary in the email, with the full
+interactive dashboard attached as an `.html` file (tap it to open, works on a phone).
+This works with a **private** repo. No GitHub Pages needed.
 
-> **Privacy:** if the repo is public, the dashboard is public too. That is fine for public threat data,
-> but **do not put real client names in `clients.json` in a public repo.** Use codenames or make the repo private.
-> (On a free plan, GitHub Pages needs a public repo. Email-only works with a private repo.)
+1. **Make a Gmail app password.** Google blocks your normal password for apps like this, so you create a special one.
+   - Turn on 2-Step Verification: [myaccount.google.com/security](https://myaccount.google.com/security).
+   - Then go to [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords), name it `threat brief`, and copy the 16-letter password.
+2. **Add two secrets in GitHub.** Repo → *Settings → Secrets and variables → Actions → New repository secret*:
+   - `SMTP_USER` = your Gmail address
+   - `SMTP_PASSWORD` = the 16-letter app password (spaces are fine)
+
+   The brief is sent from and to that address. To send it to someone else too, add `BRIEF_TO`
+   (comma-separated addresses).
+3. **Merge into `main`.** GitHub only runs scheduled workflows from the main branch.
+4. **Test it now.** *Actions tab → Daily threat intel brief → Run workflow.* The email lands within a few minutes.
+   After that it runs by itself every morning at about 06:17 UK time (05:17 in winter), and looks back 72 hours on Mondays to cover the weekend.
+   If no email arrives, open the run in the Actions tab: a yellow warning explains what went wrong.
+5. **(Optional) Better data.** A free `NVD_API_KEY` (from nvd.nist.gov) avoids NVD rate limits. A free `ABUSECH_AUTH_KEY` (from auth.abuse.ch) keeps abuse.ch feeds working if they require one.
+
+Every brief is also saved in the repo under `docs/` (`docs/latest.md` is always today's), so you can read past ones on GitHub.
+
+> **Want a web page instead?** GitHub Pages needs a public repo on the free plan. If you ever make the repo public:
+> *Settings → Pages → Deploy from a branch → `main` / `/docs`*, then add a repository variable `DASHBOARD_URL`
+> with the page address so the email links to it. Keep real client names out of a public repo (see below).
 
 ---
 
@@ -112,7 +125,7 @@ Add your own lessons to `ti/data/nuggets.json` and terms to `ti/data/glossary.js
 ## Run it on your own computer
 
 ```bash
-python -m ti --demo          # sample data, no internet needed → opens demo_output/index.html
+python -m ti --demo          # sample data, no internet needed → writes demo_output/index.html
 python -m ti                 # live feeds → docs/index.html and docs/briefs/<date>.md
 python -m ti --hours 72      # look back further
 python -m unittest discover -s tests   # run the tests

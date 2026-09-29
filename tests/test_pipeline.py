@@ -82,6 +82,16 @@ class ClientMatchTest(unittest.TestCase):
         self.assertEqual([c["client"] for c in law["clients"]], ["B"])
 
 
+class EmailTest(unittest.TestCase):
+    def test_markdown_to_html_escapes_and_links(self):
+        from ti import notify
+        out = notify.markdown_to_html("# Hi\n- **bold** <b>x</b>\n1. [link](https://example.com)\n")
+        self.assertIn("<h1>Hi</h1>", out)
+        self.assertIn("<b>bold</b> &lt;b&gt;x&lt;/b&gt;", out)
+        self.assertIn('<a href="https://example.com">link</a>', out)
+        self.assertNotIn("href", notify.markdown_to_html("[x](javascript:alert(1))"))
+
+
 class NuggetTest(unittest.TestCase):
     def test_every_nugget_complete(self):
         fields = {"id", "title", "category", "explain", "analogy", "uk_angle",
