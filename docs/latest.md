@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Tuesday 29 September 2026
 
-_TLP:CLEAR · generated 13:52 UK time · last 36 hours_
+_TLP:CLEAR · generated 13:53 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -118,4 +118,4 @@ _Answer:_ Likely (or probable).
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 16/18 (failed: ICO (UK regulator), CISA Advisories)
+Sources healthy: 16/17 (failed: ICO enforcement (UK regulator))

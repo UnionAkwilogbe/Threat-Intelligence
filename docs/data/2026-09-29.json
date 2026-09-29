@@ -3477,11 +3477,11 @@
    "error": ""
   },
   {
-   "name": "ICO (UK regulator)",
+   "name": "ICO enforcement (UK regulator)",
    "id": "ico",
    "ok": false,
    "count": 0,
-   "error": "https://ico.org.uk/global/rss-feeds/news/: HTTP Error 404: Not Found"
+   "error": "syntax error: line 1, column 0"
   },
   {
    "name": "Computer Weekly Security",
@@ -3545,13 +3545,6 @@
    "ok": true,
    "count": 10,
    "error": ""
-  },
-  {
-   "name": "CISA Advisories",
-   "id": "cisa_adv",
-   "ok": false,
-   "count": 0,
-   "error": "https://www.cisa.gov/cybersecurity-advisories/all.xml: HTTP Error 403: Forbidden"
   },
   {
    "name": "CISA KEV",
