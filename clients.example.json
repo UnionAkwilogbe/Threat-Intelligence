@@ -1,0 +1,17 @@
+{
+  "_readme": "Copy this file to clients.json and edit it. Use codenames, not real client names, if this repo is public. Matching is case-insensitive.",
+  "clients": [
+    {
+      "name": "Client A (law firm, London)",
+      "sectors": ["Legal"],
+      "vendors": ["Fortinet", "Microsoft 365", "iManage", "Citrix"],
+      "keywords": ["law firm", "solicitor"]
+    },
+    {
+      "name": "Client B (NHS supplier)",
+      "sectors": ["Health / NHS"],
+      "vendors": ["Ivanti", "Palo Alto", "VMware"],
+      "keywords": ["NHS", "patient data"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"vulnerabilities":[{"cve":{"id":"CVE-2026-10003","published":"2026-09-28T14:15:00.000","descriptions":[{"lang":"en","value":"A remote code execution flaw in DemoCMS allows unauthenticated attackers to run code."}],"metrics":{"cvssMetricV31":[{"cvssData":{"baseScore":9.8}}]}}}]}

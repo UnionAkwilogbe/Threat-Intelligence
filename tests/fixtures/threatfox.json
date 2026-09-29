@@ -1,0 +1,3 @@
+{"1":[{"ioc_value":"198.51.100.23:443","ioc_type":"ip:port","malware_printable":"Lumma Stealer"}],
+ "2":[{"ioc_value":"update-check.example.com","ioc_type":"domain","malware_printable":"Lumma Stealer"}],
+ "3":[{"ioc_value":"9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08","ioc_type":"sha256_hash","malware_printable":"Cobalt Strike"}]}

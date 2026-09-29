@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>NCSC (sample)</title>
+<item><title>NCSC urges UK organisations to patch ExampleVPN gateways (CVE-2026-10001)</title>
+<link>https://example.com/ncsc/examplevpn</link><pubDate>Mon, 28 Sep 2026 08:00:00 +0000</pubDate>
+<description>&lt;p&gt;The NCSC is aware of active exploitation of CVE-2026-10001 in ExampleVPN affecting UK organisations. Attackers use T1190 then T1078.&lt;/p&gt;</description></item>
+<item><title>Joint advisory: state-sponsored actor targets UK telecoms</title>
+<link>https://example.com/ncsc/telecoms</link><pubDate>Sun, 27 Sep 2026 10:00:00 +0000</pubDate>
+<description>A China-linked APT group is targeting UK and Five Eyes telecom carriers. C2 at 203.0.113.45 and update-check[.]example.com.</description></item>
+</channel></rss>

@@ -1,0 +1,5 @@
+[
+ {"victim":"Example Widgets Ltd","group":"samplelocker","discovered":"2026-09-28 06:00:00","country":"GB","activity":"Manufacturing","url":"https://example.com/rw/1"},
+ {"victim":"Demo Solicitors LLP","group":"samplelocker","discovered":"2026-09-27 20:00:00","country":"GB","activity":"Legal"},
+ {"victim":"Muster GmbH","group":"otherteam","discovered":"2026-09-28 01:00:00","country":"DE","activity":"Retail"}
+]

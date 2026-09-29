@@ -1,0 +1,4 @@
+# URLhaus sample
+# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter
+"1","2026-09-28 10:00:00","http://files.example.co.uk/invoice.exe","online","2026-09-28","malware_download","exe,AgentTesla","https://example.com/u/1","tester"
+"2","2026-09-28 11:00:00","http://203.0.113.9/bins/x86","online","2026-09-28","malware_download","elf,Mirai","https://example.com/u/2","tester"

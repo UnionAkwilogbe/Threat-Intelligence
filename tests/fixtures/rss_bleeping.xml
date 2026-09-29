@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Bleeping (sample)</title>
+<item><title>New infostealer spreads through fake browser updates</title>
+<link>https://example.com/bc/stealer</link><pubDate>Mon, 28 Sep 2026 12:00:00 +0000</pubDate>
+<description>The malware steals session cookies. Sample SHA256 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08 contacts 198.51.100.23.</description></item>
+<item><title>NCSC urges UK organisations to patch ExampleVPN gateways (CVE-2026-10001)</title>
+<link>https://example.com/bc/examplevpn</link><pubDate>Mon, 28 Sep 2026 09:00:00 +0000</pubDate>
+<description>Duplicate story from another outlet.</description></item>
+</channel></rss>
