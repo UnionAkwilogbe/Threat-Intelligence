@@ -13,7 +13,7 @@ import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import enrich, howto, nuggets, notify, render, sources
+from . import enrich, howto, nuggets, notify, render, rfi, sources
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UK = ZoneInfo("Europe/London")
@@ -39,6 +39,7 @@ def main(argv=None):
     print(f"  {len(items)} raw items, {sum(h['ok'] for h in health)}/{len(health)} sources OK")
 
     stories, epss = enrich.enrich_all(items, stats)
+    rfis = rfi.track(rfi.load_rfis(), stories, stats.get("kev_index", {}))
     stats.pop("kev_index", None)  # large, not needed in the output
     pack = nuggets.build_pack(now.date(), stories)
 
@@ -56,6 +57,7 @@ def main(argv=None):
         "stats": stats,
         "health": health,
         "pack": pack,
+        "rfis": rfis,
         "demo": args.demo,
     }
 

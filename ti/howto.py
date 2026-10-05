@@ -167,6 +167,7 @@ list is not repetitive. Everything else goes into the searchable <i>Everything e
 <tr><td>Add UK keywords or change their weight</td><td><code>ti/enrich.py</code>, <code>UK_TERMS</code></td></tr>
 <tr><td>Add a sector or threat type</td><td><code>ti/enrich.py</code>, <code>SECTORS</code> / <code>THREAT_TYPES</code> / <code>PLAYBOOK</code></td></tr>
 <tr><td>Track your clients</td><td>The <code>CLIENTS_JSON</code> secret (see the README). Use codenames, because this site is public.</td></tr>
+<tr><td>Log a client question (RFI) and have it re-checked daily</td><td><code>ti/data/rfis.json</code>. Use codenames such as Client A, because this site is public.</td></tr>
 <tr><td>Add lessons or glossary words</td><td><code>ti/data/nuggets.json</code>, <code>ti/data/glossary.json</code></td></tr>
 <tr><td>Change the time it runs</td><td><code>.github/workflows/daily-brief.yml</code>, the <code>cron</code> line (times are UTC)</td></tr>
 </tbody></table></div></section>"""

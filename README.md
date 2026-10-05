@@ -122,6 +122,19 @@ Sector names you can use: `Health / NHS`, `Finance`, `Retail`, `Public sector`, 
 
 ---
 
+## Client requests (RFIs)
+
+When a client asks a question (for example "are there any Okta vulnerabilities we should know about?"),
+write the answer into `ti/data/rfis.json`: a bottom line, findings, an assessment, CVEs, actions and sources.
+It appears at the top of the dashboard under **Client requests**, and every morning the robot re-checks it:
+
+- **CISA KEV**: has any CVE for this vendor been added to the exploited list?
+- **Today's stories**: does anything mention the request's keywords?
+- **New CVEs**: has a CVE appeared that the answer does not cover yet?
+
+If anything turns up, the request turns red and says **Needs update**, so you know to go back to the client.
+The site is public, so use codenames (Client A, Client B) in this file, never real names.
+
 ## The daily knowledge pack
 
 Every brief includes:
