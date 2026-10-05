@@ -1,17 +1,36 @@
 # Threat Intel Field Brief: Monday 05 October 2026
 
-_TLP:CLEAR · generated 12:23 UK time · last 36 hours_
+_TLP:CLEAR · generated 13:21 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Citrix patches NetScaler SAML zero-day exploited in attacks (priority 54).
+- Read first: Westrop Primary & Nursery School listed by thegentlemen ransomware (priority 60).
 - 6 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 2 UK organisations named on ransomware leak sites (sectors: Education, Hospitality).
 - 1 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/)
+### 1. [Westrop Primary & Nursery School listed by thegentlemen ransomware](https://www.ransomware.live/id/V2VzdHJvcCBQcmltYXJ5ICYgTnVyc2VyeSBTY2hvb2xAdGhlZ2VudGxlbWVu)
+**Priority 60** · ransomware.live · UK relevant · _Ransomware, Education_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
+
+### 2. [Sports Events365 listed by qilin ransomware](https://www.ransomware.live/id/U3BvcnRzIEV2ZW50czM2NUBxaWxpbg==)
+**Priority 56** · ransomware.live · UK relevant · _Ransomware, Hospitality_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+
+### 3. [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/)
 **Priority 54** · BleepingComputer · KEV · EPSS 0% · _Zero-day, Exploited vuln, DDoS_
 
 **In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
@@ -20,7 +39,7 @@ _TLP:CLEAR · generated 12:23 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 2. [More UK Schools Are Recovering Faster from Cyber Incidents](https://www.infosecurity-magazine.com/news/uk-schools-recovering-faster/)
+### 4. [More UK Schools Are Recovering Faster from Cyber Incidents](https://www.infosecurity-magazine.com/news/uk-schools-recovering-faster/)
 **Priority 38** · Infosecurity Magazine · UK relevant · _Education_
 
 **In plain English:** General security news worth knowing.
@@ -29,7 +48,7 @@ _TLP:CLEAR · generated 12:23 UK time · last 36 hours_
 
 **Enrich next:** Sector (Education) → tag every client in that sector and send them a short heads-up
 
-### 3. [CVE-2026-102490: Zammad GmbH Zammad Improper Privilege Management Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102490)
+### 5. [CVE-2026-102490: Zammad GmbH Zammad Improper Privilege Management Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102490)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -38,7 +57,7 @@ _TLP:CLEAR · generated 12:23 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-104286: Fortinet FortiMail Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-104286)
+### 6. [CVE-2026-104286: Fortinet FortiMail Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-104286)
 **Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -47,7 +66,7 @@ _TLP:CLEAR · generated 12:23 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-76504: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-76504)
+### 7. [CVE-2026-76504: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-76504)
 **Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -56,30 +75,12 @@ _TLP:CLEAR · generated 12:23 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-86950: Apple Multiple Products Out-of-Bounds Write Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-86950)
+### 8. [CVE-2026-86950: Apple Multiple Products Out-of-Bounds Write Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-86950)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-10-02): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-105285: A security vulnerability has been detected in Totolink A3002MU 1.0.0-B20230403.1455. This affects an unknown function of the file…](https://nvd.nist.gov/vuln/detail/CVE-2026-105285)
-**Priority 34** · NVD · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE](https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html)
-**Priority 28** · The Hacker News · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -118,13 +119,13 @@ _Answer:_ Using one known indicator to discover related indicators, for example 
 - **Companies House as an enrichment source** (3d ago): What does a SIC code tell you about a company? _Answer: Its industry or type of business activity._
 - **Traffic Light Protocol (TLP 2.0)** (7d ago): Which TLP label means 'share with anyone, publicly'? _Answer: TLP:CLEAR._
 
-### Enrichment drill: Citrix patches NetScaler SAML zero-day exploited in attacks
+### Enrichment drill: Westrop Primary & Nursery School listed by thegentlemen ransomware
 
-1. Open nvd.nist.gov/vuln/detail/CVE-2026-88779. Note the CVSS score and affected product.
-2. Check CVE-2026-88779 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
-3. Find the vendor's own advisory. Is there a patch or only a workaround?
-4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
-5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
+1. Search Companies House for 'Westrop Primary & Nursery School'. Note its SIC code, size and registered region.
+2. Look up thegentlemen on ransomware.live. How many UK victims has it listed this year?
+3. Search 'thegentlemen initial access' to find how they usually break in (ATT&CK tactic TA0001).
+4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
+5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
 Sources healthy: 16/17 (failed: ICO enforcement (UK regulator))
