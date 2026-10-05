@@ -506,8 +506,12 @@ def render_html(ctx):
     ]
     rfis = ctx.get("rfis") or []
     high = sum(1 for x in stories if x["priority"] >= 60)
-    headline = (f"{high} high-priority item{'s' if high != 1 else ''} today. "
-                + (f"Start with: {top[0]['title']}" if top else "Quiet day."))
+    if not top:
+        headline = "Quiet day: nothing new in the feeds."
+    elif high:
+        headline = f"{high} high-priority item{'s' if high != 1 else ''} today. Start with: {top[0]['title']}"
+    else:
+        headline = f"No high-priority items today. Top story: {top[0]['title']}"
     nav = ([("rfi", "Client requests")] if rfis else []) + [("top", "Top stories"),("mix", "Threat mix"), ("patch", "Patch watch"), ("ransomware", "Ransomware"),
            ("infra", "Infrastructure"), ("learn", "Knowledge pack"), ("all", "All stories"), ("sources", "Sources")]
     body = f"""
