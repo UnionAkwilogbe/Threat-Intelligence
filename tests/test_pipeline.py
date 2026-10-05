@@ -122,6 +122,31 @@ class ParsingTest(unittest.TestCase):
 
 
 
+class RfiTest(unittest.TestCase):
+    def test_tracking_flags_new_evidence(self):
+        from ti import rfi
+        rfis = [{"id": "RFI-X", "topic": "Okta", "keywords": ["okta"], "cves": [{"id": "CVE-2026-1", "cvss": 5}]}]
+        stories = [{"title": "Okta bug CVE-2026-2 exploited", "summary": "", "cves": ["CVE-2026-2"], "source": "x"},
+                   {"title": "Unrelated", "summary": "", "cves": [], "source": "y"}]
+        quiet = rfi.track(rfis, stories[1:], {"CVE-2020-1": {"vendorProject": "Microsoft", "product": "Windows"}})[0]
+        self.assertFalse(quiet["needs_update"])
+        self.assertTrue(quiet["kev_checked"])
+        busy = rfi.track(rfis, stories, {"CVE-2026-2": {"vendorProject": "Okta", "product": "Gateway"}})[0]
+        self.assertTrue(busy["needs_update"])
+        self.assertEqual([k["id"] for k in busy["kev_hits"]], ["CVE-2026-2"])
+        self.assertEqual(busy["new_cves"], ["CVE-2026-2"])
+
+    def test_shipped_rfis_render(self):
+        from ti import rfi
+        tracked = rfi.track(rfi.load_rfis(), [], {})
+        self.assertTrue(tracked)
+        html = render._rfi_section(tracked)
+        self.assertIn("Client requests", html)
+        self.assertIn("Not checked today", html)
+        for r in tracked:  # public site: no real names, only codenames
+            self.assertTrue(r["client"].startswith("Client "))
+
+
 class HowItWorksTest(unittest.TestCase):
     def test_page_renders_with_link(self):
         from ti import howto

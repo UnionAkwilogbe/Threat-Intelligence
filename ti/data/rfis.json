@@ -1,0 +1,56 @@
+{
+  "_readme": "Client requests for information (RFIs). Each daily run re-checks CISA KEV and the day's stories against `keywords` and shows what is new. This file is published on a public site: use client codenames, never real names.",
+  "rfis": [
+    {
+      "id": "RFI-001",
+      "client": "Client A",
+      "topic": "Okta vulnerabilities",
+      "opened": "2026-10-05",
+      "status": "Answered",
+      "keywords": ["okta", "auth0"],
+      "bluf": "No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.",
+      "confidence": "Moderate confidence. KEV and the CVE records were checked directly; Okta's own advisory pages could not be reached and are cited from search results.",
+      "findings": [
+        {
+          "title": "Patch batch: September 2026 advisories",
+          "level": "Medium",
+          "text": "Okta published fixes for bugs in its self-hosted components, which Okta found by scanning its own code with AI. Okta reports no evidence of exploitation, and none are on CISA's Known Exploited Vulnerabilities list (catalogue 2026.10.04). Okta's cloud service is patched by Okta; customers only need to act if they run the components below."
+        },
+        {
+          "title": "Active threat: vishing against Okta SSO",
+          "level": "High",
+          "text": "Since January 2026, groups linked to ShinyHunters, Scattered Spider and Lapsus$ ('Scattered LAPSUS$ Hunters') have called staff and IT help desks, steering victims through fake Okta login pages in real time to capture passwords and MFA approvals. Push MFA with number matching does not stop it. Once inside Okta, they move into connected SaaS apps (Salesforce, Microsoft 365, Google Workspace) and steal data for extortion. Reported targets include financial services."
+        }
+      ],
+      "assessment": "It is unlikely (25-35%) that the September Okta bugs are being exploited at scale today, but a realistic possibility (40-50%) that exploitation follows now that details are public. It is highly likely (80-90%) that vishing against Okta-using organisations continues through the rest of 2026.",
+      "cves": [
+        {"id": "CVE-2026-85982", "product": "Auth0 AD/LDAP Connector", "issue": "Stored cross-site scripting in the admin panel", "cvss": 9.0, "fixed": "7.0.0 (affected 6.5.0 and below)"},
+        {"id": "CVE-2026-78626", "product": "Okta Access Gateway", "issue": "Authorisation bypass in Protected Rules", "cvss": 8.1, "fixed": "2026.9.1"},
+        {"id": "CVE-2026-85983", "product": "Auth0 AD/LDAP Connector", "issue": "Local privilege escalation to code execution", "cvss": 7.8, "fixed": "7.0.0"},
+        {"id": "CVE-2026-78627", "product": "Okta Hyperdrive Integration Plugin", "issue": "OAuth client secret written to logs in plain text", "cvss": 7.3, "fixed": "1.5.2 (affected 1.2.0 up to 1.5.2)"},
+        {"id": "CVE-2026-78552", "product": "Okta Access Gateway", "issue": "Admin can inject nginx/Lua directives", "cvss": 6.0, "fixed": "2026.9.1"},
+        {"id": "CVE-2026-78620", "product": "Okta Access Gateway", "issue": "Kerberos config path traversal (file write)", "cvss": 5.9, "fixed": "2026.9.1"},
+        {"id": "CVE-2026-78631", "product": "Okta Hyperdrive Agent", "issue": "SAML assertion written to logs after MFA", "cvss": 5.3, "fixed": "1.5.2 (affected 1.4.0 up to 1.5.2)"},
+        {"id": "CVE-2026-77585", "product": "Okta Privileged Access Client", "issue": "SSH target treated as a command-line option", "cvss": 5.3, "fixed": "1.111.1 (affected 1.59.0 up to 1.111.1)"}
+      ],
+      "actions": [
+        "Check whether you run any of the listed self-hosted components and upgrade them to the fixed versions.",
+        "If you used the Hyperdrive installer, rotate the OAuth client secret and clear old installer and agent logs, since they may hold secrets or SAML assertions.",
+        "Move admins and help desk staff to phishing-resistant MFA (Okta FastPass, FIDO2 security keys or passkeys), then everyone else.",
+        "Use Okta network zones to allow sign-ins only from expected networks and block anonymisers (VPNs, Tor, proxies).",
+        "Tighten help desk checks before any password or MFA reset, for example a call back to a known number or manager approval.",
+        "Watch the Okta System Log for new MFA enrolments or resets, sign-ins from new devices or locations, and new admin role grants, and alert on them."
+      ],
+      "sources": [
+        {"name": "CISA KEV catalogue (GitHub mirror, checked 2026-10-05)", "url": "https://github.com/cisagov/kev-data"},
+        {"name": "Okta security advisories", "url": "https://trust.okta.com/security-advisories/"},
+        {"name": "Okta Security Advisory Summary: September 2026", "url": "https://support.okta.com/help/s/article/security-advisory-summary-september-2026?language=en_US"},
+        {"name": "CVE records (CVE Program, cvelistV5)", "url": "https://github.com/CVEProject/cvelistV5"},
+        {"name": "Help Net Security: Okta warns of real-time vishing kits (Jan 2026)", "url": "https://www.helpnetsecurity.com/2026/01/23/okta-vishing-adaptable-phishing-kits/"},
+        {"name": "The Register: ShinyHunters claims Okta customer breaches (Jan 2026)", "url": "https://www.theregister.com/2026/01/23/shinyhunters_claims_okta_customer_breaches/"},
+        {"name": "SecurityWeek: Over 100 organisations targeted", "url": "https://www.securityweek.com/over-100-organizations-targeted-in-shinyhunters-phishing-campaign/"},
+        {"name": "Obsidian Security: ShinyHunters' 2026 vishing campaign", "url": "https://www.obsidiansecurity.com/blog/behind-the-breach-shinyhunters-2026-voice-phishing-campaign"}
+      ]
+    }
+  ]
+}

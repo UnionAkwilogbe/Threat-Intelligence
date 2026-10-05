@@ -156,6 +156,15 @@ def collect_rss(feed, since):
     return {"items": items, "stats": {}}
 
 
+def _kev_name(v):
+    """CISA names usually already start with vendor and product; avoid saying them twice."""
+    name = (v.get("vulnerabilityName") or "").strip()
+    vendor, product = v.get("vendorProject", ""), v.get("product", "")
+    if vendor and name.lower().startswith(vendor.lower()):
+        return name
+    return f"{vendor} {product} {name}".strip()
+
+
 def collect_kev(since):
     """CISA Known Exploited Vulnerabilities: bugs attackers are using right now."""
     data = fetch_json("kev.json", KEV_URL)
@@ -171,8 +180,7 @@ def collect_kev(since):
             "source": "CISA KEV",
             "source_id": "kev",
             "kind": "vuln",
-            "title": f"{v['cveID']}: {v.get('vendorProject', '')} {v.get('product', '')} "
-                     f"{v.get('vulnerabilityName', '')}".strip(),
+            "title": f"{v['cveID']}: {_kev_name(v)}",
             "url": f"https://nvd.nist.gov/vuln/detail/{v['cveID']}",
             "published": _iso(added),
             "summary": clean_text(v.get("shortDescription")),
