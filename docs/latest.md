@@ -1,37 +1,35 @@
-# Threat Intel Field Brief: Saturday 10 October 2026
+# Threat Intel Field Brief: Sunday 11 October 2026
 
-_TLP:CLEAR · generated 12:14 UK time · last 36 hours_
+_TLP:CLEAR · generated 12:27 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: lopay listed by Black X ransomware (priority 70).
-- 6 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 UK organisations named on ransomware leak sites (sectors: Financial Services).
-- 3 stories with strong UK relevance.
+- Read first: CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability (priority 55).
+- 5 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [lopay listed by Black X ransomware](https://www.ransomware.live/id/bG9wYXlAQmxhY2sgWA==)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Finance, Financial Services_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 2. [Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies](https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html)
-**Priority 68** · The Hacker News · KEV · EPSS 98% · _Exploited vuln, Nation-state / APT_
+### 1. [CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2015-5477)
+**Priority 55** · CISA KEV · KEV · EPSS 99% · _Exploited vuln, DDoS_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-11): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 2. [CVE-2015-3306: ProFTPD Improper Access Control Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2015-3306)
+**Priority 55** · CISA KEV · KEV · EPSS 99% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-11): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ### 3. [CVE-2016-3081: Apache Struts Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2016-3081)
-**Priority 54** · CISA KEV · KEV · EPSS 95% · _Exploited vuln_
+**Priority 54** · CISA KEV · KEV · EPSS 96% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -39,16 +37,7 @@ _TLP:CLEAR · generated 12:14 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2015-5477)
-**Priority 53** · CISA KEV · KEV · EPSS 92% · _Exploited vuln, DDoS_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-11): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 5. [CVE-2023-22894: Strapi Cleartext Storage of Sensitive Information Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2023-22894)
+### 4. [CVE-2023-22894: Strapi Cleartext Storage of Sensitive Information Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2023-22894)
 **Priority 49** · CISA KEV · KEV · EPSS 71% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,17 +46,8 @@ _TLP:CLEAR · generated 12:14 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [UK and Allies Warn of Cyber Threat from China’s Integrity Technology Group](https://www.infosecurity-magazine.com/news/uk-allies-threat-china-integrity/)
-**Priority 38** · Infosecurity Magazine · UK relevant · _Nation-state / APT_
-
-**In plain English:** Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.
-
-**Do this:** Map the reported techniques to MITRE ATT&CK and check client detections cover them. Check if the NCSC has issued a joint advisory with indicators to hunt for.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 7. [CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2021-3199)
-**Priority 38** · CISA KEV · KEV · EPSS 15% · _Exploited vuln_
+### 5. [CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2021-3199)
+**Priority 39** · CISA KEV · KEV · EPSS 19% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -75,14 +55,32 @@ _TLP:CLEAR · generated 12:14 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 8. [CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-88779)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln, DDoS_
+### 6. [CVE-2026-108540: A flaw has been found in OpenSpug Spug up to 3.4.0/4.0.1. This impacts an unknown function of the file /exec/transfer of the component…](https://nvd.nist.gov/vuln/detail/CVE-2026-108540)
+**Priority 24** · NVD
 
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+**In plain English:** General security news worth knowing.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-07): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 7. [CVE-2026-108707: Wukong_HRM through commit 186115e contains an authentication bypass vulnerability in ParamAspect that allows unauthenticated attackers to…](https://nvd.nist.gov/vuln/detail/CVE-2026-108707)
+**Priority 23** · NVD
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [Cyber exec arrested in case allegedly tied to ShinyHunters hackers](https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/)
+**Priority 20** · BleepingComputer · _Ransomware, Charity_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Sector (Charity) → tag every client in that sector and send them a short heads-up
 
 ## Client request RFI-001: Okta vulnerabilities (Client A)
 
@@ -96,36 +94,36 @@ _TLP:CLEAR · generated 12:14 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 283: STIX, TAXII and MISP
+### Lesson 284: Indicators go stale: ageing and decay
 
-STIX is a standard format (JSON) for describing threat intel: indicators, malware, threat actors and the links between them. TAXII is a standard way to send STIX over the internet. MISP is popular free software for storing, enriching and sharing intel, and it speaks both.
+IOCs lose value over time. An IP used for C2 today may be a clean cloud server next month. Hashes stay accurate forever but the attacker stops using them. Good intel records first-seen and last-seen dates and expires old indicators.
 
-> **Think of it like this:** STIX is the language, TAXII is the postal service, MISP is the filing cabinet and post room together.
+> **Think of it like this:** Like milk: great today, questionable next week, harmful next month if you keep blocking with it.
 
-**UK angle:** Many UK sector sharing groups and MSSPs use MISP. Being able to export your enriched data as STIX makes it easy for clients' tools to consume.
+**UK angle:** Blocking a stale IP that now belongs to a UK cloud or CDN provider can break a client's business apps and destroy trust in your feed.
 
-**Enrichment tip:** Store enrichment as MISP attributes or tags (for example tlp:amber, admiralty-scale, sector) rather than free text, so machines can filter on them.
+**Enrichment tip:** Add first_seen, last_seen and an expiry date to every IOC. A sensible default: IPs 30 days, domains 90 days, hashes much longer.
 
-**Try it today:** Open this dashboard's docs/data JSON file and spot which fields would become STIX indicators.
+**Try it today:** Check the last_online date on one Feodo C2 entry in today's brief. Would you still block it?
 
-**Quiz:** Which one is the format and which is the transport: STIX or TAXII?  
-_Answer:_ STIX is the format. TAXII is the transport.
+**Quiz:** Why should IP indicators expire faster than hashes?  
+_Answer:_ IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file.
 
-**Word of the day: ATT&CK** · MITRE's free catalogue of attacker tactics and techniques, each with an ID such as T1566.
+**Word of the day: BEC** · Business Email Compromise. Fraud where attackers use or fake a real business email account to redirect payments.
 
 ### Review (spaced repetition)
 
-- **The Cyber Kill Chain** (1d ago): Which stage is a C2 (command and control) server? _Answer: Stage 6, Command and Control._
-- **MITRE ATT&CK in five minutes** (3d ago): What is the difference between a tactic and a technique? _Answer: A tactic is the goal (why). A technique is the method used to reach it (how)._
-- **IPs, ASNs and RIPE** (7d ago): Which regional registry covers UK IP addresses? _Answer: RIPE NCC._
+- **STIX, TAXII and MISP** (1d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
+- **The Diamond Model** (3d ago): Name the four corners of the Diamond Model. _Answer: Adversary, Capability, Infrastructure, Victim._
+- **.uk domains, Nominet and WHOIS** (7d ago): Why is domain age a useful enrichment field? _Answer: Newly registered domains are much more likely to be used for phishing or malware._
 
-### Enrichment drill: lopay listed by Black X ransomware
+### Enrichment drill: CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability
 
-1. Search Companies House for 'lopay'. Note its SIC code, size and registered region.
-2. Look up Black X on ransomware.live. How many UK victims has it listed this year?
-3. Search 'Black X initial access' to find how they usually break in (ATT&CK tactic TA0001).
-4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
-5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
+1. Open nvd.nist.gov/vuln/detail/CVE-2015-5477. Note the CVSS score and affected product.
+2. Check CVE-2015-5477 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+3. Find the vendor's own advisory. Is there a patch or only a workaround?
+4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
+5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
 Sources healthy: 16/17 (failed: ICO enforcement (UK regulator))
