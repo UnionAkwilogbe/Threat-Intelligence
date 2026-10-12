@@ -328,7 +328,20 @@ def _rfi_card(r):
               f"<span class='sub'>matching stories in today's feeds</span></div>"
               f"<div class='check' style='border-top:4px solid var({'--crit' if r.get('new_cves') else '--c3'})'>"
               f"<b>{len(r.get('new_cves', []))}</b><span class='sub'>new CVEs not yet in the answer"
-              f"{': ' + e(', '.join(r['new_cves'])) if r.get('new_cves') else ''}</span></div></div>")
+              f"{': ' + e(', '.join(r['new_cves'])) if r.get('new_cves') else ''}</span></div>"
+              f"<div class='check' style='border-top:4px solid var({'--crit' if r.get('ioc_hits') else '--c6'})'>"
+              f"<b>{r.get('ioc_count', 0) if r.get('ioc_checked') else '-'}</b><span class='sub'>"
+              + ("themed indicators (IOCs) in today's malware feeds" if r.get("ioc_checked")
+                 else "IOC feeds unavailable today")
+              + "</span></div></div>")
+    iocs = "".join(
+        f"<tr><td class='mono'>{e(i['value'])}</td><td>{e(i.get('type'))}</td><td>{e(i.get('malware'))}</td>"
+        f"<td>{e(i.get('source'))}</td><td class='num'>{e(str(i.get('first_seen', ''))[:10])}</td></tr>"
+        for i in r.get("ioc_hits", []))
+    ioc_table = ("<details open><summary>Indicators to block and hunt for (defanged)</summary><div class='scroll'><table>"
+                 "<thead><tr><th>Indicator</th><th>Type</th><th>Threat</th><th>Source</th><th>First seen</th></tr></thead>"
+                 f"<tbody>{iocs}</tbody></table></div></details>") if iocs else ""
+    updates = "".join(f"<li><b>{e(u['date'])}:</b> {e(u['note'])}</li>" for u in r.get("updates", []))
     cves = "".join(
         f"<tr><td><a class='mono' href='https://www.cve.org/CVERecord?id={e(c['id'])}' target='_blank' rel='noopener noreferrer'>{e(c['id'])}</a></td>"
         f"<td>{e(c['product'])}</td><td>{e(c['issue'])}</td><td class='num'>{_sev(float(c['cvss']))}</td><td>{e(c['fixed'])}</td></tr>"
@@ -346,12 +359,14 @@ def _rfi_card(r):
   <div class="rfi-body">
     <div class="rookie"><b>Bottom line:</b> {e(r.get('bluf', ''))}</div>
     {checks}
+    {ioc_table}
     {findings}
     <div class="label">Assessment</div><p style="margin:4px 0">{e(r.get('assessment', ''))}</p>
     <p class="sub" style="margin:0">{e(r.get('confidence', ''))}</p>
     <details open><summary>Recommended actions</summary><ol>{"".join(f"<li>{e(a)}</li>" for a in r.get('actions', []))}</ol></details>
     <details><summary>Vulnerability detail ({len(r.get('cves', []))} CVEs)</summary>{cve_table}</details>
     {f"<details open><summary>In today's feeds</summary><ul>{matches}</ul></details>" if matches else ""}
+    {f"<details><summary>Update log</summary><ul>{updates}</ul></details>" if updates else ""}
     <details><summary>Sources</summary><ul>{sources}</ul></details>
   </div>
 </div>"""
@@ -361,7 +376,7 @@ def _rfi_section(rfis):
     if not rfis:
         return ""
     return ("<section id='rfi' style='--hc:var(--c7)'><h2>Client requests</h2>"
-            "<p class='h-note'>Questions clients have asked. Each one is re-checked against CISA KEV and today's feeds every morning.</p>"
+            "<p class='h-note'>Questions clients have asked. Every morning each one is re-checked against CISA KEV, today's stories and today's malware indicators.</p>"
             + "".join(_rfi_card(r) for r in rfis) + "</section>")
 
 
@@ -607,7 +622,10 @@ def render_markdown(ctx):
                 f"**Bottom line:** {r.get('bluf', '')}", "",
                 f"- On CISA KEV today: {', '.join(k['id'] for k in kev) if kev else 'none'}",
                 f"- Matching stories today: {len(r.get('matches', []))}",
-                f"- New CVEs not yet covered: {', '.join(r.get('new_cves', [])) or 'none'}", ""]
+                f"- New CVEs not yet covered: {', '.join(r.get('new_cves', [])) or 'none'}",
+                (f"- Themed indicators in today's malware feeds: {r.get('ioc_count', 0)}"
+                 + (f" (e.g. {', '.join(i['value'] for i in r['ioc_hits'][:3])})" if r.get("ioc_hits") else "")
+                 if r.get("ioc_checked") else "- Indicator feeds unavailable today"), ""]
     L = pack["lesson"]
     out += ["## Daily knowledge pack", "",
             f"### Lesson {pack['day_number']}: {L['title']}", "", L["explain"], "",
