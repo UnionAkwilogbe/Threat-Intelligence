@@ -1265,7 +1265,7 @@
  "rfis": [
   {
    "id": "RFI-001",
-   "needs_update": true,
+   "needs_update": false,
    "kev_hits": [],
    "new_cves": [],
    "matches": [],
@@ -1276,15 +1276,8 @@
      "malware": "malware_download",
      "tags": "github,LuaJIT-loader,SmartLoader,zip",
      "source": "URLhaus",
-     "first_seen": "2026-10-06 06:49:27"
-    },
-    {
-     "value": "hxxps://raw[.]githubusercontent[.]com/oktaymoral/run-from-it/refs/heads/main/public/music/from_it_run_1[.]7[.]zip",
-     "type": "url",
-     "malware": "malware_download",
-     "tags": "github,LuaJIT-loader,SmartLoader,zip",
-     "source": "URLhaus",
-     "first_seen": "2026-10-06 06:13:49"
+     "first_seen": "2026-10-06 06:49:27",
+     "known": true
     }
    ]
   }

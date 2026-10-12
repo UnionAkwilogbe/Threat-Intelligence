@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Monday 12 October 2026
 
-_TLP:CLEAR · generated 11:28 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:30 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -85,14 +85,14 @@ _TLP:CLEAR · generated 11:28 UK time · last 36 hours_
 
 ## Client request RFI-001: Okta vulnerabilities (Client A)
 
-**Status: needs update, new evidence today.**
+**Status:** In progress, re-checked today.
 
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
 - Matching stories today: 0
 - New CVEs not yet covered: none
-- Themed indicators in today's malware feeds: 2 (e.g. hxxps://raw[.]githubusercontent[.]com/fdaloiapp/okta-terraform-demo-template/HEAD/scripts/archive/okta-terraform-demo-template-grossularia[.]zip, hxxps://raw[.]githubusercontent[.]com/oktaymoral/run-from-it/refs/heads/main/public/music/from_it_run_1[.]7[.]zip)
+- Themed indicators in today's malware feeds: 1 (e.g. hxxps://raw[.]githubusercontent[.]com/fdaloiapp/okta-terraform-demo-template/HEAD/scripts/archive/okta-terraform-demo-template-grossularia[.]zip)
 
 ## Daily knowledge pack
 
