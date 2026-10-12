@@ -98,7 +98,8 @@
         "Use Okta network zones to allow sign-ins only from expected networks and block anonymisers (VPNs, Tor, proxies).",
         "Tighten help desk checks before any password or MFA reset, for example a call back to a known number or manager approval.",
         "Alert on new Okta FastPass or authenticator enrolments, especially from emulated or unrecognised Android devices, and review existing enrolments after any suspected compromise.",
-        "Watch the Okta System Log for new MFA enrolments or resets, sign-ins from new devices or locations, and new admin role grants, and alert on them."
+        "Watch the Okta System Log for new MFA enrolments or resets, sign-ins from new devices or locations, and new admin role grants, and alert on them.",
+        "Block the Okta-themed malware URLs listed above (defanged) and warn Okta admins and developers not to download Okta tooling from unofficial GitHub repositories."
       ],
       "sources": [
         {
@@ -153,8 +154,11 @@
         },
         {
           "date": "2026-10-12",
-          "note": "Re-checked: still nothing on CISA KEV and no Okta stories in the daily feeds (5 to 11 October). Added CVE-2026-78560 from the same September batch and the FastPass persistence tradecraft. Okta-themed indicators (for example fake Okta login domains) are now scanned for every morning in URLhaus and ThreatFox."
+          "note": "Re-checked: still nothing on CISA KEV and no Okta stories in the daily feeds (5 to 11 October). Added CVE-2026-78560 from the same September batch and the FastPass persistence tradecraft. Okta-themed indicators (for example fake Okta login domains) are now scanned for every morning in URLhaus and ThreatFox. First result: URLhaus lists a malware download disguised as an 'okta-terraform-demo-template' on GitHub (hxxps://raw[.]githubusercontent[.]com/fdaloiapp/okta-terraform-demo-template/...), a lure aimed at Okta admins and developers. Added to the blocklist recommendation."
         }
+      ],
+      "known_iocs": [
+        "https://raw.githubusercontent.com/fdaloiapp/okta-terraform-demo-template/HEAD/scripts/archive/okta-terraform-demo-template-grossularia.zip"
       ]
     }
   ]

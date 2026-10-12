@@ -329,17 +329,19 @@ def _rfi_card(r):
               f"<div class='check' style='border-top:4px solid var({'--crit' if r.get('new_cves') else '--c3'})'>"
               f"<b>{len(r.get('new_cves', []))}</b><span class='sub'>new CVEs not yet in the answer"
               f"{': ' + e(', '.join(r['new_cves'])) if r.get('new_cves') else ''}</span></div>"
-              f"<div class='check' style='border-top:4px solid var({'--crit' if r.get('ioc_hits') else '--c6'})'>"
+              f"<div class='check' style='border-top:4px solid var({'--crit' if r.get('new_ioc_count') else '--c6'})'>"
               f"<b>{r.get('ioc_count', 0) if r.get('ioc_checked') else '-'}</b><span class='sub'>"
-              + ("themed indicators (IOCs) in today's malware feeds" if r.get("ioc_checked")
+              + (f"themed indicators (IOCs) in today's malware feeds, {r.get('new_ioc_count', 0)} new"
+                 if r.get("ioc_checked")
                  else "IOC feeds unavailable today")
               + "</span></div></div>")
     iocs = "".join(
         f"<tr><td class='mono'>{e(i['value'])}</td><td>{e(i.get('type'))}</td><td>{e(i.get('malware'))}</td>"
-        f"<td>{e(i.get('source'))}</td><td class='num'>{e(str(i.get('first_seen', ''))[:10])}</td></tr>"
+        f"<td>{e(i.get('source'))}</td><td class='num'>{e(str(i.get('first_seen', ''))[:10])}</td>"
+        f"<td>{'Reviewed' if i.get('known') else '<b>New</b>'}</td></tr>"
         for i in r.get("ioc_hits", []))
     ioc_table = ("<details open><summary>Indicators to block and hunt for (defanged)</summary><div class='scroll'><table>"
-                 "<thead><tr><th>Indicator</th><th>Type</th><th>Threat</th><th>Source</th><th>First seen</th></tr></thead>"
+                 "<thead><tr><th>Indicator</th><th>Type</th><th>Threat</th><th>Source</th><th>First seen</th><th>Status</th></tr></thead>"
                  f"<tbody>{iocs}</tbody></table></div></details>") if iocs else ""
     updates = "".join(f"<li><b>{e(u['date'])}:</b> {e(u['note'])}</li>" for u in r.get("updates", []))
     cves = "".join(

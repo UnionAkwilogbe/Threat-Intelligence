@@ -149,6 +149,17 @@ class RfiTest(unittest.TestCase):
         self.assertIn("okta-sso-login[.]example", render._rfi_section([hit]))
         self.assertFalse(rfi.track(rfis, [], {}, None)[0]["ioc_checked"])
 
+    def test_ioc_watch_whole_words_and_known(self):
+        from ti import rfi
+        bad = "https://raw.githubusercontent.com/x/okta-terraform-demo/a.zip"
+        pool = [{"value": bad, "type": "url", "source": "URLhaus"},
+                {"value": "https://raw.githubusercontent.com/oktaymoral/run/a.zip", "type": "url", "source": "URLhaus"}]
+        rfis = [{"id": "R", "topic": "Okta", "keywords": ["okta"], "cves": [], "known_iocs": [bad]}]
+        out = rfi.track(rfis, [], {}, pool)[0]
+        self.assertEqual(out["ioc_count"], 1)  # oktaymoral is not a match
+        self.assertEqual(out["new_ioc_count"], 0)  # already reviewed
+        self.assertFalse(out["needs_update"])
+
     def test_ioc_pool_from_fixtures(self):
         from ti import rfi
         os.environ["TI_FIXTURES"] = FIXTURES
