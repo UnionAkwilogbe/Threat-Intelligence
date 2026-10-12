@@ -1,11 +1,12 @@
-# Threat Intel Field Brief: Sunday 11 October 2026
+# Threat Intel Field Brief: Monday 12 October 2026
 
-_TLP:CLEAR · generated 12:27 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:28 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
 - Read first: CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability (priority 55).
 - 5 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 1 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
@@ -46,7 +47,16 @@ _TLP:CLEAR · generated 12:27 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2021-3199)
+### 5. [Help the NCSC understand how organisations approach external attack surface risk](https://www.ncsc.gov.uk/blogs/help-ncsc-understand-how-organisations-approach-external-attack-surface-risk)
+**Priority 46** · NCSC UK · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 6. [CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2021-3199)
 **Priority 39** · CISA KEV · KEV · EPSS 19% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -55,67 +65,59 @@ _TLP:CLEAR · generated 12:27 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-108540: A flaw has been found in OpenSpug Spug up to 3.4.0/4.0.1. This impacts an unknown function of the file /exec/transfer of the component…](https://nvd.nist.gov/vuln/detail/CVE-2026-108540)
-**Priority 24** · NVD
+### 7. [Imagine there's no Shiny Hunters – AI could make human hacking crews obsolete](https://www.theregister.com/security/2026/10/12/imagine-theres-no-shiny-hunters-ai-could-make-human-hacking-crews-obsolete/5302430)
+**Priority 37** · The Register Security · _Exploited vuln_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
 
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 7. [CVE-2026-108707: Wukong_HRM through commit 186115e contains an authentication bypass vulnerability in ParamAspect that allows unauthenticated attackers to…](https://nvd.nist.gov/vuln/detail/CVE-2026-108707)
-**Priority 23** · NVD
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [Cyber exec arrested in case allegedly tied to ShinyHunters hackers](https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/)
-**Priority 20** · BleepingComputer · _Ransomware, Charity_
+### 8. [Months-Old Palo Alto VPN Vulnerability Remains a Target for Ransomware Groups](https://www.infosecurity-magazine.com/news/palo-alto-vpn-vulnerability-target/)
+**Priority 37** · Infosecurity Magazine · _Ransomware_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
 **Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
-**Enrich next:** Sector (Charity) → tag every client in that sector and send them a short heads-up
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
 ## Client request RFI-001: Okta vulnerabilities (Client A)
 
-**Status:** Answered, re-checked today.
+**Status: needs update, new evidence today.**
 
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
 - Matching stories today: 0
 - New CVEs not yet covered: none
+- Themed indicators in today's malware feeds: 2 (e.g. hxxps://raw[.]githubusercontent[.]com/fdaloiapp/okta-terraform-demo-template/HEAD/scripts/archive/okta-terraform-demo-template-grossularia[.]zip, hxxps://raw[.]githubusercontent[.]com/oktaymoral/run-from-it/refs/heads/main/public/music/from_it_run_1[.]7[.]zip)
 
 ## Daily knowledge pack
 
-### Lesson 284: Indicators go stale: ageing and decay
+### Lesson 285: False positives and allowlists
 
-IOCs lose value over time. An IP used for C2 today may be a clean cloud server next month. Hashes stay accurate forever but the attacker stops using them. Good intel records first-seen and last-seen dates and expires old indicators.
+A false positive is a harmless thing flagged as malicious. Feeds sometimes include shared infrastructure like Google DNS (8.8.8.8), Microsoft or Cloudflare IPs. Blocking these can take a client offline. Allowlists (MISP calls them warninglists) catch them before sharing.
 
-> **Think of it like this:** Like milk: great today, questionable next week, harmful next month if you keep blocking with it.
+> **Think of it like this:** A smoke alarm that goes off every time you make toast. People soon take the battery out.
 
-**UK angle:** Blocking a stale IP that now belongs to a UK cloud or CDN provider can break a client's business apps and destroy trust in your feed.
+**UK angle:** Add UK-specific allowlists: gov.uk, nhs.uk, major UK banks, and the client's own IP ranges and suppliers.
 
-**Enrichment tip:** Add first_seen, last_seen and an expiry date to every IOC. A sensible default: IPs 30 days, domains 90 days, hashes much longer.
+**Enrichment tip:** Before sharing any IOC, check it against an allowlist of popular domains (for example the Tranco top list) and cloud provider ranges.
 
-**Try it today:** Check the last_online date on one Feodo C2 entry in today's brief. Would you still block it?
+**Try it today:** List five domains that should never be blocked for a UK client.
 
-**Quiz:** Why should IP indicators expire faster than hashes?  
-_Answer:_ IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file.
+**Quiz:** What is a MISP warninglist for?  
+_Answer:_ Flagging indicators that are probably false positives, such as well-known legitimate services.
 
-**Word of the day: BEC** · Business Email Compromise. Fraud where attackers use or fake a real business email account to redirect payments.
+**Word of the day: C2** · Command and Control. The server an attacker uses to send orders to infected machines.
 
 ### Review (spaced repetition)
 
-- **STIX, TAXII and MISP** (1d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
-- **The Diamond Model** (3d ago): Name the four corners of the Diamond Model. _Answer: Adversary, Capability, Infrastructure, Victim._
-- **.uk domains, Nominet and WHOIS** (7d ago): Why is domain age a useful enrichment field? _Answer: Newly registered domains are much more likely to be used for phishing or malware._
+- **Indicators go stale: ageing and decay** (1d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
+- **The Cyber Kill Chain** (3d ago): Which stage is a C2 (command and control) server? _Answer: Stage 6, Command and Control._
+- **Passive DNS and certificate transparency** (7d ago): What is 'pivoting' in threat intel? _Answer: Using one known indicator to discover related indicators, for example from a domain to its IP to other domains on that IP._
 
 ### Enrichment drill: CVE-2015-5477: ISC BIND Data Processing Errors Vulnerability
 
