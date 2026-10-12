@@ -2,6 +2,53 @@
  "date": "2026-10-12",
  "stories": [
   {
+   "source": "ransomware.live",
+   "source_id": "ransomware",
+   "kind": "ransomware",
+   "title": "lopay listed by Black X ransomware",
+   "url": "https://www.ransomware.live/id/bG9wYXlAQmxhY2sgWA==",
+   "published": "2026-10-09T19:12:37.596311+00:00",
+   "summary": "Lopay is a UK-based fintech company that provides a payment platform enabling small and medium-sized enterprises (SMEs) and sole traders to accept credit card and mobile payments, as well as manage their sales and settlements. This includes financial information belonging to client companies, such as customer payment details, card information, banking data, transaction history, and payment terminal information.",
+   "uk_source": true,
+   "extra": {
+    "group": "Black X",
+    "sector": "Financial Services",
+    "victim": "lopay",
+    "website": "lopay.com"
+   },
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Finance",
+    "Financial Services"
+   ],
+   "uk_score": 100,
+   "priority": 60,
+   "priority_why": {
+    "UK relevance": 35,
+    "Serious threat type": 10,
+    "UK victim named": 15,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "CISA KEV",
    "source_id": "kev",
    "kind": "vuln",
@@ -288,6 +335,40 @@
    "clients": []
   },
   {
+   "source": "Computer Weekly Security",
+   "source_id": "computerweekly",
+   "kind": "news",
+   "title": "AI: Faster than the speed of safety",
+   "url": "https://www.computerweekly.com/news/366651940/AI-Faster-than-the-speed-of-safety",
+   "published": "2026-10-12T08:00:00+00:00",
+   "summary": "Microsoft president Brad Smith calls for industry-wide collaboration, while the UK government ramps up cyber defence to tackle AI safety concerns",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Public sector"
+   ],
+   "uk_score": 65,
+   "priority": 38,
+   "priority_why": {
+    "UK relevance": 23,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "The Register Security",
    "source_id": "theregister",
    "kind": "news",
@@ -402,6 +483,40 @@
    "source": "Infosecurity Magazine",
    "source_id": "infosecmag",
    "kind": "news",
+   "title": "Major French Supermarket Chains Hit by Cyber-Attack, Food Stock Impacted",
+   "url": "https://www.infosecurity-magazine.com/news/french-supermarket-chains/",
+   "published": "2026-10-12T11:57:00+00:00",
+   "summary": "The CEO of Cooperative U confirmed a cyber-attack affected the food stock in several stores from October 11",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Retail"
+   ],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Retail) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
    "title": "Net Closes Around ShinyHunters with Another FBI Arrest",
    "url": "https://www.infosecurity-magazine.com/news/net-closes-shinyhunters-another/",
    "published": "2026-10-12T10:00:00+00:00",
@@ -431,19 +546,57 @@
    "clients": []
   },
   {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Ukraine strikes third Yandex data center, disrupting digital services across Russia",
+   "url": "https://therecord.media/ukraine-strikes-third-yandex-data-center",
+   "published": "2026-10-12T12:00:00+00:00",
+   "summary": "A third Yandex data center in Russia was hit by Ukrainian drones over the weekend, forcing it to shut down and causing further disruptions to cloud services, payments, deliveries and other online services across the country.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "The Hacker News",
    "source_id": "thehackernews",
    "kind": "news",
-   "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
-   "url": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
-   "published": "2026-10-12T09:02:14+00:00",
-   "summary": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
+   "title": "Critical SonicWall SMA 1000 Flaw Targeted in 135 Exploitation Attempts After Patch",
+   "url": "https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html",
+   "published": "2026-10-12T10:36:56+00:00",
+   "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in SonicWall Secure Mobile Access (SMA) 1000 appliances within days of public disclosure. The vulnerability, tracked as CVE-2026-102255 (CVSS score: 10.0), is a case of pre-authenticated server-side request forgery (SSRF) that could allow a remote attacker \"to direct the appliance to issue requests on their",
    "uk_source": false,
    "cves": [
-    "CVE-2026-85097"
+    "CVE-2026-102255"
    ],
    "kev": [],
-   "epss": 0.00312,
+   "epss": 0.00477,
    "attack": [],
    "iocs": {},
    "threat_types": [
@@ -470,19 +623,19 @@
    "clients": []
   },
   {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
    "kind": "news",
-   "title": "Critical SonicWall Vulnerability Exploited Days After Disclosure",
-   "url": "https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/",
-   "published": "2026-10-12T08:36:01+00:00",
-   "summary": "CVE-2026-102255 is a pre-authenticated SSRF flaw that could allow attackers to perform unauthorized operations. The post Critical SonicWall Vulnerability Exploited Days After Disclosure appeared first on SecurityWeek .",
+   "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
+   "url": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
+   "published": "2026-10-12T09:02:14+00:00",
+   "summary": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
    "uk_source": false,
    "cves": [
-    "CVE-2026-102255"
+    "CVE-2026-85097"
    ],
    "kev": [],
-   "epss": 0.00477,
+   "epss": 0.00312,
    "attack": [],
    "iocs": {},
    "threat_types": [
@@ -547,13 +700,13 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
+   "source": "Computer Weekly Security",
+   "source_id": "computerweekly",
    "kind": "news",
-   "title": "AI systems are fully capable of carrying out nightmare attacks against infrastructure and nobody's ready",
-   "url": "https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450",
-   "published": "2026-10-11T11:30:00+00:00",
-   "summary": "Meanwhile, AI agents move robotic arms, 'make OT device operator screens lie'",
+   "title": "NCSC and pals call out company that backed Chinese state hackers",
+   "url": "https://www.computerweekly.com/news/366651807/NCSC-and-pals-call-out-company-that-backed-Chinese-state-hackers",
+   "published": "2026-10-09T14:39:00+00:00",
+   "summary": "The NCSC\u2019s joint advisory names perennial offender Integrity Technology, accusing it of facilitating cyber attacks on behalf of Flax Typhoon, a Chinese state threat actor",
    "uk_source": true,
    "cves": [],
    "kev": [],
@@ -561,21 +714,58 @@
    "attack": [],
    "iocs": {},
    "threat_types": [],
-   "sectors": [
-    "Manufacturing"
-   ],
-   "uk_score": 35,
-   "priority": 22,
+   "sectors": [],
+   "uk_score": 65,
+   "priority": 23,
    "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 10
+    "UK relevance": 23,
+    "Fresh": 0
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Sector (Manufacturing) \u2192 tag every client in that sector and send them a short heads-up"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Computer Weekly Security",
+   "source_id": "computerweekly",
+   "kind": "news",
+   "title": "Fraudster who targeted ransomware victims appears in US court",
+   "url": "https://www.computerweekly.com/news/366651963/Fraudster-who-targeted-ransomware-victims-appears-in-US-court",
+   "published": "2026-10-09T15:29:00+00:00",
+   "summary": "Zohar Pinhasi stands accused of duping distressed ransomware victims by profiting from fake cyber services that he could not provide",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware",
+    "Fraud / Scam"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 22,
+   "priority_why": {
+    "UK relevance": 12,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Watch for lookalike domains of client brands (typosquats)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -660,6 +850,40 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "AI systems are fully capable of carrying out nightmare attacks against infrastructure and nobody's ready",
+   "url": "https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450",
+   "published": "2026-10-11T11:30:00+00:00",
+   "summary": "Meanwhile, AI agents move robotic arms, 'make OT device operator screens lie'",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Manufacturing"
+   ],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Manufacturing) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -701,13 +925,13 @@
    "clients": []
   },
   {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
    "kind": "news",
-   "title": "Let\u2019s Encrypt Cuts Default Certificate Validity to 64 Days Ahead of 45-Day Switch",
-   "url": "https://www.securityweek.com/lets-encrypt-cuts-default-certificate-validity-to-64-days-ahead-of-45-day-switch/",
-   "published": "2026-10-12T07:53:28+00:00",
-   "summary": "Beginning February 2027, all newly issued certificates will have a 64-day validity period by default. The post Let\u2019s Encrypt Cuts Default Certificate Validity to 64 Days Ahead of 45-Day Switch appeared first on SecurityWeek .",
+   "title": "GitLab warns of max severity code execution vulnerability",
+   "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
+   "published": "2026-10-12T13:09:09+00:00",
+   "summary": "GitLab warned users today to immediately patch a maximum-severity vulnerability in the CI/CD Regular Expression Compiler that could let remote attackers run arbitrary code on targeted instances. [...]",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -728,6 +952,106 @@
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
+   "published": "2026-10-12T11:58:33+00:00",
+   "summary": "Microsoft has reminded customers that systems running Windows 11 23H2 Enterprise, Education, and IoT Enterprise editions will stop receiving security updates next month. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Education"
+   ],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Education) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Bring Your Own Agent: Your Employees' Assistants Are Already Logged In",
+   "url": "https://thehackernews.com/2026/10/bring-your-own-agent-your-employees.html",
+   "published": "2026-10-12T11:55:00+00:00",
+   "summary": "The personal AI agents rollout is going about as smoothly as expected: Amazon now blocks Meta's Muse because it doesn't identify itself as a bot while browsing; Instinct keeps raising privacy concerns; and the horror stories from pretty much every personal AI agent keep piling up. Regardless, the tech world is mesmerized by the capabilities and potential of these services. Less than a year",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis-Sold Wallet Amid Fund Theft Reports",
+   "url": "https://thehackernews.com/2026/10/ledger-finds-unauthorized-hardware.html",
+   "published": "2026-10-12T11:21:48+00:00",
+   "summary": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via Cryptobilis following reports of stolen funds linked to devices sold by the reseller. On Friday, the company said it was investigating reports of loss of funds from users in Southeast Asia who had purchased products from CryptoBilis. The incident is said to have resulted in losses totaling more than $86",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -794,6 +1118,45 @@
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
+   "url": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
+   "published": "2026-10-10T15:07:54+00:00",
+   "summary": "Canadian cybersecurity executive Edward Dubrovsky has been arrested in Pennsylvania in connection with alleged extortion activity that multiple reports have linked to the FBI's ongoing crackdown on the ShinyHunters hacking group. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Charity"
+   ],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Sector (Charity) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -877,6 +1240,183 @@
    "clients": []
   },
   {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-108598: Floci 1.1.0 before 2.2.0 contains a code injection vulnerability in VtlTemplateEngine that allows unauthenticated attackers to execute\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108598",
+   "published": "2026-10-10T19:16:58.347000+00:00",
+   "summary": "Floci 1.1.0 before 2.2.0 contains a code injection vulnerability in VtlTemplateEngine that allows unauthenticated attackers to execute commands via unrestricted Velocity mapping templates. Attackers can create a REST API with a MOCK integration whose template uses $util reflection to reach Runtime or ProcessBuilder, executing OS commands in the Floci JVM.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-108598"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00732,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-108551: openapi-typescript-codegen through 0.31.0 contains a code injection vulnerability that allows attackers controlling an OpenAPI document to\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108551",
+   "published": "2026-10-10T15:16:58.273000+00:00",
+   "summary": "openapi-typescript-codegen through 0.31.0 contains a code injection vulnerability that allows attackers controlling an OpenAPI document to inject JavaScript by supplying unescaped values interpolated into single-quoted string literals. Attackers can embed a single quote in path keys, parameter names, servers[0].url, or info.version to execute arbitrary JavaScript when generated clients are imported or service methods called.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-108551"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00415,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Two characters open up a world of typosquatting opportunities in Chromium browsers",
+   "url": "https://www.theregister.com/security/2026/10/10/two-characters-open-up-a-world-of-typosquatting-opportunities-in-chromium-browsers/5302383",
+   "published": "2026-10-10T10:15:00+00:00",
+   "summary": "Attackers abusing rare Cyrillic and Latin letters to impersonate popular websites",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Fraud / Scam"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 0
+   },
+   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
+   "actions": [
+    "Watch for lookalike domains of client brands (typosquats).",
+    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "AWS AgentCore security undone by prompt requesting credentials",
+   "url": "https://www.theregister.com/security/2026/10/09/aws-agentcore-security-undone-by-prompt-requesting-credentials/5302436",
+   "published": "2026-10-09T19:15:48+00:00",
+   "summary": "Tokens transmitted in metadata, weak VM isolation, and expansive permissions make hacking a lot easier",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Wikimedia Says Rogue AI Agents Abused its Platforms",
+   "url": "https://www.infosecurity-magazine.com/news/wikimedia-confirms-platforms-rogue/",
+   "published": "2026-10-09T15:00:00+00:00",
+   "summary": "Wikimedia says OpenAI agents performed unauthorized actions on its platforms, including edits to wikis",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -907,6 +1447,470 @@
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn't",
+   "url": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
+   "published": "2026-10-10T11:00:00+00:00",
+   "summary": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind single sign-on. The other thousand are invisible to identity infrastructure by default, not because anyone hid them, but because an identity stack can only govern what authenticates through it, and most agents never do. That gap is the clearest",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Supply chain"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Attackers break into a supplier or software package to reach that supplier's customers.",
+   "actions": [
+    "List which clients use the affected supplier or package.",
+    "Ask the supplier for their incident statement and indicators."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Krebs on Security",
+   "source_id": "krebs",
+   "kind": "news",
+   "title": "FBI Arrests Executive at Ransomware Negotiation Firm",
+   "url": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
+   "published": "2026-10-10T00:17:42+00:00",
+   "summary": "Agents with the Federal Bureau of Investigation (FBI) on Thursday arrested the co-founder of a Canadian cybersecurity firm in connection with an investigation into the ShinyHunters hacking group that recently relieved the FBI of sensitive data on thousands of agents, multiple sources tell KrebsOnSecurity.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Japan confirms arrest of Russian Qilin operative, extradition to Germany",
+   "url": "https://therecord.media/japan-germany-ransomware-arrest",
+   "published": "2026-10-09T18:45:00+00:00",
+   "summary": "Japan\u2019s National Police Agency confirmed the arrest and extradition to Germany of a Russian national accused of being involved in the Qilin ransomware gang.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware",
+    "Nation-state / APT"
+   ],
+   "sectors": [
+    "Public sector"
+   ],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them."
+   ],
+   "enrich_steps": [
+    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
+   "url": "https://thehackernews.com/2026/10/fbi-arrests-another-shinyhunters.html",
+   "published": "2026-10-09T17:45:26+00:00",
+   "summary": "The FBI has arrested another suspected co-conspirator of ShinyHunters, FBI Director Kash Patel said on October 9 in a post on X. ShinyHunters is the extortion group that said in September it had breached the FBI's jobs portal and stolen sensitive data on almost all FBI agents and job applicants. The FBI has not named the suspect, and no charges have been made public. The",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware",
+    "Data breach"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
+   "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
+   "published": "2026-10-09T17:17:23+00:00",
+   "summary": "Threat actors are exploiting one critical and one medium-severity vulnerability still unpatched in the AhsayCBS backup management platform to deploy webshells and cryptocurrency miners. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Zero-day",
+    "Exploited vuln"
+   ],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "A bug attackers found before the vendor could fix it, so there may be no patch yet.",
+   "actions": [
+    "Find out which clients run the product (asset inventory or Shodan/Censys search).",
+    "Apply the vendor's workaround or mitigation until a patch ships.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
+   "url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
+   "published": "2026-10-09T17:02:29+00:00",
+   "summary": "The FBI has arrested another suspected member of the ShinyHunters extortion group believed to be involved in the recent breach of FBI systems, Director Kash Patel announced Friday. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware",
+    "Data breach"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Leader of vast money mule operation that laundered cybercriminal proceeds pleads guilty",
+   "url": "https://therecord.media/leader-of-money-mule-operation-for-cybercriminals-pleads-guilty",
+   "published": "2026-10-09T16:06:00+00:00",
+   "summary": "Oleg Korniev, a 42-year-old dual citizen of Ukraine and Russia, was a principal of Your Mule Cashout, or \u201cYMCO,\u201d which from 2007 until 2014 set up a sophisticated network of mules in the U.S. and Europe.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Germany arrests alleged core Qilin ransomware member after extradition",
+   "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
+   "published": "2026-10-09T15:38:56+00:00",
+   "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware",
+    "Nation-state / APT"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "TP-Link Sued by Four More U.S. States Over Router Security and China Ties",
+   "url": "https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html",
+   "published": "2026-10-09T13:22:53+00:00",
+   "summary": "Four more U.S. states sued router maker TP-Link Systems on October 6, bringing the total to five, with Texas filing a suit in February. Florida, Iowa, Montana and Nebraska allege the California company misled buyers about how secure its routers are and how separate it is from China. TP-Link denies the claims and says it will fight them in court. TP-Link Systems is based in",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-108107: PHPNuxBill through 2025.3.20 contains an unauthenticated SQL injection vulnerability in the radius.php FreeRADIUS REST endpoint that\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108107",
+   "published": "2026-10-09T15:17:11.713000+00:00",
+   "summary": "PHPNuxBill through 2025.3.20 contains an unauthenticated SQL injection vulnerability in the radius.php FreeRADIUS REST endpoint that interpolates request parameters into whereRaw() queries. Attackers can send crafted username, macAddr or nasid parameters to the accounting or authenticate actions to extract customer records and credentials via time-based blind SQL injection.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-108107"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00411,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 8,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-86405: Improper verification of cryptographic signature vulnerability in Sipay Electronic Money and Payment Services Inc. PrestaShop Virtual POS\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86405",
+   "published": "2026-10-09T13:17:11.100000+00:00",
+   "summary": "Improper verification of cryptographic signature vulnerability in Sipay Electronic Money and Payment Services Inc. PrestaShop Virtual POS Module allows Signature Spoofing by Improper Validation. This issue affects PrestaShop Virtual POS Module: from 26.8.1 before 26.9.1.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-86405"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00201,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 8,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-85531: Improper verification of cryptographic signature vulnerability in Sipay Electronic Money and Payment Services Inc. OpenCart Virtual POS\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85531",
+   "published": "2026-10-09T13:17:10.957000+00:00",
+   "summary": "Improper verification of cryptographic signature vulnerability in Sipay Electronic Money and Payment Services Inc. OpenCart Virtual POS Module allows Signature Spoofing by Improper Validation. This issue affects OpenCart Virtual POS Module: from 26.8.2 before 26.9.1.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-85531"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00201,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 8,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -947,45 +1951,343 @@
    ],
    "also_reported_by": [],
    "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
+   "url": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
+   "published": "2026-10-10T14:16:17+00:00",
+   "summary": "The cyberattacks that shook the South Korean financial sector earlier this month were launched by a Chinese hacker using the ARTEX AI penetration testing suite and Claude agents. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 5,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
+   "url": "https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/",
+   "published": "2026-10-10T12:30:39+00:00",
+   "summary": "Traditional attack surface management helps organizations discover exposed assets, but visibility alone is not enough to address threats. Criminal IP introduces AITEM, an AI-powered approach that connects exposure discovery with investigation, risk prioritization, and response. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws",
+   "url": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
+   "published": "2026-10-10T09:18:45+00:00",
+   "summary": "Anthropic on Friday said it's cutting off live internet access for all its internal evaluations until further notice following the discovery of new incidents in which its artificial intelligence (AI) models exhibited misaligned behavior and targeted real websites. The AI company said it identified four broad categories of unintended model actions during evaluations and internal use of Claude",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SANS Internet Storm Center",
+   "source_id": "sans",
+   "kind": "research",
+   "title": "Why TLP should not replace your internal information classification, (Sat, Oct 10th)",
+   "url": "https://isc.sans.edu/diary/rss/33414",
+   "published": "2026-10-10T09:11:34+00:00",
+   "summary": "The Traffic Light Protocol (TLP)[ 1 ], which is now in its second incarnation, is a wonderful standard that enables one to easily communicate whether information may be shared further (and if so, how far).",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+   "published": "2026-10-09T20:31:37+00:00",
+   "summary": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
+   "url": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
+   "published": "2026-10-09T19:14:28+00:00",
+   "summary": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer accounts to push a malicious workflow into over 340 repositories. \"Using the account of Takashi Kitao, author of the 18,400-star game engine pyxel, the attacker pushed a malicious workflow to 27 repositories starting at 13:20 UTC,\" StepSecurity",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Charity"
+   ],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Charity) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Hundreds of thousands impacted by data breach at biosensor firm iRhythm",
+   "url": "https://therecord.media/irhythm-data-breach-reports",
+   "published": "2026-10-09T16:06:00+00:00",
+   "summary": "A company known for wearable cardiac sensors, iRhythm, has begun notifying states of the impact of a data breach from the summer.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "FBI touts another ShinyHunters arrest in response to data breach",
+   "url": "https://therecord.media/shinyhunters-arrest-fbi-data-breach-investigation",
+   "published": "2026-10-09T15:41:00+00:00",
+   "summary": "\u201cWe will continue to work closely with our partners to disrupt what\u2019s left of the ShinyHunters group and their associates, no matter where they operate,\" FBI Director Kash Patel said.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "How to keep AI agents within their permissions",
+   "url": "https://www.bleepingcomputer.com/news/security/how-to-keep-ai-agents-within-their-permissions/",
+   "published": "2026-10-09T14:01:11+00:00",
+   "summary": "AI agents can use valid credentials to perform actions beyond their assigned permissions, creating risks that traditional access controls may not prevent. Token Security explains how organizations can enforce agent-specific policies without sacrificing autonomy. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 0,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
   }
  ],
  "stats": {
   "kev_total": 1739,
-  "critical_cves": 6,
-  "victims_total": 25,
-  "victims_uk": 0,
+  "critical_cves": 11,
+  "victims_total": 56,
+  "victims_uk": 1,
   "top_groups": [
    [
     "N0n",
     12
    ],
    [
-    "thegentlemen",
-    4
+    "qilin",
+    9
    ],
    [
-    "qilin",
-    3
+    "thegentlemen",
+    7
    ],
    [
     "rhysida",
-    2
+    3
+   ],
+   [
+    "Black X",
+    3
+   ],
+   [
+    "arcusmedia",
+    3
    ],
    [
     "Redact",
-    1
+    2
    ],
    [
     "emperador",
-    1
-   ],
-   [
-    "BrainCipher",
-    1
-   ],
-   [
-    "dragonforce",
-    1
+    2
    ]
   ],
   "c2_total": 5,
@@ -1011,7 +2313,7 @@
     1
    ]
   ],
-  "urls_total": 33627,
+  "urls_total": 33682,
   "urls_uk": [
    {
     "url": "https://royalcuts.co.uk/google.exe",
@@ -1067,22 +2369,22 @@
    ],
    [
     "Mozi",
-    5497
+    5509
    ],
    [
     "elf",
-    5277
+    5291
    ],
    [
     "ua-wget",
     2774
    ]
   ],
-  "iocs_total": 5784,
+  "iocs_total": 5905,
   "ioc_families": [
    [
     "Cobalt Strike",
-    1313
+    1302
    ],
    [
     "PureRAT",
@@ -1090,15 +2392,15 @@
    ],
    [
     "Unknown malware",
-    464
-   ],
-   [
-    "AsyncRAT",
-    416
+    478
    ],
    [
     "Vidar",
-    399
+    425
+   ],
+   [
+    "AsyncRAT",
+    415
    ],
    [
     "AdaptixC2",
@@ -1106,7 +2408,7 @@
    ],
    [
     "Mirai",
-    206
+    255
    ],
    [
     "DanaBot",
@@ -1116,19 +2418,19 @@
   "ioc_types": [
    [
     "ip:port",
-    3411
+    3416
    ],
    [
     "domain",
-    1213
+    1250
    ],
    [
     "url",
-    489
+    510
    ],
    [
     "sha256_hash",
-    401
+    459
    ],
    [
     "sha1_hash",
@@ -1159,64 +2461,64 @@
    "name": "Computer Weekly Security",
    "id": "computerweekly",
    "ok": true,
-   "count": 0,
+   "count": 3,
    "error": ""
   },
   {
    "name": "The Register Security",
    "id": "theregister",
    "ok": true,
-   "count": 2,
+   "count": 4,
    "error": ""
   },
   {
    "name": "Infosecurity Magazine",
    "id": "infosecmag",
    "ok": true,
-   "count": 3,
+   "count": 5,
    "error": ""
   },
   {
    "name": "BleepingComputer",
    "id": "bleeping",
    "ok": true,
-   "count": 1,
+   "count": 11,
    "error": ""
   },
   {
    "name": "The Record",
    "id": "therecord",
    "ok": true,
-   "count": 0,
+   "count": 5,
    "error": ""
   },
   {
    "name": "The Hacker News",
    "id": "thehackernews",
    "ok": true,
-   "count": 3,
+   "count": 11,
    "error": ""
   },
   {
    "name": "Krebs on Security",
    "id": "krebs",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "error": ""
   },
   {
    "name": "SANS Internet Storm Center",
    "id": "sans",
    "ok": true,
-   "count": 1,
+   "count": 2,
    "error": ""
   },
   {
    "name": "SecurityWeek",
    "id": "securityweek",
-   "ok": true,
-   "count": 2,
-   "error": ""
+   "ok": false,
+   "count": 0,
+   "error": "https://www.securityweek.com/feed/: HTTP Error 504: Gateway Timeout"
   },
   {
    "name": "CISA KEV",
@@ -1229,14 +2531,14 @@
    "name": "NVD critical CVEs",
    "id": "nvd",
    "ok": true,
-   "count": 6,
+   "count": 11,
    "error": ""
   },
   {
    "name": "ransomware.live",
    "id": "ransomware",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "error": ""
   },
   {
