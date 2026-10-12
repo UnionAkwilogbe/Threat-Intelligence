@@ -32,6 +32,12 @@ def _hits(text, keywords):
     return any(k.lower() in text for k in keywords)
 
 
+def _token_hits(value, keywords):
+    """Whole-word match inside an indicator: 'okta-terraform' matches okta, 'oktaymoral' does not."""
+    tokens = set(re.split(r"[^a-z0-9]+", value.lower()))
+    return any(k.lower() in tokens for k in keywords)
+
+
 def defang(value):
     """Make an indicator unclickable before it is shown or shared: hxxp://evil[.]com."""
     return re.sub(r"^http", "hxxp", value).replace(".", "[.]")
@@ -57,9 +63,12 @@ def track(rfis, stories, kev_index, iocs=None):
         known = {c["id"] for c in r.get("cves", [])}
         new_cves = sorted({c for s in matches for c in s.get("cves", [])} - known)
         ioc_kw = r.get("ioc_keywords", kw)
-        ioc_hits = [dict(i, value=defang(i["value"])) for i in (iocs or []) if _hits(i["value"], ioc_kw)]
+        known_iocs = set(r.get("known_iocs", []))  # already reviewed and reported to the client
+        ioc_hits = [dict(i, value=defang(i["value"]), known=i["value"] in known_iocs)
+                    for i in (iocs or []) if _token_hits(i["value"], ioc_kw)]
+        new_iocs = [i for i in ioc_hits if not i["known"]]
         tracked.append(dict(r, kev_hits=kev, matches=matches[:6], new_cves=new_cves,
-                            ioc_hits=ioc_hits[:25], ioc_count=len(ioc_hits), ioc_checked=bool(iocs),
-                            kev_checked=bool(kev_index),
-                            needs_update=bool(kev or new_cves or ioc_hits)))
+                            ioc_hits=ioc_hits[:25], ioc_count=len(ioc_hits), new_ioc_count=len(new_iocs),
+                            ioc_checked=bool(iocs), kev_checked=bool(kev_index),
+                            needs_update=bool(kev or new_cves or new_iocs)))
     return tracked
