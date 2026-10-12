@@ -136,6 +136,30 @@ class RfiTest(unittest.TestCase):
         self.assertEqual([k["id"] for k in busy["kev_hits"]], ["CVE-2026-2"])
         self.assertEqual(busy["new_cves"], ["CVE-2026-2"])
 
+    def test_ioc_watch_matches_and_defangs(self):
+        from ti import rfi
+        rfis = [{"id": "RFI-X", "topic": "Okta", "keywords": ["okta"], "cves": []}]
+        pool = [{"value": "https://okta-sso-login.example.com/signin", "type": "url", "malware": "phishing",
+                 "source": "URLhaus", "first_seen": "2026-10-12"},
+                {"value": "203.0.113.5:443", "type": "ip:port", "malware": "Lumma", "source": "ThreatFox"}]
+        hit = rfi.track(rfis, [], {}, pool)[0]
+        self.assertEqual(hit["ioc_count"], 1)
+        self.assertEqual(hit["ioc_hits"][0]["value"], "hxxps://okta-sso-login[.]example[.]com/signin")
+        self.assertTrue(hit["needs_update"])
+        self.assertIn("okta-sso-login[.]example", render._rfi_section([hit]))
+        self.assertFalse(rfi.track(rfis, [], {}, None)[0]["ioc_checked"])
+
+    def test_ioc_pool_from_fixtures(self):
+        from ti import rfi
+        os.environ["TI_FIXTURES"] = FIXTURES
+        try:
+            _, stats, _ = sources.collect_all(lookback_hours=24 * 365 * 10)
+        finally:
+            os.environ.pop("TI_FIXTURES", None)
+        values = [i["value"] for i in rfi.ioc_pool(stats)]
+        self.assertIn("update-check.example.com", values)
+        self.assertIn("http://files.example.co.uk/invoice.exe", values)
+
     def test_shipped_rfis_render(self):
         from ti import rfi
         tracked = rfi.track(rfi.load_rfis(), [], {})

@@ -300,12 +300,14 @@ def collect_urlhaus(since):
     raw = fetch("urlhaus.csv", URLHAUS_URL).decode("utf-8", "replace")
     lines = [l for l in raw.splitlines() if l and not l.startswith("#")]
     reader = csv.reader(io.StringIO("\n".join(lines)))
-    total, uk_hosted, tags = 0, [], {}
+    total, uk_hosted, tags, pool = 0, [], {}, []
     for row in reader:
         if len(row) < 7:
             continue
         total += 1
         url = row[2]
+        pool.append({"value": url, "type": "url", "malware": row[5], "tags": row[6], "source": "URLhaus",
+                     "first_seen": row[1]})
         for t in (row[6] or "").split(","):
             t = t.strip()
             if t and t != "None":
@@ -313,7 +315,7 @@ def collect_urlhaus(since):
         host = re.sub(r"^[a-z]+://", "", url).split("/")[0].split(":")[0].lower()
         if host.endswith(".uk") and len(uk_hosted) < 15:
             uk_hosted.append({"url": url, "threat": row[5], "tags": row[6]})
-    return {"items": [], "stats": {"urls_total": total, "urls_uk": uk_hosted,
+    return {"items": [], "stats": {"urls_total": total, "urls_uk": uk_hosted, "ioc_pool_urlhaus": pool,
                                    "url_tags": sorted(tags.items(), key=lambda kv: -kv[1])[:8]}}
 
 
@@ -333,7 +335,11 @@ def collect_threatfox(since):
         families[fam] = families.get(fam, 0) + 1
         t = r.get("ioc_type") or "unknown"
         types[t] = types.get(t, 0) + 1
-    return {"items": [], "stats": {"iocs_total": len(rows),
+    pool = [{"value": str(r.get("ioc_value") or ""), "type": r.get("ioc_type") or "",
+             "malware": r.get("malware_printable") or "", "tags": ",".join(r.get("tags") or [])
+             if isinstance(r.get("tags"), list) else str(r.get("tags") or ""),
+             "source": "ThreatFox", "first_seen": r.get("first_seen_utc") or ""} for r in rows]
+    return {"items": [], "stats": {"iocs_total": len(rows), "ioc_pool_threatfox": pool,
                                    "ioc_families": sorted(families.items(), key=lambda kv: -kv[1])[:8],
                                    "ioc_types": sorted(types.items(), key=lambda kv: -kv[1])}}
 

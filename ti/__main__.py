@@ -39,8 +39,9 @@ def main(argv=None):
     print(f"  {len(items)} raw items, {sum(h['ok'] for h in health)}/{len(health)} sources OK")
 
     stories, epss = enrich.enrich_all(items, stats)
-    rfis = rfi.track(rfi.load_rfis(), stories, stats.get("kev_index", {}))
-    stats.pop("kev_index", None)  # large, not needed in the output
+    rfis = rfi.track(rfi.load_rfis(), stories, stats.get("kev_index", {}), rfi.ioc_pool(stats))
+    for key in [k for k in stats if k == "kev_index" or k.startswith("ioc_pool_")]:
+        stats.pop(key)  # large, not needed in the output
     pack = nuggets.build_pack(now.date(), stories)
 
     briefs = os.path.join(args.out, "briefs")
@@ -74,7 +75,12 @@ def main(argv=None):
         fh.write(howto.render_how(os.environ.get("DASHBOARD_URL", "")))
     with open(os.path.join(data, f"{day}.json"), "w", encoding="utf-8") as fh:
         json.dump({"date": day, "stories": stories, "stats": stats, "health": health,
-                   "lesson": pack["lesson"]["id"]}, fh, indent=1, default=str)
+                   "lesson": pack["lesson"]["id"],
+                   "rfis": [{"id": r["id"], "needs_update": r["needs_update"],
+                             "kev_hits": r["kev_hits"], "new_cves": r["new_cves"],
+                             "matches": [m["title"] for m in r["matches"]],
+                             "ioc_hits": r["ioc_hits"]} for r in rfis]},
+                  fh, indent=1, default=str)
 
     print(f"Wrote {args.out}/index.html and briefs/{day}.md ({len(stories)} stories)")
     if stories:

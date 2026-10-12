@@ -6,12 +6,15 @@ ti/data/rfis.json. Every daily run then keeps the answer fresh by checking:
 
   * CISA KEV: has any CVE for this vendor been added to the exploited list?
   * today's stories: does anything mention the RFI's keywords?
+  * today's indicators (URLhaus, ThreatFox): any URL, domain or IP whose
+    value contains the keywords, for example a fake Okta login page
 
-If either finds something, the dashboard flags the RFI as needing an update.
+If any check finds something, the dashboard flags the RFI as needing an update.
 """
 
 import json
 import os
+import re
 
 from .nuggets import DATA_DIR
 
@@ -29,8 +32,21 @@ def _hits(text, keywords):
     return any(k.lower() in text for k in keywords)
 
 
-def track(rfis, stories, kev_index):
-    """Attach today's KEV and story matches to each RFI."""
+def defang(value):
+    """Make an indicator unclickable before it is shown or shared: hxxp://evil[.]com."""
+    return re.sub(r"^http", "hxxp", value).replace(".", "[.]")
+
+
+def ioc_pool(stats):
+    """All raw indicators collected today (URLhaus, ThreatFox), kept in memory only."""
+    return [i for k, v in stats.items() if k.startswith("ioc_pool_") for i in v]
+
+
+def track(rfis, stories, kev_index, iocs=None):
+    """Attach today's KEV, story and indicator matches to each RFI.
+
+    `iocs` is today's indicator pool; None means the IOC feeds were unavailable.
+    """
     tracked = []
     for r in rfis:
         kw = r.get("keywords", [])
@@ -40,7 +56,10 @@ def track(rfis, stories, kev_index):
         matches = [s for s in stories if _hits(f"{s['title']} {s.get('summary', '')}", kw)]
         known = {c["id"] for c in r.get("cves", [])}
         new_cves = sorted({c for s in matches for c in s.get("cves", [])} - known)
+        ioc_kw = r.get("ioc_keywords", kw)
+        ioc_hits = [dict(i, value=defang(i["value"])) for i in (iocs or []) if _hits(i["value"], ioc_kw)]
         tracked.append(dict(r, kev_hits=kev, matches=matches[:6], new_cves=new_cves,
+                            ioc_hits=ioc_hits[:25], ioc_count=len(ioc_hits), ioc_checked=bool(iocs),
                             kev_checked=bool(kev_index),
-                            needs_update=bool(kev or new_cves)))
+                            needs_update=bool(kev or new_cves or ioc_hits)))
     return tracked
