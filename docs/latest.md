@@ -1,45 +1,16 @@
-# Threat Intel Field Brief: Saturday 17 October 2026
+# Threat Intel Field Brief: Sunday 18 October 2026
 
-_TLP:CLEAR · generated 10:28 UK time · last 36 hours_
+_TLP:CLEAR · generated 10:41 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: JJS Justice listed by thegentlemen ransomware (priority 66).
+- Read first: CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (priority 40).
 - 9 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 UK organisations named on ransomware leak sites (sectors: Government & Defense).
-- 1 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [JJS Justice listed by thegentlemen ransomware](https://www.ransomware.live/id/SkpTIEp1c3RpY2VAdGhlZ2VudGxlbWVu)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Government & Defense_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
-
-### 2. [China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers](https://thehackernews.com/2026/10/china-linked-hackers-exploited.html)
-**Priority 46** · The Hacker News · KEV · EPSS 1% · _Zero-day, Exploited vuln, Nation-state / APT_
-
-**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Find out which clients run the product (asset inventory or Shodan/Censys search).
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 3. [PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions](https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html)
-**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 4. [CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-104935)
+### 1. [CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-104935)
 **Priority 40** · CISA KEV · KEV · EPSS 26% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -48,7 +19,7 @@ _TLP:CLEAR · generated 10:28 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
+### 2. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
 **Priority 38** · CISA KEV · KEV · EPSS 13% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,7 +28,7 @@ _TLP:CLEAR · generated 10:28 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
+### 3. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
 **Priority 36** · CISA KEV · KEV · EPSS 5% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -66,7 +37,25 @@ _TLP:CLEAR · generated 10:28 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-76519)
+### 4. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
+**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-19): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
+**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-19): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 6. [CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-76519)
 **Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -75,12 +64,21 @@ _TLP:CLEAR · generated 10:28 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 8. [CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-0322)
+### 7. [CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-0322)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-10-17): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [CVE-2026-96951: Microsoft Windows Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96951)
+**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -97,36 +95,36 @@ _TLP:CLEAR · generated 10:28 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 290: Infostealers and stolen sessions
+### Lesson 291: Help desk social engineering
 
-Infostealers (for example Lumma, RedLine, Vidar) are malware that grab saved passwords, browser cookies and session tokens. Stolen sessions let attackers skip MFA. Logs get sold on criminal markets and often lead to ransomware or data theft weeks later.
+Groups like Scattered Spider phone IT help desks pretending to be staff and ask for password or MFA resets. No malware needed: they talk their way in, then add their own devices and move to ransomware or data theft.
 
-> **Think of it like this:** Stealing someone's house key is bad. Stealing the key and the alarm code together is how people get in without a sound.
+> **Think of it like this:** Ringing the hotel reception, claiming you lost your room key, and being handed a new one.
 
-**UK angle:** Many major breaches start with a stolen login. Checking whether client domains appear in stealer logs is high-value enrichment.
+**UK angle:** Major UK retail attacks in 2025 were linked to this style of social engineering. It is a top concern for UK retail, finance and anyone with an outsourced help desk.
 
-**Enrichment tip:** Watch for client email domains and SaaS login URLs in breach and stealer-log services, and treat a hit as an incident: reset passwords and revoke sessions.
+**Enrichment tip:** For identity attack stories, enrich with the targeted help desk provider or outsourcer. Clients sharing that supplier face higher risk.
 
-**Try it today:** Find one infostealer family in today's ThreatFox stats and read what it steals.
+**Try it today:** Write three questions a help desk should ask before resetting MFA.
 
-**Quiz:** Why can a stolen session cookie bypass MFA?  
-_Answer:_ It proves a login that already passed MFA, so the attacker does not have to log in again.
+**Quiz:** What does the attacker usually ask the help desk for?  
+_Answer:_ A password reset or to register a new MFA device.
 
-**Word of the day: CVSS** · Common Vulnerability Scoring System. Rates how severe a bug is, from 0 to 10.
+**Word of the day: Defanging** · Changing an indicator so it cannot be clicked by accident, for example evil[.]com or hxxp://.
 
 ### Review (spaced repetition)
 
-- **Where UK victims report things** (1d ago): Where do UK users forward suspicious emails? _Answer: report@phishing.gov.uk._
-- **Cyber Essentials** (3d ago): Name the five Cyber Essentials controls. _Answer: Firewalls, secure configuration, user access control, malware protection, security update management._
-- **STIX, TAXII and MISP** (7d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
+- **Infostealers and stolen sessions** (1d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
+- **UK GDPR, the ICO and the 72-hour rule** (3d ago): How long does a UK organisation have to report a qualifying personal data breach to the ICO? _Answer: 72 hours from becoming aware of it._
+- **Indicators go stale: ageing and decay** (7d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
 
-### Enrichment drill: JJS Justice listed by thegentlemen ransomware
+### Enrichment drill: CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability
 
-1. Search Companies House for 'JJS Justice'. Note its SIC code, size and registered region.
-2. Look up thegentlemen on ransomware.live. How many UK victims has it listed this year?
-3. Search 'thegentlemen initial access' to find how they usually break in (ATT&CK tactic TA0001).
-4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
-5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
+1. Open nvd.nist.gov/vuln/detail/CVE-2026-104935. Note the CVSS score and affected product.
+2. Check CVE-2026-104935 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+3. Find the vendor's own advisory. Is there a patch or only a workaround?
+4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
+5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
 Sources healthy: 16/17 (failed: ICO enforcement (UK regulator))
