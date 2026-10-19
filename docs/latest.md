@@ -1,6 +1,6 @@
-# Threat Intel Field Brief: Sunday 18 October 2026
+# Threat Intel Field Brief: Monday 19 October 2026
 
-_TLP:CLEAR · generated 10:41 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:53 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
@@ -19,16 +19,7 @@ _TLP:CLEAR · generated 10:41 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 2. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
-**Priority 38** · CISA KEV · KEV · EPSS 13% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 3. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
+### 2. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
 **Priority 36** · CISA KEV · KEV · EPSS 5% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -37,7 +28,7 @@ _TLP:CLEAR · generated 10:41 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
+### 3. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -46,12 +37,21 @@ _TLP:CLEAR · generated 10:41 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
+### 4. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-10-19): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
+**Priority 35** · CISA KEV · KEV · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -95,28 +95,28 @@ _TLP:CLEAR · generated 10:41 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 291: Help desk social engineering
+### Lesson 292: Typosquatting and brand monitoring
 
-Groups like Scattered Spider phone IT help desks pretending to be staff and ask for password or MFA resets. No malware needed: they talk their way in, then add their own devices and move to ransomware or data theft.
+Typosquatting means registering lookalike domains: cl1ent.co.uk, client-login.com, client.co instead of client.co.uk. Tools like dnstwist generate the possible variants and check which ones are registered.
 
-> **Think of it like this:** Ringing the hotel reception, claiming you lost your room key, and being handed a new one.
+> **Think of it like this:** A fake shop on the high street with a logo almost identical to the real one.
 
-**UK angle:** Major UK retail attacks in 2025 were linked to this style of social engineering. It is a top concern for UK retail, finance and anyone with an outsourced help desk.
+**UK angle:** UK clients are often impersonated across .uk, .co.uk, .com and .org.uk. Monitoring all of these is cheap and catches phishing early.
 
-**Enrichment tip:** For identity attack stories, enrich with the targeted help desk provider or outsourcer. Clients sharing that supplier face higher risk.
+**Enrichment tip:** For each lookalike: add creation date, whether it has MX records (can send or receive email), whether it has a live website, and certificate data from crt.sh.
 
-**Try it today:** Write three questions a help desk should ask before resetting MFA.
+**Try it today:** Run dnstwist (pip install dnstwist) against a UK brand domain and count the registered lookalikes.
 
-**Quiz:** What does the attacker usually ask the help desk for?  
-_Answer:_ A password reset or to register a new MFA device.
+**Quiz:** Why does an MX record on a lookalike domain matter?  
+_Answer:_ It means the domain can handle email, so it can be used for phishing or invoice fraud.
 
-**Word of the day: Defanging** · Changing an indicator so it cannot be clicked by accident, for example evil[.]com or hxxp://.
+**Word of the day: EDR** · Endpoint Detection and Response. Security software on laptops and servers that watches for attacker behaviour.
 
 ### Review (spaced repetition)
 
-- **Infostealers and stolen sessions** (1d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
-- **UK GDPR, the ICO and the 72-hour rule** (3d ago): How long does a UK organisation have to report a qualifying personal data breach to the ICO? _Answer: 72 hours from becoming aware of it._
-- **Indicators go stale: ageing and decay** (7d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
+- **Help desk social engineering** (1d ago): What does the attacker usually ask the help desk for? _Answer: A password reset or to register a new MFA device._
+- **Where UK victims report things** (3d ago): Where do UK users forward suspicious emails? _Answer: report@phishing.gov.uk._
+- **False positives and allowlists** (7d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
 
 ### Enrichment drill: CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability
 
