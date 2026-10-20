@@ -1,25 +1,54 @@
-# Threat Intel Field Brief: Monday 19 October 2026
+# Threat Intel Field Brief: Tuesday 20 October 2026
 
-_TLP:CLEAR · generated 11:53 UK time · last 72 hours_
+_TLP:CLEAR · generated 11:09 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (priority 40).
-- 9 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- Read first: Johnson & Pace listed by qilin ransomware (priority 66).
+- 7 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 1 UK organisations named on ransomware leak sites (sectors: Not Found).
+- 4 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-104935)
-**Priority 40** · CISA KEV · KEV · EPSS 26% · _Exploited vuln_
+### 1. [Johnson & Pace listed by qilin ransomware](https://www.ransomware.live/id/Sm9obnNvbiAmIFBhY2VAcWlsaW4=)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Not Found_
 
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 2. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
+### 2. [Introducing a new AI chapter in the NCSC research problem book](https://www.ncsc.gov.uk/blogs/introducing-new-ai-chapter-ncsc-research-problem-book)
+**Priority 46** · NCSC UK · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 3. [UK finance watchdog wants firms to report AI failures and close calls](https://www.theregister.com/ai-and-ml/2026/10/20/uk-finance-watchdog-wants-firms-to-report-ai-failures-and-close-calls/5304078)
+**Priority 45** · The Register Security · UK relevant · _Finance_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
+
+### 4. [Why cyber resilience is now a boardroom priority for UK public services](https://www.theregister.com/security/2026/10/20/partner-content-why-cyber-resilience-is-now-a-boardroom-priority-for-uk-public-services/5301601)
+**Priority 38** · The Register Security · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 5. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
 **Priority 36** · CISA KEV · KEV · EPSS 5% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -28,7 +57,7 @@ _TLP:CLEAR · generated 11:53 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
+### 6. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -37,7 +66,7 @@ _TLP:CLEAR · generated 11:53 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
+### 7. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -46,39 +75,12 @@ _TLP:CLEAR · generated 11:53 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
+### 8. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
 **Priority 35** · CISA KEV · KEV · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-10-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-76519)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-17): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-0322)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-17): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-96951: Microsoft Windows Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96951)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -95,36 +97,36 @@ _TLP:CLEAR · generated 11:53 UK time · last 72 hours_
 
 ## Daily knowledge pack
 
-### Lesson 292: Typosquatting and brand monitoring
+### Lesson 293: Writing for clients: BLUF
 
-Typosquatting means registering lookalike domains: cl1ent.co.uk, client-login.com, client.co instead of client.co.uk. Tools like dnstwist generate the possible variants and check which ones are registered.
+BLUF means Bottom Line Up Front. Start with the conclusion and the action, then give the detail. Busy readers stop after the first two lines, so those lines must carry the message.
 
-> **Think of it like this:** A fake shop on the high street with a logo almost identical to the real one.
+> **Think of it like this:** A news headline and first paragraph tell you the whole story. The rest is for people who want more.
 
-**UK angle:** UK clients are often impersonated across .uk, .co.uk, .com and .org.uk. Monitoring all of these is cheap and catches phishing early.
+**UK angle:** UK client boards and service desks both want: what happened, does it affect us, what do we do, by when.
 
-**Enrichment tip:** For each lookalike: add creation date, whether it has MX records (can send or receive email), whether it has a live website, and certificate data from crt.sh.
+**Enrichment tip:** Your enrichment should end in a BLUF line: 'Action: patch FortiOS on the two internet-facing firewalls today. KEV-listed, EPSS 94%.'
 
-**Try it today:** Run dnstwist (pip install dnstwist) against a UK brand domain and count the registered lookalikes.
+**Try it today:** Write a two-line BLUF for today's number one story.
 
-**Quiz:** Why does an MX record on a lookalike domain matter?  
-_Answer:_ It means the domain can handle email, so it can be used for phishing or invoice fraud.
+**Quiz:** What does BLUF stand for?  
+_Answer:_ Bottom Line Up Front.
 
-**Word of the day: EDR** · Endpoint Detection and Response. Security software on laptops and servers that watches for attacker behaviour.
+**Word of the day: Enrichment** · Adding context to raw data (owner, location, reputation, history) so people can decide what to do.
 
 ### Review (spaced repetition)
 
-- **Help desk social engineering** (1d ago): What does the attacker usually ask the help desk for? _Answer: A password reset or to register a new MFA device._
-- **Where UK victims report things** (3d ago): Where do UK users forward suspicious emails? _Answer: report@phishing.gov.uk._
-- **False positives and allowlists** (7d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
+- **Typosquatting and brand monitoring** (1d ago): Why does an MX record on a lookalike domain matter? _Answer: It means the domain can handle email, so it can be used for phishing or invoice fraud._
+- **Infostealers and stolen sessions** (3d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
+- **Matching threats to client assets** (7d ago): What does a CPE name identify? _Answer: A specific vendor and product (and optionally version) so vulnerabilities can be matched to it._
 
-### Enrichment drill: CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability
+### Enrichment drill: Johnson & Pace listed by qilin ransomware
 
-1. Open nvd.nist.gov/vuln/detail/CVE-2026-104935. Note the CVSS score and affected product.
-2. Check CVE-2026-104935 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
-3. Find the vendor's own advisory. Is there a patch or only a workaround?
-4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
-5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
+1. Search Companies House for 'Johnson & Pace'. Note its SIC code, size and registered region.
+2. Look up qilin on ransomware.live. How many UK victims has it listed this year?
+3. Search 'qilin initial access' to find how they usually break in (ATT&CK tactic TA0001).
+4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
+5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
 Sources healthy: 16/17 (failed: ICO enforcement (UK regulator))
