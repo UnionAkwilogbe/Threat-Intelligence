@@ -1,19 +1,19 @@
-# Threat Intel Field Brief: Tuesday 20 October 2026
+# Threat Intel Field Brief: Wednesday 21 October 2026
 
-_TLP:CLEAR · generated 11:09 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:16 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Johnson & Pace listed by qilin ransomware (priority 66).
-- 7 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 UK organisations named on ransomware leak sites (sectors: Not Found).
-- 4 stories with strong UK relevance.
+- Read first: Aveva listed by Mimori ransomware (priority 70).
+- 9 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 1 UK organisations named on ransomware leak sites (sectors: Manufacturing).
+- 8 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Johnson & Pace listed by qilin ransomware](https://www.ransomware.live/id/Sm9obnNvbiAmIFBhY2VAcWlsaW4=)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Not Found_
+### 1. [Aveva listed by Mimori ransomware](https://www.ransomware.live/id/QXZldmFATWltb3Jp)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Manufacturing, Energy / Utilities_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -21,8 +21,17 @@ _TLP:CLEAR · generated 11:09 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 2. [Introducing a new AI chapter in the NCSC research problem book](https://www.ncsc.gov.uk/blogs/introducing-new-ai-chapter-ncsc-research-problem-book)
-**Priority 46** · NCSC UK · UK relevant
+### 2. [Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA](https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html)
+**Priority 64** · The Hacker News · KEV · EPSS 97% · _Ransomware, Exploited vuln, Identity / MFA_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Check whether any client shares the victim's sector, suppliers or software.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 3. [Critical security issue affecting PHP](https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php)
+**Priority 56** · NCSC UK · UK relevant
 
 **In plain English:** General security news worth knowing.
 
@@ -30,59 +39,50 @@ _TLP:CLEAR · generated 11:09 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 3. [UK finance watchdog wants firms to report AI failures and close calls](https://www.theregister.com/ai-and-ml/2026/10/20/uk-finance-watchdog-wants-firms-to-report-ai-failures-and-close-calls/5304078)
-**Priority 45** · The Register Security · UK relevant · _Finance_
+### 4. [CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html)
+**Priority 53** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
-**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [Why cyber resilience is now a boardroom priority for UK public services](https://www.theregister.com/security/2026/10/20/partner-content-why-cyber-resilience-is-now-a-boardroom-priority-for-uk-public-services/5301601)
-**Priority 38** · The Register Security · UK relevant
+### 5. [Children’s Data Stolen After Ransomware Attack Compromises ‘Password1’ Account](https://www.infosecurity-magazine.com/news/children-data-stolen-password1/)
+**Priority 51** · Infosecurity Magazine · UK relevant · _Ransomware, Public sector_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+
+### 6. ['Password1' and a forgotten test account land Welsh outfits in hot water](https://www.theregister.com/cyber-crime/2026/10/20/password1-and-a-forgotten-test-account-land-welsh-outfits-in-hot-water/5304139)
+**Priority 46** · The Register Security · UK relevant · _Ransomware, Data breach_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html)
+**Priority 43** · The Hacker News · KEV · EPSS 0% · _Exploited vuln, Malware_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [Introducing a new AI chapter in the NCSC research problem book](https://www.ncsc.gov.uk/blogs/introducing-new-ai-chapter-ncsc-research-problem-book)
+**Priority 41** · NCSC UK · UK relevant
 
 **In plain English:** General security news worth knowing.
 
 **Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 5. [CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-105134)
-**Priority 36** · CISA KEV · KEV · EPSS 5% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-17): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-102764)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-19): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-61624)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-19): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-21589)
-**Priority 35** · CISA KEV · KEV · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-001: Okta vulnerabilities (Client A)
 
@@ -97,34 +97,34 @@ _TLP:CLEAR · generated 11:09 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 293: Writing for clients: BLUF
+### Lesson 294: Strategic, operational, tactical, technical
 
-BLUF means Bottom Line Up Front. Start with the conclusion and the action, then give the detail. Busy readers stop after the first two lines, so those lines must carry the message.
+Strategic intel is for leaders: trends and risk ('ransomware against UK retail is rising'). Operational is about specific campaigns and actors. Tactical covers TTPs for defenders. Technical is the raw IOCs for tools.
 
-> **Think of it like this:** A news headline and first paragraph tell you the whole story. The rest is for people who want more.
+> **Think of it like this:** Planning a trip: the country's safety (strategic), a planned strike on travel day (operational), which neighbourhoods to avoid (tactical), the exact address of a pickpocket gang (technical).
 
-**UK angle:** UK client boards and service desks both want: what happened, does it affect us, what do we do, by when.
+**UK angle:** A UK SME board needs strategic plus one action. Their MSP needs tactical and technical. Same enrichment, different packaging.
 
-**Enrichment tip:** Your enrichment should end in a BLUF line: 'Action: patch FortiOS on the two internet-facing firewalls today. KEV-listed, EPSS 94%.'
+**Enrichment tip:** Tag each output with its level and audience so the right people get the right version.
 
-**Try it today:** Write a two-line BLUF for today's number one story.
+**Try it today:** Rewrite one story from today's brief at the strategic level for a board.
 
-**Quiz:** What does BLUF stand for?  
-_Answer:_ Bottom Line Up Front.
+**Quiz:** Which level of intel is a list of malicious IPs?  
+_Answer:_ Technical.
 
-**Word of the day: Enrichment** · Adding context to raw data (owner, location, reputation, history) so people can decide what to do.
+**Word of the day: EPSS** · Exploit Prediction Scoring System. The estimated chance (0-1) a CVE is exploited in the next 30 days.
 
 ### Review (spaced repetition)
 
-- **Typosquatting and brand monitoring** (1d ago): Why does an MX record on a lookalike domain matter? _Answer: It means the domain can handle email, so it can be used for phishing or invoice fraud._
-- **Infostealers and stolen sessions** (3d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
-- **Matching threats to client assets** (7d ago): What does a CPE name identify? _Answer: A specific vendor and product (and optionally version) so vulnerabilities can be matched to it._
+- **Writing for clients: BLUF** (1d ago): What does BLUF stand for? _Answer: Bottom Line Up Front._
+- **Help desk social engineering** (3d ago): What does the attacker usually ask the help desk for? _Answer: A password reset or to register a new MFA device._
+- **Cyber Essentials** (7d ago): Name the five Cyber Essentials controls. _Answer: Firewalls, secure configuration, user access control, malware protection, security update management._
 
-### Enrichment drill: Johnson & Pace listed by qilin ransomware
+### Enrichment drill: Aveva listed by Mimori ransomware
 
-1. Search Companies House for 'Johnson & Pace'. Note its SIC code, size and registered region.
-2. Look up qilin on ransomware.live. How many UK victims has it listed this year?
-3. Search 'qilin initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'Aveva'. Note its SIC code, size and registered region.
+2. Look up Mimori on ransomware.live. How many UK victims has it listed this year?
+3. Search 'Mimori initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
