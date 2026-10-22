@@ -34,6 +34,11 @@
           "title": "What an attack looks like",
           "level": "Medium",
           "text": "Very large form POSTs (about 3.5 MB field names, null bytes). PHP error log: 'Allowed memory size of ... bytes exhausted (tried to allocate ...) in Unknown on line 0'. Apache: 'AH00052: child pid ... exit signal Segmentation fault (11)'. The clearest sign of success is a web worker (php-fpm, apache2, httpd) starting a shell or connecting out. A successful exploit can return HTTP 200 with no crash, so absence of errors proves nothing."
+        },
+        {
+          "title": "Network detection",
+          "level": "Medium",
+          "text": "Network detection: Cisco Talos Snort rules 67359 and 67360 cover both CVEs (also in the free Community Ruleset). They can only inspect traffic they can read, so HTTPS between a CDN or WAF and the web server hides attacks from a network IDS in front of that server."
         }
       ],
       "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 20 October could already have been compromised, so patching alone is not enough.",
@@ -91,12 +96,17 @@
           "name": "6. Outbound connections from web workers (UDM search)",
           "why": "Reverse shells and downloads. Exclude your own ranges and known update servers.",
           "query": "metadata.event_type = \"NETWORK_CONNECTION\"\nAND principal.process.file.full_path = /(php-fpm|php-cgi|lsphp|frankenphp|httpd|apache2)/ nocase"
+        },
+        {
+          "name": "7. IDS alerts for the Talos PHP2Shell rules (UDM search)",
+          "why": "Works for any Snort-based IDS feeding the SIEM, including Cisco and Meraki, where signature IDs look like 1:67359:1. Only sees unencrypted traffic.",
+          "query": "security_result.rule_id = /(^|:)(67359|67360)(:|$)/\nOR security_result.rule_name = /php2shell|CVE-2026-10961[89]/ nocase"
         }
       ],
       "updates": [
         {
           "date": "2026-10-22",
-          "note": "Opened after the NCSC alert. CVE records and CISA KEV checked directly (not on KEV yet). Detection guidance from Google Cloud and Datadog added as hunt queries. Client B's web supplier reports the site was patched on 21 October and Cloudflare emergency WAF rules are on; Roc can only hunt in the logs it receives."
+          "note": "Opened after the NCSC alert. CVE records and CISA KEV checked directly (not on KEV yet). Detection guidance from Google Cloud, Datadog and Cisco Talos added as hunt queries. Client B response coordinated with the SOC partner."
         }
       ],
       "sources": [
@@ -139,6 +149,18 @@
         {
           "name": "Help Net Security: PHP2Shell patched",
           "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/"
+        },
+        {
+          "name": "Cisco Talos: Two critical RCEs in PHP core (Snort 67359, 67360)",
+          "url": "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+        },
+        {
+          "name": "Cybaverse: PHP2Shell response guide and How to hunt",
+          "url": "https://www.cybaverse.co.uk/en/php2shell-checker"
+        },
+        {
+          "name": "Elastic: PHP2Shell detection coverage",
+          "url": "https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection"
         }
       ]
     },
