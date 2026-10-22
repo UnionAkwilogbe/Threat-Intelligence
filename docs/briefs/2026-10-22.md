@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Thursday 22 October 2026
 
-_TLP:CLEAR · generated 09:33 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
