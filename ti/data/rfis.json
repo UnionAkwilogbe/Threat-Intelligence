@@ -2,6 +2,147 @@
   "_readme": "Client requests for information (RFIs). Each daily run re-checks CISA KEV and the day's stories against `keywords` and shows what is new. This file is published on a public site: use client codenames, never real names.",
   "rfis": [
     {
+      "id": "RFI-002",
+      "client": "Client B",
+      "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
+      "opened": "2026-10-22",
+      "updated": "2026-10-22",
+      "status": "In progress",
+      "keywords": [
+        "php2shell",
+        "cve-2026-109618",
+        "cve-2026-109619"
+      ],
+      "ioc_keywords": [
+        "php2shell"
+      ],
+      "audio": "briefings/php2shell-briefing.mp3",
+      "bluf": "Two critical PHP bugs let an unauthenticated attacker run code on a web server. Fixes shipped on 21 October, details leaked a day earlier, and vendors report attacks already under way. Patch every internet-facing PHP system now, then check it was not compromised before the patch.",
+      "confidence": "High confidence on the facts: the CVE records and CISA KEV (catalogue 2026.10.21) were checked directly on 22 October. Exploitation reports come from vendors (Cloudflare, Patchstack) and are not yet confirmed by CISA.",
+      "findings": [
+        {
+          "title": "What is affected",
+          "level": "High",
+          "text": "Any PHP that serves web requests: PHP-FPM, Apache mod_php (highest risk), php-cgi, FrankenPHP and LiteSpeed. Fixed in 8.5.12, 8.4.27, 8.3.36 and 8.2.35. PHP 8.1 and older are end of life, so only a vendor backport (for example a Linux distribution or Plesk build dated 21 October) protects them. PHP is also bundled inside hosting panels, appliances and products like WordPress hosting, so suppliers must be asked."
+        },
+        {
+          "title": "Exploitation",
+          "level": "High",
+          "text": "Details leaked on 20 October, before the fix. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV. Some public exploit code is unverified and may itself contain malware."
+        },
+        {
+          "title": "What an attack looks like",
+          "level": "Medium",
+          "text": "Very large form POSTs (about 3.5 MB field names, null bytes). PHP error log: 'Allowed memory size of ... bytes exhausted (tried to allocate ...) in Unknown on line 0'. Apache: 'AH00052: child pid ... exit signal Segmentation fault (11)'. The clearest sign of success is a web worker (php-fpm, apache2, httpd) starting a shell or connecting out. A successful exploit can return HTTP 200 with no crash, so absence of errors proves nothing."
+        }
+      ],
+      "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 20 October could already have been compromised, so patching alone is not enough.",
+      "cves": [
+        {
+          "id": "CVE-2026-109618",
+          "product": "PHP",
+          "issue": "Remote code execution via out-of-memory handling corruption",
+          "cvss": 9.2,
+          "fixed": "8.5.12 / 8.4.27 / 8.3.36 / 8.2.35"
+        },
+        {
+          "id": "CVE-2026-109619",
+          "product": "PHP",
+          "issue": "Remote code execution via stale global state (use after free); memory disclosure",
+          "cvss": 9.2,
+          "fixed": "8.5.12 / 8.4.27 / 8.3.36 / 8.2.35"
+        }
+      ],
+      "actions": [
+        "Find every PHP system, internet-facing first, including PHP bundled in third-party products and hosting.",
+        "Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 (or later) and restart all PHP workers. For 8.1 and older, get written confirmation of a vendor backport or migrate.",
+        "If an internet-facing system cannot be patched quickly, put a WAF block on oversized POST bodies or take it offline (NCSC advice).",
+        "Hunt for compromise since 20 October: web workers spawning shells, new PHP files in web roots, outbound connections from web servers, and the memory and crash errors above.",
+        "Google SecOps: confirm the Mandiant Frontline Threats curated rule pack is enabled (23 new detections), and check Emerging Threat Center entry GLOBAL.26.015 where licensed.",
+        "Where the website is run by a supplier, ask them to confirm the patched version, the restart, and the result of their own log review, and to share Cloudflare security events if you want them reviewed."
+      ],
+      "hunts": [
+        {
+          "name": "1. Web worker starts a shell or download tool (UDM search)",
+          "why": "Strongest sign of successful exploitation. Needs Linux endpoint telemetry (EDR or auditd) from the web servers.",
+          "query": "metadata.event_type = \"PROCESS_LAUNCH\"\nAND principal.process.file.full_path = /(php-fpm|php-cgi|lsphp|frankenphp|httpd|apache2)/ nocase\nAND target.process.file.full_path = /\\/(sh|bash|dash|zsh|curl|wget|python[0-9.]*|perl|nc|ncat|socat|busybox)$/ nocase"
+        },
+        {
+          "name": "2. Same, as a YARA-L detection rule",
+          "why": "Save as a rule so it alerts from now on.",
+          "query": "rule php2shell_worker_spawns_shell {\n  meta:\n    description = \"PHP or web worker launching a shell or download tool (PHP2Shell post-exploitation)\"\n    severity = \"HIGH\"\n  events:\n    $e.metadata.event_type = \"PROCESS_LAUNCH\"\n    $e.principal.process.file.full_path = /(php-fpm|php-cgi|lsphp|frankenphp|httpd|apache2)/ nocase\n    $e.target.process.file.full_path = /\\/(sh|bash|dash|zsh|curl|wget|python[0-9.]*|perl|nc|ncat|socat|busybox)$/ nocase\n  condition:\n    $e\n}"
+        },
+        {
+          "name": "3. New PHP files written by the web server (UDM search)",
+          "why": "Web shells dropped after exploitation.",
+          "query": "metadata.event_type = \"FILE_CREATION\"\nAND target.file.full_path = /\\/(var\\/www|srv\\/www|public_html|htdocs|wp-content)\\/.*\\.(php|phtml|phar)$/ nocase\nAND principal.process.file.full_path = /(php-fpm|php-cgi|lsphp|httpd|apache2|nginx)/ nocase"
+        },
+        {
+          "name": "4. Exploit attempts in PHP and Apache error logs (raw log search, regex)",
+          "why": "Needs PHP or Apache error logs ingested. Errors alone are not proof; correlate with oversized POSTs.",
+          "query": "Allowed memory size of \\d+ bytes exhausted.*in Unknown on line 0\nAH00052: child pid \\d+ exit signal Segmentation fault \\(11\\)\nchild \\d+ exited on signal 11 \\(SIGSEGV"
+        },
+        {
+          "name": "5. Oversized POST requests (UDM search, web proxy, WAF or load balancer logs)",
+          "why": "The out-of-memory exploit uses multi-megabyte form posts. Which byte field holds the request size depends on the log source.",
+          "query": "metadata.event_type = \"NETWORK_HTTP\"\nAND network.http.method = \"POST\"\nAND network.sent_bytes > 1000000"
+        },
+        {
+          "name": "6. Outbound connections from web workers (UDM search)",
+          "why": "Reverse shells and downloads. Exclude your own ranges and known update servers.",
+          "query": "metadata.event_type = \"NETWORK_CONNECTION\"\nAND principal.process.file.full_path = /(php-fpm|php-cgi|lsphp|frankenphp|httpd|apache2)/ nocase"
+        }
+      ],
+      "updates": [
+        {
+          "date": "2026-10-22",
+          "note": "Opened after the NCSC alert. CVE records and CISA KEV checked directly (not on KEV yet). Detection guidance from Google Cloud and Datadog added as hunt queries. Client B's web supplier reports the site was patched on 21 October and Cloudflare emergency WAF rules are on; Roc can only hunt in the logs it receives."
+        }
+      ],
+      "sources": [
+        {
+          "name": "NCSC: Critical security issue affecting PHP",
+          "url": "https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php"
+        },
+        {
+          "name": "PHP advisory GHSA-w8hw-w9fx-j79w (CVE-2026-109618)",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+        },
+        {
+          "name": "PHP advisory GHSA-6wmf-4rv5-p3rp (CVE-2026-109619)",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+        },
+        {
+          "name": "Google Cloud: Responding to core PHP vulnerabilities",
+          "url": "https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619"
+        },
+        {
+          "name": "Datadog Security Labs: PHP2Shell detection",
+          "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/"
+        },
+        {
+          "name": "Tenable: PHP2Shell FAQ",
+          "url": "https://www.tenable.com/blog/php2shell-cve-2026-109618-cve-2026-109619-frequently-asked-questions-about-critical-php-remote"
+        },
+        {
+          "name": "Patchstack: attacks ongoing",
+          "url": "https://patchstack.com/articles/php-major-vulnerability-alert-10-2026/"
+        },
+        {
+          "name": "CERT-EU Security Advisory 2026-018",
+          "url": "https://cert.europa.eu/publications/security-advisories/2026-018/pdf"
+        },
+        {
+          "name": "Plesk: PHP builds with the fix",
+          "url": "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
+        },
+        {
+          "name": "Help Net Security: PHP2Shell patched",
+          "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/"
+        }
+      ]
+    },
+    {
       "id": "RFI-001",
       "client": "Client A",
       "topic": "Okta vulnerabilities",

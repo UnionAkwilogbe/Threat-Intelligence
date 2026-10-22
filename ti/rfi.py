@@ -4,7 +4,8 @@ An RFI is a question a client has asked, for example "are there any Okta
 vulnerabilities we should know about?". The analyst's answer lives in
 ti/data/rfis.json. Every daily run then keeps the answer fresh by checking:
 
-  * CISA KEV: has any CVE for this vendor been added to the exploited list?
+  * CISA KEV: has any of the RFI's CVEs, or any CVE for this vendor, been
+    added to the exploited list?
   * today's stories: does anything mention the RFI's keywords?
   * today's indicators (URLhaus, ThreatFox): any URL, domain or IP whose
     value contains the keywords, for example a fake Okta login page
@@ -56,9 +57,11 @@ def track(rfis, stories, kev_index, iocs=None):
     tracked = []
     for r in rfis:
         kw = r.get("keywords", [])
+        watched = {c["id"] for c in r.get("cves", [])}  # the RFI's own CVEs, watched by ID
         kev = [{"id": cve, "name": v.get("vulnerabilityName", ""), "added": v.get("dateAdded", "")}
                for cve, v in sorted(kev_index.items())
-               if _hits(f"{v.get('vendorProject', '')} {v.get('product', '')}", kw)]
+               if cve in watched or _hits(f"{v.get('vendorProject', '')} {v.get('product', '')}",
+                                          r.get("kev_keywords", kw))]
         matches = [s for s in stories if _hits(f"{s['title']} {s.get('summary', '')}", kw)]
         known = {c["id"] for c in r.get("cves", [])}
         new_cves = sorted({c for s in matches for c in s.get("cves", [])} - known)

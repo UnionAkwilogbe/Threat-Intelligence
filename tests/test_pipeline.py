@@ -171,6 +171,15 @@ class RfiTest(unittest.TestCase):
         self.assertIn("update-check.example.com", values)
         self.assertIn("http://files.example.co.uk/invoice.exe", values)
 
+    def test_kev_watches_rfi_cves_by_id(self):
+        from ti import rfi
+        rfis = [{"id": "R", "topic": "PHP", "keywords": ["php2shell"], "cves": [{"id": "CVE-2026-109618", "cvss": 9.2}]}]
+        kev = {"CVE-2026-109618": {"vendorProject": "PHP Group", "product": "PHP"},
+               "CVE-2024-4577": {"vendorProject": "PHP Group", "product": "PHP"}}
+        out = rfi.track(rfis, [], kev)[0]
+        self.assertEqual([k["id"] for k in out["kev_hits"]], ["CVE-2026-109618"])
+        self.assertTrue(out["needs_update"])
+
     def test_shipped_rfis_render(self):
         from ti import rfi
         tracked = rfi.track(rfi.load_rfis(), [], {})
