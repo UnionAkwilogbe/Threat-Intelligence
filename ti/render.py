@@ -344,6 +344,12 @@ def _rfi_card(r):
                  "<thead><tr><th>Indicator</th><th>Type</th><th>Threat</th><th>Source</th><th>First seen</th><th>Status</th></tr></thead>"
                  f"<tbody>{iocs}</tbody></table></div></details>") if iocs else ""
     updates = "".join(f"<li><b>{e(u['date'])}:</b> {e(u['note'])}</li>" for u in r.get("updates", []))
+    hunts = "".join(
+        f"<div class='label'>{e(h['name'])}</div><p class='sub' style='margin:2px 0 4px'>{e(h.get('why', ''))}</p>"
+        f"<pre class='mono' style='display:block;white-space:pre-wrap;padding:10px 12px;margin:0 0 8px'>{e(h['query'])}</pre>"
+        for h in r.get("hunts", []))
+    audio = (f"<p style='margin:10px 0 0'><b>Listen:</b> <audio controls preload='none' src='{e(r['audio'])}' "
+             "style='vertical-align:middle;max-width:100%'></audio></p>") if r.get("audio") else ""
     cves = "".join(
         f"<tr><td><a class='mono' href='https://www.cve.org/CVERecord?id={e(c['id'])}' target='_blank' rel='noopener noreferrer'>{e(c['id'])}</a></td>"
         f"<td>{e(c['product'])}</td><td>{e(c['issue'])}</td><td class='num'>{_sev(float(c['cvss']))}</td><td>{e(c['fixed'])}</td></tr>"
@@ -359,13 +365,14 @@ def _rfi_card(r):
   <div class="rfi-head"><div><span class="sub">{e(r['id'])} · {e(r.get('client', ''))} · opened {e(r.get('opened', ''))}</span>
   <h3 style="margin:2px 0 0">{e(r['topic'])}</h3></div>{status}</div>
   <div class="rfi-body">
-    <div class="rookie"><b>Bottom line:</b> {e(r.get('bluf', ''))}</div>
+    <div class="rookie"><b>Bottom line:</b> {e(r.get('bluf', ''))}{audio}</div>
     {checks}
     {ioc_table}
     {findings}
     <div class="label">Assessment</div><p style="margin:4px 0">{e(r.get('assessment', ''))}</p>
     <p class="sub" style="margin:0">{e(r.get('confidence', ''))}</p>
     <details open><summary>Recommended actions</summary><ol>{"".join(f"<li>{e(a)}</li>" for a in r.get('actions', []))}</ol></details>
+    {f"<details><summary>Hunt queries ({len(r['hunts'])})</summary>{hunts}</details>" if hunts else ""}
     <details><summary>Vulnerability detail ({len(r.get('cves', []))} CVEs)</summary>{cve_table}</details>
     {f"<details open><summary>In today's feeds</summary><ul>{matches}</ul></details>" if matches else ""}
     {f"<details><summary>Update log</summary><ul>{updates}</ul></details>" if updates else ""}
