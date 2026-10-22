@@ -5,57 +5,6 @@
    "source": "ransomware.live",
    "source_id": "ransomware",
    "kind": "ransomware",
-   "title": "novagroupgbc.com listed by BrainCipher ransomware",
-   "url": "https://www.ransomware.live/id/bm92YWdyb3VwZ2JjLmNvbUBCcmFpbkNpcGhlcg==",
-   "published": "2026-10-21T20:55:59.593611+00:00",
-   "summary": "[AI generated] N/A I don't have verified, reliable information about a company operating at \"novagroupgbc.com.\" Providing fabricated details about its industry, operations, or country would risk generating inaccurate threat intelligence. If you have additional context (screenshots, registration data, WHOIS records, or business documents related to this domain), please share them and I can help analyze that information instead.",
-   "uk_source": true,
-   "extra": {
-    "group": "BrainCipher",
-    "sector": "Other",
-    "victim": "novagroupgbc.com",
-    "website": "novagroupgbc.com"
-   },
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {
-    "domains": [
-     "novagroupgbc[.]com"
-    ]
-   },
-   "threat_types": [
-    "Ransomware"
-   ],
-   "sectors": [
-    "Other"
-   ],
-   "uk_score": 90,
-   "priority": 71,
-   "priority_why": {
-    "UK relevance": 31,
-    "Serious threat type": 10,
-    "UK victim named": 15,
-    "Fresh": 15
-   },
-   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
-   "actions": [
-    "Check whether any client shares the victim's sector, suppliers or software.",
-    "Confirm clients have offline or immutable backups and have tested a restore.",
-    "Look up the gang on ransomware.live to see its usual way in (initial access)."
-   ],
-   "enrich_steps": [
-    "Domain \u2192 WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)",
-    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "ransomware.live",
-   "source_id": "ransomware",
-   "kind": "ransomware",
    "title": "Allmand-Smith Limited listed by aurora ransomware",
    "url": "https://www.ransomware.live/id/QWxsbWFuZC1TbWl0aCBMaW1pdGVkQGF1cm9yYQ==",
    "published": "2026-10-21T20:01:09.735914+00:00",
@@ -94,6 +43,57 @@
     "Look up the gang on ransomware.live to see its usual way in (initial access)."
    ],
    "enrich_steps": [
+    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "ransomware.live",
+   "source_id": "ransomware",
+   "kind": "ransomware",
+   "title": "novagroupgbc.com listed by BrainCipher ransomware",
+   "url": "https://www.ransomware.live/id/bm92YWdyb3VwZ2JjLmNvbUBCcmFpbkNpcGhlcg==",
+   "published": "2026-10-21T20:55:59.593611+00:00",
+   "summary": "[AI generated] N/A I don't have verified, reliable information about a company operating at \"novagroupgbc.com.\" Providing fabricated details about its industry, operations, or country would risk generating inaccurate threat intelligence. If you have additional context (screenshots, registration data, WHOIS records, or business documents related to this domain), please share them and I can help analyze that information instead.",
+   "uk_source": true,
+   "extra": {
+    "group": "BrainCipher",
+    "sector": "Other",
+    "victim": "novagroupgbc.com",
+    "website": "novagroupgbc.com"
+   },
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {
+    "domains": [
+     "novagroupgbc[.]com"
+    ]
+   },
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Other"
+   ],
+   "uk_score": 90,
+   "priority": 66,
+   "priority_why": {
+    "UK relevance": 31,
+    "Serious threat type": 10,
+    "UK victim named": 15,
+    "Fresh": 10
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Domain \u2192 WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)",
     "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
    ],
    "also_reported_by": [],
@@ -142,45 +142,6 @@
    "clients": []
   },
   {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "Children\u2019s Data Stolen After Ransomware Attack Compromises \u2018Password1\u2019 Account",
-   "url": "https://www.infosecurity-magazine.com/news/children-data-stolen-password1/",
-   "published": "2026-10-21T09:05:00+00:00",
-   "summary": "The ICO has slammed security failings by the Welsh local government data unit and IT service provider following the 2024 incident",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Ransomware"
-   ],
-   "sectors": [
-    "Public sector"
-   ],
-   "uk_score": 75,
-   "priority": 46,
-   "priority_why": {
-    "UK relevance": 26,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
-   "actions": [
-    "Check whether any client shares the victim's sector, suppliers or software.",
-    "Confirm clients have offline or immutable backups and have tested a restore.",
-    "Look up the gang on ransomware.live to see its usual way in (initial access)."
-   ],
-   "enrich_steps": [
-    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "The Hacker News",
    "source_id": "thehackernews",
    "kind": "news",
@@ -224,6 +185,81 @@
    "also_reported_by": [
     "CISA KEV"
    ],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Children\u2019s Data Stolen After Ransomware Attack Compromises \u2018Password1\u2019 Account",
+   "url": "https://www.infosecurity-magazine.com/news/children-data-stolen-password1/",
+   "published": "2026-10-21T09:05:00+00:00",
+   "summary": "The ICO has slammed security failings by the Welsh local government data unit and IT service provider following the 2024 incident",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Public sector"
+   ],
+   "uk_score": 75,
+   "priority": 41,
+   "priority_why": {
+    "UK relevance": 26,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure",
+   "url": "https://www.infosecurity-magazine.com/news/php2shell-exploitation-attempt/",
+   "published": "2026-10-22T10:10:00+00:00",
+   "summary": "Threat intelligence analysts now observe large-scale evidence of exploitation of the two critical PHP vulnerabilities",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 37,
+   "priority_why": {
+    "UK relevance": 12,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
    "clients": []
   },
   {
@@ -869,6 +905,40 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "IT department and auditors at major pharmacy chain got into a rip-roaring fight about using 'password' on Cisco firewall",
+   "url": "https://www.theregister.com/security/2026/10/22/it-department-and-auditors-at-major-pharmacy-chain-got-into-a-rip-roaring-fight-about-using-password-on-cisco-firewall/5304592",
+   "published": "2026-10-22T10:00:00+00:00",
+   "summary": "Misaligned incentives led to an intractable argument",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Health / NHS"
+   ],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Health / NHS) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "Infosecurity Magazine",
    "source_id": "infosecmag",
    "kind": "news",
@@ -933,6 +1003,81 @@
    "clients": []
   },
   {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "PHP2Shell Exploitation Started Days Before Patches",
+   "url": "https://www.securityweek.com/php2shell-exploitation-started-days-before-patches/",
+   "published": "2026-10-22T09:48:58+00:00",
+   "summary": "Initial attempts were observed on October 17, and mass activity began shortly after patches were released. The post PHP2Shell Exploitation Started Days Before Patches appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
+   "url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
+   "published": "2026-10-22T08:28:48+00:00",
+   "summary": "LiteLLM on Wednesday disclosed that threat actors compromised \"multiple independent security controls\" to push a malicious version of the Python package containing a credential stealer and a backdoor. On October 21, 2026, LiteLLM's release pipeline was compromised to push 1.107.0 to the Docker Hub registry and the Python Package Index (PyPI) repository. The incident took place around 4:00 a.m.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach",
+    "Supply chain",
+    "Malware"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.",
+    "List which clients use the affected supplier or package."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -976,10 +1121,46 @@
    "source": "The Hacker News",
    "source_id": "thehackernews",
    "kind": "news",
+   "title": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+   "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+   "published": "2026-10-22T06:34:10+00:00",
+   "summary": "Amazon's Threat Intelligence team on Wednesday said it detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities on October 17, 2026, against its MadPot honeypot service, as the flaws come under broad exploitation in the wild following the release of the patches. \"The exploit attempt originated from an IP address associated with a commercial anonymization network,\" CJ Moses,",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
    "title": "China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack",
    "url": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html",
    "published": "2026-10-22T04:21:26+00:00",
-   "summary": "Microsoft on Wednesday disclosed that a China state-aligned actor dubbed Storm-0940 was behind the recent supply chain compromise of the ConnectWise Cloud Backup application. During the incident, Storm-0940 used ARTEX, a Go-based agentic AI penetration testing framework that was made closed-source in the wake of its abuse against South Korean financial institutions, to speed up scanning and",
+   "summary": "Microsoft on Wednesday disclosed that a China state-aligned actor dubbed Storm-0940 was behind the recent supply chain compromise of the ConnectWise Cloud Backup application. During the incident, Storm-0940 used ARTEX, a Go-based agentic AI penetration testing framework that was made closed-source in the wake of its abuse in cyber attacks targeting South Korean financial institutions, to speed",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -1023,82 +1204,6 @@
    "uk_source": false,
    "cves": [
     "CVE-2026-114575"
-   ],
-   "extra": {
-    "cvss": 10.0
-   },
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 24,
-   "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 9,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-114383: A weakness has been identified in TOTOLINK EX200 5.2.3c.7200. This impacts the function setWiFiAclAddConfig of the file\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114383",
-   "published": "2026-10-21T22:16:49.077000+00:00",
-   "summary": "A weakness has been identified in TOTOLINK EX200 5.2.3c.7200. This impacts the function setWiFiAclAddConfig of the file /cgi-bin/cstecgi.cgi of the component wireless.so. This manipulation of the argument macAddress causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-114383"
-   ],
-   "extra": {
-    "cvss": 10.0
-   },
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 24,
-   "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 9,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-114382: A security flaw has been discovered in TOTOLINK EX200 5.2.3c.7200. This affects the function setStaticDhcpConfig of the file\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114382",
-   "published": "2026-10-21T22:16:48.910000+00:00",
-   "summary": "A security flaw has been discovered in TOTOLINK EX200 5.2.3c.7200. This affects the function setStaticDhcpConfig of the file /cgi-bin/cstecgi.cgi of the component lan.so. The manipulation of the argument Comment results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-114382"
    ],
    "extra": {
     "cvss": 10.0
@@ -1479,44 +1584,6 @@
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-91403: Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component:\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91403",
-   "published": "2026-10-21T22:16:50.243000+00:00",
-   "summary": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JSSE). Supported versions that are affected are Oracle Java SE: 8u511, 8u511-perf, 11.0.33, 17.0.21, 21.0.13, 25.0.5, 27.0.1; Oracle GraalVM for JDK: 17.0.21 and 21.0.13; Oracle GraalVM Enterprise Edition: 21.3.20. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. Successful attacks of this vulnerability can result\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-91403"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 21,
-   "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 6,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -1742,6 +1809,44 @@
    "clients": []
   },
   {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Russian hackers teamed up to wipe data at Ukrainian grain firm",
+   "url": "https://therecord.media/ukraine-hackers-russia-grain-sandworm",
+   "published": "2026-10-21T14:45:00+00:00",
+   "summary": "The Russian state-linked hacking group Sandworm collaborated with another threat actor to carry out a destructive cyberattack against a Ukrainian grain logistics company last year, researchers said Thursday.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
+   "sectors": [
+    "Transport / Logistics"
+   ],
+   "uk_score": 0,
+   "priority": 20,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 10
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
+   ],
+   "enrich_steps": [
+    "Sector (Transport / Logistics) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "SecurityWeek",
    "source_id": "securityweek",
    "kind": "news",
@@ -1819,37 +1924,77 @@
    "clients": []
   },
   {
-   "source": "The Hacker News",
-   "source_id": "thehackernews",
-   "kind": "news",
-   "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
-   "url": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
-   "published": "2026-10-21T09:05:17+00:00",
-   "summary": "This story is developing and was written before PHP's scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed versions below are confirmed by the official advisory. PHP will ship an out-of-cycle security release at 14:00 UTC today, October 21, for two critical vulnerabilities that its security team has rated 9.2 on the CVSS v4.0 scale but has not described. \u26a1",
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-114383: A weakness has been identified in TOTOLINK EX200 5.2.3c.7200. This impacts the function setWiFiAclAddConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114383",
+   "published": "2026-10-21T22:16:49.077000+00:00",
+   "summary": "A weakness has been identified in TOTOLINK EX200 5.2.3c.7200. This impacts the function setWiFiAclAddConfig of the file /cgi-bin/cstecgi.cgi of the component wireless.so. This manipulation of the argument macAddress causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
    "uk_source": false,
-   "cves": [],
+   "cves": [
+    "CVE-2026-114383"
+   ],
+   "extra": {
+    "cvss": 10.0
+   },
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [
-    "Zero-day"
-   ],
+   "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 20,
+   "priority": 19,
    "priority_why": {
     "UK relevance": 0,
-    "Serious threat type": 10,
+    "CVSS": 9,
     "Fresh": 10
    },
-   "rookie": "A bug attackers found before the vendor could fix it, so there may be no patch yet.",
+   "rookie": "General security news worth knowing.",
    "actions": [
-    "Find out which clients run the product (asset inventory or Shodan/Censys search).",
-    "Apply the vendor's workaround or mitigation until a patch ships."
+    "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-114382: A security flaw has been discovered in TOTOLINK EX200 5.2.3c.7200. This affects the function setStaticDhcpConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114382",
+   "published": "2026-10-21T22:16:48.910000+00:00",
+   "summary": "A security flaw has been discovered in TOTOLINK EX200 5.2.3c.7200. This affects the function setStaticDhcpConfig of the file /cgi-bin/cstecgi.cgi of the component lan.so. The manipulation of the argument Comment results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-114382"
+   ],
+   "extra": {
+    "cvss": 10.0
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 19,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 9,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2129,33 +2274,39 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Auto tech startup claims it traced hack attempt back to rival's IP address",
-   "url": "https://www.theregister.com/cyber-crime/2026/10/20/auto-tech-startup-claims-it-traced-hack-attempt-back-to-rivals-ip-address/5304281",
-   "published": "2026-10-20T22:00:46+00:00",
-   "summary": "IQ.Lvbs implies that rival Comma.ai isn't playing fair",
-   "uk_source": true,
-   "cves": [],
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-91403: Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component:\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91403",
+   "published": "2026-10-21T22:16:50.243000+00:00",
+   "summary": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JSSE). Supported versions that are affected are Oracle Java SE: 8u511, 8u511-perf, 11.0.33, 17.0.21, 21.0.13, 25.0.5, 27.0.1; Oracle GraalVM for JDK: 17.0.21 and 21.0.13; Oracle GraalVM Enterprise Edition: 21.3.20. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. Successful attacks of this vulnerability can result\u2026",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-91403"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
    "threat_types": [],
    "sectors": [],
-   "uk_score": 35,
-   "priority": 17,
+   "uk_score": 0,
+   "priority": 16,
    "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 5
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2196,6 +2347,70 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Cisco Patches 34 Vulnerabilities Across Multiple Products",
+   "url": "https://www.securityweek.com/cisco-patches-34-vulnerabilities-across-multiple-products/",
+   "published": "2026-10-22T10:05:21+00:00",
+   "summary": "Critical-severity security defects could lead to command execution, authentication bypass, and XSS attacks. The post Cisco Patches 34 Vulnerabilities Across Multiple Products appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions",
+   "url": "https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html",
+   "published": "2026-10-22T07:47:22+00:00",
+   "summary": "Node.js released security updates on October 21 for its three supported release lines, 22.x, 24.x and 26.x, fixing 10 flaws. The most serious is a bug in the Brotli decompression code that Node.js bundles, which the project says can allow remote code execution, meaning an attacker could run code of their choosing on the affected system. Each supported line has one fixed version:",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2265,6 +2480,38 @@
    "clients": []
   },
   {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification",
+   "url": "https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html",
+   "published": "2026-10-22T06:38:31+00:00",
+   "summary": "A remote attacker who has not logged in can crash many HTTP/3 web servers with a single connection, security firm FoxIO disclosed, releasing working proof-of-concept code. By sending a small batch of compressed HTTP headers that expands in memory to a much larger set, the attacker can force the server to use thousands of times more memory than it received, enough to run a default server",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "SANS Internet Storm Center",
    "source_id": "sans",
    "kind": "research",
@@ -2297,13 +2544,13 @@
    "clients": []
   },
   {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
    "kind": "news",
-   "title": "Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks",
-   "url": "https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/",
-   "published": "2026-10-21T22:16:26+00:00",
-   "summary": "Chrome is getting new scam protections that use Gemini to detect deceptive websites and warn users when they copy suspicious commands from ClickFix attacks. [...]",
+   "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+   "url": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
+   "published": "2026-10-21T09:05:17+00:00",
+   "summary": "This story is developing and was written before PHP's scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed versions below are confirmed by the official advisory. PHP will ship an out-of-cycle security release at 14:00 UTC today, October 21, for two critical vulnerabilities that its security team has rated 9.2 on the CVSS v4.0 scale but has not described. \u26a1",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -2311,97 +2558,23 @@
    "attack": [],
    "iocs": {},
    "threat_types": [
-    "Fraud / Scam"
+    "Zero-day"
    ],
    "sectors": [],
    "uk_score": 0,
    "priority": 15,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 15
+    "Serious threat type": 10,
+    "Fresh": 5
    },
-   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
+   "rookie": "A bug attackers found before the vendor could fix it, so there may be no patch yet.",
    "actions": [
-    "Watch for lookalike domains of client brands (typosquats).",
-    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
+    "Find out which clients run the product (asset inventory or Shodan/Censys search).",
+    "Apply the vendor's workaround or mitigation until a patch ships."
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
-   "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
-   "published": "2026-10-21T21:43:27+00:00",
-   "summary": "Hackers compromised the infrastructure of Onamae Desktop Cloud, a popular provider of VPS services in Japan, and installed malware on up to 26,739 customers' servers. [...]",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Malware"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 15,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 15
-   },
-   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
-   "actions": [
-    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
-    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SANS Internet Storm Center",
-   "source_id": "sans",
-   "kind": "research",
-   "title": "Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)",
-   "url": "https://isc.sans.edu/diary/rss/33440",
-   "published": "2026-10-21T21:02:43+00:00",
-   "summary": "PHP.net announced that it will release a critical update today. We decided to change the infoCon to YELLOW due to the widespread use of PHP, the expected severity of the flaw (CVSS 9.4), and the availability of early PoC exploits before the patch became available.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-109618",
-    "CVE-2026-109619"
-   ],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {
-    "domains": [
-     "php[.]net"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 15,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "Domain \u2192 WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -4153,1171 +4326,111 @@
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9869: A stack-based buffer overflow vulnerability exists in the boa formTR069Config functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9869",
-   "published": "2026-10-20T21:17:23.143000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formTR069Config functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks",
+   "url": "https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/",
+   "published": "2026-10-21T22:16:26+00:00",
+   "summary": "Chrome is getting new scam protections that use Gemini to detect deceptive websites and warn users when they copy suspicious commands from ClickFix attacks. [...]",
    "uk_source": false,
-   "cves": [
-    "CVE-2026-9869"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
+   "cves": [],
    "kev": [],
-   "epss": 0.00791,
+   "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [],
+   "threat_types": [
+    "Fraud / Scam"
+   ],
    "sectors": [],
    "uk_score": 0,
-   "priority": 11,
+   "priority": 10,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
+    "Fresh": 10
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Watch for lookalike domains of client brands (typosquats).",
+    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9827: A arbitrary file write vulnerability exists in the boa formUploadFile functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9827",
-   "published": "2026-10-20T21:17:23.020000+00:00",
-   "summary": "A arbitrary file write vulnerability exists in the boa formUploadFile functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
+   "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
+   "published": "2026-10-21T21:43:27+00:00",
+   "summary": "Hackers compromised the infrastructure of Onamae Desktop Cloud, a popular provider of VPS services in Japan, and installed malware on up to 26,739 customers' servers. [...]",
    "uk_source": false,
-   "cves": [
-    "CVE-2026-9827"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
+   "cves": [],
    "kev": [],
-   "epss": 0.00976,
+   "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [],
+   "threat_types": [
+    "Malware"
+   ],
    "sectors": [],
    "uk_score": 0,
-   "priority": 11,
+   "priority": 10,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
+    "Fresh": 10
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
+    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9817: A stack-based buffer overflow vulnerability exists in the boa formUploadFile functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9817",
-   "published": "2026-10-20T21:17:22.900000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formUploadFile functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
+   "source": "SANS Internet Storm Center",
+   "source_id": "sans",
+   "kind": "research",
+   "title": "Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)",
+   "url": "https://isc.sans.edu/diary/rss/33440",
+   "published": "2026-10-21T21:02:43+00:00",
+   "summary": "PHP.net announced that it will release a critical update today. We decided to change the infoCon to YELLOW due to the widespread use of PHP, the expected severity of the flaw (CVSS 9.4), and the availability of early PoC exploits before the patch became available.",
    "uk_source": false,
    "cves": [
-    "CVE-2026-9817"
+    "CVE-2026-109618",
+    "CVE-2026-109619"
    ],
-   "extra": {
-    "cvss": 9.1
-   },
    "kev": [],
-   "epss": 0.00791,
+   "epss": null,
    "attack": [],
-   "iocs": {},
+   "iocs": {
+    "domains": [
+     "php[.]net"
+    ]
+   },
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 11,
+   "priority": 10,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
+    "Fresh": 10
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9814: An OS command injection vulnerability exists in the boa formWizard newPass functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9814",
-   "published": "2026-10-20T21:17:22.773000+00:00",
-   "summary": "An OS command injection vulnerability exists in the boa formWizard newPass functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-9814"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.013,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9660: Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formFilter functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9660",
-   "published": "2026-10-20T21:17:22.613000+00:00",
-   "summary": "Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formFilter functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability deals with the vpnPassword parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-9660"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-9659: Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formFilter functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9659",
-   "published": "2026-10-20T21:17:22.410000+00:00",
-   "summary": "Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formFilter functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability deals with the vpnUser parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-9659"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42026: Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup dhcp_dns functionality of X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42026",
-   "published": "2026-10-20T21:17:19.730000+00:00",
-   "summary": "Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup dhcp_dns functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the dhcp_dns2 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42026"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42025: Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup dhcp_dns functionality of X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42025",
-   "published": "2026-10-20T21:17:19.610000+00:00",
-   "summary": "Multiple exploitable stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup dhcp_dns functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the dhcp_dns1 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42025"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42024: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42024",
-   "published": "2026-10-20T21:17:19.490000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the static_gw parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42024"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42023: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42023",
-   "published": "2026-10-20T21:17:19.373000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the static_ipv6 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42023"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00791,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42022: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42022",
-   "published": "2026-10-20T21:17:19.257000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the static_dns2 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42022"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42021: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42021",
-   "published": "2026-10-20T21:17:19.140000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup static network configuration functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the static_dns1 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42021"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42020: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup pppoe functionality of Totolink X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42020",
-   "published": "2026-10-20T21:17:19.020000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup pppoe functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the pppoe_dns2 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42020"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-42019: Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup pppoe functionality of Totolink X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42019",
-   "published": "2026-10-20T21:17:18.903000+00:00",
-   "summary": "Multiple stack-based buffer overflow vulnerabilities exist in the boa formIpv6Setup pppoe functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger these vulnerabilities. This vulnerability concerns the pppoe_dns1 parameter.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-42019"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-41223: A stack-based buffer overflow vulnerability exists in the boa formMapDelDevice macstr functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41223",
-   "published": "2026-10-20T21:17:18.783000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formMapDelDevice macstr functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-41223"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-41222: A stack-based buffer overflow vulnerability exists in the boa formParentControl url functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41222",
-   "published": "2026-10-20T21:17:18.653000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formParentControl url functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-41222"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-40627: An os command injection vulnerability exists in the boa formWsc targetAPSsid functionality of Totolink X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40627",
-   "published": "2026-10-20T21:17:18.517000+00:00",
-   "summary": "An os command injection vulnerability exists in the boa formWsc targetAPSsid functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-40627"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01043,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-40615: A stack-based buffer overflow vulnerability exists in the boa formParentControl deviceName functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40615",
-   "published": "2026-10-20T21:17:18.393000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formParentControl deviceName functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-40615"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-35499: An os command injection vulnerability exists in the boa formWsc peerRptPin functionality of Totolink X2000R\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35499",
-   "published": "2026-10-20T21:17:18.277000+00:00",
-   "summary": "An os command injection vulnerability exists in the boa formWsc peerRptPin functionality of Totolink X2000R TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327. A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-35499"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01043,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-33568: A OS command injection vulnerability exists in the boa formMapDelDevice macstr functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33568",
-   "published": "2026-10-20T21:17:18.157000+00:00",
-   "summary": "A OS command injection vulnerability exists in the boa formMapDelDevice macstr functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-33568"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01043,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-28763: A stack-based buffer overflow vulnerability exists in the boa formMapDelDevice hostname functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28763",
-   "published": "2026-10-20T21:17:18.037000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formMapDelDevice hostname functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-28763"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00737,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10141: A Unsigned Firmware vulnerability exists in the boa Firmware Update functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10141",
-   "published": "2026-10-20T21:17:16.843000+00:00",
-   "summary": "A Unsigned Firmware vulnerability exists in the boa Firmware Update functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted firmware binary can lead to arbitrary firmware update. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10141"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00406,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10139: A stack-based buffer overflow vulnerability exists in the Mcli functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10139",
-   "published": "2026-10-20T21:17:16.720000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the Mcli functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10139"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00946,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10138: A OS command injection vulnerability exists in the boa formUpload() functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10138",
-   "published": "2026-10-20T21:17:16.597000+00:00",
-   "summary": "A OS command injection vulnerability exists in the boa formUpload() functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10138"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01153,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10137: A stack-based buffer overflow vulnerability exists in the boa formUpload() functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10137",
-   "published": "2026-10-20T21:17:16.480000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formUpload() functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10137"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00946,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10136: A heap-based buffer overflow vulnerability exists in the boa formUpload() functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10136",
-   "published": "2026-10-20T21:17:16.360000+00:00",
-   "summary": "A heap-based buffer overflow vulnerability exists in the boa formUpload() functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10136"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00946,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10135: A OS command injection vulnerability exists in the batchupg functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10135",
-   "published": "2026-10-20T21:17:16.240000+00:00",
-   "summary": "A OS command injection vulnerability exists in the batchupg functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10135"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01153,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10133: A stack-based buffer overflow vulnerability exists in the batchupg functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10133",
-   "published": "2026-10-20T21:17:16.117000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the batchupg functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10133"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00946,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10132: A stack-based buffer overflow vulnerability exists in the boa formIpQos mac functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10132",
-   "published": "2026-10-20T21:17:15.993000+00:00",
-   "summary": "A stack-based buffer overflow vulnerability exists in the boa formIpQos mac functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10132"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.00946,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-10131: An OS command injection vulnerability exists in the boa formPasswordSetup functionality of X2000R (version(s):\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10131",
-   "published": "2026-10-20T21:17:15.853000+00:00",
-   "summary": "An OS command injection vulnerability exists in the boa formPasswordSetup functionality of X2000R (version(s): TOTOLINK-X2000R-Gh-V1.0.0-B20250421.1327). A specially crafted HTTP request can lead to arbitrary code execution. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-10131"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
-   "kev": [],
-   "epss": 0.01153,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 11,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 6,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "Domain \u2192 WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -5591,38 +4704,6 @@
    "clients": []
   },
   {
-   "source": "The Record",
-   "source_id": "therecord",
-   "kind": "news",
-   "title": "Hundreds of websites taken offline as concern grows over two PHP vulnerabilities",
-   "url": "https://therecord.media/php-script-vulnerabilities-warnings",
-   "published": "2026-10-21T14:17:00+00:00",
-   "summary": "The maintainers of the globally used PHP scripting language released patches for two vulnerabilities after alerting users that the bugs were severe.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -5824,38 +4905,6 @@
    "clients": []
   },
   {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "OpenAI Agents Silenced Security Team Alerts, Removed Misalignment Monitor",
-   "url": "https://www.securityweek.com/openai-agents-silenced-security-team-alerts-removed-misalignment-monitor/",
-   "published": "2026-10-21T12:34:22+00:00",
-   "summary": "In two internal incidents, agents read routine coding instructions as permission to weaken monitoring, and one gave a false answer about it. The post OpenAI Agents Silenced Security Team Alerts, Removed Misalignment Monitor appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -5897,38 +4946,6 @@
    "url": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
    "published": "2026-10-21T11:53:34+00:00",
    "summary": "Generative AI has changed what a malicious email looks like. Messages that once gave themselves away through clumsy wording, generic pretexts, and reused templates now arrive fluent, personalized, and unique to each recipient, and the behavioral signals email filters have relied on for years are fading as a result. Proofpoint shared several examples of the shift at its Protect 2026 conference.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Browsers Block eMudhra Intermediate CAs Over Recoverable Private Keys",
-   "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
-   "published": "2026-10-21T11:22:05+00:00",
-   "summary": "The private keys associated with eight certificates were compromised, and root programs and trust stores are blocking them. The post Browsers Block eMudhra Intermediate CAs Over Recoverable Private Keys appeared first on SecurityWeek .",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -6066,10 +5083,10 @@
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -6101,10 +5118,10 @@
    ],
    "sectors": [],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
    "actions": [
@@ -6255,47 +5272,12 @@
    ],
    "also_reported_by": [],
    "clients": []
-  },
-  {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "PHP warns admins of two critical flaws, emergency patches coming tomorrow",
-   "url": "https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/",
-   "published": "2026-10-20T20:56:43+00:00",
-   "summary": "The PHP security team is warning administrators to prepare for emergency security updates tomorrow to address two critical vulnerabilities, as information about the flaws has reportedly leaked ahead of their scheduled disclosure. [...]",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Data breach"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 5,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 5
-   },
-   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
-   "actions": [
-    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
-    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
   }
  ],
  "stats": {
   "kev_total": 1754,
-  "critical_cves": 81,
-  "victims_total": 42,
+  "critical_cves": 51,
+  "victims_total": 43,
   "victims_uk": 2,
   "top_groups": [
    [
@@ -6308,7 +5290,7 @@
    ],
    [
     "lamashtu",
-    5
+    6
    ],
    [
     "everest",
@@ -6388,14 +5370,14 @@
    "name": "Infosecurity Magazine",
    "id": "infosecmag",
    "ok": true,
-   "count": 7,
+   "count": 8,
    "error": ""
   },
   {
    "name": "BleepingComputer",
    "id": "bleeping",
    "ok": true,
-   "count": 14,
+   "count": 13,
    "error": ""
   },
   {
@@ -6409,7 +5391,7 @@
    "name": "The Hacker News",
    "id": "thehackernews",
    "ok": true,
-   "count": 17,
+   "count": 21,
    "error": ""
   },
   {
@@ -6444,7 +5426,7 @@
    "name": "NVD critical CVEs",
    "id": "nvd",
    "ok": true,
-   "count": 81,
+   "count": 51,
    "error": ""
   },
   {
@@ -6485,11 +5467,11 @@
    "new_cves": [],
    "matches": [
     "Critical security issue affecting PHP",
+    "PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure",
+    "PHP2Shell Exploitation Started Days Before Patches",
+    "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
     "PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors",
-    "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
-    "CVE-2026-109619: PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or\u2026",
-    "CVE-2026-109618: PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not\u2026",
-    "Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)"
+    "CVE-2026-109619: PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or\u2026"
    ],
    "ioc_hits": []
   },

@@ -1,10 +1,10 @@
 # Threat Intel Field Brief: Thursday 22 October 2026
 
-_TLP:CLEAR · generated 09:45 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:17 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: novagroupgbc.com listed by BrainCipher ransomware (priority 71).
+- Read first: Allmand-Smith Limited listed by aurora ransomware (priority 70).
 - 8 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 2 UK organisations named on ransomware leak sites (sectors: Manufacturing, Other).
 - 4 stories with strong UK relevance.
@@ -12,16 +12,7 @@ _TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 
 ## Top 8 for your UK clients
 
-### 1. [novagroupgbc.com listed by BrainCipher ransomware](https://www.ransomware.live/id/bm92YWdyb3VwZ2JjLmNvbUBCcmFpbkNpcGhlcg==)
-**Priority 71** · ransomware.live · UK relevant · _Ransomware, Other_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
-
-### 2. [Allmand-Smith Limited listed by aurora ransomware](https://www.ransomware.live/id/QWxsbWFuZC1TbWl0aCBMaW1pdGVkQGF1cm9yYQ==)
+### 1. [Allmand-Smith Limited listed by aurora ransomware](https://www.ransomware.live/id/QWxsbWFuZC1TbWl0aCBMaW1pdGVkQGF1cm9yYQ==)
 **Priority 70** · ransomware.live · UK relevant · _Ransomware, Finance, Manufacturing_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
@@ -29,6 +20,15 @@ _TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 **Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+
+### 2. [novagroupgbc.com listed by BrainCipher ransomware](https://www.ransomware.live/id/bm92YWdyb3VwZ2JjLmNvbUBCcmFpbkNpcGhlcg==)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Other_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
 ### 3. [Critical security issue affecting PHP](https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php)
 **Priority 60** · NCSC UK · UK relevant
@@ -39,16 +39,7 @@ _TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [Children’s Data Stolen After Ransomware Attack Compromises ‘Password1’ Account](https://www.infosecurity-magazine.com/news/children-data-stolen-password1/)
-**Priority 46** · Infosecurity Magazine · UK relevant · _Ransomware, Public sector_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
-
-### 5. [CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html)
+### 4. [CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html)
 **Priority 43** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,7 +48,25 @@ _TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk](https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611)
+### 5. [Children’s Data Stolen After Ransomware Attack Compromises ‘Password1’ Account](https://www.infosecurity-magazine.com/news/children-data-stolen-password1/)
+**Priority 41** · Infosecurity Magazine · UK relevant · _Ransomware, Public sector_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+
+### 6. [PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure](https://www.infosecurity-magazine.com/news/php2shell-exploitation-attempt/)
+**Priority 37** · Infosecurity Magazine · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk](https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611)
 **Priority 37** · The Register Security · _Exploited vuln, Supply chain_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -66,16 +75,7 @@ _TLP:CLEAR · generated 09:45 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 7. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
+### 8. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -131,11 +131,11 @@ _Answer:_ Any three of: relevance, timeliness, accuracy, completeness, uniquenes
 - **Typosquatting and brand monitoring** (3d ago): Why does an MX record on a lookalike domain matter? _Answer: It means the domain can handle email, so it can be used for phishing or invoice fraud._
 - **UK GDPR, the ICO and the 72-hour rule** (7d ago): How long does a UK organisation have to report a qualifying personal data breach to the ICO? _Answer: 72 hours from becoming aware of it._
 
-### Enrichment drill: novagroupgbc.com listed by BrainCipher ransomware
+### Enrichment drill: Allmand-Smith Limited listed by aurora ransomware
 
-1. Search Companies House for 'novagroupgbc.com'. Note its SIC code, size and registered region.
-2. Look up BrainCipher on ransomware.live. How many UK victims has it listed this year?
-3. Search 'BrainCipher initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'Allmand-Smith Limited'. Note its SIC code, size and registered region.
+2. Look up aurora on ransomware.live. How many UK victims has it listed this year?
+3. Search 'aurora initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
