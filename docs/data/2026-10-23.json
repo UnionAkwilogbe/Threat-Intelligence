@@ -90,6 +90,44 @@
    "clients": []
   },
   {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Attacks on Tech Firms Behind Most Third-Party Data Breach Victims",
+   "url": "https://www.infosecurity-magazine.com/news/tech-third-party-breach-victims/",
+   "published": "2026-10-23T10:00:00+00:00",
+   "summary": "Kroll found that 69% of data breach victims in the past year were affected by a third-party breach, with attacks on tech companies the most common cause",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach",
+    "Supply chain"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 37,
+   "priority_why": {
+    "UK relevance": 12,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.",
+    "List which clients use the affected supplier or package."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "CISA KEV",
    "source_id": "kev",
    "kind": "vuln",
@@ -486,42 +524,6 @@
    "clients": []
   },
   {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure",
-   "url": "https://www.infosecurity-magazine.com/news/php2shell-exploitation-attempt/",
-   "published": "2026-10-22T10:10:00+00:00",
-   "summary": "Threat intelligence analysts now observe large-scale evidence of exploitation of the two critical PHP vulnerabilities",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Exploited vuln"
-   ],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 32,
-   "priority_why": {
-    "UK relevance": 12,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
-   "actions": [
-    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
-    "Search client external attack surface for the affected product and version."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -606,6 +608,42 @@
    "clients": []
   },
   {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure",
+   "url": "https://www.infosecurity-magazine.com/news/php2shell-exploitation-attempt/",
+   "published": "2026-10-22T10:10:00+00:00",
+   "summary": "Threat intelligence analysts now observe large-scale evidence of exploitation of the two critical PHP vulnerabilities",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "The Register Security",
    "source_id": "theregister",
    "kind": "news",
@@ -681,6 +719,42 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Attackers Exploit Third VeloCloud Orchestrator Zero-Day in Four Months",
+   "url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
+   "published": "2026-10-23T09:58:34+00:00",
+   "summary": "The critical-severity SQL injection flaw allows attackers to access privileged internal functionality and gain operator privileges. The post Attackers Exploit Third VeloCloud Orchestrator Zero-Day in Four Months appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Zero-day"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "A bug attackers found before the vendor could fix it, so there may be no patch yet.",
+   "actions": [
+    "Find out which clients run the product (asset inventory or Shodan/Censys search).",
+    "Apply the vendor's workaround or mitigation until a patch ships."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -1175,40 +1249,6 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "IT department and auditors at major pharmacy chain got into a rip-roaring fight about using 'password' on Cisco firewall",
-   "url": "https://www.theregister.com/security/2026/10/22/it-department-and-auditors-at-major-pharmacy-chain-got-into-a-rip-roaring-fight-about-using-password-on-cisco-firewall/5304592",
-   "published": "2026-10-22T10:00:00+00:00",
-   "summary": "Misaligned incentives led to an intractable argument",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [
-    "Health / NHS"
-   ],
-   "uk_score": 35,
-   "priority": 22,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Sector (Health / NHS) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -1627,6 +1667,40 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "IT department and auditors at major pharmacy chain got into a rip-roaring fight about using 'password' on Cisco firewall",
+   "url": "https://www.theregister.com/security/2026/10/22/it-department-and-auditors-at-major-pharmacy-chain-got-into-a-rip-roaring-fight-about-using-password-on-cisco-firewall/5304592",
+   "published": "2026-10-22T10:00:00+00:00",
+   "summary": "Misaligned incentives led to an intractable argument",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Health / NHS"
+   ],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Health / NHS) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2752,41 +2826,6 @@
    "clients": []
   },
   {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Splunk, SolarWinds Release Fresh Security Updates",
-   "url": "https://www.securityweek.com/splunk-solarwinds-release-fresh-security-updates/",
-   "published": "2026-10-22T10:45:24+00:00",
-   "summary": "Patched vulnerabilities could allow attackers to execute code, elevate privileges, and leak sensitive information. The post Splunk, SolarWinds Release Fresh Security Updates appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Data breach"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
-   "actions": [
-    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
-    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "The Hacker News",
    "source_id": "thehackernews",
    "kind": "news",
@@ -2948,41 +2987,6 @@
    ],
    "also_reported_by": [],
    "clients": []
-  },
-  {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
-   "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
-   "published": "2026-10-21T21:43:27+00:00",
-   "summary": "Hackers compromised the infrastructure of Onamae Desktop Cloud, a popular provider of VPS services in Japan, and installed malware on up to 26,739 customers' servers. [...]",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Malware"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 5,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 5
-   },
-   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
-   "actions": [
-    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
-    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
   }
  ],
  "stats": {
@@ -3081,14 +3085,14 @@
    "name": "Infosecurity Magazine",
    "id": "infosecmag",
    "ok": true,
-   "count": 5,
+   "count": 6,
    "error": ""
   },
   {
    "name": "BleepingComputer",
    "id": "bleeping",
    "ok": true,
-   "count": 11,
+   "count": 10,
    "error": ""
   },
   {

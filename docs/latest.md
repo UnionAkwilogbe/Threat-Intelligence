@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Friday 23 October 2026
 
-_TLP:CLEAR · generated 10:30 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:11 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -30,7 +30,16 @@ _TLP:CLEAR · generated 10:30 UK time · last 36 hours_
 
 **Enrich next:** Sector (Telecoms) → tag every client in that sector and send them a short heads-up
 
-### 3. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
+### 3. [Attacks on Tech Firms Behind Most Third-Party Data Breach Victims](https://www.infosecurity-magazine.com/news/tech-third-party-breach-victims/)
+**Priority 37** · Infosecurity Magazine · _Data breach, Supply chain_
+
+**In plain English:** Private data got out. Stolen data is later reused for scams and account takeover.
+
+**Do this:** Check if client staff email domains appear in the leak (Have I Been Pwned domain search). Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 4. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -39,7 +48,7 @@ _TLP:CLEAR · generated 10:30 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
+### 5. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -48,7 +57,7 @@ _TLP:CLEAR · generated 10:30 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-110936: Siemens Software Center Uncontrolled Search Path Element Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110936)
+### 6. [CVE-2026-110936: Siemens Software Center Uncontrolled Search Path Element Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110936)
 **Priority 35** · CISA KEV · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,7 +66,7 @@ _TLP:CLEAR · generated 10:30 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [PHP2Shell puts dozens of UK government services out of service](https://www.theregister.com/security/2026/10/22/php2shell-puts-dozens-of-uk-government-services-out-of-service/5304840)
+### 7. [PHP2Shell puts dozens of UK government services out of service](https://www.theregister.com/security/2026/10/22/php2shell-puts-dozens-of-uk-government-services-out-of-service/5304840)
 **Priority 33** · The Register Security · UK relevant · _Public sector_
 
 **In plain English:** General security news worth knowing.
@@ -66,21 +75,12 @@ _TLP:CLEAR · generated 10:30 UK time · last 36 hours_
 
 **Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
 
-### 7. [Iranian Hacking Group Found Hosting C2 Infrastructure in the US](https://www.infosecurity-magazine.com/news/iranian-hacking-group-hosting-c2/)
+### 8. [Iranian Hacking Group Found Hosting C2 Infrastructure in the US](https://www.infosecurity-magazine.com/news/iranian-hacking-group-hosting-c2/)
 **Priority 32** · Infosecurity Magazine · _Nation-state / APT, Malware_
 
 **In plain English:** Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.
 
 **Do this:** Map the reported techniques to MITRE ATT&CK and check client detections cover them. Check if the NCSC has issued a joint advisory with indicators to hunt for.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 8. [PHP2Shell Exploitation Attempt Detected by Amazon Four Days Before Vulnerability Disclosure](https://www.infosecurity-magazine.com/news/php2shell-exploitation-attempt/)
-**Priority 32** · Infosecurity Magazine · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
