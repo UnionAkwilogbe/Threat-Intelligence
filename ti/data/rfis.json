@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-10-22",
+      "updated": "2026-10-23",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -28,7 +28,7 @@
         {
           "title": "Exploitation",
           "level": "High",
-          "text": "Details leaked on 20 October, before the fix. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV. Some public exploit code is unverified and may itself contain malware."
+          "text": "Amazon's honeypots recorded an exploitation attempt on 17 October, four days before disclosure, and Amazon cannot explain how the attacker had the details. Details then leaked publicly on 20 October and proof-of-concept code appeared on 21 October. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV (catalogue 2026.10.21). Some public exploit code is unverified and may itself contain malware."
         },
         {
           "title": "What an attack looks like",
@@ -41,7 +41,7 @@
           "text": "Network detection: Cisco Talos Snort rules 67359 and 67360 cover both CVEs (also in the free Community Ruleset). They can only inspect traffic they can read, so HTTPS between a CDN or WAF and the web server hides attacks from a network IDS in front of that server."
         }
       ],
-      "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 20 October could already have been compromised, so patching alone is not enough.",
+      "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
       "cves": [
         {
           "id": "CVE-2026-109618",
@@ -62,7 +62,7 @@
         "Find every PHP system, internet-facing first, including PHP bundled in third-party products and hosting.",
         "Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 (or later) and restart all PHP workers. For 8.1 and older, get written confirmation of a vendor backport or migrate.",
         "If an internet-facing system cannot be patched quickly, put a WAF block on oversized POST bodies or take it offline (NCSC advice).",
-        "Hunt for compromise since 20 October: web workers spawning shells, new PHP files in web roots, outbound connections from web servers, and the memory and crash errors above.",
+        "Hunt for compromise since 17 October: web workers spawning shells, new PHP files in web roots, outbound connections from web servers, and the memory and crash errors above.",
         "Google SecOps: confirm the Mandiant Frontline Threats curated rule pack is enabled (23 new detections), and check Emerging Threat Center entry GLOBAL.26.015 where licensed.",
         "Where the website is run by a supplier, ask them to confirm the patched version, the restart, and the result of their own log review, and to share Cloudflare security events if you want them reviewed."
       ],
@@ -107,6 +107,10 @@
         {
           "date": "2026-10-22",
           "note": "Opened after the NCSC alert. CVE records and CISA KEV checked directly (not on KEV yet). Detection guidance from Google Cloud, Datadog and Cisco Talos added as hunt queries. Client B response coordinated with the SOC partner."
+        },
+        {
+          "date": "2026-10-23",
+          "note": "Compromise-check window moved back to 17 October after Amazon Threat Intelligence reported an exploitation attempt four days before disclosure. Still not on CISA KEV."
         }
       ],
       "sources": [
@@ -161,6 +165,14 @@
         {
           "name": "Elastic: PHP2Shell detection coverage",
           "url": "https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection"
+        },
+        {
+          "name": "The Register: AWS reveals attacks began before disclosure",
+          "url": "https://www.theregister.com/cyber-crime/2026/10/22/hackers-pile-on-php2shell-as-aws-reveals-attacks-began-before-disclosure/5304749"
+        },
+        {
+          "name": "Security Affairs: attacks started four days before disclosure",
+          "url": "https://securityaffairs.com/201479/hacking/php2shell-attacks-started-four-days-before-public-disclosure-aws-reports.html"
         }
       ]
     },
