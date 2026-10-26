@@ -1,18 +1,19 @@
-# Threat Intel Field Brief: Sunday 25 October 2026
+# Threat Intel Field Brief: Monday 26 October 2026
 
-_TLP:CLEAR · generated 09:53 UK time · last 36 hours_
+_TLP:CLEAR · generated 10:20 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Castle Howard Estate listed by qilin ransomware (priority 66).
+- Read first: Castle Howard Estate listed by qilin ransomware (priority 61).
 - 8 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 1 UK organisations named on ransomware leak sites (sectors: Hospitality).
+- 2 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
 ### 1. [Castle Howard Estate listed by qilin ransomware](https://www.ransomware.live/id/Q2FzdGxlIEhvd2FyZCBFc3RhdGVAcWlsaW4=)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Hospitality_
+**Priority 61** · ransomware.live · UK relevant · _Ransomware, Hospitality_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -20,8 +21,17 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 2. [CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud](https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html)
-**Priority 43** · The Hacker News · KEV · EPSS 2% · _Exploited vuln_
+### 2. [PHP2Shell security flaws now sucessfully exploited in the wild](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/)
+**Priority 45** · BleepingComputer · EPSS 100% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 3. [CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud](https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html)
+**Priority 40** · The Hacker News · KEV · EPSS 12% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -29,7 +39,16 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114625)
+### 4. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
+**Priority 36** · CISA KEV · KEV · EPSS 3% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114625)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -38,8 +57,8 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+### 6. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
+**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -47,17 +66,8 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
+### 7. [CVE-2026-110936: Siemens Software Center Uncontrolled Search Path Element Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110936)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [CVE-2026-110936: Siemens Software Center Uncontrolled Search Path Element Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110936)
-**Priority 35** · CISA KEV · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -65,23 +75,14 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-115995: A security vulnerability has been detected in Unitree Robotics Unitree Go2 up to 1.1.11.4. The impacted element is the function set_volume…](https://nvd.nist.gov/vuln/detail/CVE-2026-115995)
-**Priority 23** · NVD
+### 8. [PHP Publishes Mitigation Advice for New RCE Flaw](https://www.infosecurity-magazine.com/news/php-publishes-mitigation-advice/)
+**Priority 30** · Infosecurity Magazine
 
 **In plain English:** General security news worth knowing.
 
 **Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [Autonomous attack agent in 'Skynet mode' hijacks other models to carry out its evil deeds](https://www.theregister.com/security/2026/10/24/autonomous-attack-agent-in-skynet-mode-hijacks-other-models-to-carry-out-its-evil-deeds/5305215)
-**Priority 22** · The Register Security
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
@@ -90,7 +91,7 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. Fixes shipped on 21 October, details leaked a day earlier, and vendors report attacks already under way. Patch every internet-facing PHP system now, then check it was not compromised before the patch.
 
 - On CISA KEV today: none
-- Matching stories today: 0
+- Matching stories today: 6
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -107,28 +108,28 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 298: What is data enrichment?
+### Lesson 299: The Pyramid of Pain
 
-Enrichment means taking a bare fact (an IP address, a domain, a CVE number) and adding context until someone can make a decision with it. A raw IP tells you nothing. An IP that belongs to a bulletproof hosting company, was seen yesterday running a known ransomware C2 server, and talked to your client's firewall at 3am tells you to act.
+David Bianco's Pyramid of Pain ranks indicators by how much it hurts the attacker when you block them. Bottom to top: hash values (trivial to change), IP addresses (easy), domain names (simple), network and host artefacts (annoying), tools (challenging), TTPs: tactics, techniques and procedures (tough).
 
-> **Think of it like this:** A raw indicator is a car number plate. Enrichment is running the plate: owner, insurance, where it was last seen, whether it is reported stolen.
+> **Think of it like this:** Blocking a hash is like confiscating a burglar's gloves. Blocking a TTP is like making every window in the street burglar-proof.
 
-**UK angle:** UK clients mostly want three answers: does this affect us, how bad is it, and what do we do. Every enrichment step should move you closer to one of those answers.
+**UK angle:** Many UK SMEs only receive IP and hash blocklists. Enrichment that climbs the pyramid (which tool, which technique) gives them protection that lasts longer than a day.
 
-**Enrichment tip:** Use a fixed checklist per indicator type so every analyst adds the same fields: who owns it, where it is, how bad it is, when it was seen, who else reported it.
+**Enrichment tip:** For every hash or IP you share, try to add the tool name and the ATT&CK technique. That moves your intel up the pyramid.
 
-**Try it today:** Pick one IP from today's brief. Write down five facts about it using RIPEstat (stat.ripe.net) and AbuseIPDB. That is enrichment.
+**Try it today:** Take one malware story from the brief and write down: one hash, one domain, one tool name, one technique. Label each with its pyramid level.
 
-**Quiz:** In one sentence, what is the goal of enrichment?  
-_Answer:_ To add enough context to a raw indicator that someone can make a decision with it.
+**Quiz:** Which is harder for an attacker to change: an IP address or a technique (TTP)?  
+_Answer:_ A technique. TTPs sit at the top of the pyramid because changing them means changing how the attacker works.
 
-**Word of the day: IOC** · Indicator of Compromise. A clue that something bad happened: a hash, IP, domain or URL.
+**Word of the day: Initial access** · The first foothold an attacker gets inside a network, for example through phishing or a vulnerable VPN.
 
 ### Review (spaced repetition)
 
-- **Critical national infrastructure and NIS** (1d ago): What is the NCSC framework used to assess many NIS-regulated organisations? _Answer: The Cyber Assessment Framework (CAF)._
-- **Evaluating feeds** (3d ago): Name three criteria for evaluating a threat feed. _Answer: Any three of: relevance, timeliness, accuracy, completeness, uniqueness._
-- **Help desk social engineering** (7d ago): What does the attacker usually ask the help desk for? _Answer: A password reset or to register a new MFA device._
+- **What is data enrichment?** (1d ago): In one sentence, what is the goal of enrichment? _Answer: To add enough context to a raw indicator that someone can make a decision with it._
+- **Building a UK relevance score** (3d ago): Why should a relevance score be explainable? _Answer: So analysts and clients can trust it, challenge it and tune it._
+- **Typosquatting and brand monitoring** (7d ago): Why does an MX record on a lookalike domain matter? _Answer: It means the domain can handle email, so it can be used for phishing or invoice fraud._
 
 ### Enrichment drill: Castle Howard Estate listed by qilin ransomware
 
