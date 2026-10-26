@@ -306,6 +306,9 @@ def _short(text, limit=320):
 
 
 def _sev(cvss):
+    if cvss is None:
+        return "<span class='sev'>Not scored yet</span>"
+    cvss = float(cvss)
     cls = "crit" if cvss >= 9 else "high" if cvss >= 7 else "med" if cvss >= 4 else ""
     word = "Critical" if cvss >= 9 else "High" if cvss >= 7 else "Medium" if cvss >= 4 else "Low"
     return f"<span class='sev {cls}'>{cvss:.1f} {word}</span>"
@@ -352,8 +355,8 @@ def _rfi_card(r):
              "style='vertical-align:middle;max-width:100%'></audio></p>") if r.get("audio") else ""
     cves = "".join(
         f"<tr><td><a class='mono' href='https://www.cve.org/CVERecord?id={e(c['id'])}' target='_blank' rel='noopener noreferrer'>{e(c['id'])}</a></td>"
-        f"<td>{e(c['product'])}</td><td>{e(c['issue'])}</td><td class='num'>{_sev(float(c['cvss']))}</td><td>{e(c['fixed'])}</td></tr>"
-        for c in sorted(r.get("cves", []), key=lambda c: -float(c["cvss"])))
+        f"<td>{e(c['product'])}</td><td>{e(c['issue'])}</td><td class='num'>{_sev(c.get('cvss'))}</td><td>{e(c['fixed'])}</td></tr>"
+        for c in sorted(r.get("cves", []), key=lambda c: -float(c.get("cvss") or 0)))
     cve_table = ("<div class='label'>Vulnerabilities covered</div><div class='scroll'><table><thead><tr><th>CVE</th><th>Product</th>"
                  "<th>Issue</th><th>CVSS</th><th>Fixed in</th></tr></thead><tbody>" + cves + "</tbody></table></div>") if cves else ""
     matches = "".join(f"<li><a href='{e(safe_url(m.get('url')))}' target='_blank' rel='noopener noreferrer'>{e(m['title'])}</a> "
