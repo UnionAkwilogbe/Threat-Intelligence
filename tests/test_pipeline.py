@@ -180,6 +180,10 @@ class RfiTest(unittest.TestCase):
         self.assertEqual([k["id"] for k in out["kev_hits"]], ["CVE-2026-109618"])
         self.assertTrue(out["needs_update"])
 
+    def test_unscored_cve_renders(self):
+        self.assertIn("Not scored yet", render._sev(None))
+        self.assertIn("9.2 Critical", render._sev(9.2))
+
     def test_shipped_rfis_render(self):
         from ti import rfi
         tracked = rfi.track(rfi.load_rfis(), [], {})

@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-10-23",
+      "updated": "2026-10-26",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -28,7 +28,7 @@
         {
           "title": "Exploitation",
           "level": "High",
-          "text": "Amazon's honeypots recorded an exploitation attempt on 17 October, four days before disclosure, and Amazon cannot explain how the attacker had the details. Details then leaked publicly on 20 October and proof-of-concept code appeared on 21 October. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV (catalogue 2026.10.21). Some public exploit code is unverified and may itself contain malware."
+          "text": "Amazon's honeypots recorded an exploitation attempt on 17 October, four days before disclosure, and Amazon cannot explain how the attacker had the details. Details then leaked publicly on 20 October and proof-of-concept code appeared on 21 October. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV (catalogue 2026.10.21). Some public exploit code is unverified and may itself contain malware. By 23 October BleepingComputer reported successful exploitation in the wild and Mirai botnet operators had joined the attacks, although some researchers still question how reliable the public exploits are."
         },
         {
           "title": "What an attack looks like",
@@ -39,6 +39,11 @@
           "title": "Network detection",
           "level": "Medium",
           "text": "Network detection: Cisco Talos Snort rules 67359 and 67360 cover both CVEs (also in the free Community Ruleset). They can only inspect traffic they can read, so HTTPS between a CDN or WAF and the web server hides attacks from a network IDS in front of that server."
+        },
+        {
+          "title": "Third bug: CVE-2026-115560",
+          "level": "Medium",
+          "text": "Announced 23 October. The 21 October patches do not fix it and there will be no emergency release; the fix comes in the next regular PHP release. It needs an unusual session configuration (a non-default session.serialize_handler switched at runtime, with session upload progress on). Workaround: set session.upload_progress.enabled=0 as an administrative setting and fully restart PHP workers."
         }
       ],
       "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
@@ -56,11 +61,19 @@
           "issue": "Remote code execution via stale global state (use after free); memory disclosure",
           "cvss": 9.2,
           "fixed": "8.5.12 / 8.4.27 / 8.3.36 / 8.2.35"
+        },
+        {
+          "id": "CVE-2026-115560",
+          "product": "PHP",
+          "issue": "Third session-handler RCE; only unusual session configurations. No emergency fix",
+          "cvss": null,
+          "fixed": "Next regular PHP release. Workaround: session.upload_progress.enabled=0 (set as admin flag, full restart)"
         }
       ],
       "actions": [
         "Find every PHP system, internet-facing first, including PHP bundled in third-party products and hosting.",
         "Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 (or later) and restart all PHP workers. For 8.1 and older, get written confirmation of a vendor backport or migrate.",
+        "Apply the CVE-2026-115560 workaround where practical: set session.upload_progress.enabled=0 administratively (for example php_admin_flag in the PHP-FPM pool) and fully restart PHP workers, then apply the next regular PHP release when it ships.",
         "If an internet-facing system cannot be patched quickly, put a WAF block on oversized POST bodies or take it offline (NCSC advice).",
         "Hunt for compromise since 17 October: web workers spawning shells, new PHP files in web roots, outbound connections from web servers, and the memory and crash errors above.",
         "Google SecOps: confirm the Mandiant Frontline Threats curated rule pack is enabled (23 new detections), and check Emerging Threat Center entry GLOBAL.26.015 where licensed.",
@@ -111,6 +124,10 @@
         {
           "date": "2026-10-23",
           "note": "Compromise-check window moved back to 17 October after Amazon Threat Intelligence reported an exploitation attempt four days before disclosure. Still not on CISA KEV."
+        },
+        {
+          "date": "2026-10-26",
+          "note": "Added CVE-2026-115560 (third PHP2Shell-related bug, workaround only) and reports of successful in-the-wild exploitation and Mirai botnet activity. Still not on CISA KEV (catalogue 2026.10.23)."
         }
       ],
       "sources": [
@@ -173,6 +190,18 @@
         {
           "name": "Security Affairs: attacks started four days before disclosure",
           "url": "https://securityaffairs.com/201479/hacking/php2shell-attacks-started-four-days-before-public-disclosure-aws-reports.html"
+        },
+        {
+          "name": "The Register: a third PHP2Shell bug, no emergency fix",
+          "url": "https://www.theregister.com/security/2026/10/23/theres-a-third-php2shell-bug-but-it-wont-get-an-emergency-fix/5305208"
+        },
+        {
+          "name": "Astra Security: CVE-2026-115560",
+          "url": "https://www.getastra.com/blog/security-advisory/cve-2026-115560/"
+        },
+        {
+          "name": "BleepingComputer: PHP2Shell now successfully exploited in the wild",
+          "url": "https://bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild"
         }
       ]
     },
