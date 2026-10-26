@@ -632,6 +632,40 @@
    "source": "Computer Weekly Security",
    "source_id": "computerweekly",
    "kind": "news",
+   "title": "Toshiba looks to deliver quantum-safe networks at scale",
+   "url": "https://www.computerweekly.com/news/366652753/Toshiba-looks-to-deliver-quantum-safe-networks-at-scale",
+   "published": "2026-10-26T06:15:00+00:00",
+   "summary": "Carrier-grade platform enables businesses to integrate quantum-safe protection across existing networks with reduced complexity, footprint and cost",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Telecoms"
+   ],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Telecoms) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Computer Weekly Security",
+   "source_id": "computerweekly",
+   "kind": "news",
    "title": "Gartner: Winning in the edge",
    "url": "https://www.computerweekly.com/feature/Gartner-Winning-in-the-edge",
    "published": "2026-10-26T05:00:00+00:00",
@@ -653,41 +687,6 @@
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Work to protect DNS from quantum decryption attacks is speeding up",
-   "url": "https://www.theregister.com/networks/2026/10/26/work-to-protect-dns-from-quantum-decryption-attacks-is-speeding-up/5305274",
-   "published": "2026-10-26T04:08:23+00:00",
-   "summary": "PLUS: Regional internet registry reform nears; Trustworthy-sounding domains attract scammers",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Fraud / Scam"
-   ],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 27,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 15
-   },
-   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
-   "actions": [
-    "Watch for lookalike domains of client brands (typosquats).",
-    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
@@ -1100,38 +1099,6 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Autonomous attack agent in 'Skynet mode' hijacks other models to carry out its evil deeds",
-   "url": "https://www.theregister.com/security/2026/10/24/autonomous-attack-agent-in-skynet-mode-hijacks-other-models-to-carry-out-its-evil-deeds/5305215",
-   "published": "2026-10-24T13:02:00+00:00",
-   "summary": "Designed to carry out 100,000 steps without human approval",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 17,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -1165,6 +1132,105 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates",
+   "url": "https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/",
+   "published": "2026-10-26T10:26:52+00:00",
+   "summary": "Kali Linux has released version 2026.3, its third release this year, featuring six new hacking tools, desktop environment improvements, refreshed build scripts, and more. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Node2Shell: Brotli Flaw Triggers Patching Across Microsoft, Node.js, Python Packages",
+   "url": "https://www.securityweek.com/node2shell-brotli-flaw-triggers-patching-across-microsoft-node-js-python-packages/",
+   "published": "2026-10-26T10:21:57+00:00",
+   "summary": "An out-of-bounds write in Google\u2019s Brotli decoder affects Node.js, .NET, PowerShell, and Python packages, and can lead to code execution. The post Node2Shell: Brotli Flaw Triggers Patching Across Microsoft, Node.js, Python Packages appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts",
+   "url": "https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html",
+   "published": "2026-10-26T09:54:02+00:00",
+   "summary": "A rentable Android spyware kit called uCreator takes over Telegram and WeChat accounts by hiding its code inside working copies of the two apps, researcher Ovi found. It only reaches people who install one of these tampered copies, spread outside the official app stores, or who run WeChat inside the kit makers' own container app. The kit's Telegram part matches Baohuo, a backdoor that Doctor",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Malware"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
+   "actions": [
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
+    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -1413,105 +1479,6 @@
    "clients": []
   },
   {
-   "source": "The Hacker News",
-   "source_id": "thehackernews",
-   "kind": "news",
-   "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
-   "url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
-   "published": "2026-10-24T11:09:29+00:00",
-   "summary": "A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, Microsoft's .NET, the Python Brotli and brotlicffi packages, and Envoy proxies set up to decompress Brotli. Tracked as CVE-2026-111497, the flaw allows crafted compressed data to overwrite past the end of a buffer and corrupt a program's memory,",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-111497"
-   ],
-   "kev": [],
-   "epss": 0.32782,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 7,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "There's a third PHP2Shell bug, but it won't get an emergency fix",
-   "url": "https://www.theregister.com/security/2026/10/23/theres-a-third-php2shell-bug-but-it-wont-get-an-emergency-fix/5305208",
-   "published": "2026-10-23T20:04:40+00:00",
-   "summary": "Bad things (and software bugs?) come in threes",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 0
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Red-team report found OpenAI utterly failed to monitor its agents during Hugging Face attack",
-   "url": "https://www.theregister.com/ai-and-ml/2026/10/23/red-team-report-found-openai-utterly-failed-to-monitor-its-agents-during-hugging-face-attack/5305200",
-   "published": "2026-10-23T19:14:57+00:00",
-   "summary": "Monitoring was only partial and was easily bypassed",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 0
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "Infosecurity Magazine",
    "source_id": "infosecmag",
    "kind": "news",
@@ -1547,75 +1514,6 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Torvalds: AI is fine for competent devs, but spare us the 'drive-by' patches",
-   "url": "https://www.theregister.com/columnists/2026/10/23/torvalds-ai-is-fine-for-competent-devs-but-spare-us-the-drive-by-patches/5304357",
-   "published": "2026-10-23T11:31:00+00:00",
-   "summary": "Kernel maintainers stop asking who used AI, as long as the code is good",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 0
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "Widespread Token-Spraying Attacks Target Microsoft 365 Accounts For Email Compromise",
-   "url": "https://www.infosecurity-magazine.com/news/tokenspraying-attacks-target/",
-   "published": "2026-10-23T10:30:00+00:00",
-   "summary": "Security researchers identified attempts to access corporate networks which have been linked to a major Microsoft 365-targeted BEC campaign using phishing, stolen session tokens and social engineering",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Phishing",
-    "Identity / MFA"
-   ],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 0
-   },
-   "rookie": "Fake emails, texts or calls that trick people into handing over passwords or money.",
-   "actions": [
-    "Pull any sender domains or URLs and check them against client mail logs.",
-    "Remind clients they can forward suspicious email to report@phishing.gov.uk (SERS).",
-    "Check clients' help desk identity checks for password and MFA resets."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "SANS Internet Storm Center",
    "source_id": "sans",
    "kind": "research",
@@ -1623,38 +1521,6 @@
    "url": "https://isc.sans.edu/diary/rss/33454",
    "published": "2026-10-25T19:57:53+00:00",
    "summary": "YARA-X&#;x26;#;39;s 1.22.0 release brings 11 improvements and 9 bugfixes.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave",
-   "url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
-   "published": "2026-10-25T11:00:00+00:00",
-   "summary": "Founded in 2025 by Unit 8200 alumni, Tel Aviv-based Mave uses AI agents to investigate alerts across existing security stacks. The post Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave appeared first on SecurityWeek .",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -1834,83 +1700,6 @@
    "clients": []
   },
   {
-   "source": "The Hacker News",
-   "source_id": "thehackernews",
-   "kind": "news",
-   "title": "Russia-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack",
-   "url": "https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html",
-   "published": "2026-10-23T11:11:23+00:00",
-   "summary": "The Russian state-sponsored hacking group Sandworm teamed up with another threat actor to carry out a destructive wiping attack targeting a Ukrainian logistics company last year. According to ESET, the attack involved UAC-0099 (aka Earth Sirrush) obtaining initial access to the target on July 16, 2025, via a spear-phishing email bearing a malware-laced attachment that led to the deployment of",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Phishing",
-    "Nation-state / APT",
-    "Malware"
-   ],
-   "sectors": [
-    "Transport / Logistics"
-   ],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 0
-   },
-   "rookie": "Fake emails, texts or calls that trick people into handing over passwords or money.",
-   "actions": [
-    "Pull any sender domains or URLs and check them against client mail logs.",
-    "Remind clients they can forward suspicious email to report@phishing.gov.uk (SERS).",
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them."
-   ],
-   "enrich_steps": [
-    "Sector (Transport / Logistics) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "China APT Uses AI Pentest Tool Artex in ConnectWise Attacks",
-   "url": "https://www.securityweek.com/china-apt-uses-ai-pentest-tool-artex-in-connectwise-attacks/",
-   "published": "2026-10-23T10:31:16+00:00",
-   "summary": "The state-sponsored hackers targeted hundreds of organizations and gained privileged access to some environments. The post China APT Uses AI Pentest Tool Artex in ConnectWise Attacks appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Nation-state / APT"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 0
-   },
-   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
-   "actions": [
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
-    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -1945,6 +1734,73 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
+   "url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
+   "published": "2026-10-24T11:09:29+00:00",
+   "summary": "A memory-corruption flaw in Google's Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, Microsoft's .NET, the Python Brotli and brotlicffi packages, and Envoy proxies set up to decompress Brotli. Tracked as CVE-2026-111497, the flaw allows crafted compressed data to overwrite past the end of a buffer and corrupt a program's memory,",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-111497"
+   ],
+   "kev": [],
+   "epss": 0.32782,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 7,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 7,
+    "Fresh": 0
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave",
+   "url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
+   "published": "2026-10-25T11:00:00+00:00",
+   "summary": "Founded in 2025 by Unit 8200 alumni, Tel Aviv-based Mave uses AI agents to investigate alerts across existing security stacks. The post Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 5,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2000,10 +1856,10 @@
    ],
    "sectors": [],
    "uk_score": 0,
-   "priority": 5,
+   "priority": 0,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 5
+    "Fresh": 0
    },
    "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
    "actions": [
@@ -2033,10 +1889,10 @@
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 5,
+   "priority": 0,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 5
+    "Fresh": 0
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -2551,44 +2407,12 @@
    ],
    "also_reported_by": [],
    "clients": []
-  },
-  {
-   "source": "SANS Internet Storm Center",
-   "source_id": "sans",
-   "kind": "research",
-   "title": "ISC Stormcast For Friday, October 23rd, 2026 https://isc.sans.edu/podcastdetail/10148, (Fri, Oct 23rd)",
-   "url": "https://isc.sans.edu/diary/rss/33448",
-   "published": "2026-10-23T10:25:11+00:00",
-   "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 0,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 0
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
   }
  ],
  "stats": {
   "kev_total": 1756,
   "critical_cves": 8,
-  "victims_total": 79,
+  "victims_total": 78,
   "victims_uk": 1,
   "top_groups": [
    [
@@ -2667,28 +2491,28 @@
    "name": "Computer Weekly Security",
    "id": "computerweekly",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "error": ""
   },
   {
    "name": "The Register Security",
    "id": "theregister",
-   "ok": true,
-   "count": 5,
-   "error": ""
+   "ok": false,
+   "count": 0,
+   "error": "not well-formed (invalid token): line 7, column 22"
   },
   {
    "name": "Infosecurity Magazine",
    "id": "infosecmag",
    "ok": true,
-   "count": 4,
+   "count": 3,
    "error": ""
   },
   {
    "name": "BleepingComputer",
    "id": "bleeping",
    "ok": true,
-   "count": 10,
+   "count": 11,
    "error": ""
   },
   {
@@ -2716,7 +2540,7 @@
    "name": "SANS Internet Storm Center",
    "id": "sans",
    "ok": true,
-   "count": 6,
+   "count": 5,
    "error": ""
   },
   {
@@ -2779,7 +2603,6 @@
    "matches": [
     "PHP2Shell security flaws now sucessfully exploited in the wild",
     "PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity",
-    "There's a third PHP2Shell bug, but it won't get an emergency fix",
     "PHP Warns of Another Unpatched RCE Risk Two Days After Emergency PHP2Shell Patches",
     "(Reliable)? php2shell exploitability, (Fri, Oct 23rd)",
     "Mirai Botnet Operators Join PHP2Shell Attacks as ASLR Bypass Exploits Emerge"

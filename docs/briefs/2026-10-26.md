@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Monday 26 October 2026
 
-_TLP:CLEAR · generated 10:20 UK time · last 72 hours_
+_TLP:CLEAR · generated 11:13 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
@@ -91,7 +91,7 @@ _TLP:CLEAR · generated 10:20 UK time · last 72 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. Fixes shipped on 21 October, details leaked a day earlier, and vendors report attacks already under way. Patch every internet-facing PHP system now, then check it was not compromised before the patch.
 
 - On CISA KEV today: none
-- Matching stories today: 6
+- Matching stories today: 5
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -140,4 +140,4 @@ _Answer:_ A technique. TTPs sit at the top of the pyramid because changing them 
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
+Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), The Register Security, URLhaus, ThreatFox)
