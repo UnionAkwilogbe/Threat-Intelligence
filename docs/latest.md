@@ -1,13 +1,13 @@
 # Threat Intel Field Brief: Tuesday 27 October 2026
 
-_TLP:CLEAR · generated 09:57 UK time · last 36 hours_
+_TLP:CLEAR · generated 10:40 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
 - Read first: CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution (priority 70).
 - 4 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 2 UK organisations named on ransomware leak sites (sectors: Financial Services, Manufacturing).
-- 6 stories with strong UK relevance.
+- 7 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
@@ -57,7 +57,16 @@ _TLP:CLEAR · generated 09:57 UK time · last 36 hours_
 
 **Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
 
-### 6. [Britain bets big on AI to defend against the threats AI is helping create](https://www.theregister.com/security/2026/10/26/britain-bets-big-on-ai-to-defend-against-the-threats-ai-is-helping-create/5305319)
+### 6. [Watchdog Urges Police and Fire Service to Improve Cybersecurity](https://www.infosecurity-magazine.com/news/watchdog-police-fire-service/)
+**Priority 38** · Infosecurity Magazine · UK relevant · _Public sector_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+
+### 7. [Britain bets big on AI to defend against the threats AI is helping create](https://www.theregister.com/security/2026/10/26/britain-bets-big-on-ai-to-defend-against-the-threats-ai-is-helping-create/5305319)
 **Priority 38** · The Register Security · UK relevant
 
 **In plain English:** General security news worth knowing.
@@ -66,17 +75,8 @@ _TLP:CLEAR · generated 09:57 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 7. [CVE-2026-110447: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110447)
+### 8. [CVE-2026-110447: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110447)
 **Priority 37** · CISA KEV · KEV · EPSS 12% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114625)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
