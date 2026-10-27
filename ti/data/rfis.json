@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-10-26",
+      "updated": "2026-10-27",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -17,8 +17,8 @@
         "php2shell"
       ],
       "audio": "briefings/php2shell-briefing.mp3",
-      "bluf": "Two critical PHP bugs let an unauthenticated attacker run code on a web server. Fixes shipped on 21 October, details leaked a day earlier, and vendors report attacks already under way. Patch every internet-facing PHP system now, then check it was not compromised before the patch.",
-      "confidence": "High confidence on the facts: the CVE records and CISA KEV (catalogue 2026.10.21) were checked directly on 22 October. Exploitation reports come from vendors (Cloudflare, Patchstack) and are not yet confirmed by CISA.",
+      "bluf": "Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.",
+      "confidence": "High confidence. CISA KEV (catalogue 2026.10.26) and the CVE records were checked directly on 27 October.",
       "findings": [
         {
           "title": "What is affected",
@@ -28,7 +28,7 @@
         {
           "title": "Exploitation",
           "level": "High",
-          "text": "Amazon's honeypots recorded an exploitation attempt on 17 October, four days before disclosure, and Amazon cannot explain how the attacker had the details. Details then leaked publicly on 20 October and proof-of-concept code appeared on 21 October. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Not yet on CISA KEV (catalogue 2026.10.21). Some public exploit code is unverified and may itself contain malware. By 23 October BleepingComputer reported successful exploitation in the wild and Mirai botnet operators had joined the attacks, although some researchers still question how reliable the public exploits are."
+          "text": "Amazon's honeypots recorded an exploitation attempt on 17 October, four days before disclosure, and Amazon cannot explain how the attacker had the details. Details then leaked publicly on 20 October and proof-of-concept code appeared on 21 October. Cloudflare saw early attack attempts and deployed emergency WAF rules, and Patchstack reports attacks are ongoing. Some public exploit code is unverified and may itself contain malware. By 23 October BleepingComputer reported successful exploitation in the wild and Mirai botnet operators had joined the attacks, although some researchers still question how reliable the public exploits are. CISA added both CVEs to KEV on 26 October (US federal deadline 29 October). Cloudflare counted millions of attempts by 22 October. In the UK only about a quarter of exposed hosts had been patched (Infrawatch), the NCSC sent more than 50,000 warnings to UK organisations, and 32 government services were taken offline as a precaution. CYFIRMA reports a slow, low-volume scanning campaign it links to North Korea, aimed at governments, banks, airports and payment platforms."
         },
         {
           "title": "What an attack looks like",
@@ -46,7 +46,7 @@
           "text": "Announced 23 October. The 21 October patches do not fix it and there will be no emergency release; the fix comes in the next regular PHP release. It needs an unusual session configuration (a non-default session.serialize_handler switched at runtime, with session upload progress on). Workaround: set session.upload_progress.enabled=0 as an administrative setting and fully restart PHP workers."
         }
       ],
-      "assessment": "It is almost certain (95% and above) that internet-facing unpatched PHP sites will be attacked in the coming days. It is likely (55-75%) that CISA adds these CVEs to KEV soon. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
+      "assessment": "Exploitation is confirmed and widespread. It is almost certain (95% and above) that unpatched internet-facing PHP sites will be attacked, and highly likely (80-90%) that a long tail of compromises surfaces over the coming months. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
       "cves": [
         {
           "id": "CVE-2026-109618",
@@ -128,6 +128,10 @@
         {
           "date": "2026-10-26",
           "note": "Added CVE-2026-115560 (third PHP2Shell-related bug, workaround only) and reports of successful in-the-wild exploitation and Mirai botnet activity. Still not on CISA KEV (catalogue 2026.10.23)."
+        },
+        {
+          "date": "2026-10-27",
+          "note": "CISA added CVE-2026-109618 and CVE-2026-109619 to KEV on 26 October (due 29 October). Added UK patching lag, NCSC warning volume and the suspected North Korean scanning campaign."
         }
       ],
       "sources": [
@@ -202,7 +206,27 @@
         {
           "name": "BleepingComputer: PHP2Shell now successfully exploited in the wild",
           "url": "https://bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild"
+        },
+        {
+          "name": "The Hacker News: exploitation continues amid suspected North Korea scanning",
+          "url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html"
+        },
+        {
+          "name": "CYFIRMA: suspected DPRK campaign staging PHP2Shell targeting",
+          "url": "https://www.cyfirma.com/research/cyfirma-threat-advisory-suspected-dprk-campaign-staging-php2shell-targeting-against-global-php-infrastructure/"
+        },
+        {
+          "name": "Computer Weekly: EU makes progress towards PHP patching, UK lags behind",
+          "url": "https://computerweekly.com/news/366652698/EU-makes-progress-towards-PHP-patching-UK-lags-behind"
+        },
+        {
+          "name": "ITV: more than 50,000 warnings sent to UK organisations",
+          "url": "https://www.itv.com/news/2026-10-22/more-than-30-government-services-offline-amid-global-php-cybersecurity-threat"
         }
+      ],
+      "known_kev": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
       ]
     },
     {

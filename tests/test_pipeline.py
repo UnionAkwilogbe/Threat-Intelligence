@@ -110,6 +110,10 @@ class NuggetTest(unittest.TestCase):
 
 
 class ParsingTest(unittest.TestCase):
+    def test_feed_with_bad_characters_still_parses(self):
+        raw = b"<rss><channel><item><title>Fish & chips\x0b hack</title><link>https://a</link></item></channel></rss>"
+        self.assertEqual(sources.parse_feed(raw)[0]["title"], "Fish & chips hack")
+
     def test_dates(self):
         self.assertEqual(sources.parse_date("Mon, 28 Sep 2026 08:00:00 +0000"),
                          datetime(2026, 9, 28, 8, tzinfo=timezone.utc))
@@ -179,6 +183,13 @@ class RfiTest(unittest.TestCase):
         out = rfi.track(rfis, [], kev)[0]
         self.assertEqual([k["id"] for k in out["kev_hits"]], ["CVE-2026-109618"])
         self.assertTrue(out["needs_update"])
+
+    def test_known_kev_does_not_reflag(self):
+        from ti import rfi
+        rfis = [{"id": "R", "topic": "PHP", "keywords": [], "cves": [{"id": "CVE-1", "cvss": 9}], "known_kev": ["CVE-1"]}]
+        out = rfi.track(rfis, [], {"CVE-1": {"vendorProject": "PHP Group", "product": "PHP"}})[0]
+        self.assertEqual(len(out["kev_hits"]), 1)
+        self.assertFalse(out["needs_update"])
 
     def test_unscored_cve_renders(self):
         self.assertIn("Not scored yet", render._sev(None))
