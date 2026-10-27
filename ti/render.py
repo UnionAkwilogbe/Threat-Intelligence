@@ -324,8 +324,10 @@ def _rfi_card(r):
     kev = r.get("kev_hits", [])
     kev_text = ("Not checked today (KEV feed unavailable)" if not r.get("kev_checked")
                 else ", ".join(k["id"] for k in kev) if kev else "None on the exploited list")
+    new_tag = "<span class='chip kev'>new</span>" if r.get("new_kev") else ""
     checks = (f"<div class='checks'>"
               f"<div class='check' style='border-top:4px solid var({'--crit' if kev else '--good'})'><b>{len(kev)}</b>"
+              f"{new_tag}"
               f"<span class='sub'>on CISA KEV today: {e(kev_text)}</span></div>"
               f"<div class='check' style='border-top:4px solid var(--c1)'><b>{len(r.get('matches', []))}</b>"
               f"<span class='sub'>matching stories in today's feeds</span></div>"

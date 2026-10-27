@@ -70,8 +70,9 @@ def track(rfis, stories, kev_index, iocs=None):
         ioc_hits = [dict(i, value=defang(i["value"]), known=i["value"] in known_iocs)
                     for i in (iocs or []) if _token_hits(i["value"], ioc_kw)]
         new_iocs = [i for i in ioc_hits if not i["known"]]
+        new_kev = [k for k in kev if k["id"] not in set(r.get("known_kev", []))]  # KEV listings already reported
         tracked.append(dict(r, kev_hits=kev, matches=matches[:6], new_cves=new_cves,
                             ioc_hits=ioc_hits[:25], ioc_count=len(ioc_hits), new_ioc_count=len(new_iocs),
                             ioc_checked=bool(iocs), kev_checked=bool(kev_index),
-                            needs_update=bool(kev or new_cves or new_iocs)))
+                            new_kev=new_kev, needs_update=bool(new_kev or new_cves or new_iocs)))
     return tracked

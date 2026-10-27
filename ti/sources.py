@@ -108,9 +108,21 @@ def _local(tag):
     return tag.rsplit("}", 1)[-1]
 
 
+_BAD_XML_CHARS = re.compile(rb"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+_BARE_AMP = re.compile(rb"&(?!(?:[a-zA-Z][a-zA-Z0-9]*|#[0-9]+|#x[0-9a-fA-F]+);)")
+
+
+def _repair_xml(raw):
+    """Fix the two most common feed faults: control characters and unescaped '&'."""
+    return _BARE_AMP.sub(b"&amp;", _BAD_XML_CHARS.sub(b"", raw))
+
+
 def parse_feed(raw):
     """Parse RSS 2.0 or Atom bytes into a list of {title, url, published, summary}."""
-    root = ET.fromstring(raw)
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError:
+        root = ET.fromstring(_repair_xml(raw))
     entries = []
     for node in root.iter():
         if _local(node.tag) not in ("item", "entry"):
