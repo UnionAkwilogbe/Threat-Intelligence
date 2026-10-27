@@ -1,37 +1,19 @@
-# Threat Intel Field Brief: Monday 26 October 2026
+# Threat Intel Field Brief: Tuesday 27 October 2026
 
-_TLP:CLEAR · generated 11:13 UK time · last 72 hours_
+_TLP:CLEAR · generated 09:57 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Castle Howard Estate listed by qilin ransomware (priority 61).
-- 8 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 UK organisations named on ransomware leak sites (sectors: Hospitality).
-- 2 stories with strong UK relevance.
+- Read first: CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution (priority 70).
+- 4 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 2 UK organisations named on ransomware leak sites (sectors: Financial Services, Manufacturing).
+- 6 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Castle Howard Estate listed by qilin ransomware](https://www.ransomware.live/id/Q2FzdGxlIEhvd2FyZCBFc3RhdGVAcWlsaW4=)
-**Priority 61** · ransomware.live · UK relevant · _Ransomware, Hospitality_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 2. [PHP2Shell security flaws now sucessfully exploited in the wild](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/)
-**Priority 45** · BleepingComputer · EPSS 100% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 3. [CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud](https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html)
-**Priority 40** · The Hacker News · KEV · EPSS 12% · _Exploited vuln_
+### 1. [CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution](https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html)
+**Priority 70** · The Hacker News · KEV · EPSS 100% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -39,16 +21,61 @@ _TLP:CLEAR · generated 11:13 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-106931: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-106931)
-**Priority 36** · CISA KEV · KEV · EPSS 3% · _Exploited vuln_
+### 2. [Bangor Wholesale Laminates listed by qilin ransomware](https://www.ransomware.live/id/QmFuZ29yIFdob2xlc2FsZSBMYW1pbmF0ZXNAcWlsaW4=)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Charity, Manufacturing_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+
+### 3. [Power Funding listed by qilin ransomware](https://www.ransomware.live/id/UG93ZXIgRnVuZGluZ0BxaWxpbg==)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Financial Services_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+
+### 4. [PHP2Shell security flaws now sucessfully exploited in the wild](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/)
+**Priority 66** · BleepingComputer · KEV · EPSS 100% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114625)
+### 5. [From industry concern to practical action: the value of working with regulators](https://www.ncsc.gov.uk/blogs/industry-concern-practical-action-value-working-regulators)
+**Priority 53** · NCSC UK · UK relevant · _Finance_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
+
+### 6. [Britain bets big on AI to defend against the threats AI is helping create](https://www.theregister.com/security/2026/10/26/britain-bets-big-on-ai-to-defend-against-the-threats-ai-is-helping-create/5305319)
+**Priority 38** · The Register Security · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [CVE-2026-110447: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110447)
+**Priority 37** · CISA KEV · KEV · EPSS 12% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-10-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114625)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,41 +84,14 @@ _TLP:CLEAR · generated 11:13 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-96656: Plex Media Server External Control of File Name or Path Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-96656)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-10-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-110936: Siemens Software Center Uncontrolled Search Path Element Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-110936)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-03): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [PHP Publishes Mitigation Advice for New RCE Flaw](https://www.infosecurity-magazine.com/news/php-publishes-mitigation-advice/)
-**Priority 30** · Infosecurity Magazine
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
 **Status:** In progress, re-checked today.
 
-**Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. Fixes shipped on 21 October, details leaked a day earlier, and vendors report attacks already under way. Patch every internet-facing PHP system now, then check it was not compromised before the patch.
+**Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
-- On CISA KEV today: none
-- Matching stories today: 5
+- On CISA KEV today: CVE-2026-109618, CVE-2026-109619
+- Matching stories today: 6
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -108,36 +108,36 @@ _TLP:CLEAR · generated 11:13 UK time · last 72 hours_
 
 ## Daily knowledge pack
 
-### Lesson 299: The Pyramid of Pain
+### Lesson 300: CVSS vs EPSS vs KEV
 
-David Bianco's Pyramid of Pain ranks indicators by how much it hurts the attacker when you block them. Bottom to top: hash values (trivial to change), IP addresses (easy), domain names (simple), network and host artefacts (annoying), tools (challenging), TTPs: tactics, techniques and procedures (tough).
+CVSS (0-10) says how bad a bug could be if exploited. EPSS (0-1, from FIRST.org) estimates the chance it will be exploited in the next 30 days. KEV (CISA's Known Exploited Vulnerabilities list) says it is already being exploited. Severity, likelihood, reality.
 
-> **Think of it like this:** Blocking a hash is like confiscating a burglar's gloves. Blocking a TTP is like making every window in the street burglar-proof.
+> **Think of it like this:** CVSS is how deep the river is. EPSS is the chance it floods this month. KEV is: it is flooding now.
 
-**UK angle:** Many UK SMEs only receive IP and hash blocklists. Enrichment that climbs the pyramid (which tool, which technique) gives them protection that lasts longer than a day.
+**UK angle:** Cyber Essentials requires critical and high-risk updates to be applied within 14 days. Using KEV and EPSS helps clients decide which of those to do on day one rather than day fourteen.
 
-**Enrichment tip:** For every hash or IP you share, try to add the tool name and the ATT&CK technique. That moves your intel up the pyramid.
+**Enrichment tip:** Never send a CVE to a client with only a CVSS score. Always add EPSS percentile and KEV status, plus whether they run the product.
 
-**Try it today:** Take one malware story from the brief and write down: one hash, one domain, one tool name, one technique. Label each with its pyramid level.
+**Try it today:** Look at the vulnerability table in today's brief. Find the CVE with the highest EPSS. Is it on KEV? What product is it?
 
-**Quiz:** Which is harder for an attacker to change: an IP address or a technique (TTP)?  
-_Answer:_ A technique. TTPs sit at the top of the pyramid because changing them means changing how the attacker works.
+**Quiz:** Which of the three tells you a vulnerability is already being used in real attacks?  
+_Answer:_ KEV. CVSS is severity and EPSS is predicted likelihood.
 
-**Word of the day: Initial access** · The first foothold an attacker gets inside a network, for example through phishing or a vulnerable VPN.
+**Word of the day: Infostealer** · Malware that steals saved passwords, cookies and session tokens from a computer.
 
 ### Review (spaced repetition)
 
-- **What is data enrichment?** (1d ago): In one sentence, what is the goal of enrichment? _Answer: To add enough context to a raw indicator that someone can make a decision with it._
-- **Building a UK relevance score** (3d ago): Why should a relevance score be explainable? _Answer: So analysts and clients can trust it, challenge it and tune it._
-- **Typosquatting and brand monitoring** (7d ago): Why does an MX record on a lookalike domain matter? _Answer: It means the domain can handle email, so it can be used for phishing or invoice fraud._
+- **The Pyramid of Pain** (1d ago): Which is harder for an attacker to change: an IP address or a technique (TTP)? _Answer: A technique. TTPs sit at the top of the pyramid because changing them means changing how the attacker works._
+- **Critical national infrastructure and NIS** (3d ago): What is the NCSC framework used to assess many NIS-regulated organisations? _Answer: The Cyber Assessment Framework (CAF)._
+- **Writing for clients: BLUF** (7d ago): What does BLUF stand for? _Answer: Bottom Line Up Front._
 
-### Enrichment drill: Castle Howard Estate listed by qilin ransomware
+### Enrichment drill: CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution
 
-1. Search Companies House for 'Castle Howard Estate'. Note its SIC code, size and registered region.
-2. Look up qilin on ransomware.live. How many UK victims has it listed this year?
-3. Search 'qilin initial access' to find how they usually break in (ATT&CK tactic TA0001).
-4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
-5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
+1. Open nvd.nist.gov/vuln/detail/CVE-2026-109618. Note the CVSS score and affected product.
+2. Check CVE-2026-109618 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+3. Find the vendor's own advisory. Is there a patch or only a workaround?
+4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
+5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
-Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), The Register Security, URLhaus, ThreatFox)
+Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
