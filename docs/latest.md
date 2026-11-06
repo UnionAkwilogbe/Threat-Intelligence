@@ -1,37 +1,18 @@
-# Threat Intel Field Brief: Thursday 05 November 2026
+# Threat Intel Field Brief: Friday 06 November 2026
 
-_TLP:CLEAR · generated 13:17 UK time · last 36 hours_
+_TLP:CLEAR · generated 13:01 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Unilever listed by Whitearmor ransomware (priority 70).
-- 4 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 2 UK organisations named on ransomware leak sites (sectors: Manufacturing, Professional Services).
+- Read first: Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th) (priority 65).
+- 2 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 3 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Unilever listed by Whitearmor ransomware](https://www.ransomware.live/id/VW5pbGV2ZXJAV2hpdGVhcm1vcg==)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Manufacturing_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 2. [Jobmongers listed by medusalocker ransomware](https://www.ransomware.live/id/Sm9ibW9uZ2Vyc0BtZWR1c2Fsb2NrZXI=)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Professional Services_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
-
-### 3. [Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says](https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html)
-**Priority 53** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware_
+### 1. [Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)](https://isc.sans.edu/diary/rss/33492)
+**Priority 65** · SANS Internet Storm Center · KEV · EPSS 100% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -39,17 +20,17 @@ _TLP:CLEAR · generated 13:17 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [CVE-2026-118527: Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-118527)
-**Priority 53** · CISA KEV · KEV · EPSS 89% · _Exploited vuln_
+### 2. [Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says](https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html)
+**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-13): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [NATS Air Traffic Control Failure Cost UK Economy £33m](https://www.infosecurity-magazine.com/news/nats-air-traffic-control-fail-cost/)
-**Priority 43** · Infosecurity Magazine · UK relevant
+### 3. [UK ministers seek powers to investigate when AI agents are let off the leash](https://www.theregister.com/ai-and-ml/2026/11/06/uk-ministers-seek-powers-to-investigate-when-ai-agents-are-let-off-the-leash/5307889)
+**Priority 38** · The Register Security · UK relevant
 
 **In plain English:** General security news worth knowing.
 
@@ -57,30 +38,48 @@ _TLP:CLEAR · generated 13:17 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 6. [CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades](https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html)
-**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
+### 4. [AI agents are a 'bane' for some website operators, says Cloudflare](https://www.theregister.com/networks/2026/11/06/ai-agents-are-a-bane-for-some-website-operators-says-cloudflare/5308022)
+**Priority 37** · The Register Security · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 5. [CVE-2026-119977: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-119977)
+**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-06): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [3AM Ransomware Used Human-AI Hybrid Tactics in UK School Estate Compromise](https://www.infosecurity-magazine.com/news/3am-ransomware-hybrid-ai-uk-school/)
-**Priority 38** · Infosecurity Magazine · UK relevant · _Ransomware, Data breach, Finance, Education_
+### 6. [Zurich uncovers £19m of fraud with Quantexa data analytics](https://www.computerweekly.com/news/366653717/Zurich-uncovers-19m-of-fraud-with-Quantexa-data-analytics)
+**Priority 33** · Computer Weekly Security · UK relevant · _Fraud / Scam, Finance_
 
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+**In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
 
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+**Do this:** Watch for lookalike domains of client brands (typosquats). UK victims report to Action Fraud (England, Wales, NI) or Police Scotland.
 
-**Enrich next:** Sector (Finance, Education) → tag every client in that sector and send them a short heads-up
+**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
 
-### 8. [New York's Queens Public Library battles ransomware crims: Wi-Fi, checkouts, and website go dark](https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796)
-**Priority 37** · The Register Security · _Ransomware_
+### 7. [NATS Air Traffic Control Failure Cost UK Economy £33m](https://www.infosecurity-magazine.com/news/nats-air-traffic-control-fail-cost/)
+**Priority 33** · Infosecurity Magazine · UK relevant
 
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+**In plain English:** General security news worth knowing.
 
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. [ARTEX Offensive AI Tool Activity Far Exceeds Reported Campaigns, Censys Finds](https://www.infosecurity-magazine.com/news/artex-activity-exceeds-reported/)
+**Priority 27** · Infosecurity Magazine
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
@@ -91,7 +90,7 @@ _TLP:CLEAR · generated 13:17 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619
-- Matching stories today: 0
+- Matching stories today: 1
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -108,36 +107,36 @@ _TLP:CLEAR · generated 13:17 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 309: IPs, ASNs and RIPE
+### Lesson 310: .uk domains, Nominet and WHOIS
 
-Every public IP belongs to a network called an Autonomous System, identified by an ASN (for example AS2856 is BT). RIPE NCC is the registry for Europe, including the UK. RIPEstat (stat.ripe.net) shows who owns an IP, its ASN, country and routing history for free.
+Nominet runs the .uk domain registry. WHOIS shows registration data such as registrar, creation date and name servers. Since GDPR most personal details are hidden, but creation date, registrar and name servers are still very useful.
 
-> **Think of it like this:** The IP is a house number. The ASN is the estate or landlord who owns the whole street.
+> **Think of it like this:** WHOIS is the land registry for domains: you may not see the owner's name, but you see when the plot was bought and who sold it.
 
-**UK angle:** Knowing whether a malicious IP sits in a UK ASN changes the response. UK hosting means UK law enforcement and UK providers can act, and it may mean a compromised UK business rather than attacker-owned infrastructure.
+**UK angle:** A lookalike .co.uk domain registered yesterday that imitates a client's brand is a strong phishing signal. New domain + brand name = high priority.
 
-**Enrichment tip:** Always add ASN name and country to an IP. Flag known residential ISPs (BT, Sky, Virgin Media) because these IPs are often compromised home devices or proxies, not attacker servers.
+**Enrichment tip:** Add 'domain age in days' to every domain indicator. Domains under 30 days old deserve extra suspicion.
 
-**Try it today:** Look up one C2 IP from today's Feodo list on stat.ripe.net. Who owns it?
+**Try it today:** Run a WHOIS lookup on any .co.uk domain and find its creation date and registrar.
 
-**Quiz:** Which regional registry covers UK IP addresses?  
-_Answer:_ RIPE NCC.
+**Quiz:** Why is domain age a useful enrichment field?  
+_Answer:_ Newly registered domains are much more likely to be used for phishing or malware.
 
-**Word of the day: Pivot** · Using one indicator to discover related ones, for example from a domain to its IP to other domains.
+**Word of the day: Ransomware** · Malware that encrypts or steals data and demands payment.
 
 ### Review (spaced repetition)
 
-- **Companies House as an enrichment source** (1d ago): What does a SIC code tell you about a company? _Answer: Its industry or type of business activity._
-- **The intelligence cycle** (3d ago): Which two stages of the cycle are most often skipped? _Answer: Direction (setting requirements) and Feedback._
-- **NCSC Early Warning: free enrichment for UK clients** (7d ago): What two kinds of asset does an organisation register with Early Warning? _Answer: IP addresses and domain names._
+- **IPs, ASNs and RIPE** (1d ago): Which regional registry covers UK IP addresses? _Answer: RIPE NCC._
+- **Priority Intelligence Requirements (PIRs)** (3d ago): Why do PIRs make enrichment faster? _Answer: They tell you which context matters, so you only enrich what answers the client's questions._
+- **The Admiralty Code: grading sources** (7d ago): In the grade 'B2', what does the B describe and what does the 2 describe? _Answer: B is source reliability (usually reliable). 2 is information credibility (probably true)._
 
-### Enrichment drill: Unilever listed by Whitearmor ransomware
+### Enrichment drill: Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)
 
-1. Search Companies House for 'Unilever'. Note its SIC code, size and registered region.
-2. Look up Whitearmor on ransomware.live. How many UK victims has it listed this year?
-3. Search 'Whitearmor initial access' to find how they usually break in (ATT&CK tactic TA0001).
-4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
-5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
+1. Open nvd.nist.gov/vuln/detail/CVE-2023-20198. Note the CVSS score and affected product.
+2. Check CVE-2023-20198 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+3. Find the vendor's own advisory. Is there a patch or only a workaround?
+4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
+5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
 Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
