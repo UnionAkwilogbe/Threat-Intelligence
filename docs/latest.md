@@ -1,18 +1,18 @@
-# Threat Intel Field Brief: Friday 06 November 2026
+# Threat Intel Field Brief: Saturday 07 November 2026
 
-_TLP:CLEAR · generated 13:01 UK time · last 36 hours_
+_TLP:CLEAR · generated 11:47 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th) (priority 65).
-- 2 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- Read first: SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins (priority 53).
+- 3 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 3 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)](https://isc.sans.edu/diary/rss/33492)
-**Priority 65** · SANS Internet Storm Center · KEV · EPSS 100% · _Exploited vuln_
+### 1. [SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins](https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/)
+**Priority 53** · SecurityWeek · KEV · _Exploited vuln, Identity / MFA_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -20,34 +20,25 @@ _TLP:CLEAR · generated 13:01 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 2. [Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says](https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html)
-**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware_
+### 2. [NHS breach helpline left staff carrying a 'significant emotional burden'](https://www.theregister.com/security/2026/11/07/nhs-breach-helpline-left-staff-carrying-a-significant-emotional-burden/5308201)
+**Priority 39** · The Register Security · UK relevant · _Data breach, Health / NHS_
+
+**In plain English:** Private data got out. Stolen data is later reused for scams and account takeover.
+
+**Do this:** Check if client staff email domains appear in the leak (Have I Been Pwned domain search). Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.
+
+**Enrich next:** Sector (Health / NHS) → tag every client in that sector and send them a short heads-up
+
+### 3. [CVE-2024-27834: Apple Multiple Products Improper Authentication Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2024-27834)
+**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [UK ministers seek powers to investigate when AI agents are let off the leash](https://www.theregister.com/ai-and-ml/2026/11/06/uk-ministers-seek-powers-to-investigate-when-ai-agents-are-let-off-the-leash/5307889)
-**Priority 38** · The Register Security · UK relevant
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 4. [AI agents are a 'bane' for some website operators, says Cloudflare](https://www.theregister.com/networks/2026/11/06/ai-agents-are-a-bane-for-some-website-operators-says-cloudflare/5308022)
-**Priority 37** · The Register Security · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 5. [CVE-2026-119977: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-119977)
+### 4. [CVE-2026-119977: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-119977)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -56,17 +47,8 @@ _TLP:CLEAR · generated 13:01 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [Zurich uncovers £19m of fraud with Quantexa data analytics](https://www.computerweekly.com/news/366653717/Zurich-uncovers-19m-of-fraud-with-Quantexa-data-analytics)
-**Priority 33** · Computer Weekly Security · UK relevant · _Fraud / Scam, Finance_
-
-**In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
-
-**Do this:** Watch for lookalike domains of client brands (typosquats). UK victims report to Action Fraud (England, Wales, NI) or Police Scotland.
-
-**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
-
-### 7. [NATS Air Traffic Control Failure Cost UK Economy £33m](https://www.infosecurity-magazine.com/news/nats-air-traffic-control-fail-cost/)
-**Priority 33** · Infosecurity Magazine · UK relevant
+### 5. [UK ministers seek powers to investigate when AI agents are let off the leash](https://www.theregister.com/ai-and-ml/2026/11/06/uk-ministers-seek-powers-to-investigate-when-ai-agents-are-let-off-the-leash/5307889)
+**Priority 28** · The Register Security · UK relevant
 
 **In plain English:** General security news worth knowing.
 
@@ -74,14 +56,32 @@ _TLP:CLEAR · generated 13:01 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 8. [ARTEX Offensive AI Tool Activity Far Exceeds Reported Campaigns, Censys Finds](https://www.infosecurity-magazine.com/news/artex-activity-exceeds-reported/)
-**Priority 27** · Infosecurity Magazine
+### 6. [AI agents are a 'bane' for some website operators, says Cloudflare](https://www.theregister.com/networks/2026/11/06/ai-agents-are-a-bane-for-some-website-operators-says-cloudflare/5308022)
+**Priority 27** · The Register Security · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/)
+**Priority 25** · BleepingComputer · _Exploited vuln, Identity / MFA_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. [CVE-2026-123961: A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiBasicConfig of the file…](https://nvd.nist.gov/vuln/detail/CVE-2026-123961)
+**Priority 24** · NVD
 
 **In plain English:** General security news worth knowing.
 
 **Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
@@ -107,33 +107,33 @@ _TLP:CLEAR · generated 13:01 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 310: .uk domains, Nominet and WHOIS
+### Lesson 311: Passive DNS and certificate transparency
 
-Nominet runs the .uk domain registry. WHOIS shows registration data such as registrar, creation date and name servers. Since GDPR most personal details are hidden, but creation date, registrar and name servers are still very useful.
+Passive DNS is a history of which domains pointed to which IPs over time. Certificate transparency (crt.sh) logs every public TLS certificate issued. Together they let you pivot: from one bad domain to the IP, to other domains on that IP, to certificates with similar names.
 
-> **Think of it like this:** WHOIS is the land registry for domains: you may not see the owner's name, but you see when the plot was bought and who sold it.
+> **Think of it like this:** Like checking who else has lived at a suspect's address over the years, and who else ordered the same custom number plate.
 
-**UK angle:** A lookalike .co.uk domain registered yesterday that imitates a client's brand is a strong phishing signal. New domain + brand name = high priority.
+**UK angle:** Search crt.sh for your clients' brand names (for example %clientname%) to find lookalike sites issued certificates, often before a phishing campaign starts.
 
-**Enrichment tip:** Add 'domain age in days' to every domain indicator. Domains under 30 days old deserve extra suspicion.
+**Enrichment tip:** A pivot is only useful with a limit. Record why each pivot is linked (same IP, same certificate, same registrar) and stop after two or three hops.
 
-**Try it today:** Run a WHOIS lookup on any .co.uk domain and find its creation date and registrar.
+**Try it today:** Search crt.sh for a UK brand name and see which subdomains and lookalikes appear.
 
-**Quiz:** Why is domain age a useful enrichment field?  
-_Answer:_ Newly registered domains are much more likely to be used for phishing or malware.
+**Quiz:** What is 'pivoting' in threat intel?  
+_Answer:_ Using one known indicator to discover related indicators, for example from a domain to its IP to other domains on that IP.
 
-**Word of the day: Ransomware** · Malware that encrypts or steals data and demands payment.
+**Word of the day: RaaS** · Ransomware as a Service. Gangs rent their ransomware to 'affiliates' who carry out attacks for a cut.
 
 ### Review (spaced repetition)
 
-- **IPs, ASNs and RIPE** (1d ago): Which regional registry covers UK IP addresses? _Answer: RIPE NCC._
-- **Priority Intelligence Requirements (PIRs)** (3d ago): Why do PIRs make enrichment faster? _Answer: They tell you which context matters, so you only enrich what answers the client's questions._
-- **The Admiralty Code: grading sources** (7d ago): In the grade 'B2', what does the B describe and what does the 2 describe? _Answer: B is source reliability (usually reliable). 2 is information credibility (probably true)._
+- **.uk domains, Nominet and WHOIS** (1d ago): Why is domain age a useful enrichment field? _Answer: Newly registered domains are much more likely to be used for phishing or malware._
+- **Companies House as an enrichment source** (3d ago): What does a SIC code tell you about a company? _Answer: Its industry or type of business activity._
+- **Traffic Light Protocol (TLP 2.0)** (7d ago): Which TLP label means 'share with anyone, publicly'? _Answer: TLP:CLEAR._
 
-### Enrichment drill: Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)
+### Enrichment drill: SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins
 
-1. Open nvd.nist.gov/vuln/detail/CVE-2023-20198. Note the CVSS score and affected product.
-2. Check CVE-2023-20198 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+1. Open nvd.nist.gov/vuln/detail/CVE-2026-19868. Note the CVSS score and affected product.
+2. Check CVE-2026-19868 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
 3. Find the vendor's own advisory. Is there a patch or only a workaround?
 4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
 5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
