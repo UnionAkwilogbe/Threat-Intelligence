@@ -1,0 +1,3465 @@
+{
+ "date": "2026-11-08",
+ "stories": [
+  {
+   "source": "ransomware.live",
+   "source_id": "ransomware",
+   "kind": "ransomware",
+   "title": "Simply UK listed by qilin ransomware",
+   "url": "https://www.ransomware.live/id/U2ltcGx5IFVLQHFpbGlu",
+   "published": "2026-11-07T18:29:21.055812+00:00",
+   "summary": "N/A",
+   "uk_source": true,
+   "extra": {
+    "group": "qilin",
+    "sector": "Not Found",
+    "victim": "Simply UK",
+    "website": "www.simplyuk.co"
+   },
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Not Found"
+   ],
+   "uk_score": 100,
+   "priority": 70,
+   "priority_why": {
+    "UK relevance": 35,
+    "Serious threat type": 10,
+    "UK victim named": 15,
+    "Fresh": 10
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "ransomware.live",
+   "source_id": "ransomware",
+   "kind": "ransomware",
+   "title": "Oak Green School listed by qilin ransomware",
+   "url": "https://www.ransomware.live/id/T2FrIEdyZWVuIFNjaG9vbEBxaWxpbg==",
+   "published": "2026-11-07T14:32:10.066717+00:00",
+   "summary": "N/A",
+   "uk_source": true,
+   "extra": {
+    "group": "qilin",
+    "sector": "Education",
+    "victim": "Oak Green School",
+    "website": "www.oakgreen.bucks.sch.uk"
+   },
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Education"
+   ],
+   "uk_score": 90,
+   "priority": 66,
+   "priority_why": {
+    "UK relevance": 31,
+    "Serious threat type": 10,
+    "UK victim named": 15,
+    "Fresh": 10
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "ransomware.live",
+   "source_id": "ransomware",
+   "kind": "ransomware",
+   "title": "Amber Management Ltd listed by qilin ransomware",
+   "url": "https://www.ransomware.live/id/QW1iZXIgTWFuYWdlbWVudCBMdGRAcWlsaW4=",
+   "published": "2026-11-07T14:30:35.066447+00:00",
+   "summary": "N/A",
+   "uk_source": true,
+   "extra": {
+    "group": "qilin",
+    "sector": "Other",
+    "victim": "Amber Management Ltd",
+    "website": "www.amberman.co.uk"
+   },
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Other"
+   ],
+   "uk_score": 90,
+   "priority": 66,
+   "priority_why": {
+    "UK relevance": 31,
+    "Serious threat type": 10,
+    "UK victim named": 15,
+    "Fresh": 10
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Victim \u2192 Companies House (sector SIC code, size, directors) \u2192 which clients share suppliers or sector"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins",
+   "url": "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/",
+   "published": "2026-11-07T10:16:23+00:00",
+   "summary": "CVE-2026-19868 can let attackers holding credentials for a different login method get past SAML checks, including SAML-enforced MFA. The post SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-19868"
+   ],
+   "kev": [
+    "CVE-2026-19868"
+   ],
+   "epss": 0.00621,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln",
+    "Identity / MFA"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 43,
+   "priority_why": {
+    "UK relevance": 0,
+    "Actively exploited (KEV)": 25,
+    "EPSS": 0,
+    "Serious threat type": 10,
+    "Fresh": 5,
+    "Corroborated": 3
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "On CISA KEV: patch or mitigate for UK clients now, do not wait.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version.",
+    "Check clients' help desk identity checks for password and MFA resets."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [
+    "CISA KEV"
+   ],
+   "clients": []
+  },
+  {
+   "source": "CISA KEV",
+   "source_id": "kev",
+   "kind": "vuln",
+   "title": "CVE-2026-19868: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
+   "published": "2026-11-06T00:00:00+00:00",
+   "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-19868"
+   ],
+   "extra": {
+    "vendor": "SonicWall",
+    "product": "SonicOS SSLVPN",
+    "due_date": "2026-11-20",
+    "ransomware_use": false,
+    "required_action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or\u2026"
+   },
+   "kev": [
+    "CVE-2026-19868"
+   ],
+   "epss": 0.00621,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln",
+    "Identity / MFA"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 35,
+   "priority_why": {
+    "UK relevance": 0,
+    "Actively exploited (KEV)": 25,
+    "EPSS": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "On CISA KEV (US federal patch deadline 2026-11-20): patch or mitigate for UK clients now, do not wait.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version.",
+    "Check clients' help desk identity checks for password and MFA resets."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "CISA KEV",
+   "source_id": "kev",
+   "kind": "vuln",
+   "title": "CVE-2024-27834: Apple Multiple Products Improper Authentication Vulnerability",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834",
+   "published": "2026-11-04T00:00:00+00:00",
+   "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2024-27834"
+   ],
+   "extra": {
+    "vendor": "Apple",
+    "product": "Multiple Products",
+    "due_date": "2026-11-18",
+    "ransomware_use": false,
+    "required_action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or\u2026"
+   },
+   "kev": [
+    "CVE-2024-27834"
+   ],
+   "epss": 0.01502,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 35,
+   "priority_why": {
+    "UK relevance": 0,
+    "Actively exploited (KEV)": 25,
+    "EPSS": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "On CISA KEV (US federal patch deadline 2026-11-18): patch or mitigate for UK clients now, do not wait.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "CISA KEV",
+   "source_id": "kev",
+   "kind": "vuln",
+   "title": "CVE-2026-119977: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977",
+   "published": "2026-11-03T00:00:00+00:00",
+   "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-119977"
+   ],
+   "extra": {
+    "vendor": "WordPress",
+    "product": "WordPress Core",
+    "due_date": "2026-11-06",
+    "ransomware_use": false,
+    "required_action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or\u2026"
+   },
+   "kev": [
+    "CVE-2026-119977"
+   ],
+   "epss": 0.01157,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 35,
+   "priority_why": {
+    "UK relevance": 0,
+    "Actively exploited (KEV)": 25,
+    "EPSS": 0,
+    "Serious threat type": 10,
+    "Fresh": 0
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "On CISA KEV (US federal patch deadline 2026-11-06): patch or mitigate for UK clients now, do not wait.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123614: imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123614",
+   "published": "2026-11-08T02:16:56.983000+00:00",
+   "summary": "imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer overflow via a crafted data_size value. Attackers can submit a crafted ICO image whose data_size wraps the allocation in vips/icoload.c, corrupting heap memory to crash the process or achieve code execution.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123614"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Malware"
+   ],
+   "sectors": [],
+   "uk_score": 25,
+   "priority": 32,
+   "priority_why": {
+    "UK relevance": 9,
+    "CVSS": 8,
+    "Fresh": 15
+   },
+   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
+   "actions": [
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
+    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "NHS breach helpline left staff carrying a 'significant emotional burden'",
+   "url": "https://www.theregister.com/security/2026/11/07/nhs-breach-helpline-left-staff-carrying-a-significant-emotional-burden/5308201",
+   "published": "2026-11-07T10:30:00+00:00",
+   "summary": "Team given a day's notice faced distressed callers, safeguarding decisions during project that stretched from 2 weeks to 11",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach"
+   ],
+   "sectors": [
+    "Health / NHS"
+   ],
+   "uk_score": 70,
+   "priority": 29,
+   "priority_why": {
+    "UK relevance": 24,
+    "Fresh": 5
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
+   ],
+   "enrich_steps": [
+    "Sector (Health / NHS) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-120984: A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984",
+   "published": "2026-11-07T14:17:01.580000+00:00",
+   "summary": "A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-120984"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 26,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Serious threat type": 10,
+    "Fresh": 10
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123551: OpenAM from 14.0.0 before 16.1.4 contains an information disclosure vulnerability that allows unauthenticated attackers to read live\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123551",
+   "published": "2026-11-08T02:16:46.603000+00:00",
+   "summary": "OpenAM from 14.0.0 before 16.1.4 contains an information disclosure vulnerability that allows unauthenticated attackers to read live session tokens from the notification WebSocket. Attackers can bypass the agent-only check through an unvalidated internal forward on legacy Liberty ID-FF endpoints, collecting iPlanetDirectoryPro tokens to hijack user and administrator sessions.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123551"
+   ],
+   "extra": {
+    "cvss": 10.0
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Identity / MFA"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 24,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 9,
+    "Fresh": 15
+   },
+   "rookie": "Attacks on logins: fooling the help desk, stealing session cookies, or MFA fatigue.",
+   "actions": [
+    "Check clients' help desk identity checks for password and MFA resets.",
+    "Look for sign-ins from new devices or countries in identity logs."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123550: OpenAM before 16.1.4 contains an authentication bypass vulnerability in its SAML v2.0 service provider that accepts unsigned assertions on\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123550",
+   "published": "2026-11-08T02:16:46.410000+00:00",
+   "summary": "OpenAM before 16.1.4 contains an authentication bypass vulnerability in its SAML v2.0 service provider that accepts unsigned assertions on the ECP (PAOS) and HTTP-Artifact bindings when WantAssertionsSigned is false. Unauthenticated remote attackers can submit forged assertions to obtain sessions as any mapped user, including administrators, and hijack single sign-on to dependent applications.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123550"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 23,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 8,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123549: OpenAM before 16.1.4 fails to enforce the Valid Creation Attributes list during self-registration, allowing anonymous attackers to set\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123549",
+   "published": "2026-11-08T02:16:46.247000+00:00",
+   "summary": "OpenAM before 16.1.4 fails to enforce the Valid Creation Attributes list during self-registration, allowing anonymous attackers to set restricted attributes including group membership. Attackers can register through the legacy self-service REST endpoint or User Self-Service flow to join administrative groups and gain full administrative control of OpenAM.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123549"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 23,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 8,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123966: A vulnerability was determined in Tenda AC19 16.03.10.07. Affected by this issue is the function saveParentControlInfo of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123966",
+   "published": "2026-11-07T14:17:01.800000+00:00",
+   "summary": "A vulnerability was determined in Tenda AC19 16.03.10.07. Affected by this issue is the function saveParentControlInfo of the file /goform/saveParentControlInfo. This manipulation of the argument deviceId causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123966"
+   ],
+   "extra": {
+    "cvss": 10.0
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "16[.]03[.]10[.]07"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 19,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 9,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-124060: A vulnerability was detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this issue is the function UploadCustomModule of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124060",
+   "published": "2026-11-07T21:17:00.150000+00:00",
+   "summary": "A vulnerability was detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this issue is the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument File results in buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-124060"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 16,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-124059: A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this vulnerability is the function\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124059",
+   "published": "2026-11-07T19:17:28.480000+00:00",
+   "summary": "A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this vulnerability is the function setWiFiWdsAddConfig of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument ApCliKeyStr leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-124059"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 16,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-124058: A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. Affected is the function setWiFiRepeaterConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124058",
+   "published": "2026-11-07T19:17:28.263000+00:00",
+   "summary": "A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. Affected is the function setWiFiRepeaterConfig of the file /cgi-bin/cstecgi.cgi. Executing a manipulation of the argument ApCliKeyStr can lead to buffer overflow. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-124058"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 16,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-124057: A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124057",
+   "published": "2026-11-07T18:17:21.607000+00:00",
+   "summary": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument Key1Str1 results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-124057"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 16,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-118066: The Appointment Booking Plugin \u2013 LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118066",
+   "published": "2026-11-07T12:17:43.717000+00:00",
+   "summary": "The Appointment Booking Plugin \u2013 LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Account Takeover in all versions up to, and including, 5.7.6. This is due to the `OsModel::build_conditions_query()` function in `lib/models/model.php` comparing WHERE-clause values against the literal strings `'IS NULL'` and `'IS NOT NULL'` and concatenating a match directly into SQL without binding it as a parameter, a flaw that neither `sanitize_text_field()` nor the 5.7.5 `is_scalar()` hardening guard closes, since both pass the scalar sentinel\u2026",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-118066"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 16,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 6,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+   "published": "2026-11-07T00:00:55+00:00",
+   "summary": "SonicWall has released security updates to fix seven vulnerabilities in SonicOS firewalls, including an SSL-VPN authentication bypass flaw exploited in attacks. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln",
+    "Identity / MFA"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version.",
+    "Check clients' help desk identity checks for password and MFA resets."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123961: A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiBasicConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123961",
+   "published": "2026-11-07T11:17:01.290000+00:00",
+   "summary": "A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiBasicConfig of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument KeyStr leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123961"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123960: A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. This affects the function setWanConfig of the file /cgi-bin/cstecgi.cgi.\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123960",
+   "published": "2026-11-07T10:17:12.357000+00:00",
+   "summary": "A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. This affects the function setWanConfig of the file /cgi-bin/cstecgi.cgi. Executing a manipulation of the argument pppoeUser/priDns/secDns can lead to buffer overflow. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123960"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00796,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123958: A vulnerability was identified in TOTOLINK CA300-PoE 6.2c.884. The affected element is the function setLanConfig of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123958",
+   "published": "2026-11-07T09:17:15.177000+00:00",
+   "summary": "A vulnerability was identified in TOTOLINK CA300-PoE 6.2c.884. The affected element is the function setLanConfig of the file /cgi-bin/cstecgi.cgi. Such manipulation of the argument lanDns/lanSecDns/langType leads to buffer overflow. It is possible to launch the attack remotely. The exploit is publicly available and might be used.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123958"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00466,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123957: A vulnerability was determined in TOTOLINK CA300-PoE 6.2c.884. Impacted is the function setIpQosRules of the file /cgi-bin/cstecgi.cgi.\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123957",
+   "published": "2026-11-07T09:17:14.890000+00:00",
+   "summary": "A vulnerability was determined in TOTOLINK CA300-PoE 6.2c.884. Impacted is the function setIpQosRules of the file /cgi-bin/cstecgi.cgi. This manipulation of the argument ipStart causes buffer overflow. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123957"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00466,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17410: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17410",
+   "published": "2026-11-07T05:18:58.410000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify other tenants' portal data due to improper neutralization of argument delimiters.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17410"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00655,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17402: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17402",
+   "published": "2026-11-07T05:18:56.460000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary commands due to OS command injection. User-supplied input is not properly neutralized before it is passed to the operating system, which could allow commands to run on the underlying host.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17402"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.01908,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17399: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17399",
+   "published": "2026-11-07T05:18:55.790000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to insufficient validation of uploaded content. Content uploaded to the product is not sufficiently checked before it is processed, which could allow code to run on the server.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17399"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00786,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17392: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain unauthorized\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17392",
+   "published": "2026-11-07T05:18:54.113000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain unauthorized administrative access to other tenants due to LDAP injection. User-supplied input is not properly neutralized in directory queries, which could change the query and grant access beyond the user's own tenant.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17392"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00655,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17359: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359",
+   "published": "2026-11-07T05:18:48.017000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code. A user-supplied value can influence code that the product generates, which could lead to code execution.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17359"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.0085,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17354: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform arbitrary file writes due to path\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17354",
+   "published": "2026-11-07T05:18:47.057000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform arbitrary file writes due to path traversal.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17354"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00664,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17342: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17342",
+   "published": "2026-11-07T05:18:45.943000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17342"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.0085,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17336: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17336",
+   "published": "2026-11-07T05:18:44.673000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17336"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00618,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17298: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17298",
+   "published": "2026-11-07T05:18:37.510000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to server-side request forgery.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17298"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00537,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17239: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to a path traversal\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17239",
+   "published": "2026-11-07T05:18:32.657000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to a path traversal vulnerability.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17239"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00835,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17158: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain elevated\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17158",
+   "published": "2026-11-07T05:18:28.853000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to gain elevated privileges due to improper authentication.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17158"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00662,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17150: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17150",
+   "published": "2026-11-07T05:18:28.230000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and access sensitive information from other tenants due to insufficient input validation. Uploaded custom module content is not sufficiently validated before it is processed, which could allow code to run with access beyond the user's own tenant.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17150"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00786,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17147: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17147",
+   "published": "2026-11-07T05:18:28.037000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and perform unauthorized administrative actions due to a path traversal vulnerability.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17147"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00899,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17146: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17146",
+   "published": "2026-11-07T05:18:27.843000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary JavaScript and obtain sensitive information due to improper input validation.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17146"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00666,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17134: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to SQL\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17134",
+   "published": "2026-11-07T05:18:26.630000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to SQL injection.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17134"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.0046,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17132: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17132",
+   "published": "2026-11-07T05:18:26.430000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17132"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00618,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17117: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17117",
+   "published": "2026-11-07T05:18:25.647000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improperly controlled modification of object attributes. A user could set a field that should only be controlled by the system, which could lead to code execution.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17117"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00803,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17049: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and modify arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17049",
+   "published": "2026-11-07T05:18:23.173000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and modify arbitrary documents due to authorization bypass through user-controlled keys.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17049"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00537,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-16920: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to bypass security restrictions due to a confused\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16920",
+   "published": "2026-11-07T05:18:22.990000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to bypass security restrictions due to a confused deputy vulnerability.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-16920"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00528,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-16884: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to an XML external entity\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16884",
+   "published": "2026-11-07T05:18:22.440000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to an XML external entity (XXE) injection.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-16884"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
+   "kev": [],
+   "epss": 0.00497,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 14,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 9,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17408: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17408",
+   "published": "2026-11-07T05:18:57.917000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to improper neutralization of special elements in an OS command.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17408"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00926,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17396: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17396",
+   "published": "2026-11-07T05:18:55.103000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to SQL injection.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17396"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.00496,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17394: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17394",
+   "published": "2026-11-07T05:18:54.617000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to improperly controlled modification of object attributes. A user-supplied value could change an access-related setting that should be controlled by the system, which could expose sensitive information.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17394"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.00515,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17360: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control due to the use of hard-coded\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17360",
+   "published": "2026-11-07T05:18:48.197000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control due to the use of hard-coded credentials.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17360"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00576,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17353: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and bypass security\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17353",
+   "published": "2026-11-07T05:18:46.880000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to server-side request forgery.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17353"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.0046,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17340: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to a path traversal vulnerability.",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17340",
+   "published": "2026-11-07T05:18:45.510000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to a path traversal vulnerability.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17340"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00922,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17313: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and take control of gateway\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17313",
+   "published": "2026-11-07T05:18:40.163000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and take control of gateway configuration due to authentication bypass via an alternate path.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17313"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.0078,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17301: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow an unauthenticated attacker to bypass authentication\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17301",
+   "published": "2026-11-07T05:18:37.913000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow an unauthenticated attacker to bypass authentication due to improper verification of a cryptographic signature.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17301"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00435,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17299: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform arbitrary\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17299",
+   "published": "2026-11-07T05:18:37.700000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform arbitrary file reads and server-side request forgery due to unrestricted resolution of external references. Externally referenced content in submitted definitions is not sufficiently restricted when processed, and the retrieved content could be returned to the attacker.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17299"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.00443,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17297: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to perform an account takeover due\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17297",
+   "published": "2026-11-07T05:18:37.333000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to perform an account takeover due to an open redirect vulnerability. The redirect address used during sign-in is not sufficiently validated, which could allow authentication results to be sent to an attacker-controlled location.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17297"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.00612,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17296: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17296",
+   "published": "2026-11-07T05:18:37.140000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to server-side request forgery.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17296"
+   ],
+   "extra": {
+    "cvss": 9.6
+   },
+   "kev": [],
+   "epss": 0.0045,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17278: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain unauthorized access to sensitive API catalog and runtime\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17278",
+   "published": "2026-11-07T05:18:33.440000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain unauthorized access to sensitive API catalog and runtime configuration data due to improper authentication. Information supplied by the client is not sufficiently verified, which could allow a caller to appear as a trusted party.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17278"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00722,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-16720: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16720",
+   "published": "2026-11-07T05:18:21.883000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for other users due to improper authentication. Authentication against a connected directory service is not sufficiently enforced, which could allow another user's identity to be assumed.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-16720"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00766,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-19803: The Printcart Store \u2013 Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19803",
+   "published": "2026-11-07T04:17:29.233000+00:00",
+   "summary": "The Printcart Store \u2013 Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.13.2. This is due to the `nbu_crop_image` AJAX handler accepting a user-supplied `url` parameter that `Nbdesigner_IO::convert_url_to_path()` concatenates onto the uploads base directory without normalizing or stripping `../` sequences, and then deriving both the output directory and output file extension via `pathinfo()` from the same attacker-controlled path \u2014 with no `stripImage()` call before `writeImage()` is invoked. This\u2026",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-19803"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00962,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123218: IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218",
+   "published": "2026-11-07T04:17:28.900000+00:00",
+   "summary": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123218"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00396,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-93754: The payever \u2013 WooCommerce Gateway plugin for WordPress is vulnerable to arbitrary file upload leading to remote code execution in various\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754",
+   "published": "2026-11-07T03:17:08.410000+00:00",
+   "summary": "The payever \u2013 WooCommerce Gateway plugin for WordPress is vulnerable to arbitrary file upload leading to remote code execution in various versions up to, and including, 4.8.0. Three WooCommerce-API callbacks (payever_set_sandbox_api_keys, payever_toggle_subscription, payever_synchronization_incoming) are registered with no authentication, capability check, or nonce, and the upload_image() routine writes a remotely fetched file to the public uploads directory using an attacker-controlled basename() BEFORE validating the file type. This makes it possible for unauthenticated attackers to write\u2026",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-93754"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": 0.00872,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 13,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 8,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-18838: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and modify API configurations due\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18838",
+   "published": "2026-11-07T05:18:59.803000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and modify API configurations due to improper authentication. Identity information supplied in requests is not sufficiently verified, which could allow a caller to impersonate another user.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-18838"
+   ],
+   "extra": {
+    "cvss": 9.4
+   },
+   "kev": [],
+   "epss": 0.00672,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [
+    "Fraud / Scam"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
+   "actions": [
+    "Watch for lookalike domains of client brands (typosquats).",
+    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-18836: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18836",
+   "published": "2026-11-07T05:18:59.597000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. The affected component can be made to send requests to unintended destinations and return the response to the attacker.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-18836"
+   ],
+   "extra": {
+    "cvss": 9.3
+   },
+   "kev": [],
+   "epss": 0.00406,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17344: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17344",
+   "published": "2026-11-07T05:18:46.317000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. A service that can be reached without authentication could be made to send requests to unintended destinations.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17344"
+   ],
+   "extra": {
+    "cvss": 9.3
+   },
+   "kev": [],
+   "epss": 0.00512,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17329: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to improper validation of\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17329",
+   "published": "2026-11-07T05:18:43.273000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to improper validation of endpoint URLs.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17329"
+   ],
+   "extra": {
+    "cvss": 9.3
+   },
+   "kev": [],
+   "epss": 0.00415,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17131: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17131",
+   "published": "2026-11-07T05:18:26.230000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. Restrictions on outbound requests can be bypassed, so the server could be made to contact unintended destinations and return the response.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17131"
+   ],
+   "extra": {
+    "cvss": 9.3
+   },
+   "kev": [],
+   "epss": 0.00441,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-16918: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to access internal network\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16918",
+   "published": "2026-11-07T05:18:22.803000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to access internal network resources due to server-side request forgery.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-16918"
+   ],
+   "extra": {
+    "cvss": 9.3
+   },
+   "kev": [],
+   "epss": 0.00424,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 12,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 7,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-123959: A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. The impacted element is the function setLanguageCfg of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123959",
+   "published": "2026-11-07T10:17:12.123000+00:00",
+   "summary": "A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. The impacted element is the function setLanguageCfg of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument langType results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-123959"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": 0.00841,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17403: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17403",
+   "published": "2026-11-07T05:18:56.690000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control due to the use of hard-coded credentials.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17403"
+   ],
+   "extra": {
+    "cvss": 9.0
+   },
+   "kev": [],
+   "epss": 0.005,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17339: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access or delete resources belonging to other\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17339",
+   "published": "2026-11-07T05:18:45.287000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access or delete resources belonging to other tenants due to path traversal.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17339"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": 0.00494,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17338: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to broken\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17338",
+   "published": "2026-11-07T05:18:45.083000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to broken object-level authorization.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17338"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": 0.00384,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17292: IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to take over\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17292",
+   "published": "2026-11-07T05:18:36.330000+00:00",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to take over ownership of other organizations due to broken object-level authorization. Access checks on organization objects are incomplete, which could allow ownership of organizations the user does not control to be changed.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17292"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": 0.00397,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-17066: IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and modify or delete\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17066",
+   "published": "2026-11-07T05:18:23.787000+00:00",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information and modify or delete data belonging to other tenants due to missing authorization.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-17066"
+   ],
+   "extra": {
+    "cvss": 9.1
+   },
+   "kev": [],
+   "epss": 0.0056,
+   "attack": [],
+   "iocs": {
+    "ips": [
+     "12[.]1[.]0[.]0",
+     "12[.]1[.]1[.]2"
+    ]
+   },
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 11,
+   "priority_why": {
+    "UK relevance": 0,
+    "EPSS": 0,
+    "CVSS": 6,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Hackers pull off $133 million French bank heist via service provider",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+   "published": "2026-11-07T15:25:35+00:00",
+   "summary": "French cooperative bank Cr\u00e9dit Mutuel Ark\u00e9a was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Fraud / Scam"
+   ],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 10
+   },
+   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
+   "actions": [
+    "Watch for lookalike domains of client brands (typosquats).",
+    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
+   "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
+   "published": "2026-11-07T14:10:19+00:00",
+   "summary": "Scammers are impersonating major brands and celebrities to lure consumers into fake gift card giveaways that collect personal information and trigger unwanted subscriptions. CTM360 reveals how these campaigns use deceptive verification steps and affiliate networks to generate revenue without delivering the promised rewards. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Fraud / Scam"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 10
+   },
+   "rookie": "Tricks aimed at stealing money, often by pretending to be a trusted brand or person.",
+   "actions": [
+    "Watch for lookalike domains of client brands (typosquats).",
+    "UK victims report to Action Fraud (England, Wales, NI) or Police Scotland."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Claude Code's \u201cDon't Ask Again\u201d File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+   "url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+   "published": "2026-11-07T06:44:17+00:00",
+   "summary": "Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can read them. When a user selects \"Yes, and don't ask again,\" Anthropic's AI coding assistant can save the command, word-for-word, including the secret, in a project settings file. Software security company Apiiro said yesterday that 1,122 public",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 5,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  }
+ ],
+ "stats": {
+  "kev_total": 1769,
+  "critical_cves": 63,
+  "victims_total": 48,
+  "victims_uk": 3,
+  "top_groups": [
+   [
+    "N0n",
+    14
+   ],
+   [
+    "qilin",
+    10
+   ],
+   [
+    "metaencryptor",
+    7
+   ],
+   [
+    "incransom",
+    4
+   ],
+   [
+    "payload",
+    4
+   ],
+   [
+    "BYOD",
+    2
+   ],
+   [
+    "Whitearmor",
+    2
+   ],
+   [
+    "rhysida",
+    2
+   ]
+  ],
+  "c2_total": 5,
+  "c2_online": 1,
+  "c2_uk": [
+   {
+    "ip": "178.62.3.223",
+    "port": 443,
+    "malware": "QakBot",
+    "as_name": "DIGITALOCEAN-ASN - DigitalOcean, LLC",
+    "asn": 14061,
+    "status": "offline",
+    "last_online": "2026-02-18"
+   }
+  ],
+  "c2_families": [
+   [
+    "QakBot",
+    4
+   ],
+   [
+    "Emotet",
+    1
+   ]
+  ]
+ },
+ "health": [
+  {
+   "name": "NCSC UK",
+   "id": "ncsc",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "ICO enforcement (UK regulator)",
+   "id": "ico",
+   "ok": false,
+   "count": 0,
+   "error": "https://ico.org.uk/global/rss-feeds/enforcement/: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Computer Weekly Security",
+   "id": "computerweekly",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "The Register Security",
+   "id": "theregister",
+   "ok": true,
+   "count": 1,
+   "error": ""
+  },
+  {
+   "name": "Infosecurity Magazine",
+   "id": "infosecmag",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "BleepingComputer",
+   "id": "bleeping",
+   "ok": true,
+   "count": 3,
+   "error": ""
+  },
+  {
+   "name": "The Record",
+   "id": "therecord",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "The Hacker News",
+   "id": "thehackernews",
+   "ok": true,
+   "count": 1,
+   "error": ""
+  },
+  {
+   "name": "Krebs on Security",
+   "id": "krebs",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "SANS Internet Storm Center",
+   "id": "sans",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "SecurityWeek",
+   "id": "securityweek",
+   "ok": true,
+   "count": 1,
+   "error": ""
+  },
+  {
+   "name": "CISA KEV",
+   "id": "kev",
+   "ok": true,
+   "count": 3,
+   "error": ""
+  },
+  {
+   "name": "NVD critical CVEs",
+   "id": "nvd",
+   "ok": true,
+   "count": 63,
+   "error": ""
+  },
+  {
+   "name": "ransomware.live",
+   "id": "ransomware",
+   "ok": true,
+   "count": 3,
+   "error": ""
+  },
+  {
+   "name": "Feodo Tracker (C2)",
+   "id": "feodo",
+   "ok": true,
+   "count": 0,
+   "error": ""
+  },
+  {
+   "name": "URLhaus",
+   "id": "urlhaus",
+   "ok": false,
+   "count": 0,
+   "error": "https://urlhaus.abuse.ch/downloads/csv_recent/: HTTP Error 410: Gone"
+  },
+  {
+   "name": "ThreatFox",
+   "id": "threatfox",
+   "ok": false,
+   "count": 0,
+   "error": "https://threatfox.abuse.ch/export/json/recent/: HTTP Error 410: Gone"
+  }
+ ],
+ "lesson": "ioc-vs-ioa",
+ "rfis": [
+  {
+   "id": "RFI-002",
+   "needs_update": false,
+   "kev_hits": [
+    {
+     "id": "CVE-2026-109618",
+     "name": "PHP Memory Corruption Vulnerability",
+     "added": "2026-10-26"
+    },
+    {
+     "id": "CVE-2026-109619",
+     "name": "PHP Stale Internal Request-State Vulnerability",
+     "added": "2026-10-26"
+    }
+   ],
+   "new_cves": [],
+   "matches": [],
+   "ioc_hits": []
+  },
+  {
+   "id": "RFI-001",
+   "needs_update": false,
+   "kev_hits": [],
+   "new_cves": [],
+   "matches": [],
+   "ioc_hits": []
+  }
+ ]
+}
