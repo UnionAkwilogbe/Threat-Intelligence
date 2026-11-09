@@ -1,10 +1,10 @@
-# Threat Intel Field Brief: Sunday 08 November 2026
+# Threat Intel Field Brief: Monday 09 November 2026
 
-_TLP:CLEAR · generated 11:59 UK time · last 36 hours_
+_TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Simply UK listed by qilin ransomware (priority 70).
+- Read first: Simply UK listed by qilin ransomware (priority 65).
 - 3 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 3 UK organisations named on ransomware leak sites (sectors: Education, Not Found, Other).
 - 1 stories with strong UK relevance.
@@ -13,7 +13,7 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 ## Top 8 for your UK clients
 
 ### 1. [Simply UK listed by qilin ransomware](https://www.ransomware.live/id/U2ltcGx5IFVLQHFpbGlu)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Not Found_
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -22,7 +22,7 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
 ### 2. [Oak Green School listed by qilin ransomware](https://www.ransomware.live/id/T2FrIEdyZWVuIFNjaG9vbEBxaWxpbg==)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Education_
+**Priority 61** · ransomware.live · UK relevant · _Ransomware, Education_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -31,7 +31,7 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
 ### 3. [Amber Management Ltd listed by qilin ransomware](https://www.ransomware.live/id/QW1iZXIgTWFuYWdlbWVudCBMdGRAcWlsaW4=)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Other_
+**Priority 61** · ransomware.live · UK relevant · _Ransomware, Other_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -39,8 +39,8 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 4. [SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins](https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/)
-**Priority 43** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln, Identity / MFA_
+### 4. [CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation](https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html)
+**Priority 56** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Identity / MFA_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -66,23 +66,23 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-123614: imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer…](https://nvd.nist.gov/vuln/detail/CVE-2026-123614)
-**Priority 32** · NVD · _Malware_
+### 7. [CVE-2026-6715: IBM Concert 1.0 through 3.0.1.1 allows an attacker can supply crafted input that is incorporated into an operating system command without…](https://nvd.nist.gov/vuln/detail/CVE-2026-6715)
+**Priority 28** · NVD · _Exploited vuln_
 
-**In plain English:** Malicious software, for example info-stealers that grab saved passwords and cookies.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Extract hashes, domains and IPs and push them to client blocklists or the SIEM. Check the malware family on MalwareBazaar or ThreatFox for more indicators.
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 8. [NHS breach helpline left staff carrying a 'significant emotional burden'](https://www.theregister.com/security/2026/11/07/nhs-breach-helpline-left-staff-carrying-a-significant-emotional-burden/5308201)
-**Priority 29** · The Register Security · UK relevant · _Data breach, Health / NHS_
+### 8. [CVE-2026-15266: IBM Concert 1.0 through 3.0.1.1 contains components that allow potentially unsafe command execution, which could be exploited to run…](https://nvd.nist.gov/vuln/detail/CVE-2026-15266)
+**Priority 28** · NVD · _Exploited vuln_
 
-**In plain English:** Private data got out. Stolen data is later reused for scams and account takeover.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Check if client staff email domains appear in the leak (Have I Been Pwned domain search). Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
 
-**Enrich next:** Sector (Health / NHS) → tag every client in that sector and send them a short heads-up
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
@@ -108,28 +108,28 @@ _TLP:CLEAR · generated 11:59 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 312: IOC vs IOA vs TTP
+### Lesson 313: MITRE ATT&CK in five minutes
 
-An IOC (indicator of compromise) is evidence something bad happened: a hash, IP or domain. An IOA (indicator of attack) is behaviour showing an attack in progress, like PowerShell downloading a file and disabling antivirus. TTPs are the attacker's habits described in general terms.
+ATT&CK is a free catalogue of attacker behaviour. Tactics are the attacker's goal (why), for example Initial Access. Techniques are how they achieve it, for example T1566 Phishing. Each technique has an ID, examples and detection advice.
 
-> **Think of it like this:** IOC = fingerprints left at the scene. IOA = someone seen trying door handles right now. TTP = 'this gang always comes in through the back garden'.
+> **Think of it like this:** A recipe book for attacks: tactics are chapters (starters, mains), techniques are individual recipes.
 
-**UK angle:** Most free feeds give IOCs. Clients with a SIEM or EDR get more value if you translate IOCs into IOAs and detection ideas.
+**UK angle:** NCSC and Five Eyes joint advisories list ATT&CK IDs. Mapping them to a client's detections shows gaps in language their technical team understands.
 
-**Enrichment tip:** For every IOC batch, add one line: 'what behaviour would we see if this hit us?' That turns IOCs into IOAs.
+**Enrichment tip:** When a story has no ATT&CK IDs, add them yourself: phishing email = T1566, valid stolen accounts = T1078, ransomware encryption = T1486.
 
-**Try it today:** Take one malware family from today's ThreatFox list and search for its common behaviour.
+**Try it today:** Look up T1486 on attack.mitre.org and read the detection section.
 
-**Quiz:** Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA?  
-_Answer:_ An IOA. It is suspicious behaviour, not a static artefact.
+**Quiz:** What is the difference between a tactic and a technique?  
+_Answer:_ A tactic is the goal (why). A technique is the method used to reach it (how).
 
-**Word of the day: SIC code** · Standard Industrial Classification. The UK code describing what business a company does.
+**Word of the day: SIEM** · Security Information and Event Management. A system that collects logs and raises alerts.
 
 ### Review (spaced repetition)
 
-- **Passive DNS and certificate transparency** (1d ago): What is 'pivoting' in threat intel? _Answer: Using one known indicator to discover related indicators, for example from a domain to its IP to other domains on that IP._
-- **IPs, ASNs and RIPE** (3d ago): Which regional registry covers UK IP addresses? _Answer: RIPE NCC._
-- **The PHIA probability yardstick** (7d ago): Which yardstick term covers roughly 55-75%? _Answer: Likely (or probable)._
+- **IOC vs IOA vs TTP** (1d ago): Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA? _Answer: An IOA. It is suspicious behaviour, not a static artefact._
+- **.uk domains, Nominet and WHOIS** (3d ago): Why is domain age a useful enrichment field? _Answer: Newly registered domains are much more likely to be used for phishing or malware._
+- **The intelligence cycle** (7d ago): Which two stages of the cycle are most often skipped? _Answer: Direction (setting requirements) and Feedback._
 
 ### Enrichment drill: Simply UK listed by qilin ransomware
 
