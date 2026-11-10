@@ -1,19 +1,19 @@
-# Threat Intel Field Brief: Monday 09 November 2026
+# Threat Intel Field Brief: Tuesday 10 November 2026
 
-_TLP:CLEAR · generated 14:00 UK time · last 72 hours_
+_TLP:CLEAR · generated 13:34 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Simply UK listed by qilin ransomware (priority 65).
-- 3 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 3 UK organisations named on ransomware leak sites (sectors: Education, Not Found, Other).
-- 1 stories with strong UK relevance.
+- Read first: Company #189 listed by N0n ransomware (priority 65).
+- 6 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 3 UK organisations named on ransomware leak sites (sectors: Not Found).
+- 2 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Simply UK listed by qilin ransomware](https://www.ransomware.live/id/U2ltcGx5IFVLQHFpbGlu)
-**Priority 65** · ransomware.live · UK relevant · _Ransomware, Not Found_
+### 1. [Company #189 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMTg5QE4wbg==)
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -21,8 +21,8 @@ _TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 2. [Oak Green School listed by qilin ransomware](https://www.ransomware.live/id/T2FrIEdyZWVuIFNjaG9vbEBxaWxpbg==)
-**Priority 61** · ransomware.live · UK relevant · _Ransomware, Education_
+### 2. [Company #157 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMTU3QE4wbg==)
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -30,8 +30,8 @@ _TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 3. [Amber Management Ltd listed by qilin ransomware](https://www.ransomware.live/id/QW1iZXIgTWFuYWdlbWVudCBMdGRAcWlsaW4=)
-**Priority 61** · ransomware.live · UK relevant · _Ransomware, Other_
+### 3. [Company #156 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMTU2QE4wbg==)
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Retail, Manufacturing_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -39,8 +39,8 @@ _TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 4. [CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation](https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html)
-**Priority 56** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Identity / MFA_
+### 4. [CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws](https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html)
+**Priority 56** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -48,39 +48,39 @@ _TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2024-27834: Apple Multiple Products Improper Authentication Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2024-27834)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
+### 5. [IBM Aspera Faspex, SignalWire FreeSwitch Vulnerabilities Exploited in Attacks](https://www.securityweek.com/ibm-aspera-faspex-signalwire-freeswitch-vulnerabilities-exploited-in-attacks/)
+**Priority 53** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-18): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-119977: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-119977)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+### 6. [Hackers exploit SSHole OpenSSH flaw to breach Linux systems](https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/)
+**Priority 48** · BleepingComputer · KEV · EPSS 1% · _Exploited vuln, Data breach_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-06): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-6715: IBM Concert 1.0 through 3.0.1.1 allows an attacker can supply crafted input that is incorporated into an operating system command without…](https://nvd.nist.gov/vuln/detail/CVE-2026-6715)
-**Priority 28** · NVD · _Exploited vuln_
+### 7. [Who Gives A Crap? Hackers, apparently, after toilet paper maker's customer data exposed](https://www.theregister.com/security/2026/11/09/who-gives-a-crap-hackers-apparently-after-toilet-paper-makers-customer-data-exposed/5308419)
+**Priority 43** · The Register Security · UK relevant · _Supply chain_
+
+**In plain English:** Attackers break into a supplier or software package to reach that supplier's customers.
+
+**Do this:** List which clients use the affected supplier or package. Ask the supplier for their incident statement and indicators.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. [CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation](https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html)
+**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Identity / MFA_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-15266: IBM Concert 1.0 through 3.0.1.1 contains components that allow potentially unsafe command execution, which could be exploited to run…](https://nvd.nist.gov/vuln/detail/CVE-2026-15266)
-**Priority 28** · NVD · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -108,34 +108,34 @@ _TLP:CLEAR · generated 14:00 UK time · last 72 hours_
 
 ## Daily knowledge pack
 
-### Lesson 313: MITRE ATT&CK in five minutes
+### Lesson 314: The Diamond Model
 
-ATT&CK is a free catalogue of attacker behaviour. Tactics are the attacker's goal (why), for example Initial Access. Techniques are how they achieve it, for example T1566 Phishing. Each technique has an ID, examples and detection advice.
+The Diamond Model describes every intrusion with four corners: Adversary (who), Capability (their tools), Infrastructure (servers, domains) and Victim (who was hit). If you know one corner, you can pivot to the others.
 
-> **Think of it like this:** A recipe book for attacks: tactics are chapters (starters, mains), techniques are individual recipes.
+> **Think of it like this:** A crime scene board: suspect, weapon, getaway car, victim, with string between them.
 
-**UK angle:** NCSC and Five Eyes joint advisories list ATT&CK IDs. Mapping them to a client's detections shows gaps in language their technical team understands.
+**UK angle:** For a UK ransomware victim: Victim from the leak site, Adversary = the gang, Capability = their ransomware, Infrastructure = their C2 and leak site. Each corner is an enrichment job.
 
-**Enrichment tip:** When a story has no ATT&CK IDs, add them yourself: phishing email = T1566, valid stolen accounts = T1078, ransomware encryption = T1486.
+**Enrichment tip:** Organise enrichment notes under the four corners. It shows at a glance which corner you know least about.
 
-**Try it today:** Look up T1486 on attack.mitre.org and read the detection section.
+**Try it today:** Fill in a diamond for one ransomware entry in today's brief. Which corners are empty?
 
-**Quiz:** What is the difference between a tactic and a technique?  
-_Answer:_ A tactic is the goal (why). A technique is the method used to reach it (how).
+**Quiz:** Name the four corners of the Diamond Model.  
+_Answer:_ Adversary, Capability, Infrastructure, Victim.
 
-**Word of the day: SIEM** · Security Information and Event Management. A system that collects logs and raises alerts.
+**Word of the day: STIX** · Structured Threat Information eXpression. A standard JSON format for sharing threat intel.
 
 ### Review (spaced repetition)
 
-- **IOC vs IOA vs TTP** (1d ago): Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA? _Answer: An IOA. It is suspicious behaviour, not a static artefact._
-- **.uk domains, Nominet and WHOIS** (3d ago): Why is domain age a useful enrichment field? _Answer: Newly registered domains are much more likely to be used for phishing or malware._
-- **The intelligence cycle** (7d ago): Which two stages of the cycle are most often skipped? _Answer: Direction (setting requirements) and Feedback._
+- **MITRE ATT&CK in five minutes** (1d ago): What is the difference between a tactic and a technique? _Answer: A tactic is the goal (why). A technique is the method used to reach it (how)._
+- **Passive DNS and certificate transparency** (3d ago): What is 'pivoting' in threat intel? _Answer: Using one known indicator to discover related indicators, for example from a domain to its IP to other domains on that IP._
+- **Priority Intelligence Requirements (PIRs)** (7d ago): Why do PIRs make enrichment faster? _Answer: They tell you which context matters, so you only enrich what answers the client's questions._
 
-### Enrichment drill: Simply UK listed by qilin ransomware
+### Enrichment drill: Company #189 listed by N0n ransomware
 
-1. Search Companies House for 'Simply UK'. Note its SIC code, size and registered region.
-2. Look up qilin on ransomware.live. How many UK victims has it listed this year?
-3. Search 'qilin initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'Company #189'. Note its SIC code, size and registered region.
+2. Look up N0n on ransomware.live. How many UK victims has it listed this year?
+3. Search 'N0n initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
