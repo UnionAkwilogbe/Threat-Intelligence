@@ -1,37 +1,28 @@
-# Threat Intel Field Brief: Wednesday 11 November 2026
+# Threat Intel Field Brief: Thursday 12 November 2026
 
-_TLP:CLEAR · generated 12:47 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:27 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Signworx listed by play ransomware (priority 66).
+- Read first: baronandbudd.com listed by Curious Worm ransomware (priority 66).
 - 11 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 2 UK organisations named on ransomware leak sites (sectors: Other, Professional Services).
-- 4 stories with strong UK relevance.
+- 1 UK organisations named on ransomware leak sites (sectors: Professional Services).
+- 1 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Signworx listed by play ransomware](https://www.ransomware.live/id/U2lnbndvcnhAcGxheQ==)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Other_
+### 1. [baronandbudd.com listed by Curious Worm ransomware](https://www.ransomware.live/id/YmFyb25hbmRidWRkLmNvbUBDdXJpb3VzIFdvcm0=)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Data breach, Legal, Professional Services_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
 **Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
-### 2. [A&O Shearman listed by SilentRansomGroup ransomware](https://www.ransomware.live/id/QSZPIFNoZWFybWFuQFNpbGVudFJhbnNvbUdyb3Vw)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Legal, Professional Services_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 3. [Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor](https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html)
-**Priority 62** · The Hacker News · KEV · EPSS 84% · _Exploited vuln, Malware_
+### 2. [Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches](https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html)
+**Priority 43** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -39,35 +30,8 @@ _TLP:CLEAR · generated 12:47 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches](https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html)
-**Priority 56** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 5. [Threat Actors Exploit Openwave, Cisco BroadWorks Vulnerabilities](https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/)
-**Priority 53** · SecurityWeek · KEV · EPSS 0% · _Exploited vuln, Data breach_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft](https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/)
-**Priority 48** · SecurityWeek · KEV · _Zero-day, Exploited vuln_
-
-**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Find out which clients run the product (asset inventory or Shodan/Censys search).
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [NCSC scheme will help critical organisations test their cyber defences](https://www.ncsc.gov.uk/news/ncsc-scheme-help-critical-organisations-test-their-cyber-defences)
-**Priority 46** · NCSC UK · UK relevant
+### 3. [NCSC scheme will help critical organisations test their cyber defences](https://www.ncsc.gov.uk/news/ncsc-scheme-help-critical-organisations-test-their-cyber-defences)
+**Priority 41** · NCSC UK · UK relevant
 
 **In plain English:** General security news worth knowing.
 
@@ -75,12 +39,48 @@ _TLP:CLEAR · generated 12:47 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 8. [Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026](https://thehackernews.com/2026/11/google-issues-chrome-security-update.html)
-**Priority 43** · The Hacker News · KEV · _Zero-day, Exploited vuln_
+### 4. [CVE-2026-123158: OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123158)
+**Priority 38** · CISA KEV · KEV · EPSS 17% · _Exploited vuln_
 
-**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Find out which clients run the product (asset inventory or Shodan/Censys search).
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-12): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [Maersk Reveals Data Breach as Extortion Group Demands $5m](https://www.infosecurity-magazine.com/news/maersk-data-breach-extortion-group/)
+**Priority 37** · Infosecurity Magazine · _Ransomware, Data breach_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 6. [CVE-2026-124194: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-124194)
+**Priority 35** · CISA KEV · KEV · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 7. [CVE-2026-111793: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111793)
+**Priority 35** · CISA KEV · KEV · EPSS 0% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
+**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-13): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -108,34 +108,34 @@ _TLP:CLEAR · generated 12:47 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 315: The Cyber Kill Chain
+### Lesson 316: STIX, TAXII and MISP
 
-Lockheed Martin's Kill Chain splits an attack into seven stages: Reconnaissance, Weaponisation, Delivery, Exploitation, Installation, Command and Control, Actions on Objectives. Stopping any stage breaks the chain.
+STIX is a standard format (JSON) for describing threat intel: indicators, malware, threat actors and the links between them. TAXII is a standard way to send STIX over the internet. MISP is popular free software for storing, enriching and sharing intel, and it speaks both.
 
-> **Think of it like this:** Planning a burglary: case the house, get tools, approach, break the lock, move in, keep contact with the getaway driver, steal.
+> **Think of it like this:** STIX is the language, TAXII is the postal service, MISP is the filing cabinet and post room together.
 
-**UK angle:** Great for explaining to UK client boards why a phishing email (Delivery) matters even if nobody clicked: it is a stage you already stopped.
+**UK angle:** Many UK sector sharing groups and MSSPs use MISP. Being able to export your enriched data as STIX makes it easy for clients' tools to consume.
 
-**Enrichment tip:** Tag each IOC with its kill chain stage. A C2 IP is stage 6, so a hit on it means the attacker is already inside.
+**Enrichment tip:** Store enrichment as MISP attributes or tags (for example tlp:amber, admiralty-scale, sector) rather than free text, so machines can filter on them.
 
-**Try it today:** Place today's top story onto the kill chain. Which stage does it describe?
+**Try it today:** Open this dashboard's docs/data JSON file and spot which fields would become STIX indicators.
 
-**Quiz:** Which stage is a C2 (command and control) server?  
-_Answer:_ Stage 6, Command and Control.
+**Quiz:** Which one is the format and which is the transport: STIX or TAXII?  
+_Answer:_ STIX is the format. TAXII is the transport.
 
-**Word of the day: TAXII** · The protocol used to send and receive STIX data over the internet.
+**Word of the day: TLP** · Traffic Light Protocol. Labels (CLEAR, GREEN, AMBER, AMBER+STRICT, RED) that set who may see shared info.
 
 ### Review (spaced repetition)
 
-- **The Diamond Model** (1d ago): Name the four corners of the Diamond Model. _Answer: Adversary, Capability, Infrastructure, Victim._
-- **IOC vs IOA vs TTP** (3d ago): Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA? _Answer: An IOA. It is suspicious behaviour, not a static artefact._
-- **Companies House as an enrichment source** (7d ago): What does a SIC code tell you about a company? _Answer: Its industry or type of business activity._
+- **The Cyber Kill Chain** (1d ago): Which stage is a C2 (command and control) server? _Answer: Stage 6, Command and Control._
+- **MITRE ATT&CK in five minutes** (3d ago): What is the difference between a tactic and a technique? _Answer: A tactic is the goal (why). A technique is the method used to reach it (how)._
+- **IPs, ASNs and RIPE** (7d ago): Which regional registry covers UK IP addresses? _Answer: RIPE NCC._
 
-### Enrichment drill: Signworx listed by play ransomware
+### Enrichment drill: baronandbudd.com listed by Curious Worm ransomware
 
-1. Search Companies House for 'Signworx'. Note its SIC code, size and registered region.
-2. Look up play on ransomware.live. How many UK victims has it listed this year?
-3. Search 'play initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'baronandbudd.com'. Note its SIC code, size and registered region.
+2. Look up Curious Worm on ransomware.live. How many UK victims has it listed this year?
+3. Search 'Curious Worm initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
