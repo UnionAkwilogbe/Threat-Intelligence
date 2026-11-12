@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Thursday 12 November 2026
 
-_TLP:CLEAR · generated 13:51 UK time · last 36 hours_
+_TLP:CLEAR · generated 14:57 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -40,7 +40,7 @@ _TLP:CLEAR · generated 13:51 UK time · last 36 hours_
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
 ### 4. [Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches](https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html)
-**Priority 43** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
+**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -49,7 +49,7 @@ _TLP:CLEAR · generated 13:51 UK time · last 36 hours_
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ### 5. [CVE-2026-123158: OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123158)
-**Priority 38** · CISA KEV · KEV · EPSS 17% · _Exploited vuln_
+**Priority 39** · CISA KEV · KEV · EPSS 19% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -75,14 +75,14 @@ _TLP:CLEAR · generated 13:51 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 8. [NCSC scheme will help critical organisations test their cyber defences](https://www.ncsc.gov.uk/news/ncsc-scheme-help-critical-organisations-test-their-cyber-defences)
-**Priority 36** · NCSC UK · UK relevant
+### 8. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
+**Priority 37** · CISA KEV · KEV · EPSS 9% · _Exploited vuln_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-13): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
