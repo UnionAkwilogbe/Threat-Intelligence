@@ -1,18 +1,18 @@
 # Threat Intel Field Brief: Friday 13 November 2026
 
-_TLP:CLEAR · generated 09:55 UK time · last 36 hours_
+_TLP:CLEAR · generated 13:13 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th) (priority 48).
+- Read first: Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th) (priority 43).
 - 10 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 2 stories with strong UK relevance.
+- 4 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
 ### 1. [Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th)](https://isc.sans.edu/diary/rss/33514)
-**Priority 48** · SANS Internet Storm Center · KEV · EPSS 1% · _Exploited vuln_
+**Priority 43** · SANS Internet Storm Center · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -21,7 +21,7 @@ _TLP:CLEAR · generated 09:55 UK time · last 36 hours_
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ### 2. [SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths](https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html)
-**Priority 45** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware, Tech / MSP, Charity_
+**Priority 40** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Malware, Tech / MSP, Charity_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -29,12 +29,12 @@ _TLP:CLEAR · generated 09:55 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [NCSC Launches Cyber Adversary Testing to Boost Resilience](https://www.infosecurity-magazine.com/news/ncsc-cyber-adversary-testing-boost/)
-**Priority 43** · Infosecurity Magazine · UK relevant
+### 3. [Record number of cyber incidents reported to UK privacy regulator](https://therecord.media/record-number-of-cyber-incidents-reported-to-uk-regulator)
+**Priority 39** · The Record · UK relevant · _Ransomware_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
@@ -47,7 +47,25 @@ _TLP:CLEAR · generated 09:55 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [AI Set to Revolutionize Ransomware Following “Stagnant” Few Years](https://www.infosecurity-magazine.com/news/ai-revolutionize-ransomware/)
+### 5. [Crackdown on UK medical record snooping after staff reported sneaking 300+ times this year](https://www.theregister.com/security/2026/11/13/crackdown-on-uk-medical-record-snooping-after-staff-reported-sneaking-300-times-this-year/5309421)
+**Priority 38** · The Register Security · UK relevant · _Health / NHS_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Health / NHS) → tag every client in that sector and send them a short heads-up
+
+### 6. [NCSC Launches Cyber Adversary Testing to Boost Resilience](https://www.infosecurity-magazine.com/news/ncsc-cyber-adversary-testing-boost/)
+**Priority 38** · Infosecurity Magazine · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [AI Set to Revolutionize Ransomware Following “Stagnant” Few Years](https://www.infosecurity-magazine.com/news/ai-revolutionize-ransomware/)
 **Priority 37** · Infosecurity Magazine · _Ransomware_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
@@ -56,30 +74,12 @@ _TLP:CLEAR · generated 09:55 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 6. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
+### 8. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
 **Priority 37** · CISA KEV · KEV · EPSS 9% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-11-13): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-124194: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-124194)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-111793: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111793)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -139,4 +139,4 @@ _Answer:_ IPs get reassigned to new, often innocent, owners, while a hash always
 5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
-Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
+Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), NVD critical CVEs, URLhaus, ThreatFox)
