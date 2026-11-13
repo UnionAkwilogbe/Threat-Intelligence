@@ -3483,7 +3483,7 @@
  "rfis": [
   {
    "id": "RFI-002",
-   "needs_update": true,
+   "needs_update": false,
    "kev_hits": [
     {
      "id": "CVE-2026-109618",
@@ -3496,9 +3496,7 @@
      "added": "2026-10-26"
     }
    ],
-   "new_cves": [
-    "CVE-2026-123039"
-   ],
+   "new_cves": [],
    "matches": [
     "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
     "PHP2Shell Exploited in Destructive Check Point Gateway Attacks"

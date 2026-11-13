@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Friday 13 November 2026
 
-_TLP:CLEAR · generated 09:53 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:55 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -85,13 +85,13 @@ _TLP:CLEAR · generated 09:53 UK time · last 36 hours_
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
-**Status: needs update, new evidence today.**
+**Status:** In progress, re-checked today.
 
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619
 - Matching stories today: 2
-- New CVEs not yet covered: CVE-2026-123039
+- New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
 ## Client request RFI-001: Okta vulnerabilities (Client A)
