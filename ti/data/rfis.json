@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-10-27",
+      "updated": "2026-11-13",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -44,6 +44,11 @@
           "title": "Third bug: CVE-2026-115560",
           "level": "Medium",
           "text": "Announced 23 October. The 21 October patches do not fix it and there will be no emergency release; the fix comes in the next regular PHP release. It needs an unusual session configuration (a non-default session.serialize_handler switched at runtime, with session upload progress on). Workaround: set session.upload_progress.enabled=0 as an administrative setting and fully restart PHP workers."
+        },
+        {
+          "title": "Embedded PHP: Check Point gateways attacked",
+          "level": "High",
+          "text": "From 30 October attackers used PHP2Shell against Check Point Mobile Access portals, chained it with a Gaia OS root exploit (CVE-2026-123039), planted webshells and the TSGA backdoor, and in at least one case moved over SSH to a VMware ESXi host and ran a wiper. Check Point says a couple of dozen customers were hit. This is the 'PHP inside other products' risk the NCSC warned about."
         }
       ],
       "assessment": "Exploitation is confirmed and widespread. It is almost certain (95% and above) that unpatched internet-facing PHP sites will be attacked, and highly likely (80-90%) that a long tail of compromises surfaces over the coming months. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
@@ -68,12 +73,20 @@
           "issue": "Third session-handler RCE; only unusual session configurations. No emergency fix",
           "cvss": null,
           "fixed": "Next regular PHP release. Workaround: session.upload_progress.enabled=0 (set as admin flag, full restart)"
+        },
+        {
+          "id": "CVE-2026-123039",
+          "product": "Check Point Gaia OS",
+          "issue": "Local privilege escalation to root, chained with PHP2Shell on Mobile Access portals. Exploited",
+          "cvss": 7.8,
+          "fixed": "November Jumbo Hotfix / R82.20 Take 14 (PHP2Shell hotfix since 23 October); see Check Point sk1000362"
         }
       ],
       "actions": [
         "Find every PHP system, internet-facing first, including PHP bundled in third-party products and hosting.",
         "Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 (or later) and restart all PHP workers. For 8.1 and older, get written confirmation of a vendor backport or migrate.",
         "Apply the CVE-2026-115560 workaround where practical: set session.upload_progress.enabled=0 administratively (for example php_admin_flag in the PHP-FPM pool) and fully restart PHP workers, then apply the next regular PHP release when it ships.",
+        "Check Point customers: install the November Jumbo Hotfix (or the PHP2Shell hotfix and the CVE-2026-123039 fix), check Mobile Access portals for webshells and unexpected root activity, and restrict SSH from gateways to ESXi hosts.",
         "If an internet-facing system cannot be patched quickly, put a WAF block on oversized POST bodies or take it offline (NCSC advice).",
         "Hunt for compromise since 17 October: web workers spawning shells, new PHP files in web roots, outbound connections from web servers, and the memory and crash errors above.",
         "Google SecOps: confirm the Mandiant Frontline Threats curated rule pack is enabled (23 new detections), and check Emerging Threat Center entry GLOBAL.26.015 where licensed.",
@@ -132,6 +145,10 @@
         {
           "date": "2026-10-27",
           "note": "CISA added CVE-2026-109618 and CVE-2026-109619 to KEV on 26 October (due 29 October). Added UK patching lag, NCSC warning volume and the suspected North Korean scanning campaign."
+        },
+        {
+          "date": "2026-11-13",
+          "note": "Added the Check Point Gaia chain (CVE-2026-123039): PHP2Shell used against Mobile Access portals since 30 October, leading to root, the TSGA backdoor and an ESXi wiper."
         }
       ],
       "sources": [
@@ -222,6 +239,18 @@
         {
           "name": "ITV: more than 50,000 warnings sent to UK organisations",
           "url": "https://www.itv.com/news/2026-10-22/more-than-30-government-services-offline-amid-global-php-cybersecurity-threat"
+        },
+        {
+          "name": "Check Point Research: PHP2Shell exploitation on Check Point Gateway",
+          "url": "https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/"
+        },
+        {
+          "name": "Check Point advisory: active exploitation of PHP2Shell and local privilege escalation",
+          "url": "https://blog.checkpoint.com/security/security-advisory-active-exploitation-of-php2shell-and-local-privilege-escalation"
+        },
+        {
+          "name": "SecurityWeek: PHP2Shell exploited in destructive Check Point attacks",
+          "url": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/"
         }
       ],
       "known_kev": [
