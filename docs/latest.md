@@ -1,31 +1,31 @@
-# Threat Intel Field Brief: Saturday 14 November 2026
+# Threat Intel Field Brief: Sunday 15 November 2026
 
-_TLP:CLEAR · generated 12:17 UK time · last 36 hours_
+_TLP:CLEAR · generated 12:49 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: CVE-2026-114713: UnrealIRCd Improper Neutralization of Delimiters Vulnerability (priority 40).
+- Read first: fittleworth.com listed by Scarlettgroup ransomware (priority 70).
 - 12 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 stories with strong UK relevance.
+- 1 UK organisations named on ransomware leak sites (sectors: Retail & E-Commerce).
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [CVE-2026-114713: UnrealIRCd Improper Neutralization of Delimiters Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-114713)
-**Priority 40** · CISA KEV · KEV · EPSS 0% · _Exploited vuln_
+### 1. [fittleworth.com listed by Scarlettgroup ransomware](https://www.ransomware.live/id/Zml0dGxld29ydGguY29tQFNjYXJsZXR0Z3JvdXA=)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Health / NHS, Retail & E-Commerce_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
+
+### 2. [Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection](https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html)
+**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 2. [CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123039)
-**Priority 40** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -47,7 +47,16 @@ _TLP:CLEAR · generated 12:17 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-124194: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-124194)
+### 5. [CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123039)
+**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 6. [CVE-2026-124194: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-124194)
 **Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -56,7 +65,7 @@ _TLP:CLEAR · generated 12:17 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-111793: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111793)
+### 7. [CVE-2026-111793: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111793)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -65,16 +74,7 @@ _TLP:CLEAR · generated 12:17 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-20320: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-20320)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-125350: Google Chromium Use-After-Free Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-125350)
+### 8. [CVE-2026-20320: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-20320)
 **Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -90,7 +90,7 @@ _TLP:CLEAR · generated 12:17 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039
-- Matching stories today: 2
+- Matching stories today: 0
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -107,36 +107,36 @@ _TLP:CLEAR · generated 12:17 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 318: False positives and allowlists
+### Lesson 319: Matching threats to client assets
 
-A false positive is a harmless thing flagged as malicious. Feeds sometimes include shared infrastructure like Google DNS (8.8.8.8), Microsoft or Cloudflare IPs. Blocking these can take a client offline. Allowlists (MISP calls them warninglists) catch them before sharing.
+The most valuable enrichment is 'does this client have the thing?'. That needs an asset inventory: which vendors, products and versions each client runs, and which are internet facing. Vulnerabilities use CPE names (for example cpe:2.3:a:fortinet:fortios) to identify products.
 
-> **Think of it like this:** A smoke alarm that goes off every time you make toast. People soon take the battery out.
+> **Think of it like this:** A recall notice for a car is only useful if you know which car you drive.
 
-**UK angle:** Add UK-specific allowlists: gov.uk, nhs.uk, major UK banks, and the client's own IP ranges and suppliers.
+**UK angle:** Shodan and Censys searches with country:GB and a client's IP ranges show what they expose. Pair that with KEV each morning for a very high-value brief.
 
-**Enrichment tip:** Before sharing any IOC, check it against an allowlist of popular domains (for example the Tranco top list) and cloud provider ranges.
+**Enrichment tip:** Keep a simple per-client file: vendor, product, internet facing (yes/no). Match each morning's CVEs against it. That is personalised intel.
 
-**Try it today:** List five domains that should never be blocked for a UK client.
+**Try it today:** Write down the five most important internet-facing products for one client (VPN, firewall, email, remote access, website CMS).
 
-**Quiz:** What is a MISP warninglist for?  
-_Answer:_ Flagging indicators that are probably false positives, such as well-known legitimate services.
+**Quiz:** What does a CPE name identify?  
+_Answer:_ A specific vendor and product (and optionally version) so vulnerabilities can be matched to it.
 
-**Word of the day: Typosquatting** · Registering lookalike domains to trick people, for example paypa1.com.
+**Word of the day: Zero-day** · A vulnerability attackers use before the vendor has released a fix.
 
 ### Review (spaced repetition)
 
-- **Indicators go stale: ageing and decay** (1d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
-- **The Cyber Kill Chain** (3d ago): Which stage is a C2 (command and control) server? _Answer: Stage 6, Command and Control._
-- **Passive DNS and certificate transparency** (7d ago): What is 'pivoting' in threat intel? _Answer: Using one known indicator to discover related indicators, for example from a domain to its IP to other domains on that IP._
+- **False positives and allowlists** (1d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
+- **STIX, TAXII and MISP** (3d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
+- **IOC vs IOA vs TTP** (7d ago): Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA? _Answer: An IOA. It is suspicious behaviour, not a static artefact._
 
-### Enrichment drill: CVE-2026-114713: UnrealIRCd Improper Neutralization of Delimiters Vulnerability
+### Enrichment drill: fittleworth.com listed by Scarlettgroup ransomware
 
-1. Open nvd.nist.gov/vuln/detail/CVE-2026-114713. Note the CVSS score and affected product.
-2. Check CVE-2026-114713 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
-3. Find the vendor's own advisory. Is there a patch or only a workaround?
-4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
-5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
+1. Search Companies House for 'fittleworth.com'. Note its SIC code, size and registered region.
+2. Look up Scarlettgroup on ransomware.live. How many UK victims has it listed this year?
+3. Search 'Scarlettgroup initial access' to find how they usually break in (ATT&CK tactic TA0001).
+4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
+5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
+Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), NVD critical CVEs, URLhaus, ThreatFox)
