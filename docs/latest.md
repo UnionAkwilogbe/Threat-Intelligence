@@ -1,18 +1,19 @@
-# Threat Intel Field Brief: Sunday 15 November 2026
+# Threat Intel Field Brief: Monday 16 November 2026
 
-_TLP:CLEAR · generated 12:49 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:34 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: fittleworth.com listed by Scarlettgroup ransomware (priority 70).
-- 12 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- Read first: fittleworth.com listed by Scarlettgroup ransomware (priority 65).
+- 8 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 1 UK organisations named on ransomware leak sites (sectors: Retail & E-Commerce).
+- 2 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
 ### 1. [fittleworth.com listed by Scarlettgroup ransomware](https://www.ransomware.live/id/Zml0dGxld29ydGguY29tQFNjYXJsZXR0Z3JvdXA=)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Health / NHS, Retail & E-Commerce_
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Health / NHS, Retail & E-Commerce_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -29,14 +30,14 @@ _TLP:CLEAR · generated 12:49 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [CVE-2026-123158: OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123158)
-**Priority 39** · CISA KEV · KEV · EPSS 19% · _Exploited vuln_
+### 3. [UK councils lead on email anti-spoofing but lock into Microsoft](https://www.computerweekly.com/news/366654774/UK-councils-lead-on-email-anti-spoofing-but-lock-into-Microsoft)
+**Priority 38** · Computer Weekly Security · UK relevant · _Public sector_
 
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+**In plain English:** General security news worth knowing.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-12): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
 
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
 
 ### 4. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
 **Priority 37** · CISA KEV · KEV · EPSS 11% · _Exploited vuln_
@@ -90,7 +91,7 @@ _TLP:CLEAR · generated 12:49 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039
-- Matching stories today: 0
+- Matching stories today: 1
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -107,28 +108,28 @@ _TLP:CLEAR · generated 12:49 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 319: Matching threats to client assets
+### Lesson 320: Cyber Essentials
 
-The most valuable enrichment is 'does this client have the thing?'. That needs an asset inventory: which vendors, products and versions each client runs, and which are internet facing. Vulnerabilities use CPE names (for example cpe:2.3:a:fortinet:fortios) to identify products.
+Cyber Essentials is the UK government-backed baseline certification. Five controls: firewalls, secure configuration, user access control, malware protection, and security update management. Cyber Essentials Plus adds a hands-on technical audit.
 
-> **Think of it like this:** A recall notice for a car is only useful if you know which car you drive.
+> **Think of it like this:** An MOT for a company's basic cyber hygiene.
 
-**UK angle:** Shodan and Censys searches with country:GB and a client's IP ranges show what they expose. Pair that with KEV each morning for a very high-value brief.
+**UK angle:** Many UK public sector contracts require it. Framing intel around the five controls ('this CVE falls under security update management, 14-day rule') lands well with UK SMEs.
 
-**Enrichment tip:** Keep a simple per-client file: vendor, product, internet facing (yes/no). Match each morning's CVEs against it. That is personalised intel.
+**Enrichment tip:** Tag each story with the Cyber Essentials control it relates to. Clients immediately see which part of their certification is under pressure.
 
-**Try it today:** Write down the five most important internet-facing products for one client (VPN, firewall, email, remote access, website CMS).
+**Try it today:** Map today's top three stories to one of the five Cyber Essentials controls.
 
-**Quiz:** What does a CPE name identify?  
-_Answer:_ A specific vendor and product (and optionally version) so vulnerabilities can be matched to it.
+**Quiz:** Name the five Cyber Essentials controls.  
+_Answer:_ Firewalls, secure configuration, user access control, malware protection, security update management.
 
-**Word of the day: Zero-day** · A vulnerability attackers use before the vendor has released a fix.
+**Word of the day: Admiralty Code** · A grading system for intel: source reliability (A-F) plus information credibility (1-6).
 
 ### Review (spaced repetition)
 
-- **False positives and allowlists** (1d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
-- **STIX, TAXII and MISP** (3d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
-- **IOC vs IOA vs TTP** (7d ago): Is 'a new admin account created at 3am followed by backup deletion' an IOC or an IOA? _Answer: An IOA. It is suspicious behaviour, not a static artefact._
+- **Matching threats to client assets** (1d ago): What does a CPE name identify? _Answer: A specific vendor and product (and optionally version) so vulnerabilities can be matched to it._
+- **Indicators go stale: ageing and decay** (3d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
+- **MITRE ATT&CK in five minutes** (7d ago): What is the difference between a tactic and a technique? _Answer: A tactic is the goal (why). A technique is the method used to reach it (how)._
 
 ### Enrichment drill: fittleworth.com listed by Scarlettgroup ransomware
 
@@ -139,4 +140,4 @@ _Answer:_ A specific vendor and product (and optionally version) so vulnerabilit
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), NVD critical CVEs, URLhaus, ThreatFox)
+Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
