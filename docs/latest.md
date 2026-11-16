@@ -1,18 +1,36 @@
 # Threat Intel Field Brief: Monday 16 November 2026
 
-_TLP:CLEAR · generated 09:36 UK time · last 72 hours_
+_TLP:CLEAR · generated 13:46 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: fittleworth.com listed by Scarlettgroup ransomware (priority 65).
+- Read first: CARRINGTON listed by Vortex ransomware (priority 71).
 - 8 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 1 UK organisations named on ransomware leak sites (sectors: Retail & E-Commerce).
+- 2 UK organisations named on ransomware leak sites (sectors: Financial Services, Retail & E-Commerce).
 - 2 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [fittleworth.com listed by Scarlettgroup ransomware](https://www.ransomware.live/id/Zml0dGxld29ydGguY29tQFNjYXJsZXR0Z3JvdXA=)
+### 1. [CARRINGTON listed by Vortex ransomware](https://www.ransomware.live/id/Q0FSUklOR1RPTkBWb3J0ZXg=)
+**Priority 71** · ransomware.live · UK relevant · _Ransomware, Financial Services_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+
+### 2. [Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33522)
+**Priority 68** · SANS Internet Storm Center · KEV · EPSS 91% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 3. [fittleworth.com listed by Scarlettgroup ransomware](https://www.ransomware.live/id/Zml0dGxld29ydGguY29tQFNjYXJsZXR0Z3JvdXA=)
 **Priority 65** · ransomware.live · UK relevant · _Ransomware, Health / NHS, Retail & E-Commerce_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
@@ -21,8 +39,8 @@ _TLP:CLEAR · generated 09:36 UK time · last 72 hours_
 
 **Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
-### 2. [Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection](https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html)
-**Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
+### 4. [Recent UnrealIRCd Vulnerability Exploited in Attacks](https://www.securityweek.com/recent-unrealircd-vulnerability-exploited-in-attacks/)
+**Priority 50** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -30,7 +48,16 @@ _TLP:CLEAR · generated 09:36 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [UK councils lead on email anti-spoofing but lock into Microsoft](https://www.computerweekly.com/news/366654774/UK-councils-lead-on-email-anti-spoofing-but-lock-into-Microsoft)
+### 5. [Information Commissioner’s Office Receives 300+ Reports of Medical Snooping](https://www.infosecurity-magazine.com/news/ico-300-reports-of-medical-snooping/)
+**Priority 38** · Infosecurity Magazine · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 6. [UK councils lead on email anti-spoofing but lock into Microsoft](https://www.computerweekly.com/news/366654774/UK-councils-lead-on-email-anti-spoofing-but-lock-into-Microsoft)
 **Priority 38** · Computer Weekly Security · UK relevant · _Public sector_
 
 **In plain English:** General security news worth knowing.
@@ -39,7 +66,7 @@ _TLP:CLEAR · generated 09:36 UK time · last 72 hours_
 
 **Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
 
-### 4. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
+### 7. [CVE-2026-111560: Barracuda Networks Multiple Products OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111560)
 **Priority 37** · CISA KEV · KEV · EPSS 11% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -48,39 +75,12 @@ _TLP:CLEAR · generated 09:36 UK time · last 72 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123039)
+### 8. [CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123039)
 **Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-11-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [CVE-2026-124194: Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-124194)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-111793: Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-111793)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-20320: Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-20320)
-**Priority 35** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-24): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -131,13 +131,13 @@ _Answer:_ Firewalls, secure configuration, user access control, malware protecti
 - **Indicators go stale: ageing and decay** (3d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
 - **MITRE ATT&CK in five minutes** (7d ago): What is the difference between a tactic and a technique? _Answer: A tactic is the goal (why). A technique is the method used to reach it (how)._
 
-### Enrichment drill: fittleworth.com listed by Scarlettgroup ransomware
+### Enrichment drill: CARRINGTON listed by Vortex ransomware
 
-1. Search Companies House for 'fittleworth.com'. Note its SIC code, size and registered region.
-2. Look up Scarlettgroup on ransomware.live. How many UK victims has it listed this year?
-3. Search 'Scarlettgroup initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'CARRINGTON'. Note its SIC code, size and registered region.
+2. Look up Vortex on ransomware.live. How many UK victims has it listed this year?
+3. Search 'Vortex initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), NVD critical CVEs, URLhaus, ThreatFox)
+Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
