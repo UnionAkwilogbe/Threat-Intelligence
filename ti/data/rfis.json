@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-11-13",
+      "updated": "2026-11-16",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -149,6 +149,10 @@
         {
           "date": "2026-11-13",
           "note": "Added the Check Point Gaia chain (CVE-2026-123039): PHP2Shell used against Mobile Access portals since 30 October, leading to root, the TSGA backdoor and an ESXi wiper."
+        },
+        {
+          "date": "2026-11-16",
+          "note": "CISA added the Check Point Gaia bug (CVE-2026-123039) to KEV on 13 November, with a US federal deadline of 16 November."
         }
       ],
       "sources": [
@@ -255,7 +259,8 @@
       ],
       "known_kev": [
         "CVE-2026-109618",
-        "CVE-2026-109619"
+        "CVE-2026-109619",
+        "CVE-2026-123039"
       ]
     },
     {
