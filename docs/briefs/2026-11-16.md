@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Monday 16 November 2026
 
-_TLP:CLEAR · generated 09:34 UK time · last 72 hours_
+_TLP:CLEAR · generated 09:36 UK time · last 72 hours_
 
 ## Your morning in 30 seconds
 
@@ -86,7 +86,7 @@ _TLP:CLEAR · generated 09:34 UK time · last 72 hours_
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
-**Status: needs update, new evidence today.**
+**Status:** In progress, re-checked today.
 
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
@@ -140,4 +140,4 @@ _Answer:_ Firewalls, secure configuration, user access control, malware protecti
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
-Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
+Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), NVD critical CVEs, URLhaus, ThreatFox)
