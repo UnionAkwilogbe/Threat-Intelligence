@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Tuesday 17 November 2026
 
-_TLP:CLEAR · generated 10:01 UK time · last 36 hours_
+_TLP:CLEAR · generated 14:37 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -30,16 +30,7 @@ _TLP:CLEAR · generated 10:01 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 3. [Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33522)
-**Priority 63** · SANS Internet Storm Center · KEV · EPSS 91% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 4. [CARRINGTON listed by Vortex ransomware](https://www.ransomware.live/id/Q0FSUklOR1RPTkBWb3J0ZXg=)
+### 3. [CARRINGTON listed by Vortex ransomware](https://www.ransomware.live/id/Q0FSUklOR1RPTkBWb3J0ZXg=)
 **Priority 61** · ransomware.live · UK relevant · _Ransomware, Financial Services_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
@@ -48,8 +39,8 @@ _TLP:CLEAR · generated 10:01 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 5. [Recent UnrealIRCd Vulnerability Exploited in Attacks](https://www.securityweek.com/recent-unrealircd-vulnerability-exploited-in-attacks/)
-**Priority 48** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln_
+### 4. [Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33522)
+**Priority 58** · SANS Internet Storm Center · KEV · EPSS 91% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -57,32 +48,41 @@ _TLP:CLEAR · generated 10:01 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [King Charles opens new HQ for National Cyber Force, UK’s offensive hacking unit](https://therecord.media/uk-national-cyber-force-headquarters-opens)
-**Priority 38** · The Record · UK relevant
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 7. [Why threat hunting should matter to every board](https://www.ncsc.gov.uk/blogs/why-threat-hunting-should-matter-to-every-board)
-**Priority 35** · NCSC UK
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 8. [CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-123039)
-**Priority 35** · CISA KEV · KEV · EPSS 2% · _Exploited vuln_
+### 5. [MSP ScreenConnect Servers Targeted in Month-Long Campaign](https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/)
+**Priority 50** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln, Tech / MSP_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-16): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 6. [ICO Issues GTA 6 Scam Warning as Release Date Nears](https://www.infosecurity-magazine.com/news/ico-gta-6-scam-warning-release/)
+**Priority 46** · Infosecurity Magazine · UK relevant · _Fraud / Scam_
+
+**In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
+
+**Do this:** Watch for lookalike domains of client brands (typosquats). UK victims report to Action Fraud (England, Wales, NI) or Police Scotland.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 7. [Optimizely Flaw Exploited to Serve Malicious Code to Visitors of 178 Organizations](https://www.infosecurity-magazine.com/news/optimizely-hack-malware-178-orgs/)
+**Priority 37** · Infosecurity Magazine · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. ['Not rocket surgery' claims researcher who found six Danfoss fridge controller zero-days in under an hour](https://www.theregister.com/security/2026/11/17/not-rocket-surgery-claims-researcher-who-found-six-danfoss-fridge-controller-zero-days-in-under-an-hour/5310197)
+**Priority 37** · The Register Security · _Zero-day_
+
+**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
+
+**Do this:** Find out which clients run the product (asset inventory or Shodan/Censys search). Apply the vendor's workaround or mitigation until a patch ships.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
