@@ -1,46 +1,28 @@
-# Threat Intel Field Brief: Tuesday 17 November 2026
+# Threat Intel Field Brief: Wednesday 18 November 2026
 
-_TLP:CLEAR · generated 14:37 UK time · last 36 hours_
+_TLP:CLEAR · generated 10:21 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Waterman Group listed by rhysida ransomware (priority 70).
-- 2 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 3 UK organisations named on ransomware leak sites (sectors: Financial Services, Professional Services).
-- 3 stories with strong UK relevance.
+- Read first: Hicrete Products Technology listed by thegentlemen ransomware (priority 66).
+- 3 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 1 UK organisations named on ransomware leak sites (sectors: Manufacturing).
+- 6 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Waterman Group listed by rhysida ransomware](https://www.ransomware.live/id/V2F0ZXJtYW4gR3JvdXBAcmh5c2lkYQ==)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Finance, Professional Services_
+### 1. [Hicrete Products Technology listed by thegentlemen ransomware](https://www.ransomware.live/id/SGljcmV0ZSBQcm9kdWN0cyBUZWNobm9sb2d5QHRoZWdlbnRsZW1lbg==)
+**Priority 66** · ransomware.live · UK relevant · _Ransomware, Health / NHS, Manufacturing_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
 **Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
-### 2. [Burney Wealth listed by Shiba ransomware](https://www.ransomware.live/id/QnVybmV5IFdlYWx0aEBTaGliYQ==)
-**Priority 66** · ransomware.live · UK relevant · _Ransomware, Finance, Financial Services_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 3. [CARRINGTON listed by Vortex ransomware](https://www.ransomware.live/id/Q0FSUklOR1RPTkBWb3J0ZXg=)
-**Priority 61** · ransomware.live · UK relevant · _Ransomware, Financial Services_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
-
-### 4. [Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33522)
-**Priority 58** · SANS Internet Storm Center · KEV · EPSS 91% · _Exploited vuln_
+### 2. [Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers](https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html)
+**Priority 53** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -48,8 +30,8 @@ _TLP:CLEAR · generated 14:37 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [MSP ScreenConnect Servers Targeted in Month-Long Campaign](https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/)
-**Priority 50** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln, Tech / MSP_
+### 3. [MSP ScreenConnect Servers Targeted in Month-Long Campaign](https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/)
+**Priority 45** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln, Tech / MSP_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -57,30 +39,48 @@ _TLP:CLEAR · generated 14:37 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [ICO Issues GTA 6 Scam Warning as Release Date Nears](https://www.infosecurity-magazine.com/news/ico-gta-6-scam-warning-release/)
-**Priority 46** · Infosecurity Magazine · UK relevant · _Fraud / Scam_
+### 4. [UK MPs want AI watchdog with power to pull the plug on dangerous models](https://www.theregister.com/ai-and-ml/2026/11/18/uk-mps-want-ai-watchdog-with-power-to-pull-the-plug-on-dangerous-models/5310567)
+**Priority 38** · The Register Security · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 5. [Watchdog Warns UK Government Is Falling Short on Risk Management](https://www.infosecurity-magazine.com/news/watchdog-government-risk/)
+**Priority 38** · Infosecurity Magazine · UK relevant · _Public sector_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+
+### 6. [Data security, compliance top expected connectivity challenges in 2027](https://www.computerweekly.com/news/366654825/Data-security-compliance-top-expected-connectivity-challenges-in-2027)
+**Priority 38** · Computer Weekly Security · UK relevant · _Public sector_
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+
+### 7. [Oracle reveals fix-this-ASAP-grade Java4Shell bug that allows attacks on many third-party apps](https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661)
+**Priority 37** · The Register Security · _Supply chain_
+
+**In plain English:** Attackers break into a supplier or software package to reach that supplier's customers.
+
+**Do this:** List which clients use the affected supplier or package. Ask the supplier for their incident statement and indicators.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. [ICO Issues GTA 6 Scam Warning as Release Date Nears](https://www.infosecurity-magazine.com/news/ico-gta-6-scam-warning-release/)
+**Priority 36** · Infosecurity Magazine · UK relevant · _Fraud / Scam_
 
 **In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
 
 **Do this:** Watch for lookalike domains of client brands (typosquats). UK victims report to Action Fraud (England, Wales, NI) or Police Scotland.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 7. [Optimizely Flaw Exploited to Serve Malicious Code to Visitors of 178 Organizations](https://www.infosecurity-magazine.com/news/optimizely-hack-malware-178-orgs/)
-**Priority 37** · Infosecurity Magazine · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 8. ['Not rocket surgery' claims researcher who found six Danfoss fridge controller zero-days in under an hour](https://www.theregister.com/security/2026/11/17/not-rocket-surgery-claims-researcher-who-found-six-danfoss-fridge-controller-zero-days-in-under-an-hour/5310197)
-**Priority 37** · The Register Security · _Zero-day_
-
-**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
-
-**Do this:** Find out which clients run the product (asset inventory or Shodan/Censys search). Apply the vendor's workaround or mitigation until a patch ships.
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
@@ -108,34 +108,34 @@ _TLP:CLEAR · generated 14:37 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 321: UK GDPR, the ICO and the 72-hour rule
+### Lesson 322: Where UK victims report things
 
-UK GDPR and the Data Protection Act 2018 govern personal data in the UK. The Information Commissioner's Office (ICO) is the regulator. A personal data breach that poses a risk to people must be reported to the ICO within 72 hours of becoming aware of it.
+Suspicious emails: forward to report@phishing.gov.uk. Scam texts: forward to 7726. Fraud and cybercrime in England, Wales and Northern Ireland: the national fraud and cyber crime reporting service (Action Fraud, which is being replaced by a new Report Fraud service, so check which is live). Scotland: Police Scotland on 101. Significant incidents: the NCSC incident reporting service.
 
-> **Think of it like this:** Like reporting a car accident to your insurer: there is a deadline, and missing it makes things worse.
+> **Think of it like this:** Knowing whether to call 999, 111 or your GP.
 
-**UK angle:** When a UK breach hits the news, the regulatory angle (ICO report, possible fine) is often what gets a client's leadership to pay attention.
+**UK angle:** Clients value an analyst who tells them exactly where to report. Put the right channel in every relevant brief item.
 
-**Enrichment tip:** For breach stories, add a 'regulatory' field: ICO, FCA (finance), Ofcom (telecoms), NIS regulator (critical services). That shows clients who they might answer to.
+**Enrichment tip:** Add a 'report to' field to phishing and fraud items with the correct UK channel for the client's nation.
 
-**Try it today:** Look at the ICO news feed in today's brief. Is there an enforcement action? What went wrong?
+**Try it today:** Save these channels in your notes so you can paste them into client updates.
 
-**Quiz:** How long does a UK organisation have to report a qualifying personal data breach to the ICO?  
-_Answer:_ 72 hours from becoming aware of it.
+**Quiz:** Where do UK users forward suspicious emails?  
+_Answer:_ report@phishing.gov.uk.
 
-**Word of the day: APT** · Advanced Persistent Threat. A skilled, patient, usually government-backed hacking group.
+**Word of the day: ASN** · Autonomous System Number. The ID of a network that owns a block of IP addresses, for example AS2856 (BT).
 
 ### Review (spaced repetition)
 
-- **Cyber Essentials** (1d ago): Name the five Cyber Essentials controls. _Answer: Firewalls, secure configuration, user access control, malware protection, security update management._
-- **False positives and allowlists** (3d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
-- **The Diamond Model** (7d ago): Name the four corners of the Diamond Model. _Answer: Adversary, Capability, Infrastructure, Victim._
+- **UK GDPR, the ICO and the 72-hour rule** (1d ago): How long does a UK organisation have to report a qualifying personal data breach to the ICO? _Answer: 72 hours from becoming aware of it._
+- **Matching threats to client assets** (3d ago): What does a CPE name identify? _Answer: A specific vendor and product (and optionally version) so vulnerabilities can be matched to it._
+- **The Cyber Kill Chain** (7d ago): Which stage is a C2 (command and control) server? _Answer: Stage 6, Command and Control._
 
-### Enrichment drill: Waterman Group listed by rhysida ransomware
+### Enrichment drill: Hicrete Products Technology listed by thegentlemen ransomware
 
-1. Search Companies House for 'Waterman Group'. Note its SIC code, size and registered region.
-2. Look up rhysida on ransomware.live. How many UK victims has it listed this year?
-3. Search 'rhysida initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'Hicrete Products Technology'. Note its SIC code, size and registered region.
+2. Look up thegentlemen on ransomware.live. How many UK victims has it listed this year?
+3. Search 'thegentlemen initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
