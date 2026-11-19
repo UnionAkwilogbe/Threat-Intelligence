@@ -1,19 +1,28 @@
 # Threat Intel Field Brief: Thursday 19 November 2026
 
-_TLP:CLEAR · generated 09:25 UK time · last 36 hours_
+_TLP:CLEAR · generated 14:29 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Company #239 listed by N0n ransomware (priority 75).
+- Read first: Everything Is a Web Application, Including Your Firewall (priority 70).
 - 7 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 4 UK organisations named on ransomware leak sites (sectors: Not Found).
-- 3 stories with strong UK relevance.
+- 6 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Company #239 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjM5QE4wbg==)
-**Priority 75** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
+### 1. [Everything Is a Web Application, Including Your Firewall](https://thehackernews.com/2026/11/everything-is-web-application-including.html)
+**Priority 70** · The Hacker News · KEV · EPSS 100% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 2. [Company #239 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjM5QE4wbg==)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -21,8 +30,8 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 2. [Company #234 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjM0QE4wbg==)
-**Priority 75** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
+### 3. [Company #234 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjM0QE4wbg==)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -30,8 +39,8 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 3. [Company #227 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjI3QE4wbg==)
-**Priority 75** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
+### 4. [Company #227 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjI3QE4wbg==)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -39,8 +48,8 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 4. [Company #225 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjI1QE4wbg==)
-**Priority 75** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
+### 5. [Company #225 listed by N0n ransomware](https://www.ransomware.live/id/Q29tcGFueSAjMjI1QE4wbg==)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Retail, Not Found_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -48,7 +57,7 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 5. [Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers](https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html)
+### 6. [Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers](https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html)
 **Priority 43** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -57,7 +66,7 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [CVE-2026-40217: BerriAI LiteLLM Unprotected Alternate Channel Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-40217)
+### 7. [CVE-2026-40217: BerriAI LiteLLM Unprotected Alternate Channel Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-40217)
 **Priority 43** · CISA KEV · KEV · EPSS 17% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -66,17 +75,8 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [CVE-2026-90817: Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-90817)
+### 8. [CVE-2026-90817: Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-90817)
 **Priority 41** · CISA KEV · KEV · EPSS 4% · _Exploited vuln, Education_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-21): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2024-10441: Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2024-10441)
-**Priority 40** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -91,7 +91,7 @@ _TLP:CLEAR · generated 09:25 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039
-- Matching stories today: 2
+- Matching stories today: 3
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -131,13 +131,13 @@ _Answer:_ It proves a login that already passed MFA, so the attacker does not ha
 - **Cyber Essentials** (3d ago): Name the five Cyber Essentials controls. _Answer: Firewalls, secure configuration, user access control, malware protection, security update management._
 - **STIX, TAXII and MISP** (7d ago): Which one is the format and which is the transport: STIX or TAXII? _Answer: STIX is the format. TAXII is the transport._
 
-### Enrichment drill: Company #239 listed by N0n ransomware
+### Enrichment drill: Everything Is a Web Application, Including Your Firewall
 
-1. Search Companies House for 'Company #239'. Note its SIC code, size and registered region.
-2. Look up N0n on ransomware.live. How many UK victims has it listed this year?
-3. Search 'N0n initial access' to find how they usually break in (ATT&CK tactic TA0001).
-4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
-5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
+1. Open nvd.nist.gov/vuln/detail/CVE-2026-109618. Note the CVSS score and affected product.
+2. Check CVE-2026-109618 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
+3. Find the vendor's own advisory. Is there a patch or only a workaround?
+4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
+5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
 Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)

@@ -2,6 +2,51 @@
  "date": "2026-11-19",
  "stories": [
   {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Everything Is a Web Application, Including Your Firewall",
+   "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
+   "published": "2026-11-19T11:52:23+00:00",
+   "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. The disclosure itself went a little wrong.",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-109618",
+    "CVE-2026-109619"
+   ],
+   "kev": [
+    "CVE-2026-109618",
+    "CVE-2026-109619"
+   ],
+   "epss": 0.99999,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 70,
+   "priority_why": {
+    "UK relevance": 0,
+    "Actively exploited (KEV)": 25,
+    "EPSS": 20,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "On CISA KEV: patch or mitigate for UK clients now, do not wait.",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "ransomware.live",
    "source_id": "ransomware",
    "kind": "ransomware",
@@ -29,12 +74,12 @@
     "Not Found"
    ],
    "uk_score": 100,
-   "priority": 75,
+   "priority": 70,
    "priority_why": {
     "UK relevance": 35,
     "Serious threat type": 10,
     "UK victim named": 15,
-    "Fresh": 15
+    "Fresh": 10
    },
    "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
    "actions": [
@@ -76,12 +121,12 @@
     "Not Found"
    ],
    "uk_score": 100,
-   "priority": 75,
+   "priority": 70,
    "priority_why": {
     "UK relevance": 35,
     "Serious threat type": 10,
     "UK victim named": 15,
-    "Fresh": 15
+    "Fresh": 10
    },
    "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
    "actions": [
@@ -123,12 +168,12 @@
     "Not Found"
    ],
    "uk_score": 100,
-   "priority": 75,
+   "priority": 70,
    "priority_why": {
     "UK relevance": 35,
     "Serious threat type": 10,
     "UK victim named": 15,
-    "Fresh": 15
+    "Fresh": 10
    },
    "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
    "actions": [
@@ -170,12 +215,12 @@
     "Not Found"
    ],
    "uk_score": 100,
-   "priority": 75,
+   "priority": 70,
    "priority_why": {
     "UK relevance": 35,
     "Serious threat type": 10,
     "UK victim named": 15,
-    "Fresh": 15
+    "Fresh": 10
    },
    "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
    "actions": [
@@ -438,6 +483,38 @@
    "clients": []
   },
   {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "A Fifth of UK Employees Share Passwords with AI",
+   "url": "https://www.infosecurity-magazine.com/news/fifth-uk-employees-share-passwords/",
+   "published": "2026-11-19T10:30:00+00:00",
+   "summary": "Dashlane research reveals UK workers are sharing passwords with AI tools and granting access to sensitive data, raising major enterprise security concerns",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 65,
+   "priority": 38,
+   "priority_why": {
+    "UK relevance": 23,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "CISA KEV",
    "source_id": "kev",
    "kind": "vuln",
@@ -588,45 +665,13 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "UK MPs want AI watchdog with power to pull the plug on dangerous models",
-   "url": "https://www.theregister.com/ai-and-ml/2026/11/18/uk-mps-want-ai-watchdog-with-power-to-pull-the-plug-on-dangerous-models/5310567",
-   "published": "2026-11-18T09:30:00+00:00",
-   "summary": "Parliamentary committee says tech giants can't be left to mark their own homework when it comes to AI safety",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 65,
-   "priority": 33,
-   "priority_why": {
-    "UK relevance": 23,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "Infosecurity Magazine",
    "source_id": "infosecmag",
    "kind": "news",
-   "title": "Watchdog Warns UK Government Is Falling Short on Risk Management",
-   "url": "https://www.infosecurity-magazine.com/news/watchdog-government-risk/",
-   "published": "2026-11-18T09:30:00+00:00",
-   "summary": "National Audit Office report claims risk management failures are leading to poor government decisions",
+   "title": "TfL Warns 265,000 Photocard Customers May Have Had Personal Data Exposed",
+   "url": "https://www.infosecurity-magazine.com/news/tfl-customers-personal-data-exposed/",
+   "published": "2026-11-19T11:35:00+00:00",
+   "summary": "London\u2019s transport body was alerted to the incident after emails were sent from TfL\u2019s system to Oyster Photocard customers",
    "uk_source": true,
    "cves": [],
    "kev": [],
@@ -635,32 +680,32 @@
    "iocs": {},
    "threat_types": [],
    "sectors": [
-    "Public sector"
+    "Transport / Logistics"
    ],
-   "uk_score": 65,
-   "priority": 33,
+   "uk_score": 55,
+   "priority": 34,
    "priority_why": {
-    "UK relevance": 23,
-    "Fresh": 10
+    "UK relevance": 19,
+    "Fresh": 15
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+    "Sector (Transport / Logistics) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
+   "source": "The Register Security",
+   "source_id": "theregister",
    "kind": "news",
-   "title": "Suspected Chinese APT Rebuilds EggStreme Malware After Exposure",
-   "url": "https://www.infosecurity-magazine.com/news/eggstreme-malware-rebuilt-after/",
-   "published": "2026-11-18T14:00:00+00:00",
-   "summary": "Suspected Chinese APT rebuilt EggStreme malware and infrastructure after Bitdefender exposure",
+   "title": "TfL takes Oyster photocard website offline after attackers compromise customer accounts",
+   "url": "https://www.theregister.com/security/2026/11/19/tfl-takes-oyster-photocard-website-offline-after-attackers-compromise-customer-accounts/5310985",
+   "published": "2026-11-19T11:01:00+00:00",
+   "summary": "Around 265,000 customers potentially affected as London transport operator grapples with another security breach",
    "uk_source": true,
    "cves": [],
    "kev": [],
@@ -668,63 +713,66 @@
    "attack": [],
    "iocs": {},
    "threat_types": [
-    "Nation-state / APT",
-    "Malware"
+    "Data breach"
    ],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 32,
+   "sectors": [
+    "Transport / Logistics"
+   ],
+   "uk_score": 55,
+   "priority": 34,
    "priority_why": {
-    "UK relevance": 12,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
-   "actions": [
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
-    "Check if the NCSC has issued a joint advisory with indicators to hunt for.",
-    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "Russian Espionage Actor Star Blizzard Focuses on Cloud Identities for Mass Data Theft",
-   "url": "https://www.infosecurity-magazine.com/news/russian-star-blizzard-cloud-data/",
-   "published": "2026-11-18T11:45:00+00:00",
-   "summary": "New Google analysis of Star Blizzard, aka Cold Relic, highlighted the group\u2019s growing focus on compromising cloud environments to steal data and facilitate further attacks",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Data breach",
-    "Nation-state / APT"
-   ],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 32,
-   "priority_why": {
-    "UK relevance": 12,
-    "Serious threat type": 10,
-    "Fresh": 10
+    "UK relevance": 19,
+    "Fresh": 15
    },
    "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
    "actions": [
     "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
-    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.",
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them."
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
    ],
    "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+    "Sector (Transport / Logistics) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-14492: The WP Duplicate \u2013 WordPress Migration Plugin plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14492",
+   "published": "2026-11-19T10:17:28.927000+00:00",
+   "summary": "The WP Duplicate \u2013 WordPress Migration Plugin plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.1.11 via the save_single_batch_file function. This is due to a PHP type-juggling authentication bypass via loose != comparison with no is_string() guard, combined with unsanitized base64-decoded path construction in save_single_batch_file() lacking any directory traversal containment. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server. Exploitation requires that the site owner has\u2026",
+   "uk_source": false,
+   "cves": [
+    "CVE-2026-14492"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 33,
+   "priority_why": {
+    "UK relevance": 0,
+    "CVSS": 8,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
    ],
    "also_reported_by": [],
    "clients": []
@@ -861,6 +909,72 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "UK MPs want AI watchdog with power to pull the plug on dangerous models",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/18/uk-mps-want-ai-watchdog-with-power-to-pull-the-plug-on-dangerous-models/5310567",
+   "published": "2026-11-18T09:30:00+00:00",
+   "summary": "Parliamentary committee says tech giants can't be left to mark their own homework when it comes to AI safety",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 65,
+   "priority": 28,
+   "priority_why": {
+    "UK relevance": 23,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Watchdog Warns UK Government Is Falling Short on Risk Management",
+   "url": "https://www.infosecurity-magazine.com/news/watchdog-government-risk/",
+   "published": "2026-11-18T09:30:00+00:00",
+   "summary": "National Audit Office report claims risk management failures are leading to poor government decisions",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Public sector"
+   ],
+   "uk_score": 65,
+   "priority": 28,
+   "priority_why": {
+    "UK relevance": 23,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "Computer Weekly Security",
    "source_id": "computerweekly",
    "kind": "news",
@@ -890,6 +1004,72 @@
    ],
    "enrich_steps": [
     "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Cyberattack on service provider exposes payee data at 40 Irish credit unions",
+   "url": "https://www.theregister.com/security/2026/11/19/cyberattack-on-service-provider-exposes-payee-data-at-40-irish-credit-unions/5310979",
+   "published": "2026-11-19T11:45:00+00:00",
+   "summary": "Minister calls notification delay 'not acceptable' after October attack on Irish banking player Wellington IT came to light in November",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Sticky note on monitor provided keys to the company\u2019s kingdom",
+   "url": "https://www.theregister.com/security/2026/11/19/sticky-note-on-monitor-provided-keys-to-the-companys-kingdom/5310908",
+   "published": "2026-11-19T10:15:00+00:00",
+   "summary": "Don't leave your credentials out in public, where any visitor can see them.",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -930,30 +1110,74 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
    "kind": "news",
-   "title": "Get ready for another critical PHP security release to drop",
-   "url": "https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911",
-   "published": "2026-11-18T22:38:12+00:00",
-   "summary": "At least one dangerous RCE bug will get a fix on Thursday",
+   "title": "Suspected Chinese APT Rebuilds EggStreme Malware After Exposure",
+   "url": "https://www.infosecurity-magazine.com/news/eggstreme-malware-rebuilt-after/",
+   "published": "2026-11-18T14:00:00+00:00",
+   "summary": "Suspected Chinese APT rebuilt EggStreme malware and infrastructure after Bitdefender exposure",
    "uk_source": true,
    "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [],
+   "threat_types": [
+    "Nation-state / APT",
+    "Malware"
+   ],
    "sectors": [],
    "uk_score": 35,
    "priority": 27,
    "priority_why": {
     "UK relevance": 12,
-    "Fresh": 15
+    "Serious threat type": 10,
+    "Fresh": 5
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for.",
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Russian Espionage Actor Star Blizzard Focuses on Cloud Identities for Mass Data Theft",
+   "url": "https://www.infosecurity-magazine.com/news/russian-star-blizzard-cloud-data/",
+   "published": "2026-11-18T11:45:00+00:00",
+   "summary": "New Google analysis of Star Blizzard, aka Cold Relic, highlighted the group\u2019s growing focus on compromising cloud environments to steal data and facilitate further attacks",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach",
+    "Nation-state / APT"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.",
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them."
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
@@ -985,6 +1209,226 @@
     "UK relevance": 12,
     "Serious threat type": 10,
     "Fresh": 5
+   },
+   "rookie": "Attackers break into a supplier or software package to reach that supplier's customers.",
+   "actions": [
+    "List which clients use the affected supplier or package.",
+    "Ask the supplier for their incident statement and indicators."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Nvidia Responds to Gentlemen Ransomware Claim",
+   "url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+   "published": "2026-11-19T14:17:32+00:00",
+   "summary": "Nvidia says it has found no indication that its systems were compromised after the Gentlemen ransomware group listed the company as a victim. The post Nvidia Responds to Gentlemen Ransomware Claim appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Ukraine exposes ransomware network extorting US oil, healthcare firms",
+   "url": "https://therecord.media/ukraine-ransomware-arrests-cyber",
+   "published": "2026-11-19T13:30:00+00:00",
+   "summary": "Ukrainian authorities arrested four suspected members of an international ransomware network accused of extorting more than $40 million from companies around the world.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Health / NHS"
+   ],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Sector (Health / NHS) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
+   "url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+   "published": "2026-11-19T13:12:20+00:00",
+   "summary": "Attackers hacked clustered Cisco Expressway devices at a Russian organization and prepared tooling for lateral movement. The post Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "StepSecurity Secures $20 Million to Expand Supply Chain Protection",
+   "url": "https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/",
+   "published": "2026-11-19T12:23:34+00:00",
+   "summary": "The company will use the funds to accelerate the development and distribution of its security platform. The post StepSecurity Secures $20 Million to Expand Supply Chain Protection appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Supply chain"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers break into a supplier or software package to reach that supplier's customers.",
+   "actions": [
+    "List which clients use the affected supplier or package.",
+    "Ask the supplier for their incident statement and indicators."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks",
+   "url": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/",
+   "published": "2026-11-19T12:13:24+00:00",
+   "summary": "Attackers are targeting Confluence Data Center through an Axis flaw and Apache is warning of attacks against Roller. The post Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
+   },
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
+   "actions": [
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Microsoft confirms app installation, launch issues after hotpatch",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
+   "published": "2026-11-19T10:35:05+00:00",
+   "summary": "Microsoft has shared a workaround for installation and launch issues affecting Office and third-party applications after installing this month's Windows 11 hotpatch. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Supply chain"
+   ],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 25,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 15
    },
    "rookie": "Attackers break into a supplier or software package to reach that supplier's customers.",
    "actions": [
@@ -1073,13 +1517,13 @@
    "clients": []
   },
   {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
    "kind": "news",
-   "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
-   "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
-   "published": "2026-11-18T23:08:33+00:00",
-   "summary": "Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide. [...]",
+   "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
+   "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+   "published": "2026-11-19T08:00:00+00:00",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities are listed below -",
    "uk_source": false,
    "cves": [],
    "kev": [],
@@ -1087,10 +1531,12 @@
    "attack": [],
    "iocs": {},
    "threat_types": [
-    "Ransomware"
+    "Ransomware",
+    "Exploited vuln"
    ],
    "sectors": [
-    "Finance"
+    "Finance",
+    "Education"
    ],
    "uk_score": 0,
    "priority": 25,
@@ -1103,111 +1549,24 @@
    "actions": [
     "Check whether any client shares the victim's sector, suppliers or software.",
     "Confirm clients have offline or immutable backups and have tested a restore.",
-    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+    "Look up the gang on ransomware.live to see its usual way in (initial access).",
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score."
    ],
    "enrich_steps": [
-    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+    "Sector (Finance, Education) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-132143: A vulnerability has been found in DrayTek Vigor2960 up to 1.5.1.6. This vulnerability affects the function doWebBackup of the file\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132143",
-   "published": "2026-11-18T22:17:20.360000+00:00",
-   "summary": "A vulnerability has been found in DrayTek Vigor2960 up to 1.5.1.6. This vulnerability affects the function doWebBackup of the file /cgi-bin/mainfunction.cgi of the component Backup Handler. Such manipulation of the argument path/value leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.5.1.7 is able to resolve this issue. The affected component should be upgraded. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-132143"
-   ],
-   "extra": {
-    "cvss": 9.9
-   },
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "1[.]5[.]1[.]6",
-     "1[.]5[.]1[.]7"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 24,
-   "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 9,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-132141: A vulnerability was detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this issue is the function json_load_lock of the file\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132141",
-   "published": "2026-11-18T22:17:19.960000+00:00",
-   "summary": "A vulnerability was detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this issue is the function json_load_lock of the file /cgi-bin/mainfunction.cgi of the component Jsonstatus. The manipulation of the argument usefile results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 1.5.1.7 can resolve this issue. It is advisable to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-132141"
-   ],
-   "extra": {
-    "cvss": 9.9
-   },
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "1[.]5[.]1[.]6",
-     "1[.]5[.]1[.]7"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 24,
-   "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 9,
-    "Fresh": 15
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
+   "source": "The Register Security",
+   "source_id": "theregister",
    "kind": "news",
-   "title": "Last of Five Defendants Sentenced in US Scattered Spider Hacking Case",
-   "url": "https://www.securityweek.com/last-of-five-defendants-sentenced-in-us-scattered-spider-hacking-case/",
-   "published": "2026-11-18T13:19:32+00:00",
-   "summary": "British national Tyler Robert Buchanan has been sentenced to 6 years in prison in the United States, the DOJ announced. The post Last of Five Defendants Sentenced in US Scattered Spider Hacking Case appeared first on SecurityWeek .",
-   "uk_source": false,
+   "title": "Get ready for another critical PHP security release to drop",
+   "url": "https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911",
+   "published": "2026-11-18T22:38:12+00:00",
+   "summary": "At least one dangerous RCE bug will get a fix on Thursday",
+   "uk_source": true,
    "cves": [],
    "kev": [],
    "epss": null,
@@ -1215,10 +1574,10 @@
    "iocs": {},
    "threat_types": [],
    "sectors": [],
-   "uk_score": 40,
-   "priority": 24,
+   "uk_score": 35,
+   "priority": 22,
    "priority_why": {
-    "UK relevance": 14,
+    "UK relevance": 12,
     "Fresh": 10
    },
    "rookie": "General security news worth knowing.",
@@ -1497,102 +1856,6 @@
    "clients": []
   },
   {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "Java4Shell Vulnerability Allows Remote Attacks on Major Java Apps",
-   "url": "https://www.infosecurity-magazine.com/news/java4shell-vulnerability-remote/",
-   "published": "2026-11-18T12:35:00+00:00",
-   "summary": "A critical OpenJDK vulnerability could expose major Java applications to remote code execution, prompting CISA to urge organizations implement mitigations",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 22,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "Computer Weekly Security",
-   "source_id": "computerweekly",
-   "kind": "news",
-   "title": "I am the passenger: In Brussels at Google\u2019s data sovereignty event",
-   "url": "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event",
-   "published": "2026-11-18T12:02:00+00:00",
-   "summary": "I look through the window. What do I see? Physical embassies protected from local law, while cloud data stored with US giants remains exposed to foreign warrants",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 22,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "Infosecurity Magazine",
-   "source_id": "infosecmag",
-   "kind": "news",
-   "title": "Three AI Models Agree on Just One of 121 Potential Code Flaws",
-   "url": "https://www.infosecurity-magazine.com/news/ai-models-vulnerability-findings/",
-   "published": "2026-11-18T10:00:00+00:00",
-   "summary": "Echo tested Claude Mythos, GPT-5.6 Sol and GLM-5.3 on the same code and found little overlap",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 22,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -1631,45 +1894,76 @@
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-132142: A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132142",
-   "published": "2026-11-18T22:17:20.160000+00:00",
-   "summary": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which\u2026",
+   "source": "The Record",
+   "source_id": "therecord",
+   "kind": "news",
+   "title": "Russian charged with spying on Palantir employees for Moscow",
+   "url": "https://therecord.media/russian-charged-with-spying-on-palantir-for-moscow",
+   "published": "2026-11-19T00:00:00+00:00",
+   "summary": "Igor Andreevich D\u2019iu, A Russian national recruited through Telegram, has been charged in the United States with acting as a Moscow agent in a surveillance campaign targeting employees of a defense technology company, understood to be Palantir Technologies.",
    "uk_source": false,
-   "cves": [
-    "CVE-2026-132142"
-   ],
-   "extra": {
-    "cvss": 9.1
-   },
+   "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
-   "iocs": {
-    "ips": [
-     "1[.]5[.]1[.]6",
-     "1[.]5[.]1[.]7"
-    ]
-   },
-   "threat_types": [],
+   "iocs": {},
+   "threat_types": [
+    "Nation-state / APT"
+   ],
    "sectors": [],
    "uk_score": 0,
-   "priority": 21,
+   "priority": 20,
    "priority_why": {
     "UK relevance": 0,
-    "CVSS": 6,
-    "Fresh": 15
+    "Serious threat type": 10,
+    "Fresh": 10
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+   "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+   "published": "2026-11-18T23:08:33+00:00",
+   "summary": "Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Ransomware"
+   ],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 0,
+   "priority": 20,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 10
+   },
+   "rookie": "Criminals lock (encrypt) or steal a company's files, then demand money.",
+   "actions": [
+    "Check whether any client shares the victim's sector, suppliers or software.",
+    "Confirm clients have offline or immutable backups and have tested a restore.",
+    "Look up the gang on ransomware.live to see its usual way in (initial access)."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -1750,228 +2044,89 @@
    "clients": []
   },
   {
-   "source": "The Record",
-   "source_id": "therecord",
-   "kind": "news",
-   "title": "Russian cyber-espionage group used stolen cloud data to hack into organizations, Google says",
-   "url": "https://therecord.media/russia-cyber-espionage-google",
-   "published": "2026-11-18T15:15:00+00:00",
-   "summary": "Russian state-backed hackers are using information stolen from cloud accounts to impersonate trusted contacts and launch new espionage attacks against people in their victims' professional networks, according to new research.",
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-132143: A vulnerability has been found in DrayTek Vigor2960 up to 1.5.1.6. This vulnerability affects the function doWebBackup of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132143",
+   "published": "2026-11-18T22:17:20.360000+00:00",
+   "summary": "A vulnerability has been found in DrayTek Vigor2960 up to 1.5.1.6. This vulnerability affects the function doWebBackup of the file /cgi-bin/mainfunction.cgi of the component Backup Handler. Such manipulation of the argument path/value leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.5.1.7 is able to resolve this issue. The affected component should be upgraded. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we\u2026",
    "uk_source": false,
-   "cves": [],
+   "cves": [
+    "CVE-2026-132143"
+   ],
+   "extra": {
+    "cvss": 9.9
+   },
    "kev": [],
    "epss": null,
    "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Nation-state / APT",
-    "Fraud / Scam"
-   ],
+   "iocs": {
+    "ips": [
+     "1[.]5[.]1[.]6",
+     "1[.]5[.]1[.]7"
+    ]
+   },
+   "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 20,
+   "priority": 19,
    "priority_why": {
     "UK relevance": 0,
-    "Serious threat type": 10,
+    "CVSS": 9,
     "Fresh": 10
    },
-   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "rookie": "General security news worth knowing.",
    "actions": [
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
-    "Check if the NCSC has issued a joint advisory with indicators to hunt for.",
-    "Watch for lookalike domains of client brands (typosquats)."
+    "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "The Hacker News",
-   "source_id": "thehackernews",
-   "kind": "news",
-   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-   "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-   "published": "2026-11-18T14:11:28+00:00",
-   "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap response is to rotate,\" Bitdefender said in a technical report shared with The Hacker News. \"A file hash changes with every recompile, a domain costs a few",
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-132141: A vulnerability was detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this issue is the function json_load_lock of the file\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132141",
+   "published": "2026-11-18T22:17:19.960000+00:00",
+   "summary": "A vulnerability was detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this issue is the function json_load_lock of the file /cgi-bin/mainfunction.cgi of the component Jsonstatus. The manipulation of the argument usefile results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 1.5.1.7 can resolve this issue. It is advisable to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one\u2026",
    "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Nation-state / APT",
-    "Malware"
+   "cves": [
+    "CVE-2026-132141"
    ],
-   "sectors": [
-    "Public sector"
-   ],
-   "uk_score": 0,
-   "priority": 20,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 10
+   "extra": {
+    "cvss": 9.9
    },
-   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
-   "actions": [
-    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
-    "Check if the NCSC has issued a joint advisory with indicators to hunt for.",
-    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM."
-   ],
-   "enrich_steps": [
-    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization",
-   "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/",
-   "published": "2026-11-18T13:33:47+00:00",
-   "summary": "Star Blizzard weaponized data and identities stolen in late 2025 to phish and compromise a US organization. The post Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Phishing",
-    "Data breach",
-    "Nation-state / APT"
-   ],
+   "iocs": {
+    "ips": [
+     "1[.]5[.]1[.]6",
+     "1[.]5[.]1[.]7"
+    ]
+   },
+   "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 20,
+   "priority": 19,
    "priority_why": {
     "UK relevance": 0,
-    "Serious threat type": 10,
+    "CVSS": 9,
     "Fresh": 10
    },
-   "rookie": "Fake emails, texts or calls that trick people into handing over passwords or money.",
+   "rookie": "General security news worth knowing.",
    "actions": [
-    "Pull any sender domains or URLs and check them against client mail logs.",
-    "Remind clients they can forward suspicious email to report@phishing.gov.uk (SERS).",
-    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search)."
+    "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "The Hacker News",
-   "source_id": "thehackernews",
-   "kind": "news",
-   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
-   "url": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
-   "published": "2026-11-18T12:15:00+00:00",
-   "summary": "TL;DR Attackers move first. On average, exploitation now starts before a patch exists (Mandiant M-Trends 2026). In 1H 2026, 23% of vulnerabilities VulnCheck added to its exploited list were hit on or before disclosure day. AI pentesting vendors aren't interchangeable. Most look convincing in a demo. The gaps show up in your logged-in flows, your coverage, and your production safety. Make",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Exploited vuln"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 20,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
-   "actions": [
-    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
-    "Search client external attack surface for the affected product and version."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Microsoft Agent Framework Releases Poisoned With Credential Stealer",
-   "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/",
-   "published": "2026-11-18T11:05:39+00:00",
-   "summary": "Versions 1.26.1 and 1.26.2 of agent-framework on PyPI steal Azure, Azure DevOps, and GitHub Actions credentials when Python starts. The post Microsoft Agent Framework Releases Poisoned With Credential Stealer appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Supply chain",
-    "Malware"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 20,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Attackers break into a supplier or software package to reach that supplier's customers.",
-   "actions": [
-    "List which clients use the affected supplier or package.",
-    "Ask the supplier for their incident statement and indicators.",
-    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
-   "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
-   "published": "2026-11-18T10:35:05+00:00",
-   "summary": "Apache has released security updates to address a critical Roller flaw that threat actors are exploiting to gain code execution on vulnerable servers. [...]",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [
-    "Exploited vuln"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 20,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 10
-   },
-   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
-   "actions": [
-    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
-    "Search client external attack surface for the affected product and version."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2403,79 +2558,97 @@
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-130733: Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130733",
-   "published": "2026-11-18T12:17:19.627000+00:00",
-   "summary": "Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction. Attackers can rename a folder like locked*** or save from a page with an unusual prefix width through a front-end Flex pages form, replacing protected content and permissions to access the protected subtree.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-130733"
-   ],
-   "extra": {
-    "cvss": 9.8
-   },
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Java4Shell Vulnerability Allows Remote Attacks on Major Java Apps",
+   "url": "https://www.infosecurity-magazine.com/news/java4shell-vulnerability-remote/",
+   "published": "2026-11-18T12:35:00+00:00",
+   "summary": "A critical OpenJDK vulnerability could expose major Java applications to remote code execution, prompting CISA to urge organizations implement mitigations",
+   "uk_source": true,
+   "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
    "threat_types": [],
    "sectors": [],
-   "uk_score": 0,
-   "priority": 18,
+   "uk_score": 35,
+   "priority": 17,
    "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 8,
-    "Fresh": 10
+    "UK relevance": 12,
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
   },
   {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-130675: Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130675",
-   "published": "2026-11-18T12:17:10.783000+00:00",
-   "summary": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reach the method through Craft Commerce's payments/pay redirect template calling customer.photo.getUrl() with a crafted transform to instantiate classes like yii\\rbac\\PhpManager and execute PHP.",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-130675"
-   ],
-   "extra": {
-    "cvss": 9.8
-   },
+   "source": "Computer Weekly Security",
+   "source_id": "computerweekly",
+   "kind": "news",
+   "title": "I am the passenger: In Brussels at Google\u2019s data sovereignty event",
+   "url": "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event",
+   "published": "2026-11-18T12:02:00+00:00",
+   "summary": "I look through the window. What do I see? Physical embassies protected from local law, while cloud data stored with US giants remains exposed to foreign warrants",
+   "uk_source": true,
+   "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
    "threat_types": [],
-   "sectors": [
-    "Finance"
-   ],
-   "uk_score": 0,
-   "priority": 18,
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 17,
    "priority_why": {
-    "UK relevance": 0,
-    "CVSS": 8,
-    "Fresh": 10
+    "UK relevance": 12,
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "Infosecurity Magazine",
+   "source_id": "infosecmag",
+   "kind": "news",
+   "title": "Three AI Models Agree on Just One of 121 Potential Code Flaws",
+   "url": "https://www.infosecurity-magazine.com/news/ai-models-vulnerability-findings/",
+   "published": "2026-11-18T10:00:00+00:00",
+   "summary": "Echo tested Claude Mythos, GPT-5.6 Sol and GLM-5.3 on the same code and found little overlap",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2515,56 +2688,29 @@
    "clients": []
   },
   {
-   "source": "The Register Security",
-   "source_id": "theregister",
-   "kind": "news",
-   "title": "Daily disruptive outages that ground planes and halt work \u2013 welcome to the new normal",
-   "url": "https://www.theregister.com/security/2026/11/17/daily-disruptive-outages-that-ground-planes-and-halt-work-welcome-to-the-new-normal/5310634",
-   "published": "2026-11-17T23:41:31+00:00",
-   "summary": "NSA, Apple add to a week of high-profile network outages, largely attributed to 'routine maintenance'",
-   "uk_source": true,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 35,
-   "priority": 17,
-   "priority_why": {
-    "UK relevance": 12,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
-   "title": "CVE-2026-130679: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130679",
-   "published": "2026-11-18T12:17:11.450000+00:00",
-   "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel.",
+   "title": "CVE-2026-132142: A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132142",
+   "published": "2026-11-18T22:17:20.160000+00:00",
+   "summary": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which\u2026",
    "uk_source": false,
    "cves": [
-    "CVE-2026-130679"
+    "CVE-2026-132142"
    ],
    "extra": {
-    "cvss": 9.0
+    "cvss": 9.1
    },
    "kev": [],
    "epss": null,
    "attack": [],
-   "iocs": {},
+   "iocs": {
+    "ips": [
+     "1[.]5[.]1[.]6",
+     "1[.]5[.]1[.]7"
+    ]
+   },
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
@@ -2579,7 +2725,205 @@
     "Skim it and note whether any client uses the vendor or product mentioned."
    ],
    "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
+    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
+   "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
+   "published": "2026-11-19T13:08:08+00:00",
+   "summary": "The Drupal Security Team has patched a critical remote code execution vulnerability that can let attackers take over vulnerable sites. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "The Governance Gap in Open-Weight AI and What to Do About It",
+   "url": "https://www.securityweek.com/the-governance-gap-in-open-weight-ai-and-what-to-do-about-it/",
+   "published": "2026-11-19T12:00:00+00:00",
+   "summary": "Lower costs, data privacy, and greater control are driving open-weight AI adoption, but many organizations are not addressing the risks that come with it. The post The Governance Gap in Open-Weight AI and What to Do About It appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
+   "published": "2026-11-19T11:46:00+00:00",
+   "summary": "Microsoft is developing a new Edge security feature to reduce the attack surface by disabling the WebGL, WebGL2, and WebGPU APIs. [...]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "Splunk Patches Nearly 140 Flaws Across Three Core Products",
+   "url": "https://www.securityweek.com/splunk-patches-nearly-140-flaws-across-three-core-products/",
+   "published": "2026-11-19T10:41:05+00:00",
+   "summary": "The security updates resolve critical and high-severity issues leading to authentication bypass, remote code execution, and privilege escalation. The post Splunk Patches Nearly 140 Flaws Across Three Core Products appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SecurityWeek",
+   "source_id": "securityweek",
+   "kind": "news",
+   "title": "F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public",
+   "url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/",
+   "published": "2026-11-19T10:26:51+00:00",
+   "summary": "The five NGINX2Root vulnerabilities could allow remote, unauthenticated attackers to execute arbitrary code. The post F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public appeared first on SecurityWeek .",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+   "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+   "published": "2026-11-19T09:31:26+00:00",
+   "summary": "N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. \"We have taken steps to mitigate the threat and are continuing to harden our services to reduce the risk of recurrence,\" N-able said. \"The investigation is ongoing, but at this time we",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach"
+   ],
+   "sectors": [
+    "Charity"
+   ],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 15
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
+   ],
+   "enrich_steps": [
+    "Sector (Charity) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2747,30 +3091,74 @@
    "clients": []
   },
   {
-   "source": "SANS Internet Storm Center",
-   "source_id": "sans",
-   "kind": "research",
-   "title": "ISC Stormcast For Thursday, November 19th, 2026 https://isc.sans.edu/podcastdetail/10186, (Thu, Nov 19th)",
-   "url": "https://isc.sans.edu/diary/rss/33536",
-   "published": "2026-11-19T02:00:03+00:00",
-   "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+   "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "published": "2026-11-18T14:11:28+00:00",
+   "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap response is to rotate,\" Bitdefender said in a technical report shared with The Hacker News. \"A file hash changes with every recompile, a domain costs a few",
    "uk_source": false,
    "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [],
+   "threat_types": [
+    "Nation-state / APT",
+    "Malware"
+   ],
+   "sectors": [
+    "Public sector"
+   ],
+   "uk_score": 0,
+   "priority": 15,
+   "priority_why": {
+    "UK relevance": 0,
+    "Serious threat type": 10,
+    "Fresh": 5
+   },
+   "rookie": "Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.",
+   "actions": [
+    "Map the reported techniques to MITRE ATT&CK and check client detections cover them.",
+    "Check if the NCSC has issued a joint advisory with indicators to hunt for.",
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM."
+   ],
+   "enrich_steps": [
+    "Sector (Public sector) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Hacker News",
+   "source_id": "thehackernews",
+   "kind": "news",
+   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
+   "url": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
+   "published": "2026-11-18T12:15:00+00:00",
+   "summary": "TL;DR Attackers move first. On average, exploitation now starts before a patch exists (Mandiant M-Trends 2026). In 1H 2026, 23% of vulnerabilities VulnCheck added to its exploited list were hit on or before disclosure day. AI pentesting vendors aren't interchangeable. Most look convincing in a demo. The gaps show up in your logged-in flows, your coverage, and your production safety. Make",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Exploited vuln"
+   ],
    "sectors": [],
    "uk_score": 0,
    "priority": 15,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 15
+    "Serious threat type": 10,
+    "Fresh": 5
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
@@ -2779,30 +3167,34 @@
    "clients": []
   },
   {
-   "source": "SANS Internet Storm Center",
-   "source_id": "sans",
-   "kind": "research",
-   "title": "Treat Your Honeypot Analysis Like Code: Git, Pull Requests and a Human Gate for AI [Guest Diary], (Wed, Nov 18th)",
-   "url": "https://isc.sans.edu/diary/rss/33534",
-   "published": "2026-11-19T01:53:48+00:00",
-   "summary": "[This is a Guest Diary by Kevin Truong, an ISC intern as part of the SANS.edu BACS program]",
+   "source": "BleepingComputer",
+   "source_id": "bleeping",
+   "kind": "news",
+   "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+   "published": "2026-11-18T10:35:05+00:00",
+   "summary": "Apache has released security updates to address a critical Roller flaw that threat actors are exploiting to gain code execution on vulnerable servers. [...]",
    "uk_source": false,
    "cves": [],
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [],
+   "threat_types": [
+    "Exploited vuln"
+   ],
    "sectors": [],
    "uk_score": 0,
    "priority": 15,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 15
+    "Serious threat type": 10,
+    "Fresh": 5
    },
-   "rookie": "General security news worth knowing.",
+   "rookie": "Attackers are already using this weakness in real attacks, not just in theory.",
    "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
+    "Treat as patch-now: check the CISA KEV due date and the EPSS score.",
+    "Search client external attack surface for the affected product and version."
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
@@ -2926,250 +3318,31 @@
    "clients": []
   },
   {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
-   "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
-   "published": "2026-11-17T21:27:17+00:00",
-   "summary": "Credentials and access secrets exposed in public Docker Hub images are being extracted and exploited by attackers within as little as eight seconds of publication. [...]",
+   "source": "NVD",
+   "source_id": "nvd",
+   "kind": "vuln",
+   "title": "CVE-2026-130733: Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130733",
+   "published": "2026-11-18T12:17:19.627000+00:00",
+   "summary": "Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction. Attackers can rename a folder like locked*** or save from a page with an unusual prefix width through a front-end Flex pages form, replacing protected content and permissions to access the protected subtree.",
    "uk_source": false,
-   "cves": [],
+   "cves": [
+    "CVE-2026-130733"
+   ],
+   "extra": {
+    "cvss": 9.8
+   },
    "kev": [],
    "epss": null,
    "attack": [],
    "iocs": {},
-   "threat_types": [
-    "Data breach",
-    "Exploited vuln"
-   ],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 15,
-   "priority_why": {
-    "UK relevance": 0,
-    "Serious threat type": 10,
-    "Fresh": 5
-   },
-   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
-   "actions": [
-    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
-    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours.",
-    "Treat as patch-now: check the CISA KEV due date and the EPSS score."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-91507: Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine). Supported versions that\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91507",
-   "published": "2026-11-17T22:19:22.587000+00:00",
-   "summary": "Vulnerability in the Oracle Access Manager product of Oracle Fusion Middleware (component: Authentication Engine). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Access Manager. While the vulnerability is in Oracle Access Manager, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all Oracle Access Manager\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-91507"
-   ],
-   "extra": {
-    "cvss": 9.3
-   },
-   "kev": [],
-   "epss": 0.00339,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "12[.]2[.]1[.]4",
-     "14[.]1[.]2[.]1"
-    ]
-   },
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 12,
+   "priority": 13,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-91469: Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core). Supported versions that are affected\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91469",
-   "published": "2026-11-17T22:19:22.107000+00:00",
-   "summary": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core). Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and 15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server. Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all Oracle WebLogic Server accessible data as well as unauthorized read access to a subset of Oracle WebLogic Server accessible data and\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-91469"
-   ],
-   "extra": {
-    "cvss": 9.4
-   },
-   "kev": [],
-   "epss": 0.00438,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "12[.]2[.]1[.]4",
-     "14[.]1[.]1[.]0",
-     "14[.]1[.]2[.]0",
-     "15[.]1[.]1[.]0"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-115139: Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration). The\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115139",
-   "published": "2026-11-17T22:18:47.437000+00:00",
-   "summary": "Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration). The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Hyperion Infrastructure Technology. Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Hyperion Infrastructure Technology, attacks may significantly impact additional products (scope change). Successful attacks of this\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-115139"
-   ],
-   "extra": {
-    "cvss": 9.3
-   },
-   "kev": [],
-   "epss": 0.00384,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "11[.]2[.]26[.]0"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-114956: Vulnerability in the Oracle Hyperion Planning product of Oracle Hyperion (component: Security). The supported version that is affected is\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114956",
-   "published": "2026-11-17T22:18:26.023000+00:00",
-   "summary": "Vulnerability in the Oracle Hyperion Planning product of Oracle Hyperion (component: Security). The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Hyperion Planning. Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Oracle Hyperion Planning, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in unauthorized creation, deletion or\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-114956"
-   ],
-   "extra": {
-    "cvss": 9.3
-   },
-   "kev": [],
-   "epss": 0.00384,
-   "attack": [],
-   "iocs": {
-    "ips": [
-     "11[.]2[.]26[.]0"
-    ]
-   },
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)",
-    "IP \u2192 ASN and hosting provider (RIPE Stat), UK geolocation, AbuseIPDB reputation"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "NVD",
-   "source_id": "nvd",
-   "kind": "vuln",
-   "title": "CVE-2026-114934: Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Integration Broker). Supported versions\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114934",
-   "published": "2026-11-17T22:18:23.437000+00:00",
-   "summary": "Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Integration Broker). Supported versions that are affected are 8.61-8.63. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise PeopleSoft Enterprise PeopleTools. While the vulnerability is in PeopleSoft Enterprise PeopleTools, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all PeopleSoft Enterprise PeopleTools\u2026",
-   "uk_source": false,
-   "cves": [
-    "CVE-2026-114934"
-   ],
-   "extra": {
-    "cvss": 9.3
-   },
-   "kev": [],
-   "epss": 0.00354,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 12,
-   "priority_why": {
-    "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
+    "CVSS": 8,
     "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
@@ -3186,29 +3359,30 @@
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
-   "title": "CVE-2026-101691: Vulnerability in the Oracle Mobile Field Service product of Oracle E-Business Suite (component: Admin UI). Supported versions that are\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101691",
-   "published": "2026-11-17T22:18:04.460000+00:00",
-   "summary": "Vulnerability in the Oracle Mobile Field Service product of Oracle E-Business Suite (component: Admin UI). Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Mobile Field Service. While the vulnerability is in Oracle Mobile Field Service, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all Oracle Mobile Field Service accessible data as well\u2026",
+   "title": "CVE-2026-130675: Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130675",
+   "published": "2026-11-18T12:17:10.783000+00:00",
+   "summary": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reach the method through Craft Commerce's payments/pay redirect template calling customer.photo.getUrl() with a crafted transform to instantiate classes like yii\\rbac\\PhpManager and execute PHP.",
    "uk_source": false,
    "cves": [
-    "CVE-2026-101691"
+    "CVE-2026-130675"
    ],
    "extra": {
-    "cvss": 9.3
+    "cvss": 9.8
    },
    "kev": [],
-   "epss": 0.00354,
+   "epss": null,
    "attack": [],
    "iocs": {},
    "threat_types": [],
-   "sectors": [],
+   "sectors": [
+    "Finance"
+   ],
    "uk_score": 0,
-   "priority": 12,
+   "priority": 13,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
-    "CVSS": 7,
+    "CVSS": 8,
     "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
@@ -3225,19 +3399,19 @@
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
-   "title": "CVE-2026-114881: Vulnerability in the Document Management and Collaboration product of Oracle E-Business Suite (component: Attachments). Supported versions\u2026",
-   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114881",
-   "published": "2026-11-17T22:18:17.107000+00:00",
-   "summary": "Vulnerability in the Document Management and Collaboration product of Oracle E-Business Suite (component: Attachments). Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Document Management and Collaboration. Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all Document Management and Collaboration accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Document\u2026",
+   "title": "CVE-2026-130679: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store\u2026",
+   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130679",
+   "published": "2026-11-18T12:17:11.450000+00:00",
+   "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel.",
    "uk_source": false,
    "cves": [
-    "CVE-2026-114881"
+    "CVE-2026-130679"
    ],
    "extra": {
-    "cvss": 9.1
+    "cvss": 9.0
    },
    "kev": [],
-   "epss": 0.00508,
+   "epss": null,
    "attack": [],
    "iocs": {},
    "threat_types": [],
@@ -3246,7 +3420,6 @@
    "priority": 11,
    "priority_why": {
     "UK relevance": 0,
-    "EPSS": 0,
     "CVSS": 6,
     "Fresh": 5
    },
@@ -3256,6 +3429,70 @@
    ],
    "enrich_steps": [
     "CVE \u2192 EPSS + KEV + vendor advisory \u2192 which client assets run it (Shodan/Censys query filtered to country:GB)"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SANS Internet Storm Center",
+   "source_id": "sans",
+   "kind": "research",
+   "title": "ISC Stormcast For Thursday, November 19th, 2026 https://isc.sans.edu/podcastdetail/10186, (Thu, Nov 19th)",
+   "url": "https://isc.sans.edu/diary/rss/33536",
+   "published": "2026-11-19T02:00:03+00:00",
+   "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "SANS Internet Storm Center",
+   "source_id": "sans",
+   "kind": "research",
+   "title": "Treat Your Honeypot Analysis Like Code: Git, Pull Requests and a Human Gate for AI [Guest Diary], (Wed, Nov 18th)",
+   "url": "https://isc.sans.edu/diary/rss/33534",
+   "published": "2026-11-19T01:53:48+00:00",
+   "summary": "[This is a Guest Diary by Kevin Truong, an ISC intern as part of the SANS.edu BACS program]",
+   "uk_source": false,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 0,
+   "priority": 10,
+   "priority_why": {
+    "UK relevance": 0,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -3532,70 +3769,6 @@
    "clients": []
   },
   {
-   "source": "The Record",
-   "source_id": "therecord",
-   "kind": "news",
-   "title": "NSA continues response to interruptions in classified internal network",
-   "url": "https://therecord.media/nsa-continues-response-to-nsa-net-problems",
-   "published": "2026-11-18T16:19:00+00:00",
-   "summary": "Day 2 of the NSA Net's disruptions included staggered arrivals and logins at Fort Meade, while a source said classified national security work continued unimpeded.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Vero Security Raises $11 Million for AI Security Engineering Platform",
-   "url": "https://www.securityweek.com/verosecurity-raises-11-million-for-ai-security-engineering-platform/",
-   "published": "2026-11-18T15:30:42+00:00",
-   "summary": "AI Security Engineering is a new and essential security discipline now being brought into focus by VeroSecurity. The post Vero Security Raises $11 Million for AI Security Engineering Platform appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
    "source": "BleepingComputer",
    "source_id": "bleeping",
    "kind": "news",
@@ -3651,10 +3824,10 @@
     "Education"
    ],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -3662,70 +3835,6 @@
    ],
    "enrich_steps": [
     "Sector (Education) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Microsoft Takes Perception Agentic Security Platform Out of Preview",
-   "url": "https://www.securityweek.com/microsoft-takes-perception-agentic-security-platform-out-of-preview/",
-   "published": "2026-11-18T12:14:23+00:00",
-   "summary": "Four blue team agents and the Recon Agent are now generally available, while integrations and vulnerability shielding are in preview. The post Microsoft Takes Perception Agentic Security Platform Out of Preview appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "CISO Conversations: Patti Degnan \u2013 Part of the Job Is Deciding What Not to Do",
-   "url": "https://www.securityweek.com/ciso-conversations-patti-degnan-part-of-the-job-is-deciding-what-not-to-do/",
-   "published": "2026-11-18T12:00:00+00:00",
-   "summary": "Patti Degnan\u2019s identity was stolen in 2006. It set her on a path to the CISO seat at endpoint security firm Glow. The post CISO Conversations: Patti Degnan \u2013 Part of the Job Is Deciding What Not to Do appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -3749,11 +3858,11 @@
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
     "EPSS": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -3784,10 +3893,10 @@
     "Legal"
    ],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -3795,38 +3904,6 @@
    ],
    "enrich_steps": [
     "Sector (Legal) \u2192 tag every client in that sector and send them a short heads-up"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "SecurityWeek",
-   "source_id": "securityweek",
-   "kind": "news",
-   "title": "Chrome 158 Patches 204 Vulnerabilities",
-   "url": "https://www.securityweek.com/chrome-158-patches-204-vulnerabilities/",
-   "published": "2026-11-18T11:43:22+00:00",
-   "summary": "Google handed out $11,000 for five externally reported flaws but has yet to determine the amounts to be paid for 36 bugs. The post Chrome 158 Patches 204 Vulnerabilities appeared first on SecurityWeek .",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 10,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 10
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
    ],
    "also_reported_by": [],
    "clients": []
@@ -3848,10 +3925,10 @@
    "threat_types": [],
    "sectors": [],
    "uk_score": 0,
-   "priority": 10,
+   "priority": 5,
    "priority_why": {
     "UK relevance": 0,
-    "Fresh": 10
+    "Fresh": 5
    },
    "rookie": "General security news worth knowing.",
    "actions": [
@@ -3932,76 +4009,12 @@
    ],
    "also_reported_by": [],
    "clients": []
-  },
-  {
-   "source": "SANS Internet Storm Center",
-   "source_id": "sans",
-   "kind": "research",
-   "title": "ISC Stormcast For Wednesday, November 18th, 2026 https://isc.sans.edu/podcastdetail/10184, (Wed, Nov 18th)",
-   "url": "https://isc.sans.edu/diary/rss/33528",
-   "published": "2026-11-18T02:00:03+00:00",
-   "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 5,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
-  },
-  {
-   "source": "BleepingComputer",
-   "source_id": "bleeping",
-   "kind": "news",
-   "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
-   "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
-   "published": "2026-11-17T23:04:21+00:00",
-   "summary": "A critical vulnerability dubbed Java4Shell in OpenJDK, the open-source implementation of Java, can allow unauthenticated attackers to remotely execute code on popular enterprise applications, including Jenkins, Atlassian Jira, Confluence, and Keycloak. [...]",
-   "uk_source": false,
-   "cves": [],
-   "kev": [],
-   "epss": null,
-   "attack": [],
-   "iocs": {},
-   "threat_types": [],
-   "sectors": [],
-   "uk_score": 0,
-   "priority": 5,
-   "priority_why": {
-    "UK relevance": 0,
-    "Fresh": 5
-   },
-   "rookie": "General security news worth knowing.",
-   "actions": [
-    "Skim it and note whether any client uses the vendor or product mentioned."
-   ],
-   "enrich_steps": [
-    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
-   ],
-   "also_reported_by": [],
-   "clients": []
   }
  ],
  "stats": {
   "kev_total": 1786,
-  "critical_cves": 27,
-  "victims_total": 68,
+  "critical_cves": 21,
+  "victims_total": 64,
   "victims_uk": 4,
   "top_groups": [
    [
@@ -4009,11 +4022,11 @@
     25
    ],
    [
-    "PixelLeaks",
-    7
+    "lockbit5",
+    5
    ],
    [
-    "lockbit5",
+    "PixelLeaks",
     5
    ],
    [
@@ -4025,16 +4038,16 @@
     4
    ],
    [
+    "rhysida",
+    3
+   ],
+   [
     "SilentRansomGroup",
     3
    ],
    [
     "akira",
     3
-   ],
-   [
-    "rhysida",
-    2
    ]
   ],
   "c2_total": 5,
@@ -4087,21 +4100,21 @@
    "name": "The Register Security",
    "id": "theregister",
    "ok": true,
-   "count": 9,
+   "count": 11,
    "error": ""
   },
   {
    "name": "Infosecurity Magazine",
    "id": "infosecmag",
    "ok": true,
-   "count": 8,
+   "count": 10,
    "error": ""
   },
   {
    "name": "BleepingComputer",
    "id": "bleeping",
    "ok": true,
-   "count": 12,
+   "count": 13,
    "error": ""
   },
   {
@@ -4115,7 +4128,7 @@
    "name": "The Hacker News",
    "id": "thehackernews",
    "ok": true,
-   "count": 15,
+   "count": 18,
    "error": ""
   },
   {
@@ -4129,7 +4142,7 @@
    "name": "SANS Internet Storm Center",
    "id": "sans",
    "ok": true,
-   "count": 4,
+   "count": 3,
    "error": ""
   },
   {
@@ -4150,7 +4163,7 @@
    "name": "NVD critical CVEs",
    "id": "nvd",
    "ok": true,
-   "count": 27,
+   "count": 21,
    "error": ""
   },
   {
@@ -4206,6 +4219,7 @@
    ],
    "new_cves": [],
    "matches": [
+    "Everything Is a Web Application, Including Your Firewall",
     "PHP Readies Critical Security Updates to Patch Another RCE Flaw",
     "Java4Shell, NGINX2Shell and more: Why we are not at \"Yellow\", (Wed, Nov 18th)"
    ],
