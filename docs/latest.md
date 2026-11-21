@@ -1,28 +1,19 @@
-# Threat Intel Field Brief: Friday 20 November 2026
+# Threat Intel Field Brief: Saturday 21 November 2026
 
-_TLP:CLEAR · generated 14:07 UK time · last 36 hours_
+_TLP:CLEAR · generated 13:33 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: SDJ Design Engineering Limited listed by spacebears ransomware (priority 71).
-- 5 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 2 UK organisations named on ransomware leak sites (sectors: Agriculture and Food Production, Manufacturing).
-- 6 stories with strong UK relevance.
+- Read first: William Cook Holdings Limited listed by aurora ransomware (priority 70).
+- 9 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 2 UK organisations named on ransomware leak sites (sectors: Manufacturing).
+- 2 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [SDJ Design Engineering Limited listed by spacebears ransomware](https://www.ransomware.live/id/U0RKIERlc2lnbiBFbmdpbmVlcmluZyBMaW1pdGVkQHNwYWNlYmVhcnM=)
-**Priority 71** · ransomware.live · UK relevant · _Ransomware, Energy / Utilities, Manufacturing_
-
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
-
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
-
-**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
-
-### 2. [Boutinot Limited listed by aurora ransomware](https://www.ransomware.live/id/Qm91dGlub3QgTGltaXRlZEBhdXJvcmE=)
-**Priority 65** · ransomware.live · UK relevant · _Ransomware, Retail, Agriculture and Food Production_
+### 1. [William Cook Holdings Limited listed by aurora ransomware](https://www.ransomware.live/id/V2lsbGlhbSBDb29rIEhvbGRpbmdzIExpbWl0ZWRAYXVyb3Jh)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Manufacturing, Energy / Utilities_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -30,8 +21,17 @@ _TLP:CLEAR · generated 14:07 UK time · last 36 hours_
 
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
-### 3. [Everything Is a Web Application, Including Your Firewall](https://thehackernews.com/2026/11/everything-is-web-application-including.html)
-**Priority 60** · The Hacker News · KEV · EPSS 100% · _Exploited vuln_
+### 2. [SDJ Design Engineering Limited listed by spacebears ransomware](https://www.ransomware.live/id/U0RKIERlc2lnbiBFbmdpbmVlcmluZyBMaW1pdGVkQHNwYWNlYmVhcnM=)
+**Priority 61** · ransomware.live · UK relevant · _Ransomware, Energy / Utilities, Manufacturing_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
+
+### 3. [Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge](https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html)
+**Priority 53** · The Hacker News · KEV · EPSS 1% · _Exploited vuln, Nation-state / APT_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -40,7 +40,7 @@ _TLP:CLEAR · generated 14:07 UK time · last 36 hours_
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ### 4. [CVE-2026-40217: BerriAI LiteLLM Unprotected Alternate Channel Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-40217)
-**Priority 47** · CISA KEV · KEV · EPSS 62% · _Exploited vuln_
+**Priority 49** · CISA KEV · KEV · EPSS 69% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -48,41 +48,41 @@ _TLP:CLEAR · generated 14:07 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-90817: Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-90817)
-**Priority 40** · CISA KEV · KEV · EPSS 25% · _Exploited vuln, Education_
+### 5. [Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network](https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html)
+**Priority 43** · The Hacker News · KEV · EPSS 0% · _Data breach, Exploited vuln, Nation-state / APT_
 
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+**In plain English:** Private data got out. Stolen data is later reused for scams and account takeover.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-21): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Check if client staff email domains appear in the leak (Have I Been Pwned domain search).
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 6. [UK government can't keep its encryption-busting order to Apple a secret, tribunal rules](https://www.theregister.com/security/2026/11/20/uk-government-cant-keep-its-encryption-busting-order-to-apple-a-secret-tribunal-rules/5311292)
-**Priority 38** · The Register Security · UK relevant · _Public sector_
+### 6. [China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data](https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html)
+**Priority 43** · The Hacker News · KEV · EPSS 1% · _Zero-day, Exploited vuln, Nation-state / APT_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Find out which clients run the product (asset inventory or Shodan/Censys search).
 
-**Enrich next:** Sector (Public sector) → tag every client in that sector and send them a short heads-up
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 7. [JPMorgan Confirms Customer Data Breach Following Third-Party Compromise](https://www.infosecurity-magazine.com/news/jpmorgan-data-breach-third-party/)
-**Priority 37** · Infosecurity Magazine · _Ransomware, Data breach, Supply chain_
+### 7. [CVE-2026-129448: Apache Roller Deserialization of Untrusted Data Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-129448)
+**Priority 40** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
 
-**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 8. [Suspected North Korea-Aligned Group Hides C2 on Solana Blockchain](https://www.infosecurity-magazine.com/news/overlord-rat-solana-blockchain-c2/)
-**Priority 37** · Infosecurity Magazine · _Nation-state / APT, Malware_
+### 8. [CVE-2025-42884: SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2025-42884)
+**Priority 40** · CISA KEV · KEV · EPSS 0% · _Exploited vuln_
 
-**In plain English:** Government-backed hackers, usually after secrets, access, or disruption rather than quick cash.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Map the reported techniques to MITRE ATT&CK and check client detections cover them. Check if the NCSC has issued a joint advisory with indicators to hunt for.
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
@@ -91,7 +91,7 @@ _TLP:CLEAR · generated 14:07 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039
-- Matching stories today: 1
+- Matching stories today: 0
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -108,34 +108,34 @@ _TLP:CLEAR · generated 14:07 UK time · last 36 hours_
 
 ## Daily knowledge pack
 
-### Lesson 324: Help desk social engineering
+### Lesson 325: Typosquatting and brand monitoring
 
-Groups like Scattered Spider phone IT help desks pretending to be staff and ask for password or MFA resets. No malware needed: they talk their way in, then add their own devices and move to ransomware or data theft.
+Typosquatting means registering lookalike domains: cl1ent.co.uk, client-login.com, client.co instead of client.co.uk. Tools like dnstwist generate the possible variants and check which ones are registered.
 
-> **Think of it like this:** Ringing the hotel reception, claiming you lost your room key, and being handed a new one.
+> **Think of it like this:** A fake shop on the high street with a logo almost identical to the real one.
 
-**UK angle:** Major UK retail attacks in 2025 were linked to this style of social engineering. It is a top concern for UK retail, finance and anyone with an outsourced help desk.
+**UK angle:** UK clients are often impersonated across .uk, .co.uk, .com and .org.uk. Monitoring all of these is cheap and catches phishing early.
 
-**Enrichment tip:** For identity attack stories, enrich with the targeted help desk provider or outsourcer. Clients sharing that supplier face higher risk.
+**Enrichment tip:** For each lookalike: add creation date, whether it has MX records (can send or receive email), whether it has a live website, and certificate data from crt.sh.
 
-**Try it today:** Write three questions a help desk should ask before resetting MFA.
+**Try it today:** Run dnstwist (pip install dnstwist) against a UK brand domain and count the registered lookalikes.
 
-**Quiz:** What does the attacker usually ask the help desk for?  
-_Answer:_ A password reset or to register a new MFA device.
+**Quiz:** Why does an MX record on a lookalike domain matter?  
+_Answer:_ It means the domain can handle email, so it can be used for phishing or invoice fraud.
 
-**Word of the day: BEC** · Business Email Compromise. Fraud where attackers use or fake a real business email account to redirect payments.
+**Word of the day: C2** · Command and Control. The server an attacker uses to send orders to infected machines.
 
 ### Review (spaced repetition)
 
-- **Infostealers and stolen sessions** (1d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
-- **UK GDPR, the ICO and the 72-hour rule** (3d ago): How long does a UK organisation have to report a qualifying personal data breach to the ICO? _Answer: 72 hours from becoming aware of it._
-- **Indicators go stale: ageing and decay** (7d ago): Why should IP indicators expire faster than hashes? _Answer: IPs get reassigned to new, often innocent, owners, while a hash always identifies the same file._
+- **Help desk social engineering** (1d ago): What does the attacker usually ask the help desk for? _Answer: A password reset or to register a new MFA device._
+- **Where UK victims report things** (3d ago): Where do UK users forward suspicious emails? _Answer: report@phishing.gov.uk._
+- **False positives and allowlists** (7d ago): What is a MISP warninglist for? _Answer: Flagging indicators that are probably false positives, such as well-known legitimate services._
 
-### Enrichment drill: SDJ Design Engineering Limited listed by spacebears ransomware
+### Enrichment drill: William Cook Holdings Limited listed by aurora ransomware
 
-1. Search Companies House for 'SDJ Design Engineering Limited'. Note its SIC code, size and registered region.
-2. Look up spacebears on ransomware.live. How many UK victims has it listed this year?
-3. Search 'spacebears initial access' to find how they usually break in (ATT&CK tactic TA0001).
+1. Search Companies House for 'William Cook Holdings Limited'. Note its SIC code, size and registered region.
+2. Look up aurora on ransomware.live. How many UK victims has it listed this year?
+3. Search 'aurora initial access' to find how they usually break in (ATT&CK tactic TA0001).
 4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
 5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
