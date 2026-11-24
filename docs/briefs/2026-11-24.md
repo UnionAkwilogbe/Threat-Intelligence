@@ -1,19 +1,19 @@
 # Threat Intel Field Brief: Tuesday 24 November 2026
 
-_TLP:CLEAR · generated 09:52 UK time · last 36 hours_
+_TLP:CLEAR · generated 15:58 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: jcatkinson.co.uk listed by safepay ransomware (priority 70).
+- Read first: jcatkinson.co.uk listed by safepay ransomware (priority 65).
 - 10 vulnerabilities added to CISA KEV this week, 1 linked to ransomware. Check clients run none of them.
 - 4 UK organisations named on ransomware leak sites (sectors: Not Found, Professional Services).
-- 1 stories with strong UK relevance.
+- 4 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
 ### 1. [jcatkinson.co.uk listed by safepay ransomware](https://www.ransomware.live/id/amNhdGtpbnNvbi5jby51a0BzYWZlcGF5)
-**Priority 70** · ransomware.live · UK relevant · _Ransomware, Manufacturing, Professional Services_
+**Priority 65** · ransomware.live · UK relevant · _Ransomware, Manufacturing, Professional Services_
 
 **In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
@@ -49,7 +49,7 @@ _TLP:CLEAR · generated 09:52 UK time · last 36 hours_
 **Enrich next:** Victim → Companies House (sector SIC code, size, directors) → which clients share suppliers or sector
 
 ### 5. [Critical Cisco Expressway Flaw Exploited in Attacks](https://www.infosecurity-magazine.com/news/critical-cisco-expressway-flaw/)
-**Priority 60** · Infosecurity Magazine · KEV · EPSS 2% · _Exploited vuln_
+**Priority 55** · Infosecurity Magazine · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -58,7 +58,7 @@ _TLP:CLEAR · generated 09:52 UK time · last 36 hours_
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ### 6. [Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day](https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html)
-**Priority 53** · The Hacker News · KEV · EPSS 0% · _Zero-day, Exploited vuln_
+**Priority 53** · The Hacker News · KEV · EPSS 1% · _Zero-day, Exploited vuln_
 
 **In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
 
@@ -75,14 +75,14 @@ _TLP:CLEAR · generated 09:52 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 8. [Introducing CORNERSTONE: delivering external services for the NCSC](https://www.ncsc.gov.uk/blogs/introducing-cornerstone-delivering-external-services-for-the-ncsc)
-**Priority 46** · NCSC UK · UK relevant
+### 8. [CVE-2026-133968: Project MONAI MONAI Label Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133968)
+**Priority 50** · CISA KEV · KEV · EPSS 50% · _Exploited vuln_
 
-**In plain English:** General security news worth knowing.
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
 ## Client request RFI-002: PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619) (Client B)
 
@@ -102,7 +102,7 @@ _TLP:CLEAR · generated 09:52 UK time · last 36 hours_
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
-- Matching stories today: 0
+- Matching stories today: 1
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
