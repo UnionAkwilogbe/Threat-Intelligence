@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Tuesday 24 November 2026
 
-_TLP:CLEAR · generated 23:22 UK time · last 36 hours_
+_TLP:CLEAR · generated 23:23 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -101,7 +101,7 @@ _TLP:CLEAR · generated 23:22 UK time · last 36 hours_
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
-- Matching stories today: 2
+- Matching stories today: 4
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 

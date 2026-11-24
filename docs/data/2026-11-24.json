@@ -4501,7 +4501,7 @@
  "stats": {
   "kev_total": 1795,
   "critical_cves": 27,
-  "victims_total": 43,
+  "victims_total": 41,
   "victims_uk": 0,
   "top_groups": [
    [
@@ -4511,10 +4511,6 @@
    [
     "aurora",
     5
-   ],
-   [
-    "safepay",
-    4
    ],
    [
     "incransom",
@@ -4530,6 +4526,10 @@
    ],
    [
     "PixelLeaks",
+    2
+   ],
+   [
+    "safepay",
     2
    ],
    [
@@ -4715,7 +4715,9 @@
    "new_cves": [],
    "matches": [
     "New Inception Extortion Brand Tied to SSO Vishing Campaign",
-    "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site"
+    "New Inception extortion gang launches large-scale vishing campaign",
+    "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+    "Inception - possibly a ShinyHunters reboot - claims seven victims in a week"
    ],
    "ioc_hits": []
   }
