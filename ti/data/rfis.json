@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-11-16",
+      "updated": "2026-11-24",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -80,11 +80,19 @@
           "issue": "Local privilege escalation to root, chained with PHP2Shell on Mobile Access portals. Exploited",
           "cvss": 7.8,
           "fixed": "November Jumbo Hotfix / R82.20 Take 14 (PHP2Shell hotfix since 23 October); see Check Point sk1000362"
+        },
+        {
+          "id": "CVE-2026-126714",
+          "product": "PHP",
+          "issue": "phpAfterShell: interrupted session writes bypass the October PHP2Shell fix (needs an exploitable app gadget chain)",
+          "cvss": null,
+          "fixed": "8.6.0 / 8.5.13 / 8.4.28 / 8.3.37 / 8.2.36 (19 November). Workaround: session.upload_progress.enabled=0"
         }
       ],
       "actions": [
         "Find every PHP system, internet-facing first, including PHP bundled in third-party products and hosting.",
         "Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 (or later) and restart all PHP workers. For 8.1 and older, get written confirmation of a vendor backport or migrate.",
+        "Apply the 19 November PHP releases (8.5.13 / 8.4.28 / 8.3.37 / 8.2.36 or later): they fix phpAfterShell and CVE-2026-115560. Servers that only had the October fix are still exposed.",
         "Apply the CVE-2026-115560 workaround where practical: set session.upload_progress.enabled=0 administratively (for example php_admin_flag in the PHP-FPM pool) and fully restart PHP workers, then apply the next regular PHP release when it ships.",
         "Check Point customers: install the November Jumbo Hotfix (or the PHP2Shell hotfix and the CVE-2026-123039 fix), check Mobile Access portals for webshells and unexpected root activity, and restrict SSH from gateways to ESXi hosts.",
         "If an internet-facing system cannot be patched quickly, put a WAF block on oversized POST bodies or take it offline (NCSC advice).",
@@ -153,6 +161,10 @@
         {
           "date": "2026-11-16",
           "note": "CISA added the Check Point Gaia bug (CVE-2026-123039) to KEV on 13 November, with a US federal deadline of 16 November."
+        },
+        {
+          "date": "2026-11-24",
+          "note": "PHP released fixes on 19 November for phpAfterShell (CVE-2026-126714), which bypasses the October PHP2Shell patch, and CVE-2026-115560. No exploitation reported yet; not on CISA KEV."
         }
       ],
       "sources": [
@@ -255,6 +267,14 @@
         {
           "name": "SecurityWeek: PHP2Shell exploited in destructive Check Point attacks",
           "url": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/"
+        },
+        {
+          "name": "SecurityWeek: phpAfterShell revives PHP2Shell's attack path",
+          "url": "https://www.securityweek.com/phpaftershell-vulnerability-revives-php2shells-attack-path/"
+        },
+        {
+          "name": "Wiz: phpAfterShell and critical PHP RCE vulnerabilities",
+          "url": "https://www.wiz.io/blog/phpaftershell-critical-php-rce-vulnerabilities-cve-2026-126714"
         }
       ],
       "known_kev": [
