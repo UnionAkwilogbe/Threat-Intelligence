@@ -6,7 +6,7 @@
       "client": "Client B",
       "topic": "PHP2Shell: critical PHP flaws (CVE-2026-109618, CVE-2026-109619)",
       "opened": "2026-10-22",
-      "updated": "2026-11-24",
+      "updated": "2026-11-25",
       "status": "In progress",
       "keywords": [
         "php2shell",
@@ -49,6 +49,11 @@
           "title": "Embedded PHP: Check Point gateways attacked",
           "level": "High",
           "text": "From 30 October attackers used PHP2Shell against Check Point Mobile Access portals, chained it with a Gaia OS root exploit (CVE-2026-123039), planted webshells and the TSGA backdoor, and in at least one case moved over SSH to a VMware ESXi host and ran a wiper. Check Point says a couple of dozen customers were hit. This is the 'PHP inside other products' risk the NCSC warned about."
+        },
+        {
+          "title": "Embedded PHP: Palo Alto firewalls rooted (Fragnesia)",
+          "level": "High",
+          "text": "Palo Alto confirmed a China-linked group used PHP2Shell (CVE-2026-109618) on internet-facing PAN-OS management interfaces, then a Linux kernel bug nicknamed Fragnesia (CVE-2026-46300, on CISA KEV since 28 October) to get root. One report says 25 servers, including 24 firewalls, at one organisation. PAN-OS builds fixed for PHP2Shell block the first step; the kernel fix is separate. Never expose the firewall management interface to the internet."
         }
       ],
       "assessment": "Exploitation is confirmed and widespread. It is almost certain (95% and above) that unpatched internet-facing PHP sites will be attacked, and highly likely (80-90%) that a long tail of compromises surfaces over the coming months. A site patched after 17 October could already have been compromised, so patching alone is not enough.",
@@ -87,6 +92,13 @@
           "issue": "phpAfterShell: interrupted session writes bypass the October PHP2Shell fix (needs an exploitable app gadget chain)",
           "cvss": null,
           "fixed": "8.6.0 / 8.5.13 / 8.4.28 / 8.3.37 / 8.2.36 (19 November). Workaround: session.upload_progress.enabled=0"
+        },
+        {
+          "id": "CVE-2026-46300",
+          "product": "Linux kernel (in PAN-OS)",
+          "issue": "Fragnesia: local privilege escalation to root, chained after PHP2Shell on PAN-OS",
+          "cvss": null,
+          "fixed": "PAN-OS builds fixed for PHP2Shell block the chain (e.g. 10.2.18-h15, 11.1.16-h6, 11.2.16-h3, 12.1.10-h6, 12.2.4-h3); apply kernel fixes too"
         }
       ],
       "actions": [
@@ -165,6 +177,10 @@
         {
           "date": "2026-11-24",
           "note": "PHP released fixes on 19 November for phpAfterShell (CVE-2026-126714), which bypasses the October PHP2Shell patch, and CVE-2026-115560. No exploitation reported yet; not on CISA KEV."
+        },
+        {
+          "date": "2026-11-25",
+          "note": "Palo Alto confirmed PHP2Shell was chained with the Fragnesia kernel bug (CVE-2026-46300) to root PAN-OS firewalls. Same pattern as Check Point: PHP inside a security appliance. Check PAN-OS versions and management exposure."
         }
       ],
       "sources": [
@@ -275,12 +291,17 @@
         {
           "name": "Wiz: phpAfterShell and critical PHP RCE vulnerabilities",
           "url": "https://www.wiz.io/blog/phpaftershell-critical-php-rce-vulnerabilities-cve-2026-126714"
+        },
+        {
+          "name": "Cybersecurity News: Palo Alto confirms Fragnesia exploitation",
+          "url": "https://cybersecuritynews.com/palo-alto-confirms-fragnesia-exploitation/"
         }
       ],
       "known_kev": [
         "CVE-2026-109618",
         "CVE-2026-109619",
-        "CVE-2026-123039"
+        "CVE-2026-123039",
+        "CVE-2026-46300"
       ]
     },
     {
