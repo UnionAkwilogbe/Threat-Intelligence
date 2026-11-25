@@ -1,18 +1,18 @@
 # Threat Intel Field Brief: Wednesday 25 November 2026
 
-_TLP:CLEAR · generated 09:35 UK time · last 36 hours_
+_TLP:CLEAR · generated 15:45 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library (priority 53).
-- 9 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 4 stories with strong UK relevance.
+- Read first: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library (priority 54).
+- 10 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 5 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
 ### 1. [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)
-**Priority 53** · SecurityWeek · KEV · EPSS 1% · _Exploited vuln, Zero-day_
+**Priority 54** · SecurityWeek · KEV · EPSS 4% · _Exploited vuln, Zero-day_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -20,16 +20,34 @@ _TLP:CLEAR · generated 09:35 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 2. [CVE-2026-133968: Project MONAI MONAI Label Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133968)
-**Priority 45** · CISA KEV · KEV · EPSS 50% · _Exploited vuln_
+### 2. [Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation](https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html)
+**Priority 53** · The Hacker News · KEV · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [UK Authorized Push Payment Losses Surge 22% as Fraudsters Steal £660m](https://www.infosecurity-magazine.com/news/uk-app-losses-surge-22-fraudsters/)
+### 3. [NCSC Shares Guidance to Tackle Agentic Threat From ARTEX-Like Tools](https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat/)
+**Priority 48** · Infosecurity Magazine · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 4. [CVE-2026-103406: Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-103406)
+**Priority 45** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-28): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [UK Authorized Push Payment Losses Surge 22% as Fraudsters Steal £660m](https://www.infosecurity-magazine.com/news/uk-app-losses-surge-22-fraudsters/)
 **Priority 43** · Infosecurity Magazine · UK relevant · _Fraud / Scam, Finance_
 
 **In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
@@ -38,8 +56,8 @@ _TLP:CLEAR · generated 09:35 UK time · last 36 hours_
 
 **Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
 
-### 4. [Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day](https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html)
-**Priority 43** · The Hacker News · KEV · EPSS 1% · _Zero-day, Exploited vuln_
+### 6. [Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day](https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html)
+**Priority 43** · The Hacker News · KEV · EPSS 2% · _Zero-day, Exploited vuln_
 
 **In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
 
@@ -47,39 +65,21 @@ _TLP:CLEAR · generated 09:35 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [CVE-2026-129448: Apache Roller Deserialization of Untrusted Data Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-129448)
-**Priority 43** · CISA KEV · KEV · EPSS 40% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-23): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 6. [Introducing CORNERSTONE: delivering external services for the NCSC](https://www.ncsc.gov.uk/blogs/introducing-cornerstone-delivering-external-services-for-the-ncsc)
-**Priority 41** · NCSC UK · UK relevant
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 7. [Familiar weaknesses, exploited faster: defending against agentic cyber attacks](https://www.ncsc.gov.uk/blogs/familiar-weaknesses-exploited-faster-defending-against-agentic-cyber-attacks)
-**Priority 40** · NCSC UK · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** Treat as patch-now: check the CISA KEV due date and the EPSS score. Search client external attack surface for the affected product and version.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 8. [CVE-2026-132224: Optimizely Web Experimentation External Control of Critical State Data Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-132224)
-**Priority 40** · CISA KEV · KEV · EPSS 0% · _Exploited vuln, Fraud / Scam_
+### 7. [CVE-2026-132224: Optimizely Web Experimentation External Control of Critical State Data Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-132224)
+**Priority 40** · CISA KEV · KEV · EPSS 1% · _Exploited vuln, Fraud / Scam_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-11-27): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [CVE-2026-133968: Project MONAI MONAI Label Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133968)
+**Priority 40** · CISA KEV · KEV · EPSS 27% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -90,7 +90,7 @@ _TLP:CLEAR · generated 09:35 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039, CVE-2026-46300
-- Matching stories today: 1
+- Matching stories today: 2
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
