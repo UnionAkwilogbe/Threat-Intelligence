@@ -1,6 +1,6 @@
 # Threat Intel Field Brief: Wednesday 25 November 2026
 
-_TLP:CLEAR · generated 09:33 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:35 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
@@ -89,7 +89,7 @@ _TLP:CLEAR · generated 09:33 UK time · last 36 hours_
 
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
-- On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039
+- On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039, CVE-2026-46300
 - Matching stories today: 1
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
@@ -101,7 +101,7 @@ _TLP:CLEAR · generated 09:33 UK time · last 36 hours_
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
-- Matching stories today: 3
+- Matching stories today: 4
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -139,4 +139,4 @@ _Answer:_ So analysts and clients can trust it, challenge it and tune it.
 5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
 
 ---
-Sources healthy: 13/17 (failed: ICO enforcement (UK regulator), The Register Security, URLhaus, ThreatFox)
+Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)

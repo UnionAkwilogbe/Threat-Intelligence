@@ -1137,6 +1137,38 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "This could mess with Thanksgiving, says VMware as it drops third critical patch bundle in a week",
+   "url": "https://www.theregister.com/virtualization/2026/11/25/this-could-mess-with-thanksgiving-says-vmware-as-it-drops-third-critical-patch-bundle-in-a-week/5312017",
+   "published": "2026-11-25T05:15:08+00:00",
+   "summary": "Four more critical vulns, including another unauthorized access flaw in vCenter",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 27,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 15
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -1531,6 +1563,38 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "'We are not ShinyHunters,' says criminal hacking crew that looks and acts just like ShinyHunters",
+   "url": "https://www.theregister.com/security/2026/11/24/we-are-not-shinyhunters-says-criminal-hacking-crew-that-looks-and-acts-just-like-shinyhunters/5311978",
+   "published": "2026-11-24T20:15:36+00:00",
+   "summary": "Nothing to see here\u2026",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 22,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "Computer Weekly Security",
    "source_id": "computerweekly",
    "kind": "news",
@@ -1569,6 +1633,43 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "An AI coding agent, a browser, and a Mac tool found a financial firm's access key in under 6 minutes",
+   "url": "https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922",
+   "published": "2026-11-24T17:00:00+00:00",
+   "summary": "No sophisticated malware or attack framework required",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Malware"
+   ],
+   "sectors": [
+    "Finance"
+   ],
+   "uk_score": 35,
+   "priority": 22,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 10
+   },
+   "rookie": "Malicious software, for example info-stealers that grab saved passwords and cookies.",
+   "actions": [
+    "Extract hashes, domains and IPs and push them to client blocklists or the SIEM.",
+    "Check the malware family on MalwareBazaar or ThreatFox for more indicators."
+   ],
+   "enrich_steps": [
+    "Sector (Finance) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "Infosecurity Magazine",
    "source_id": "infosecmag",
    "kind": "news",
@@ -1596,6 +1697,72 @@
    ],
    "enrich_steps": [
     "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "CrowdStrike splashes $44B on Zscaler, customers brace for the bill",
+   "url": "https://www.theregister.com/security/2026/11/24/crowdstrike-splashes-44b-on-zscaler-customers-brace-for-the-bill/5311877",
+   "published": "2026-11-24T12:22:17+00:00",
+   "summary": "Record-breaking cybersecurity deal promises tighter integration, but sysadmins fear higher prices and vendor lock-in",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 22,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "European Commission confirms personal data stolen in AI-assisted cyberattack",
+   "url": "https://www.theregister.com/cyber-crime/2026/11/24/european-commission-confirms-personal-data-stolen-in-ai-assisted-cyberattack/5311834",
+   "published": "2026-11-24T11:32:41+00:00",
+   "summary": "EU Academy names and email addresses exposed, with users warned via website notice rather than contacted directly",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [
+    "Education"
+   ],
+   "uk_score": 35,
+   "priority": 22,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 10
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Sector (Education) \u2192 tag every client in that sector and send them a short heads-up"
    ],
    "also_reported_by": [],
    "clients": []
@@ -2693,6 +2860,110 @@
    "clients": []
   },
   {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Orgs that leak data 'prioritize corporate interests over customers' says Have I Been Pwned\u2019s Troy Hunt",
+   "url": "https://www.theregister.com/security/2026/11/24/orgs-that-leak-data-prioritize-corporate-interests-over-customers-says-have-i-been-pwneds-troy-hunt/5311802",
+   "published": "2026-11-24T05:13:51+00:00",
+   "summary": "Leakers move through denial, bargaining, delay, legal threats, then claiming Hunt is the real villain",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Data breach"
+   ],
+   "sectors": [
+    "Legal"
+   ],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "Private data got out. Stolen data is later reused for scams and account takeover.",
+   "actions": [
+    "Check if client staff email domains appear in the leak (Have I Been Pwned domain search).",
+    "Note the UK GDPR angle: serious breaches must be reported to the ICO within 72 hours."
+   ],
+   "enrich_steps": [
+    "Sector (Legal) \u2192 tag every client in that sector and send them a short heads-up"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Cisco and OpenAI pitch eBPF kernel plugins as the way to tame the patchpocalypse",
+   "url": "https://www.theregister.com/security/2026/11/24/cisco-and-openai-pitch-ebpf-kernel-plugins-as-the-way-to-tame-the-patchpocalypse/5311795",
+   "published": "2026-11-24T01:46:56+00:00",
+   "summary": "\u2018Shirudo\u2019 project promises to whip up compensating controls in a hurry",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "General security news worth knowing.",
+   "actions": [
+    "Skim it and note whether any client uses the vendor or product mentioned."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
+   "source": "The Register Security",
+   "source_id": "theregister",
+   "kind": "news",
+   "title": "Inception - possibly a ShinyHunters reboot - claims seven victims in a week",
+   "url": "https://www.theregister.com/security/2026/11/23/inception-possibly-a-shinyhunters-reboot-claims-seven-victims-in-a-week/5311768",
+   "published": "2026-11-23T21:52:23+00:00",
+   "summary": "Whatever they call themselves these days: be on the lookout for voice phishing attempts",
+   "uk_source": true,
+   "cves": [],
+   "kev": [],
+   "epss": null,
+   "attack": [],
+   "iocs": {},
+   "threat_types": [
+    "Phishing"
+   ],
+   "sectors": [],
+   "uk_score": 35,
+   "priority": 17,
+   "priority_why": {
+    "UK relevance": 12,
+    "Fresh": 5
+   },
+   "rookie": "Fake emails, texts or calls that trick people into handing over passwords or money.",
+   "actions": [
+    "Pull any sender domains or URLs and check them against client mail logs.",
+    "Remind clients they can forward suspicious email to report@phishing.gov.uk (SERS)."
+   ],
+   "enrich_steps": [
+    "Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing"
+   ],
+   "also_reported_by": [],
+   "clients": []
+  },
+  {
    "source": "NVD",
    "source_id": "nvd",
    "kind": "vuln",
@@ -3776,9 +4047,9 @@
   {
    "name": "The Register Security",
    "id": "theregister",
-   "ok": false,
-   "count": 0,
-   "error": "not well-formed (invalid token): line 7, column 22"
+   "ok": true,
+   "count": 8,
+   "error": ""
   },
   {
    "name": "Infosecurity Magazine",
@@ -3892,6 +4163,11 @@
      "id": "CVE-2026-123039",
      "name": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
      "added": "2026-11-13"
+    },
+    {
+     "id": "CVE-2026-46300",
+     "name": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+     "added": "2026-10-28"
     }
    ],
    "new_cves": [],
@@ -3908,7 +4184,8 @@
    "matches": [
     "New Inception Extortion Brand Tied to SSO Vishing Campaign",
     "New Inception extortion gang launches large-scale vishing campaign",
-    "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site"
+    "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+    "Inception - possibly a ShinyHunters reboot - claims seven victims in a week"
    ],
    "ioc_hits": []
   }
