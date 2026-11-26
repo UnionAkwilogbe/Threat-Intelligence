@@ -1,13 +1,13 @@
 # Threat Intel Field Brief: Thursday 26 November 2026
 
-_TLP:CLEAR · generated 09:50 UK time · last 36 hours_
+_TLP:CLEAR · generated 15:26 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
 - Read first: liverpool.ac.uk listed by Scarlettgroup ransomware (priority 70).
 - 19 vulnerabilities added to CISA KEV this week. Check clients run none of them.
 - 2 UK organisations named on ransomware leak sites (sectors: Education, Retail & E-Commerce).
-- 3 stories with strong UK relevance.
+- 4 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
@@ -31,7 +31,7 @@ _TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 **Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
 ### 3. [Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation](https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html)
-**Priority 53** · The Hacker News · KEV · _Exploited vuln_
+**Priority 55** · The Hacker News · KEV · EPSS 11% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -39,8 +39,8 @@ _TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 4. [Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products](https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html)
-**Priority 53** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
+### 4. [Critical Juniper Session Smart Conductor Flaw Exploited in Attacks](https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/)
+**Priority 53** · SecurityWeek · KEV · EPSS 2% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
@@ -48,7 +48,16 @@ _TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 5. [UK Home Office waved through border system without a working fix for bad data](https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162)
+### 5. [Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products](https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html)
+**Priority 53** · The Hacker News · KEV · EPSS 1% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 6. [UK Home Office waved through border system without a working fix for bad data](https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162)
 **Priority 46** · The Register Security · UK relevant
 
 **In plain English:** General security news worth knowing.
@@ -57,30 +66,21 @@ _TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 6. [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)
+### 7. [CVE-2026-133469: Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133469)
+**Priority 46** · CISA KEV · KEV · EPSS 32% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV (US federal patch deadline 2026-11-28): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 8. [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)
 **Priority 44** · SecurityWeek · KEV · EPSS 4% · _Exploited vuln, Zero-day_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [NCSC Shares Guidance to Tackle Agentic Threat From ARTEX-Like Tools](https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat/)
-**Priority 43** · Infosecurity Magazine · UK relevant
-
-**In plain English:** General security news worth knowing.
-
-**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
-
-**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
-
-### 8. [CVE-2026-133323: Mitel MiCollab OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133323)
-**Priority 41** · CISA KEV · KEV · EPSS 3% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-28): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -91,7 +91,7 @@ _TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039, CVE-2026-46300
-- Matching stories today: 3
+- Matching stories today: 2
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
