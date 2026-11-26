@@ -1,26 +1,36 @@
-# Threat Intel Field Brief: Wednesday 25 November 2026
+# Threat Intel Field Brief: Thursday 26 November 2026
 
-_TLP:CLEAR · generated 15:45 UK time · last 36 hours_
+_TLP:CLEAR · generated 09:50 UK time · last 36 hours_
 
 ## Your morning in 30 seconds
 
-- Read first: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library (priority 54).
-- 10 vulnerabilities added to CISA KEV this week. Check clients run none of them.
-- 5 stories with strong UK relevance.
+- Read first: liverpool.ac.uk listed by Scarlettgroup ransomware (priority 70).
+- 19 vulnerabilities added to CISA KEV this week. Check clients run none of them.
+- 2 UK organisations named on ransomware leak sites (sectors: Education, Retail & E-Commerce).
+- 3 stories with strong UK relevance.
 - 1 botnet C2 servers tracked on UK networks. Block and hunt for them.
 
 ## Top 8 for your UK clients
 
-### 1. [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)
-**Priority 54** · SecurityWeek · KEV · EPSS 4% · _Exploited vuln, Zero-day_
+### 1. [liverpool.ac.uk listed by Scarlettgroup ransomware](https://www.ransomware.live/id/bGl2ZXJwb29sLmFjLnVrQFNjYXJsZXR0Z3JvdXA=)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Education_
 
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
 
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
 
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
 
-### 2. [Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation](https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html)
+### 2. [Plumbs Limited listed by aurora ransomware](https://www.ransomware.live/id/UGx1bWJzIExpbWl0ZWRAYXVyb3Jh)
+**Priority 70** · ransomware.live · UK relevant · _Ransomware, Manufacturing, Retail & E-Commerce_
+
+**In plain English:** Criminals lock (encrypt) or steal a company's files, then demand money.
+
+**Do this:** Check whether any client shares the victim's sector, suppliers or software. Confirm clients have offline or immutable backups and have tested a restore.
+
+**Enrich next:** Domain → WHOIS / Nominet for .uk, passive DNS, certificate transparency (crt.sh)
+
+### 3. [Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation](https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html)
 **Priority 53** · The Hacker News · KEV · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
@@ -29,8 +39,17 @@ _TLP:CLEAR · generated 15:45 UK time · last 36 hours_
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
-### 3. [NCSC Shares Guidance to Tackle Agentic Threat From ARTEX-Like Tools](https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat/)
-**Priority 48** · Infosecurity Magazine · UK relevant
+### 4. [Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products](https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html)
+**Priority 53** · The Hacker News · KEV · EPSS 0% · _Exploited vuln_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 5. [UK Home Office waved through border system without a working fix for bad data](https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162)
+**Priority 46** · The Register Security · UK relevant
 
 **In plain English:** General security news worth knowing.
 
@@ -38,48 +57,30 @@ _TLP:CLEAR · generated 15:45 UK time · last 36 hours_
 
 **Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
 
-### 4. [CVE-2026-103406: Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-103406)
-**Priority 45** · CISA KEV · KEV · EPSS 1% · _Exploited vuln_
+### 6. [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)
+**Priority 44** · SecurityWeek · KEV · EPSS 4% · _Exploited vuln, Zero-day_
+
+**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
+
+**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
+
+**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
+
+### 7. [NCSC Shares Guidance to Tackle Agentic Threat From ARTEX-Like Tools](https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat/)
+**Priority 43** · Infosecurity Magazine · UK relevant
+
+**In plain English:** General security news worth knowing.
+
+**Do this:** Skim it and note whether any client uses the vendor or product mentioned.
+
+**Enrich next:** Add a TLP label and an Admiralty rating (source reliability + credibility) before sharing
+
+### 8. [CVE-2026-133323: Mitel MiCollab OS Command Injection Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133323)
+**Priority 41** · CISA KEV · KEV · EPSS 3% · _Exploited vuln_
 
 **In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
 
 **Do this:** On CISA KEV (US federal patch deadline 2026-11-28): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 5. [UK Authorized Push Payment Losses Surge 22% as Fraudsters Steal £660m](https://www.infosecurity-magazine.com/news/uk-app-losses-surge-22-fraudsters/)
-**Priority 43** · Infosecurity Magazine · UK relevant · _Fraud / Scam, Finance_
-
-**In plain English:** Tricks aimed at stealing money, often by pretending to be a trusted brand or person.
-
-**Do this:** Watch for lookalike domains of client brands (typosquats). UK victims report to Action Fraud (England, Wales, NI) or Police Scotland.
-
-**Enrich next:** Sector (Finance) → tag every client in that sector and send them a short heads-up
-
-### 6. [Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day](https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html)
-**Priority 43** · The Hacker News · KEV · EPSS 2% · _Zero-day, Exploited vuln_
-
-**In plain English:** A bug attackers found before the vendor could fix it, so there may be no patch yet.
-
-**Do this:** On CISA KEV: patch or mitigate for UK clients now, do not wait. Find out which clients run the product (asset inventory or Shodan/Censys search).
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 7. [CVE-2026-132224: Optimizely Web Experimentation External Control of Critical State Data Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-132224)
-**Priority 40** · CISA KEV · KEV · EPSS 1% · _Exploited vuln, Fraud / Scam_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-27): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
-
-**Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
-
-### 8. [CVE-2026-133968: Project MONAI MONAI Label Path Traversal Vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2026-133968)
-**Priority 40** · CISA KEV · KEV · EPSS 27% · _Exploited vuln_
-
-**In plain English:** Attackers are already using this weakness in real attacks, not just in theory.
-
-**Do this:** On CISA KEV (US federal patch deadline 2026-11-26): patch or mitigate for UK clients now, do not wait. Treat as patch-now: check the CISA KEV due date and the EPSS score.
 
 **Enrich next:** CVE → EPSS + KEV + vendor advisory → which client assets run it (Shodan/Censys query filtered to country:GB)
 
@@ -90,7 +91,7 @@ _TLP:CLEAR · generated 15:45 UK time · last 36 hours_
 **Bottom line:** Two critical PHP bugs let an unauthenticated attacker run code on a web server. They are now confirmed exploited and on CISA's Known Exploited Vulnerabilities list (added 26 October). Patch every internet-facing PHP system now, then check it was not compromised from 17 October onwards.
 
 - On CISA KEV today: CVE-2026-109618, CVE-2026-109619, CVE-2026-123039, CVE-2026-46300
-- Matching stories today: 2
+- Matching stories today: 3
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
@@ -101,42 +102,42 @@ _TLP:CLEAR · generated 15:45 UK time · last 36 hours_
 **Bottom line:** No Okta or Auth0 vulnerability is known to be exploited. The real risk to Okta customers is social engineering: phone-call phishing (vishing) that tricks staff or the help desk into handing over sign-ins and MFA.
 
 - On CISA KEV today: none
-- Matching stories today: 4
+- Matching stories today: 1
 - New CVEs not yet covered: none
 - Indicator feeds unavailable today
 
 ## Daily knowledge pack
 
-### Lesson 329: Building a UK relevance score
+### Lesson 330: Critical national infrastructure and NIS
 
-A relevance score combines simple signals into one number so you know what to read first. This dashboard adds points for UK keywords, UK sources, KEV status, EPSS, severity, threat type, freshness and corroboration. Every point is explained in the 'why' line.
+CNI covers services the UK depends on: energy, water, transport, health, telecoms, finance, government and more. The NIS Regulations 2018 set security duties for operators of essential services and some digital providers, and many are assessed against the NCSC Cyber Assessment Framework (CAF). The Cyber Security and Resilience Bill is set to widen these rules, so check its current status.
 
-> **Think of it like this:** A credit score for news stories: many small signals turned into one number you can sort by.
+> **Think of it like this:** The load-bearing walls of the country. Everything else leans on them.
 
-**UK angle:** Tune the weights to your clients: a legal-sector client should boost 'law firm' and 'solicitor'; a council client should boost 'council' and 'public sector'.
+**UK angle:** If a client is a CNI operator or supplies one, nation-state and OT (operational technology) stories get a much higher priority.
 
-**Enrichment tip:** Keep scoring explainable. If a client asks 'why is this top?', you should be able to point to each factor.
+**Enrichment tip:** Tag clients with 'CNI' and 'NIS regulated' flags. Boost Nation-state / APT and OT stories for those clients.
 
-**Try it today:** Open ti/enrich.py and find UK_TERMS. Add one keyword that matters to your clients.
+**Try it today:** Find the CAF on the NCSC website and read the four objectives (A to D).
 
-**Quiz:** Why should a relevance score be explainable?  
-_Answer:_ So analysts and clients can trust it, challenge it and tune it.
+**Quiz:** What is the NCSC framework used to assess many NIS-regulated organisations?  
+_Answer:_ The Cyber Assessment Framework (CAF).
 
-**Word of the day: CVE** · Common Vulnerabilities and Exposures. A unique ID for a publicly known security bug, for example CVE-2024-3400.
+**Word of the day: CVSS** · Common Vulnerability Scoring System. Rates how severe a bug is, from 0 to 10.
 
 ### Review (spaced repetition)
 
-- **Evaluating feeds** (1d ago): Name three criteria for evaluating a threat feed. _Answer: Any three of: relevance, timeliness, accuracy, completeness, uniqueness._
-- **Writing for clients: BLUF** (3d ago): What does BLUF stand for? _Answer: Bottom Line Up Front._
-- **Where UK victims report things** (7d ago): Where do UK users forward suspicious emails? _Answer: report@phishing.gov.uk._
+- **Building a UK relevance score** (1d ago): Why should a relevance score be explainable? _Answer: So analysts and clients can trust it, challenge it and tune it._
+- **Strategic, operational, tactical, technical** (3d ago): Which level of intel is a list of malicious IPs? _Answer: Technical._
+- **Infostealers and stolen sessions** (7d ago): Why can a stolen session cookie bypass MFA? _Answer: It proves a login that already passed MFA, so the attacker does not have to log in again._
 
-### Enrichment drill: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library
+### Enrichment drill: liverpool.ac.uk listed by Scarlettgroup ransomware
 
-1. Open nvd.nist.gov/vuln/detail/CVE-2026-131914. Note the CVSS score and affected product.
-2. Check CVE-2026-131914 on the CISA KEV list and its EPSS score at first.org/epss. Severity vs likelihood vs reality?
-3. Find the vendor's own advisory. Is there a patch or only a workaround?
-4. Search Shodan or Censys for the product with country:GB. How exposed is the UK?
-5. Write a BLUF: which clients, what action, by when (Cyber Essentials allows 14 days, KEV says sooner).
+1. Search Companies House for 'liverpool.ac.uk'. Note its SIC code, size and registered region.
+2. Look up Scarlettgroup on ransomware.live. How many UK victims has it listed this year?
+3. Search 'Scarlettgroup initial access' to find how they usually break in (ATT&CK tactic TA0001).
+4. Which of your clients share this sector or region? Write a two-line BLUF heads-up for them.
+5. Grade your sources with the Admiralty Code, for example C3 for a leak-site claim.
 
 ---
 Sources healthy: 14/17 (failed: ICO enforcement (UK regulator), URLhaus, ThreatFox)
